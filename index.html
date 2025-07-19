@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camden Cats Analytics - Login</title>
+    
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Custom styles to extend Tailwind */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Shake animation for incorrect password */
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25%, 75% { transform: translateX(-5px); }
+            50% { transform: translateX(5px); }
+        }
+        .shake-animation {
+            animation: shake 0.5s;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white flex items-center justify-center min-h-screen">
+
+    <div class="w-full max-w-md mx-auto p-4 sm:p-6 lg:p-8">
+        <div class="bg-gray-800 shadow-lg rounded-xl p-8">
+            <!-- Logo -->
+            <div class="flex justify-center mb-6">
+                <img src="assets/camden_cats_logo.jpg" alt="Camden Cats Logo" class="h-24 w-24 rounded-full object-cover border-2 border-blue-400" 
+                     onerror="this.onerror=null; this.src='https://placehold.co/120x120/1a202c/ffffff?text=Logo';">
+            </div>
+
+            <div class="text-center mb-8">
+                <h1 class="text-3xl font-bold tracking-tight">Analytics Portal</h1>
+                <p class="text-gray-400 mt-2">Please enter the password to continue.</p>
+            </div>
+            
+            <!-- Login Form -->
+            <form id="login-form">
+                <div class="mb-4">
+                    <label for="password" class="sr-only">Password</label>
+                    <input type="password" id="password" class="bg-gray-700 border border-gray-600 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3.5 placeholder-gray-400" placeholder="Enter password" required>
+                </div>
+                <button type="submit" class="w-full text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-3 text-center transition duration-300 ease-in-out">
+                    Login
+                </button>
+            </form>
+            
+            <!-- Error Message -->
+            <p id="error-message" class="hidden text-red-500 text-sm text-center mt-4">Incorrect password. Please try again.</p>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for form submission and validation
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // --- IMPORTANT ---
+            // This is a placeholder password. In a real application, 
+            // you should use a secure authentication method.
+            const correctPassword = 'camdencats123'; 
+            
+            const enteredPassword = document.getElementById('password').value;
+            const errorMessage = document.getElementById('error-message');
+            const formContainer = document.querySelector('.bg-gray-800');
+
+            if (enteredPassword === correctPassword) {
+                // If the password is correct, store login state and redirect
+                sessionStorage.setItem('isLoggedIn', 'true');
+                // Redirect to your main analytics page
+                window.location.href = 'landing.html'; 
+            } else {
+                // If the password is wrong, show error and shake animation
+                errorMessage.classList.remove('hidden');
+                formContainer.classList.add('shake-animation');
+                
+                // Remove the animation class after it finishes
+                setTimeout(() => {
+                    formContainer.classList.remove('shake-animation');
+                }, 500);
+            }
+        });
+    </script>
+
+</body>
+</html>

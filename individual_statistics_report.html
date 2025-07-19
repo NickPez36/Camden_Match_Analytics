@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camden Cats - Individual Statistics Report</title>
+    
+    <!-- Chart.js for visualizations -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Custom styles to extend Tailwind */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Style for the sortable table headers */
+        .sortable-header {
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .sortable-header:hover {
+            background-color: #374151; /* gray-700 */
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+
+    <!-- Header -->
+    <header class="bg-gray-800/50 backdrop-blur-sm shadow-md sticky top-0 z-20">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <a href="landing.html" class="flex items-center">
+                        <img src="assets/camden_cats_logo.jpg" alt="Camden Cats Logo" class="h-10 w-10 rounded-full object-cover" 
+                             onerror="this.onerror=null; this.src='https://placehold.co/40x40/1a202c/ffffff?text=Logo';">
+                        <span class="ml-3 font-semibold text-xl">Camden Cats Analytics</span>
+                    </a>
+                </div>
+                <div class="flex items-center space-x-4">
+                     <a href="landing.html" class="text-sm font-medium text-gray-400 hover:text-white transition-colors duration-200">Back to Dashboard</a>
+                    <button id="logout-button" class="text-sm font-medium text-gray-400 hover:text-white transition-colors duration-200">Logout</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="text-center">
+            <h1 class="text-4xl font-bold tracking-tight">Individual Statistics Report</h1>
+            <p class="mt-3 max-w-2xl mx-auto text-lg text-gray-400">Select a game to view the player statistics.</p>
+        </div>
+
+        <!-- File Loader -->
+        <div class="mt-8 max-w-2xl mx-auto bg-gray-800 shadow-lg rounded-xl p-6">
+             <h2 class="text-lg font-semibold text-white">Select Game Data File</h2>
+             <div class="flex flex-col sm:flex-row gap-4 items-end mt-4">
+                <div class="flex-grow w-full">
+                    <label for="file-selector" class="sr-only">Game File</label>
+                    <select id="file-selector" class="w-full bg-gray-700 border border-gray-600 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-3">
+                        <option value="">-- Please choose a game --</option>
+                    </select>
+                </div>
+                <button id="load-file-btn" class="w-full sm:w-auto text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-3 text-center transition duration-300 ease-in-out flex-shrink-0">Load Report</button>
+             </div>
+             <div id="loading-indicator" class="hidden text-center mt-4"><p class="text-gray-400">Loading data...</p></div>
+        </div>
+
+        <!-- Report Content Area -->
+        <div id="report-content" class="hidden mt-8 max-w-7xl mx-auto space-y-8">
+            <!-- Match Info Header -->
+            <div class="bg-gray-800 shadow-lg rounded-xl p-6 text-center">
+                <h2 id="match-info-title" class="text-2xl font-bold"></h2>
+                <p id="match-info-date" class="text-gray-400"></p>
+                <div id="match-result-container" class="flex justify-center mt-4"></div>
+            </div>
+            
+            <!-- Top Performers Section -->
+            <div id="top-performers-container">
+                <h3 class="text-2xl font-bold text-center mb-6">Top Performers</h3>
+                <div id="top-performers" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6"></div>
+            </div>
+
+            <!-- Full Statistics Table -->
+            <div id="stats-table-container" class="bg-gray-800 shadow-lg rounded-xl overflow-hidden"></div>
+        </div>
+    </main>
+
+    <script>
+        // --- AUTHENTICATION CHECK ---
+        if (sessionStorage.getItem('isLoggedIn') !== 'true') {
+            window.location.href = 'index.html';
+        }
+        document.getElementById('logout-button').addEventListener('click', function() {
+            sessionStorage.removeItem('isLoggedIn');
+            window.location.href = 'index.html';
+        });
+
+        // --- DOM ELEMENT REFERENCES ---
+        const fileSelector = document.getElementById('file-selector');
+        const loadFileBtn = document.getElementById('load-file-btn');
+        const loadingIndicator = document.getElementById('loading-indicator');
+        const reportContent = document.getElementById('report-content');
+        const matchInfoTitle = document.getElementById('match-info-title');
+        const matchInfoDate = document.getElementById('match-info-date');
+        const matchResultContainer = document.getElementById('match-result-container');
+        const topPerformersContainer = document.getElementById('top-performers');
+        const statsTableContainer = document.getElementById('stats-table-container');
+
+        // --- STATE AND CONFIGURATION ---
+        let playerData = [];
+        let sortState = { key: 'Player', direction: 'asc' };
+        
+        // List of CSV files available in the 'data' folder
+        const csvFiles = [ 
+            'data/RD12_North Shore_07072025_Indv.csv'
+        ];
+
+        // --- DATA PROCESSING LOGIC ---
+        
+        // Initialize the application
+        function initializeApp() {
+            // Populate file selector dropdown
+            csvFiles.forEach(fileName => {
+                const option = document.createElement('option');
+                option.value = fileName;
+                // Clean up file name for display
+                option.textContent = fileName.replace('data/', '').replace(/_/g, ' ').replace('.csv', '').replace(' Indv', '');
+                fileSelector.appendChild(option);
+            });
+
+            // Add event listeners
+            loadFileBtn.addEventListener('click', loadSelectedFile);
+        }
+
+        // Fetch and process the selected CSV file
+        async function loadSelectedFile() {
+            const fileName = fileSelector.value;
+            if (!fileName) {
+                alert('Please select a file to load.');
+                return;
+            }
+            loadingIndicator.classList.remove('hidden');
+            reportContent.classList.add('hidden');
+            try {
+                const response = await fetch(fileName);
+                if (!response.ok) throw new Error(`Network response was not ok. Could not find file: ${fileName}`);
+                const csvText = await response.text();
+                playerData = parseCSV(csvText);
+                const matchDetails = parseFileName(fileName);
+                renderReport(matchDetails);
+                reportContent.classList.remove('hidden');
+            } catch (error) {
+                console.error('Error loading or processing file:', error);
+                alert(`Failed to load the file: ${fileName}. Make sure it exists in your repository and the path is correct.`);
+            } finally {
+                loadingIndicator.classList.add('hidden');
+            }
+        }
+        
+        // Parse the file name to get match details
+        function parseFileName(fileName) {
+            const nameWithoutExt = fileName.replace('data/', '').replace('.csv', '');
+            const parts = nameWithoutExt.split('_');
+            const round = parts[0].replace('RD', 'Round ');
+            const dateStr = parts[parts.length - 2];
+            const opposition = parts.slice(1, -2).join(' ');
+            let formattedDate = '';
+            if (dateStr && dateStr.length === 8) {
+                const day = dateStr.substring(0, 2);
+                const month = dateStr.substring(2, 4);
+                const year = dateStr.substring(4, 8);
+                const dateObj = new Date(`${year}-${month}-${day}T00:00:00`);
+                if (!isNaN(dateObj)) {
+                    formattedDate = dateObj.toLocaleDateString('en-AU', { day: 'numeric', month: 'long', year: 'numeric' });
+                }
+            }
+            return { round, opposition, date: formattedDate };
+        }
+
+        // Parse CSV text into an array of objects
+        function parseCSV(text) {
+            const lines = text.trim().split('\n');
+            // More robust header parsing to remove potential BOM characters
+            const headers = lines[0].split(',').map(h => h.trim().replace(/\uFEFF/g, ''));
+            return lines.slice(1).map(line => {
+                const values = line.split(',');
+                return headers.reduce((obj, header, i) => {
+                    const value = values[i] ? values[i].trim() : '';
+                    obj[header] = isNaN(value) || value === '' ? value : Number(value);
+                    return obj;
+                }, {});
+            });
+        }
+
+
+        // --- RENDERING LOGIC ---
+
+        // Main render function
+        function renderReport(matchDetails) {
+            matchInfoTitle.textContent = `Camden Cats vs ${matchDetails.opposition}`;
+            matchInfoDate.textContent = `${matchDetails.round} - ${matchDetails.date}`;
+            
+            renderMatchResult();
+            renderTopPerformers();
+            renderStatsTable();
+        }
+        
+        function renderMatchResult() {
+            matchResultContainer.innerHTML = '';
+            if (playerData.length > 0 && playerData[0].hasOwnProperty('Result')) {
+                const result = playerData[0].Result.toUpperCase();
+                let resultCardHTML = '';
+                if (result === 'WIN') {
+                    resultCardHTML = `<div class="bg-green-500 text-white text-sm font-bold px-4 py-2 rounded-lg inline-block">Match Won</div>`;
+                } else if (result === 'LOST') {
+                    resultCardHTML = `<div class="bg-red-500 text-white text-sm font-bold px-4 py-2 rounded-lg inline-block">Camden Lost</div>`;
+                }
+                matchResultContainer.innerHTML = resultCardHTML;
+            }
+        }
+        
+        // Render the top performer cards
+        function renderTopPerformers() {
+            topPerformersContainer.innerHTML = '';
+            if (playerData.length === 0) return;
+
+            const allHeaders = Object.keys(playerData[0]);
+            // Exclude non-statistical or non-relevant columns from top performer cards
+            const statsToExclude = ['No', 'Player', 'Round', 'Opposition', 'Result', 'Rotations', 'On Ground %', 'Efficiency'];
+            const statsToDisplay = allHeaders.filter(h => !statsToExclude.includes(h));
+
+            statsToDisplay.forEach(stat => {
+                // Ensure we only work with numeric stats
+                const numericData = playerData.filter(p => p && typeof p[stat] === 'number');
+                if (numericData.length === 0) return; // Skip if no numeric data for this stat
+
+                const maxValue = Math.max(...numericData.map(p => p[stat]));
+                
+                // Find all players who have this max value
+                const topPlayers = playerData.filter(p => p[stat] === maxValue);
+
+                if (topPlayers.length > 0) {
+                    const playerNames = topPlayers.map(p => p.Player).join(', ');
+                    const card = document.createElement('div');
+                    card.className = 'bg-gray-800 p-5 rounded-xl text-center flex flex-col';
+                    card.innerHTML = `
+                        <p class="text-sm text-gray-400 font-medium h-10">Most ${stat.replace(/_/g, ' ')}</p>
+                        <p class="text-xl font-bold text-white mt-2 flex-grow">${playerNames}</p>
+                        <p class="text-2xl font-semibold text-blue-400 mt-1">${maxValue}</p>
+                    `;
+                    topPerformersContainer.appendChild(card);
+                }
+            });
+        }
+
+        // Render the main statistics table
+        function renderStatsTable() {
+            if (playerData.length === 0) return;
+            // Sort data
+            playerData.sort((a, b) => {
+                const valA = a[sortState.key];
+                const valB = b[sortState.key];
+                const direction = sortState.direction === 'asc' ? 1 : -1;
+
+                if (typeof valA === 'number' && typeof valB === 'number') {
+                    return (valA - valB) * direction;
+                }
+                return String(valA).localeCompare(String(valB)) * direction;
+            });
+
+            // Get headers from the first player object, excluding non-table columns
+            const headers = Object.keys(playerData[0]).filter(h => !['No', 'Round', 'Opposition', 'Result'].includes(h));
+
+            let tableHTML = `<div class="overflow-x-auto">
+                <table class="w-full text-sm text-left text-gray-400">
+                <thead class="text-xs text-gray-400 uppercase bg-gray-700"><tr>`;
+            
+            headers.forEach(h => {
+                const sortIndicator = sortState.key === h ? (sortState.direction === 'asc' ? ' ▲' : ' ▼') : '';
+                tableHTML += `<th scope="col" class="px-6 py-3 sortable-header" data-sort-key="${h}">${h.replace(/_/g, ' ')}${sortIndicator}</th>`;
+            });
+            tableHTML += `</tr></thead><tbody>`;
+
+            playerData.forEach(player => {
+                tableHTML += `<tr class="border-b border-gray-700 hover:bg-gray-600/50">`;
+                headers.forEach(header => {
+                    const value = player[header];
+                    const isPlayerName = header === 'Player';
+                    if(isPlayerName) {
+                        tableHTML += `<th scope="row" class="px-6 py-4 font-medium text-white whitespace-nowrap">${value}</th>`;
+                    } else {
+                        tableHTML += `<td class="px-6 py-4">${value}</td>`;
+                    }
+                });
+                tableHTML += `</tr>`;
+            });
+
+            tableHTML += `</tbody></table></div>`;
+            statsTableContainer.innerHTML = tableHTML;
+            
+            // Add event listeners for sorting
+            statsTableContainer.querySelectorAll('.sortable-header').forEach(th => {
+                th.addEventListener('click', (e) => {
+                    const key = e.currentTarget.dataset.sortKey;
+                    if (sortState.key === key) {
+                        sortState.direction = sortState.direction === 'asc' ? 'desc' : 'asc';
+                    } else {
+                        sortState.key = key;
+                        sortState.direction = 'desc'; // Default to descending for stats
+                    }
+                    renderStatsTable();
+                });
+            });
+        }
+
+        // --- INITIALIZATION ---
+        initializeApp();
+    </script>
+</body>
+</html>

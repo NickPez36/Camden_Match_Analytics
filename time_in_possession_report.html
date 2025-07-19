@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camden Cats - Possession Analysis</title>
+    
+    <!-- PDF & Canvas Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    
+    <!-- Chart.js and Datalabels Plugin -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+    
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Custom styles to extend Tailwind */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+
+    <!-- Header -->
+    <header class="bg-gray-800/50 backdrop-blur-sm shadow-md sticky top-0 z-20">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <a href="landing.html" class="flex items-center">
+                        <img src="data/camden_cats_logo.jpg" alt="Camden Cats Logo" class="h-10 w-10 rounded-full object-cover" 
+                             onerror="this.onerror=null; this.src='https://placehold.co/40x40/1a202c/ffffff?text=Logo';">
+                        <span class="ml-3 font-semibold text-xl">Camden Cats Analytics</span>
+                    </a>
+                </div>
+                <div class="flex items-center space-x-4">
+                     <a href="landing.html" class="text-sm font-medium text-gray-400 hover:text-white transition-colors duration-200">Back to Dashboard</a>
+                    <button id="logout-button" class="text-sm font-medium text-gray-400 hover:text-white transition-colors duration-200">Logout</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="text-center">
+            <h1 class="text-4xl font-bold tracking-tight">AFL Possession Analysis Report</h1>
+            <p class="mt-3 max-w-2xl mx-auto text-lg text-gray-400">Select a match from the dropdown to generate a report.</p>
+        </div>
+
+        <!-- File Loader -->
+        <div class="mt-8 max-w-2xl mx-auto bg-gray-800 shadow-lg rounded-xl p-6">
+            <h2 class="text-lg font-semibold text-white">Select Match File</h2>
+            <div class="flex flex-col sm:flex-row gap-4 items-end mt-4">
+                <div class="flex-grow w-full">
+                    <label for="xml-file-select" class="sr-only">Match Report File</label>
+                    <select id="xml-file-select" class="w-full bg-gray-700 border border-gray-600 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-3"></select>
+                </div>
+                <button id="generate-report-btn" class="w-full sm:w-auto text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-3 text-center transition duration-300 ease-in-out flex-shrink-0">Generate Report</button>
+            </div>
+        </div>
+
+        <!-- Report Section -->
+        <div id="report-section" class="hidden mt-8 max-w-4xl mx-auto">
+            <div class="bg-gray-800 shadow-lg rounded-xl p-6 sm:p-8">
+                <div id="report-header" class="flex justify-between items-start mb-6 border-b border-gray-700 pb-6">
+                    <div>
+                        <h2 id="report-title" class="text-2xl font-bold text-white">Possession Report</h2>
+                        <p id="team-names-display" class="text-gray-400 mt-1"></p>
+                    </div>
+                    <img id="report-logo" src="assets/camden_cats_logo.jpg" alt="Team Logo" class="h-20 w-20 object-contain bg-white rounded-md p-1"
+                         onerror="this.onerror=null; this.src='https://placehold.co/80x80/ffffff/1f2937?text=Logo';">
+                </div>
+                <div id="report-content" class="space-y-12"></div>
+                <div id="download-buttons" class="mt-8 text-center border-t border-gray-700 pt-6 flex flex-col sm:flex-row justify-center gap-4">
+                    <button id="download-pdf" class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-3 transition duration-300">Download as PDF</button>
+                    <button id="download-csv" class="text-white bg-gray-600 hover:bg-gray-500 focus:ring-4 focus:outline-none focus:ring-gray-700 font-medium rounded-lg text-sm px-5 py-3 transition duration-300">Download as CSV</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Message Box for notifications -->
+        <div id="message-box" class="hidden fixed top-20 right-5 bg-red-600 text-white py-2 px-4 rounded-lg shadow-lg z-50 transition-transform duration-300 translate-x-full">
+            <p id="message-text"></p>
+        </div>
+    </main>
+
+    <script>
+        // --- AUTHENTICATION & LOGOUT ---
+        if (sessionStorage.getItem('isLoggedIn') !== 'true') {
+            window.location.href = 'index.html';
+        }
+        document.getElementById('logout-button').addEventListener('click', function() {
+            sessionStorage.removeItem('isLoggedIn');
+            window.location.href = 'index.html';
+        });
+
+        // --- GLOBAL VARIABLES & CONFIG ---
+        const xmlFiles = [ 
+            "data/RD8_Parramatta Goannas_31052025.xml", 
+            "data/RD12_North Shore Bombers_05072025.xml" ];
+        Chart.register(ChartDataLabels);
+        
+        // --- DOM ELEMENT REFERENCES ---
+        const fileSelect = document.getElementById('xml-file-select');
+        const generateBtn = document.getElementById('generate-report-btn');
+        const reportSection = document.getElementById('report-section');
+        const reportContent = document.getElementById('report-content');
+        const reportTitle = document.getElementById('report-title');
+        const teamNamesDisplay = document.getElementById('team-names-display');
+        const downloadPdfBtn = document.getElementById('download-pdf');
+        const downloadCsvBtn = document.getElementById('download-csv');
+        const messageBox = document.getElementById('message-box');
+        const messageText = document.getElementById('message-text');
+
+        // --- STATE ---
+        let reportData = {};
+        let team1Name = 'Team 1';
+        let team2Name = 'Opposition';
+
+        // --- INITIALIZATION ---
+        document.addEventListener('DOMContentLoaded', () => {
+            populateDropdown();
+            generateBtn.addEventListener('click', handleGenerateReport);
+            downloadPdfBtn.addEventListener('click', downloadPDF);
+            downloadCsvBtn.addEventListener('click', downloadCSV);
+        });
+
+        // --- CORE FUNCTIONS ---
+
+        function populateDropdown() {
+            fileSelect.innerHTML = '<option value="">-- Select a Match Report --</option>';
+            xmlFiles.forEach(fileName => {
+                const option = document.createElement('option');
+                option.value = fileName;
+                option.textContent = fileName.replace('data/', '').replace('.xml', '').replace(/_/g, ' ');
+                fileSelect.appendChild(option);
+            });
+        }
+
+        function handleGenerateReport() {
+            const selectedFile = fileSelect.value;
+            if (!selectedFile) {
+                showMessage('Please select a file from the dropdown.');
+                return;
+            }
+            loadAndProcessFile(selectedFile);
+        }
+
+        async function loadAndProcessFile(fileName) {
+            try {
+                const response = await fetch(fileName);
+                if (!response.ok) throw new Error(`Could not load file: ${response.statusText}`);
+                const buffer = await response.arrayBuffer();
+                const decoder = new TextDecoder('utf-16le'); // Assuming UTF-16LE encoding
+                const xmlString = decoder.decode(buffer);
+                const matchDetails = parseFileName(fileName);
+                team2Name = matchDetails.opposition;
+                parseXML(xmlString);
+                generateReport(matchDetails);
+                reportSection.classList.remove('hidden');
+            } catch (error) {
+                console.error("Error loading or parsing file:", error);
+                showMessage(`Failed to load report: ${error.message}`);
+            }
+        }
+
+        function parseFileName(fileName) {
+            const nameWithoutExt = fileName.replace('data/', '').replace('.xml', '');
+            const parts = nameWithoutExt.split('_');
+            const round = parts[0].replace('RD', 'Round ');
+            const dateStr = parts[parts.length - 1];
+            const opposition = parts.slice(1, -1).join(' ');
+            let formattedDate = '';
+            if (dateStr && dateStr.length === 8) {
+                const day = dateStr.substring(0, 2);
+                const month = dateStr.substring(2, 4);
+                const year = dateStr.substring(4, 8);
+                const dateObj = new Date(`${year}-${month}-${day}T00:00:00`);
+                if (!isNaN(dateObj)) {
+                    formattedDate = dateObj.toLocaleDateString('en-AU', { day: 'numeric', month: 'long', year: 'numeric' });
+                }
+            }
+            return { round, opposition, date: formattedDate };
+        }
+
+        function parseXML(xmlString) {
+            const parser = new DOMParser();
+            const xmlDoc = parser.parseFromString(xmlString, "text/xml");
+            const parserError = xmlDoc.getElementsByTagName("parsererror")[0];
+            if (parserError) {
+                console.error("XML Parsing Error:", parserError.textContent);
+                throw new Error("The file is not a valid XML document.");
+            }
+            const allInstancesNode = xmlDoc.getElementsByTagName('ALL_INSTANCES')[0];
+            if (!allInstancesNode) {
+                throw new Error("XML format error: Could not find <ALL_INSTANCES> tag.");
+            }
+            const instances = allInstancesNode.getElementsByTagName('instance');
+            reportData = {};
+            team1Name = 'Team 1';
+            let team1XmlIdentifier = '';
+
+            // First pass: Find our team's name
+            for (let i = 0; i < instances.length; i++) {
+                const codeNode = instances[i].getElementsByTagName('code')[0];
+                if (codeNode) {
+                    const codeText = codeNode.textContent.trim();
+                    if (codeText.toLowerCase().includes('in possession') && !codeText.toLowerCase().includes('opposition')) {
+                        let detectedName = codeText.split(' in Possession')[0].trim();
+                        team1XmlIdentifier = detectedName.toLowerCase();
+                        team1Name = detectedName.charAt(0).toUpperCase() + detectedName.slice(1);
+                        if (team1Name.toLowerCase() === 'cats') team1Name = 'Camden Cats';
+                        break;
+                    }
+                }
+            }
+
+            // Second pass: Process all instances
+            let lastKnownQuarter = 'Q1';
+            for (let i = 0; i < instances.length; i++) {
+                const instance = instances[i];
+                const start = parseFloat(instance.getElementsByTagName('start')[0]?.textContent);
+                const end = parseFloat(instance.getElementsByTagName('end')[0]?.textContent);
+                const code = instance.getElementsByTagName('code')[0]?.textContent.trim();
+                const labelText = instance.getElementsByTagName('label')[0]?.getElementsByTagName('text')[0]?.textContent.trim();
+                
+                if (isNaN(start) || isNaN(end) || !code) continue;
+                if (labelText && labelText.match(/^Q[1-4]$/)) lastKnownQuarter = labelText;
+                
+                const duration = end - start;
+                if (isNaN(duration) || duration < 0) continue;
+
+                if (!reportData[lastKnownQuarter]) {
+                    reportData[lastKnownQuarter] = { totalTime: 0, teamPossession: 0, teamForwardHalf: 0, oppoPossession: 0, oppoForwardHalf: 0, inDispute: 0 };
+                }
+                reportData[lastKnownQuarter].totalTime += duration;
+                
+                if (code.includes('In Dispute')) {
+                    reportData[lastKnownQuarter].inDispute += duration;
+                } else if (code.toLowerCase().includes(team1XmlIdentifier) && code.toLowerCase().includes('possession')) {
+                    if (code.toLowerCase().includes('forward half')) reportData[lastKnownQuarter].teamForwardHalf += duration;
+                    reportData[lastKnownQuarter].teamPossession += duration;
+                } else if (code.toLowerCase().includes('opposition in possession')) {
+                    if (code.toLowerCase().includes('forward half')) reportData[lastKnownQuarter].oppoForwardHalf += duration;
+                    reportData[lastKnownQuarter].oppoPossession += duration;
+                }
+            }
+        }
+
+        function formatTime(totalSeconds) {
+            const minutes = Math.floor(totalSeconds / 60);
+            const seconds = Math.round(totalSeconds % 60);
+            return `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+        }
+
+        function generateReport(matchDetails) {
+            reportContent.innerHTML = '';
+            reportTitle.textContent = `Possession: ${team1Name} vs ${team2Name}`;
+            teamNamesDisplay.textContent = `${matchDetails.round} - ${matchDetails.date}`;
+            
+            const QUARTER_DURATION_SECONDS = 22 * 60; // Standard quarter length for percentage calc
+            const quarters = Object.keys(reportData).sort((a, b) => parseInt(a.replace('Q','')) - parseInt(b.replace('Q','')));
+            
+            quarters.forEach(quarter => {
+                const data = reportData[quarter];
+                const total = data.totalTime;
+                const teamPossessionPercent = total > 0 ? (data.teamPossession / total) * 100 : 0;
+                const oppoPossessionPercent = total > 0 ? (data.oppoPossession / total) * 100 : 0;
+                const inDisputePercent = total > 0 ? (data.inDispute / total) * 100 : 0;
+                const ballInPlayPercent = (total / QUARTER_DURATION_SECONDS * 100);
+
+                const quarterDiv = document.createElement('div');
+                quarterDiv.className = 'border-t border-gray-700 pt-8';
+                quarterDiv.innerHTML = `
+                    <h3 class="text-xl font-semibold mb-6">Quarter ${quarter.replace('Q','')}</h3>
+                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <table class="w-full text-sm">
+                                <thead class="text-xs text-gray-400 uppercase">
+                                    <tr><th class="text-left pb-2">Metric</th><th class="text-center pb-2">Time (MM:SS)</th><th class="text-center pb-2">% of Ball in Play</th></tr>
+                                </thead>
+                                <tbody class="text-gray-300">
+                                    <tr class="border-b border-gray-700/50"><td class="py-3">${team1Name} Possession</td><td class="text-center font-medium text-white">${formatTime(data.teamPossession)}</td><td class="text-center font-medium text-white">${teamPossessionPercent.toFixed(1)}%</td></tr>
+                                    <tr class="border-b border-gray-700/50"><td class="py-3 pl-4 text-gray-400">↳ Forward Half</td><td class="text-center font-medium text-white">${formatTime(data.teamForwardHalf)}</td><td class="text-center font-medium text-white">${(total > 0 ? (data.teamForwardHalf / total) * 100 : 0).toFixed(1)}%</td></tr>
+                                    <tr class="border-b border-gray-700/50"><td class="py-3">${team2Name} Possession</td><td class="text-center font-medium text-white">${formatTime(data.oppoPossession)}</td><td class="text-center font-medium text-white">${oppoPossessionPercent.toFixed(1)}%</td></tr>
+                                    <tr class="border-b border-gray-700/50"><td class="py-3 pl-4 text-gray-400">↳ Forward Half</td><td class="text-center font-medium text-white">${formatTime(data.oppoForwardHalf)}</td><td class="text-center font-medium text-white">${(total > 0 ? (data.oppoForwardHalf / total) * 100 : 0).toFixed(1)}%</td></tr>
+                                    <tr class="border-b border-gray-700/50"><td class="py-3">Ball in Dispute</td><td class="text-center font-medium text-white">${formatTime(data.inDispute)}</td><td class="text-center font-medium text-white">${inDisputePercent.toFixed(1)}%</td></tr>
+                                    <tr class="font-bold"><td class="pt-3 text-white">Total Ball in Play</td><td class="pt-3 text-center text-white">${formatTime(total)}</td><td class="pt-3 text-center text-white" title="Percentage of 22 minute quarter">${ballInPlayPercent.toFixed(1)}%</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="relative h-64"><canvas id="chart-${quarter}"></canvas></div>
+                    </div>`;
+                reportContent.appendChild(quarterDiv);
+
+                const ctx = document.getElementById(`chart-${quarter}`).getContext('2d');
+                new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: [`${team1Name} Possession`, `${team2Name} Possession`, 'Ball in Dispute'],
+                        datasets: [{
+                            data: [teamPossessionPercent, oppoPossessionPercent, inDisputePercent],
+                            backgroundColor: ['#2563eb', '#dc2626', '#6b7280'], // Blue, Red, Gray
+                            borderColor: '#1f2937', // bg-gray-800
+                            borderWidth: 4
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        cutout: '50%',
+                        plugins: {
+                            legend: { display: true, position: 'top', labels: { color: '#d1d5db', font: { family: "'Inter', sans-serif" } } },
+                            tooltip: { callbacks: { label: (c) => `${c.label}: ${c.parsed.toFixed(1)}%` } },
+                            datalabels: {
+                                color: '#fff',
+                                font: { weight: 'bold', size: 14, family: "'Inter', sans-serif" },
+                                formatter: (value) => value < 5 ? '' : value.toFixed(1) + '%'
+                            }
+                        }
+                    }
+                });
+            });
+        }
+
+        function downloadPDF() {
+            const reportElement = document.getElementById('report-section').querySelector('.bg-gray-800');
+            const downloadButtons = document.getElementById('download-buttons');
+            downloadButtons.style.display = 'none';
+
+            html2canvas(reportElement, {
+                scale: 2,
+                useCORS: true,
+                backgroundColor: '#1f2937' // bg-gray-800
+            }).then(canvas => {
+                const imgData = canvas.toDataURL('image/png');
+                const { jsPDF } = window.jspdf;
+                const pdfWidth = 210; // A4 width in mm
+                const pdfHeight = (canvas.height * pdfWidth) / canvas.width;
+                const pdf = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' });
+                pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
+                pdf.save(`${team1Name}_vs_${team2Name}_Possession_Report.pdf`);
+                downloadButtons.style.display = 'flex';
+            }).catch(err => {
+                console.error("Error generating PDF:", err);
+                showMessage("Could not generate PDF.");
+                downloadButtons.style.display = 'flex';
+            });
+        }
+
+        function downloadCSV() {
+            let csvContent = "data:text/csv;charset=utf-8,";
+            csvContent += `Metric,Quarter,Time (MM:SS),Time (s),Percentage of Ball in Play\n`;
+            const quarters = Object.keys(reportData).sort((a, b) => parseInt(a.replace('Q','')) - parseInt(b.replace('Q','')));
+            quarters.forEach(quarter => {
+                const data = reportData[quarter];
+                const total = data.totalTime;
+                const rows = [
+                    [`${team1Name} Possession`, quarter, formatTime(data.teamPossession), data.teamPossession.toFixed(2), total > 0 ? (data.teamPossession / total * 100).toFixed(1) : 0],
+                    [`${team1Name} Fwd Half`, quarter, formatTime(data.teamForwardHalf), data.teamForwardHalf.toFixed(2), total > 0 ? (data.teamForwardHalf / total * 100).toFixed(1) : 0],
+                    [`${team2Name} Possession`, quarter, formatTime(data.oppoPossession), data.oppoPossession.toFixed(2), total > 0 ? (data.oppoPossession / total * 100).toFixed(1) : 0],
+                    [`${team2Name} Fwd Half`, quarter, formatTime(data.oppoForwardHalf), data.oppoForwardHalf.toFixed(2), total > 0 ? (data.oppoForwardHalf / total * 100).toFixed(1) : 0],
+                    ["Ball in Dispute", quarter, formatTime(data.inDispute), data.inDispute.toFixed(2), total > 0 ? (data.inDispute / total * 100).toFixed(1) : 0],
+                    ["Total Ball in Play", quarter, formatTime(total), total.toFixed(2), 100]
+                ];
+                rows.forEach(rowArray => {
+                    csvContent += rowArray.join(",") + "\r\n";
+                });
+            });
+            const encodedUri = encodeURI(csvContent);
+            const link = document.createElement("a");
+            link.setAttribute("href", encodedUri);
+            link.setAttribute("download", `${team1Name}_vs_${team2Name}_Possession_Data.csv`);
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        function showMessage(message) {
+            messageText.textContent = message;
+            messageBox.classList.remove('hidden', 'translate-x-full');
+            setTimeout(() => {
+                messageBox.classList.add('translate-x-full');
+                // Wait for transition to finish before hiding
+                setTimeout(() => messageBox.classList.add('hidden'), 300);
+            }, 3000);
+        }
+    </script>
+</body>
+</html>

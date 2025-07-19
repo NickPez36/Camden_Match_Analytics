@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camden Cats - GPS Match Report</title>
+    
+    <!-- Chart.js for visualizations -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Custom styles to extend Tailwind */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Style for the sortable table headers */
+        .sortable-header {
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .sortable-header:hover {
+            background-color: #374151; /* gray-700 */
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+
+    <!-- Header -->
+    <header class="bg-gray-800/50 backdrop-blur-sm shadow-md sticky top-0 z-20">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <a href="landing.html" class="flex items-center">
+                        <img src="assets/camden_cats_logo.jpg" alt="Camden Cats Logo" class="h-10 w-10 rounded-full object-cover" 
+                             onerror="this.onerror=null; this.src='https://placehold.co/40x40/1a202c/ffffff?text=Logo';">
+                        <span class="ml-3 font-semibold text-xl">Camden Cats Analytics</span>
+                    </a>
+                </div>
+                <div class="flex items-center space-x-4">
+                     <a href="landing.html" class="text-sm font-medium text-gray-400 hover:text-white transition-colors duration-200">Back to Dashboard</a>
+                    <button id="logout-button" class="text-sm font-medium text-gray-400 hover:text-white transition-colors duration-200">Logout</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="text-center">
+            <h1 class="text-4xl font-bold tracking-tight">AFL GPS Match Report</h1>
+            <p class="mt-3 max-w-2xl mx-auto text-lg text-gray-400">Select a game to generate a performance report.</p>
+        </div>
+
+        <!-- File Loader -->
+        <div class="mt-8 max-w-2xl mx-auto bg-gray-800 shadow-lg rounded-xl p-6">
+             <h2 class="text-lg font-semibold text-white">Select Game Data File</h2>
+             <div class="flex flex-col sm:flex-row gap-4 items-end mt-4">
+                <div class="flex-grow w-full">
+                    <label for="file-selector" class="sr-only">Game File</label>
+                    <select id="file-selector" class="w-full bg-gray-700 border border-gray-600 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-3">
+                        <option value="">-- Please choose a game --</option>
+                    </select>
+                </div>
+                <button id="load-file-btn" class="w-full sm:w-auto text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-3 text-center transition duration-300 ease-in-out flex-shrink-0">Load</button>
+             </div>
+             <div id="loading-indicator" class="hidden text-center mt-4"><p class="text-gray-400">Loading data...</p></div>
+        </div>
+
+        <!-- Content Area: Filters and Reports -->
+        <div id="content-area" class="hidden mt-8">
+            <!-- Filters -->
+            <div id="filters" class="max-w-2xl mx-auto bg-gray-800 shadow-lg rounded-xl p-6">
+                 <h2 class="text-lg font-semibold text-white">Filters</h2>
+                <div class="mt-4">
+                    <label for="player-filter" class="block mb-2 text-sm font-medium text-gray-300">Player Name (for Individual View)</label>
+                    <select id="player-filter" class="w-full bg-gray-700 border border-gray-600 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-3">
+                        <option value="all">All Players</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- View Switcher -->
+            <div class="mt-8 mb-4 flex justify-center space-x-2 bg-gray-800 p-1 rounded-lg max-w-xs mx-auto">
+                <button id="btn-team-view" class="w-full py-2 px-4 rounded-md text-sm font-medium">Team Summary</button>
+                <button id="btn-individual-view" class="w-full py-2 px-4 rounded-md text-sm font-medium">Individual Report</button>
+            </div>
+
+            <!-- Report Containers -->
+            <div id="team-summary-container" class="mt-8"></div>
+            <div id="individual-report-container" class="mt-8"></div>
+            <div id="no-results" class="hidden text-center py-16 bg-gray-800 rounded-xl">
+                <h3 class="text-xl font-bold">No matching data found.</h3>
+                <p class="text-gray-400 mt-2">Try adjusting your filters.</p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // --- AUTHENTICATION CHECK ---
+        if (sessionStorage.getItem('isLoggedIn') !== 'true') {
+            window.location.href = 'index.html';
+        }
+        document.getElementById('logout-button').addEventListener('click', function() {
+            sessionStorage.removeItem('isLoggedIn');
+            window.location.href = 'index.html';
+        });
+
+        // --- DOM ELEMENT REFERENCES ---
+        const fileSelector = document.getElementById('file-selector');
+        const loadFileBtn = document.getElementById('load-file-btn');
+        const loadingIndicator = document.getElementById('loading-indicator');
+        const contentArea = document.getElementById('content-area');
+        const playerFilter = document.getElementById('player-filter');
+        const teamContainer = document.getElementById('team-summary-container');
+        const individualContainer = document.getElementById('individual-report-container');
+        const noResultsMessage = document.getElementById('no-results');
+        const btnTeamView = document.getElementById('btn-team-view');
+        const btnIndividualView = document.getElementById('btn-individual-view');
+
+        // --- STATE AND CONFIGURATION ---
+        let fullData = [];
+        let currentView = 'team';
+        let sortState = { key: 'Player Name', direction: 'asc' };
+        let activeCharts = [];
+        
+        // List of CSV files available in the 'data' folder
+        const csvFiles = [ 
+            'data/RD1_Parramatta Goannas_29032025_GPS.csv',
+            'data/RD8_Parramatta Goannas_31052025_GPS.csv',
+            'data/RD9_Inner West_14062025_GPS.csv', 
+            'data/RD10_USYD_21062025_GPS.csv', 
+            'data/RD11_UNSW_28062025_GPS.csv' 
+        ];
+
+        // --- DATA PROCESSING LOGIC ---
+        
+        // Initialize the application
+        function initializeApp() {
+            // Populate file selector dropdown
+            csvFiles.forEach(fileName => {
+                const option = document.createElement('option');
+                option.value = fileName;
+                // Clean up file name for display
+                option.textContent = fileName.replace('data/', '').replace(/_/g, ' ').replace('.csv', '').replace(' GPS', '');
+                fileSelector.appendChild(option);
+            });
+
+            // Add event listeners
+            loadFileBtn.addEventListener('click', loadSelectedFile);
+            playerFilter.addEventListener('change', render);
+            btnTeamView.addEventListener('click', () => setView('team'));
+            btnIndividualView.addEventListener('click', () => setView('individual'));
+        }
+
+        // Fetch and process the selected CSV file
+        async function loadSelectedFile() {
+            const fileName = fileSelector.value;
+            if (!fileName) {
+                alert('Please select a file to load.');
+                return;
+            }
+            loadingIndicator.classList.remove('hidden');
+            contentArea.classList.add('hidden');
+            try {
+                const response = await fetch(fileName);
+                if (!response.ok) throw new Error(`Network response was not ok. Could not find file: ${fileName}`);
+                const csvText = await response.text();
+                processData(csvText);
+            } catch (error) {
+                console.error('Error loading or processing file:', error);
+                alert(`Failed to load the file: ${fileName}. Make sure it exists in your repository and the path is correct.`);
+            } finally {
+                loadingIndicator.classList.add('hidden');
+            }
+        }
+
+        // Parse CSV text into a usable data structure
+        function processData(csvText) {
+            const lines = csvText.trim().split(/\r\n|\n/);
+            const headers = lines[0].split(',').map(h => h.trim().replace(/"/g, '').toLowerCase());
+            
+            fullData = lines.slice(1).map(line => {
+                const values = line.split(',');
+                if (values.length !== headers.length) return null;
+                const row = headers.reduce((obj, header, i) => {
+                    obj[header] = values[i].trim().replace(/"/g, '');
+                    return obj;
+                }, {});
+                // Convert top speed from m/s to km/h
+                if (row['top speed [m/s]']) {
+                    row['top speed [km/h]'] = (parseFloat(row['top speed [m/s]']) * 3.6).toFixed(1);
+                }
+                return row;
+            }).filter(row => row && row['segment name'] && row['segment name'].toLowerCase() !== 'game total'); // Exclude 'game total' rows
+
+            if (fullData.length === 0) {
+                alert("No valid quarter-by-quarter data found in the selected file.");
+                return;
+            }
+            populateFilters();
+            contentArea.classList.remove('hidden');
+            setView('team'); // Default to team view
+        }
+
+        // Populate filter dropdowns based on loaded data
+        function populateFilters() {
+            const players = [...new Set(fullData.map(row => row['player name']))].sort();
+            playerFilter.innerHTML = '<option value="all">All Players</option>';
+            players.forEach(player => {
+                const option = new Option(player, player);
+                playerFilter.add(option);
+            });
+        }
+
+        // --- RENDERING LOGIC ---
+
+        // Set the current view (Team or Individual)
+        function setView(viewName) {
+            currentView = viewName;
+            // Update button styles
+            btnTeamView.className = `w-full py-2 px-4 rounded-md text-sm font-medium transition-colors ${viewName === 'team' ? 'bg-blue-600 text-white' : 'text-gray-300 hover:bg-gray-700'}`;
+            btnIndividualView.className = `w-full py-2 px-4 rounded-md text-sm font-medium transition-colors ${viewName === 'individual' ? 'bg-blue-600 text-white' : 'text-gray-300 hover:bg-gray-700'}`;
+            render();
+        }
+
+        // Main render function
+        function render() {
+            activeCharts.forEach(chart => chart.destroy());
+            activeCharts = [];
+            teamContainer.innerHTML = '';
+            individualContainer.innerHTML = '';
+            noResultsMessage.classList.add('hidden');
+
+            if (fullData.length === 0) {
+                noResultsMessage.classList.remove('hidden');
+                return;
+            }
+
+            teamContainer.classList.toggle('hidden', currentView !== 'team');
+            individualContainer.classList.toggle('hidden', currentView !== 'individual');
+
+            if (currentView === 'team') {
+                renderTeamSummary();
+            } else {
+                renderIndividualReport();
+            }
+        }
+        
+        // Render the team summary table
+        function renderTeamSummary() {
+            const summaryData = calculateTeamSummary();
+            // Sort data based on current sort state
+            summaryData.sort((a, b) => {
+                const key = sortState.key;
+                const direction = sortState.direction === 'asc' ? 1 : -1;
+                const valA = key === 'Player Name' ? a.playerName.toLowerCase() : parseFloat(a.metrics[key]) || -Infinity;
+                const valB = key === 'Player Name' ? b.playerName.toLowerCase() : parseFloat(b.metrics[key]) || -Infinity;
+                if (valA < valB) return -1 * direction;
+                if (valA > valB) return 1 * direction;
+                return 0;
+            });
+
+            const headers = ['Player Name', 'Total Distance [m]', 'Hard Running [m]', 'Sprint Distance [m]', 'Sprint Efforts', 'Work Rate [m/min]', 'Top Speed [km/h]'];
+            
+            let tableHTML = `<div class="bg-gray-800 shadow-lg rounded-xl overflow-x-auto"><table class="w-full text-sm text-left text-gray-400">
+                <thead class="text-xs text-gray-400 uppercase bg-gray-700"><tr>`;
+            
+            headers.forEach(h => {
+                const sortIndicator = sortState.key === h ? (sortState.direction === 'asc' ? ' ▲' : ' ▼') : '';
+                tableHTML += `<th scope="col" class="px-6 py-3 sortable-header" data-sort-key="${h}">${h}${sortIndicator}</th>`;
+            });
+            tableHTML += `</tr></thead><tbody>`;
+
+            summaryData.forEach(player => {
+                tableHTML += `<tr class="border-b border-gray-700 hover:bg-gray-600/50">
+                    <th scope="row" class="px-6 py-4 font-medium text-white whitespace-nowrap">${player.playerName}</th>`;
+                headers.slice(1).forEach(header => {
+                    const value = player.metrics[header] || 'N/A';
+                    tableHTML += `<td class="px-6 py-4">${value}</td>`;
+                });
+                tableHTML += `</tr>`;
+            });
+
+            tableHTML += `</tbody></table></div>`;
+            teamContainer.innerHTML = tableHTML;
+            
+            // Add event listeners for sorting
+            teamContainer.querySelectorAll('.sortable-header').forEach(th => {
+                th.addEventListener('click', (e) => {
+                    const key = e.currentTarget.dataset.sortKey;
+                    if (sortState.key === key) {
+                        sortState.direction = sortState.direction === 'asc' ? 'desc' : 'asc';
+                    } else {
+                        sortState.key = key;
+                        sortState.direction = key === 'Player Name' ? 'asc' : 'desc';
+                    }
+                    render();
+                });
+            });
+        }
+
+        // Calculate aggregated data for the team summary
+        function calculateTeamSummary() {
+            const groupedByPlayer = fullData.reduce((acc, row) => {
+                const playerName = row['player name'];
+                (acc[playerName] = acc[playerName] || []).push(row);
+                return acc;
+            }, {});
+
+            return Object.entries(groupedByPlayer).map(([playerName, rows]) => {
+                const metrics = {};
+                // Sum metrics
+                ['Total Distance [m]', 'Hard Running [m]', 'Sprint Distance [m]', 'Sprint Efforts'].forEach(metric => {
+                    metrics[metric] = rows.reduce((sum, row) => sum + (parseFloat(row[metric.toLowerCase()]) || 0), 0).toFixed(1);
+                });
+                // Average metrics
+                ['Work Rate [m/min]', 'Top Speed [km/h]'].forEach(metric => {
+                    const key = metric === 'Top Speed [km/h]' ? 'top speed [km/h]' : 'work rate [m/min]';
+                    const values = rows.map(row => parseFloat(row[key])).filter(v => !isNaN(v));
+                    metrics[metric] = values.length > 0 ? (values.reduce((s, v) => s + v, 0) / values.length).toFixed(1) : 'N/A';
+                });
+                return { playerName, metrics };
+            });
+        }
+        
+        // Render the detailed report for an individual player
+        function renderIndividualReport() {
+            const selectedPlayer = playerFilter.value;
+            if (selectedPlayer === 'all') {
+                individualContainer.innerHTML = `<div class="bg-gray-800 rounded-xl p-8 text-center"><p class="text-gray-400">Please select a player to view their detailed report.</p></div>`;
+                return;
+            }
+            
+            const playerData = fullData.filter(row => row['player name'] === selectedPlayer);
+            if (playerData.length === 0) {
+                individualContainer.innerHTML = `<div class="bg-gray-800 rounded-xl p-8 text-center"><p class="text-gray-400">No data available for ${selectedPlayer}.</p></div>`;
+                return;
+            }
+
+            playerData.sort((a, b) => a['segment name'].localeCompare(b['segment name']));
+            
+            let reportHTML = `<div class="bg-gray-800 shadow-lg rounded-xl p-6 sm:p-8">
+                <div class="flex flex-col sm:flex-row justify-between sm:items-center mb-6">
+                    <h2 class="text-2xl font-bold text-white">${selectedPlayer}</h2>
+                    <span class="text-sm text-gray-400 mt-2 sm:mt-0">${playerData[0]['event description']} - ${playerData[0]['date']}</span>
+                </div>
+                <div class="space-y-8">`;
+
+            playerData.forEach((quarterData, index) => {
+                const getVal = (key) => parseFloat(quarterData[key.toLowerCase()]) || 0;
+                
+                const totalDist = getVal('Total Distance [m]');
+                const sprintDist = getVal('Sprint Distance [m]');
+                const hardRunDist = getVal('Hard Running [m]');
+                const runDist = getVal('Run distance [m]');
+                const jogDist = getVal('Jog Distance [m]');
+                const transitionDist = Math.max(0, runDist - hardRunDist) + jogDist;
+                const walkingDist = Math.max(0, totalDist - (sprintDist + hardRunDist + transitionDist));
+
+                const chartDataValues = [sprintDist, hardRunDist, transitionDist, walkingDist];
+                const chartLabels = ['Sprint', 'Hard Run', 'Transition', 'Walk/Jog'];
+                const chartColors = ['#ef4444', '#f97316', '#3b82f6', '#8b5cf6'];
+
+                reportHTML += `<div class="border-t border-gray-700 pt-8">
+                    <h3 class="text-xl font-semibold mb-6">${quarterData['segment name']}</h3>
+                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                        <div class="relative h-64">
+                            <canvas id="chart-${index}"></canvas>
+                            <div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+                                <span class="text-4xl font-extrabold text-white">${totalDist.toFixed(0)}</span>
+                                <span class="text-sm text-gray-400">Total Metres</span>
+                            </div>
+                        </div>
+                        <div>
+                            <table class="w-full text-sm"><tbody>`;
+                
+                chartLabels.forEach((label, i) => {
+                    reportHTML += `<tr class="border-b border-gray-700/50"><td class="py-3 text-gray-400 flex items-center"><span class="w-3 h-3 rounded-sm mr-3" style="background-color: ${chartColors[i]}"></span>${label}</td><td class="py-3 text-right font-semibold text-white">${chartDataValues[i].toFixed(0)} m</td></tr>`;
+                });
+
+                ['Sprint Efforts', 'Hard Running Efforts', 'Work Rate [m/min]', 'Top Speed [km/h]'].forEach(metric => {
+                    const key = metric === 'Top Speed [km/h]' ? 'top speed [km/h]' : metric.toLowerCase();
+                    const value = quarterData[key] || 'N/A';
+                    const unit = metric.includes('km/h') ? ' km/h' : (metric.includes('m/min') ? ' m/min' : '');
+                    reportHTML += `<tr class="border-b border-gray-700/50"><td class="py-3 text-gray-400">${metric.replace(/\[.*?\]/g, '').trim()}</td><td class="py-3 text-right font-semibold text-white">${value}${unit}</td></tr>`;
+                });
+
+                reportHTML += `</tbody></table></div></div></div>`;
+            });
+
+            reportHTML += `</div></div>`;
+            individualContainer.innerHTML = reportHTML;
+
+            // Initialize charts
+            playerData.forEach((quarterData, index) => {
+                const ctx = document.getElementById(`chart-${index}`).getContext('2d');
+                const getVal = (key) => parseFloat(quarterData[key.toLowerCase()]) || 0;
+                
+                const totalDist = getVal('Total Distance [m]');
+                const sprintDist = getVal('Sprint Distance [m]');
+                const hardRunDist = getVal('Hard Running [m]');
+                const runDist = getVal('Run distance [m]');
+                const jogDist = getVal('Jog Distance [m]');
+                const transitionDist = Math.max(0, runDist - hardRunDist) + jogDist;
+                const walkingDist = Math.max(0, totalDist - (sprintDist + hardRunDist + transitionDist));
+                
+                activeCharts.push(new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Sprint', 'Hard Run', 'Transition', 'Walk/Jog'],
+                        datasets: [{
+                            data: [sprintDist, hardRunDist, transitionDist, walkingDist],
+                            backgroundColor: ['#ef4444', '#f97316', '#3b82f6', '#8b5cf6'],
+                            borderColor: '#1f2937', // bg-gray-800
+                            borderWidth: 4
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        cutout: '75%',
+                        plugins: {
+                            legend: { display: false },
+                            tooltip: {
+                                enabled: true,
+                                backgroundColor: '#111827', // bg-gray-900
+                                titleFont: { size: 14, weight: 'bold' },
+                                bodyFont: { size: 12 },
+                                displayColors: false,
+                                callbacks: {
+                                    label: (context) => {
+                                        const value = context.raw || 0;
+                                        const percentage = totalDist > 0 ? (value / totalDist * 100).toFixed(1) : 0;
+                                        return `${context.label}: ${value.toFixed(0)}m (${percentage}%)`;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }));
+            });
+        }
+
+        // --- INITIALIZATION ---
+        initializeApp();
+    </script>
+</body>
+</html>
