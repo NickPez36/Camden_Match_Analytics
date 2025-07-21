@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camden Cats - Team Statistics Report</title>
+    
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Chart.js for data visualization -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Chart.js Datalabels Plugin for displaying labels on charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Custom styles to complement Tailwind */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .card {
+            background-color: #1f2937; /* bg-gray-800 */
+            border-radius: 0.75rem; /* rounded-xl */
+            padding: 1.5rem; /* p-6 */
+        }
+        .stat-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #374151; /* border-gray-700 */
+        }
+        .stat-item:last-child {
+            border-bottom: none;
+        }
+        .stat-name {
+            color: #d1d5db; /* text-gray-300 */
+        }
+        .stat-value {
+            color: #ffffff; /* text-white */
+            font-weight: 600; /* font-semibold */
+            background-color: #374151; /* bg-gray-700 */
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px; /* rounded-full */
+            font-size: 0.875rem;
+        }
+        .donut-chart-container { position: relative; height: 250px; width: 250px; margin: auto; }
+        .donut-chart-total {
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            text-align: center; pointer-events: none;
+        }
+        .donut-chart-total .total-number { font-size: 2.25rem; font-weight: 800; color: #ffffff; }
+        .donut-chart-total .total-label { font-size: 0.875rem; color: #9ca3af; text-transform: uppercase; }
+        .key-stat-card {
+            background-color: #374151; border-radius: 0.5rem; padding: 1rem;
+            text-align: center; border-left: 4px solid #3b82f6;
+        }
+        .key-stat-card-title { font-size: 0.875rem; font-weight: 500; color: #d1d5db; margin-bottom: 0.25rem; }
+        .key-stat-card-value { font-size: 2.25rem; font-weight: 800; color: #ffffff; }
+        
+        .view-toggle-button {
+            background-color: #374151; /* bg-gray-700 */
+            color: #d1d5db; /* text-gray-300 */
+            padding: 0.5rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: all 0.2s;
+            border: 1px solid transparent;
+        }
+        .view-toggle-button.active {
+            background-color: #3b82f6; /* bg-blue-600 */
+            color: white;
+        }
+        .qxq-table { width: 100%; border-collapse: collapse; }
+        .qxq-table th, .qxq-table td { padding: 0.75rem; text-align: left; border-bottom: 1px solid #374151; }
+        .qxq-table th { background-color: #1f2937; font-weight: 600; color: #9ca3af; text-align: center; }
+        .qxq-table td { text-align: center; }
+        .qxq-table .stat-name-col { text-align: left; font-weight: 500; color: #d1d5db; }
+        .qxq-table .group-header td {
+            background-color: #111827;
+            color: white;
+            font-weight: 700;
+            text-align: left;
+            padding-left: 1rem;
+        }
+        .qxq-table .highlight-good { background-color: rgba(16, 185, 129, 0.2); }
+        .qxq-table .highlight-bad { background-color: rgba(239, 68, 68, 0.2); }
+        .qxq-table .highlight-neutral { background-color: rgba(252, 211, 77, 0.2); }
+        .qxq-table .total-col { font-weight: 700; border-left: 1px solid #4b5563; }
+        .qxq-table .avg-col { font-weight: 700; }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+
+    <!-- Header -->
+    <header class="bg-gray-800/50 backdrop-blur-sm shadow-md sticky top-0 z-20">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <a href="landing.html" class="flex items-center">
+                        <img src="assets/camden_cats_logo.jpg" alt="Camden Cats Logo" class="h-10 w-10 rounded-full object-cover" 
+                             onerror="this.onerror=null; this.src='https://placehold.co/40x40/1a202c/ffffff?text=Logo';">
+                        <span class="ml-3 font-semibold text-xl">Camden Cats Analytics</span>
+                    </a>
+                </div>
+                <div class="flex items-center space-x-4">
+                     <a href="landing.html" class="text-sm font-medium text-gray-400 hover:text-white transition-colors duration-200">Back to Dashboard</a>
+                    <button id="logout-button" class="text-sm font-medium text-gray-400 hover:text-white transition-colors duration-200">Logout</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="text-center">
+            <h1 class="text-4xl font-bold tracking-tight">AFL Team Statistics Report</h1>
+            <p class="mt-3 max-w-2xl mx-auto text-lg text-gray-400">Select a game to generate a post-game report.</p>
+        </div>
+
+        <!-- File Loader -->
+        <div class="mt-8 max-w-2xl mx-auto bg-gray-800 shadow-lg rounded-xl p-6">
+             <h2 class="text-lg font-semibold text-white">Select Game Data File</h2>
+             <div class="mt-4">
+                <label for="file-selector" class="sr-only">Game File</label>
+                <select id="file-selector" class="w-full bg-gray-700 border border-gray-600 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-3"></select>
+             </div>
+             <div id="loading-indicator" class="hidden text-center mt-4"><p class="text-gray-400">Loading data...</p></div>
+        </div>
+
+        <div id="initial-message" class="text-center py-16 mt-8 bg-gray-800 rounded-xl">
+            <h3 class="mt-2 text-lg font-medium text-white">No file selected</h3>
+            <p class="mt-1 text-sm text-gray-400">Your report will appear here once you select a file.</p>
+        </div>
+
+        <!-- This container will hold all report content, hidden by default -->
+        <div id="report-content-wrapper" class="hidden mt-8 max-w-7xl mx-auto">
+            <!-- View Toggles -->
+            <div id="view-toggle-container" class="flex justify-center mb-8 p-1 bg-gray-800 rounded-lg max-w-xs mx-auto">
+                <button id="summary-toggle" class="view-toggle-button w-full">Match Summary</button>
+                <button id="qxq-toggle" class="view-toggle-button w-full">Quarter by Quarter</button>
+            </div>
+
+            <!-- Match Summary View -->
+            <main id="summary-view" class="space-y-8">
+                <section id="summary-match-details" class="card"></section>
+                <section id="stoppage-analysis" class="card"></section>
+                <section id="inside-50-analysis" class="card"></section>
+                <section id="key-stats-section" class="card"></section>
+                <section id="detailed-stats-section" class="grid grid-cols-1 lg:grid-cols-2 gap-8"></section>
+            </main>
+
+            <!-- Quarter by Quarter View -->
+            <main id="qxq-view" class="hidden space-y-8">
+                <section id="qxq-match-details" class="card"></section>
+                <div class="card overflow-x-auto">
+                    <div id="qxq-table-container"></div>
+                </div>
+            </main>
+        </div>
+    </main>
+
+    <script>
+        // --- AUTHENTICATION CHECK ---
+        if (sessionStorage.getItem('isLoggedIn') !== 'true') {
+            window.location.href = 'index.html';
+        }
+        document.getElementById('logout-button').addEventListener('click', function() {
+            sessionStorage.removeItem('isLoggedIn');
+            window.location.href = 'index.html';
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            Chart.register(ChartDataLabels);
+
+            // --- CONFIGURATION ---
+            const TEAM_STATS_FILES = [
+                "data/RD11_UNSW_28062025_TeamStatistics.csv",
+                "data/RD12_North Shore_07072025_TeamStatistics.csv"
+                // Add more team statistics files here
+            ];
+            const PRELOAD_FILENAME = "RD12_North Shore_07072025_TeamStatistics.csv";
+
+            // --- DOM REFERENCES ---
+            const fileSelector = document.getElementById('file-selector');
+            const initialMessage = document.getElementById('initial-message');
+            const reportWrapper = document.getElementById('report-content-wrapper');
+            const summaryView = document.getElementById('summary-view');
+            const qxqView = document.getElementById('qxq-view');
+            const summaryToggle = document.getElementById('summary-toggle');
+            const qxqToggle = document.getElementById('qxq-toggle');
+            const viewToggleContainer = document.getElementById('view-toggle-container');
+            
+            let stoppageCharts = {};
+            let i50Chart = null;
+
+            // --- INITIALIZATION ---
+            function initialize() {
+                fileSelector.innerHTML = '<option value="">Select a match file</option>';
+                TEAM_STATS_FILES.forEach(filePath => {
+                    const option = document.createElement('option');
+                    option.value = filePath;
+                    option.textContent = filePath.split('/').pop().replace(/_/g, ' ').replace(' TeamStatistics.csv', '');
+                    fileSelector.appendChild(option);
+                });
+                fileSelector.addEventListener('change', (e) => loadAndProcessFile(e.target.value));
+
+                const preloadFilePath = TEAM_STATS_FILES.find(path => path.endsWith(PRELOAD_FILENAME));
+                if (preloadFilePath) {
+                    fileSelector.value = preloadFilePath;
+                    loadAndProcessFile(preloadFilePath);
+                } else {
+                     initialMessage.classList.remove('hidden');
+                }
+            }
+            
+            async function loadAndProcessFile(filePath) {
+                if (!filePath) {
+                    initialMessage.classList.remove('hidden');
+                    reportWrapper.classList.add('hidden');
+                    return;
+                }
+                
+                try {
+                    const response = await fetch(filePath);
+                    if (!response.ok) throw new Error(`Network response was not ok for ${filePath}`);
+                    const csvText = await response.text();
+                    
+                    const matchDetails = parseFileName(filePath.split('/').pop());
+                    processCsvData(csvText, matchDetails);
+
+                } catch (error) {
+                    console.error("Error loading or processing file:", error);
+                    alert(`Failed to load report: ${error.message}`);
+                    initialMessage.classList.remove('hidden');
+                    reportWrapper.classList.add('hidden');
+                }
+            }
+            
+            function parseFileName(fileName) {
+                const nameWithoutExt = fileName.replace('.csv', '');
+                const parts = nameWithoutExt.split('_');
+                let details = { round: 'N/A', opposition: 'N/A', date: 'N/A' };
+                if (parts.length >= 4) {
+                    details.round = parts[0].replace('RD', 'Round ');
+                    details.opposition = parts[1];
+                    const dateStr = parts[2];
+                     if (dateStr && dateStr.length === 8) {
+                        const day = dateStr.substring(0, 2);
+                        const month = dateStr.substring(2, 4);
+                        const year = dateStr.substring(4, 8);
+                        const dateObj = new Date(`${year}-${month}-${day}T00:00:00`);
+                        if (!isNaN(dateObj)) {
+                            details.date = dateObj.toLocaleDateString('en-AU', { day: 'numeric', month: 'long', year: 'numeric' });
+                        }
+                    }
+                }
+                return details;
+            }
+
+            function processCsvData(csv, matchDetails) {
+                const lines = csv.split(/\r\n|\n/).filter(line => line.trim() !== '');
+                if (lines.length < 2) {
+                    alert('CSV file is empty or has no data rows.');
+                    return;
+                }
+                
+                const headers = lines[0].split(',').map(h => h.trim());
+                const allStats = lines.slice(1).map(row => {
+                    const values = row.split(',');
+                    const statData = {};
+                    headers.forEach((header, i) => { statData[header] = values[i] ? values[i].trim() : ''; });
+                    return statData;
+                });
+
+                // Correctly get the match result from the first data row's "Result" column.
+                matchDetails.result = allStats[0] ? allStats[0].Result.trim() : 'N/A';
+                
+                displayReport(allStats, matchDetails);
+            }
+
+            function displayReport(allStats, matchDetails) {
+                initialMessage.style.display = 'none';
+                reportWrapper.classList.remove('hidden');
+                
+                const summaryData = buildSummaryData(allStats);
+                renderMatchDetailsCard(matchDetails);
+                renderSummaryView(summaryData, matchDetails);
+
+                const isQxqAvailable = allStats[0] && allStats[0].hasOwnProperty('Q1_Count');
+                if (isQxqAvailable) {
+                    viewToggleContainer.style.display = 'flex';
+                    renderQxqView(allStats, matchDetails);
+                    // Set default view
+                    summaryView.classList.remove('hidden');
+                    qxqView.classList.add('hidden');
+                    summaryToggle.classList.add('active');
+                    qxqToggle.classList.remove('active');
+                } else {
+                    viewToggleContainer.style.display = 'none';
+                    summaryView.classList.remove('hidden');
+                    qxqView.classList.add('hidden');
+                }
+            }
+
+            function renderMatchDetailsCard(matchDetails) {
+                const resultColor = matchDetails.result.toLowerCase() === 'win' ? 'bg-green-500' : 'bg-red-500';
+                const resultText = matchDetails.result.toLowerCase() === 'win' ? 'Match Won' : 'Camden Lost';
+                const html = `<div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                                <div>
+                                    <h2 class="text-3xl font-bold text-white">vs ${matchDetails.opposition}</h2>
+                                    <p class="text-lg text-gray-400 mt-1">${matchDetails.round}  •  ${matchDetails.date}</p>
+                                </div>
+                                <div class="${resultColor} text-white text-lg font-bold px-4 py-2 rounded-lg">${resultText}</div>
+                              </div>`;
+                document.getElementById('summary-match-details').innerHTML = html;
+                document.getElementById('qxq-match-details').innerHTML = html;
+            }
+
+            function buildSummaryData(allStats) {
+                 const summary = {
+                    teamStats: [], oppoStats: [], stoppageData: { 'Centre': {}, 'Between Arcs': {}, 'Forward 50': {}, 'Defensive 50': {} },
+                    i50Data: {}, teamScoringData: {}, oppoEfficiencyData: {}, keyStats: {}
+                };
+                
+                allStats.forEach(stat => {
+                    const total = parseInt(stat.Game_Count) || 0;
+                    const name = stat.Statistic;
+                    const stoppageMatch = name.match(/(.*) Stoppage (Win|Loss|Neutral)/i);
+                    
+                    if (['Defensive 50 Mark', 'Inside 50 Mark - Uncontested', 'Inside 50 Mark - Contested', 'Fast Rebound 50', 'Chase Down Tackle', 'Fast Through The Middle', 'Forward HB', 'Handball Recieve', 'Inside 45 kick', 'Switch and Release', 'Switch and Slow'].includes(name)) {
+                        summary.keyStats[name] = total;
+                    } else if (name === 'Inside 50 (Drop Zone)') {
+                        summary.i50Data.dropZone = total;
+                    } else if (name === 'Inside 50 (Rebound Zone)') {
+                        summary.i50Data.reboundZone = total;
+                    } else if (name === 'Inside 50') {
+                        summary.i50Data.total = total;
+                    } else if (name === 'Behind - Set Shot') {
+                        summary.teamScoringData.behindSet = total;
+                    } else if (name === 'Behind - Field Play') {
+                        summary.teamScoringData.behindField = total;
+                    } else if (name === 'Goal - Field Play') {
+                        summary.teamScoringData.goalField = total;
+                    } else if (name === 'Goal - Set Shot') {
+                        summary.teamScoringData.goalSet = total;
+                    } else if (stoppageMatch) {
+                        const type = stoppageMatch[1].trim();
+                        const outcome = stoppageMatch[2].trim().toLowerCase();
+                        if (summary.stoppageData[type]) summary.stoppageData[type][outcome] = total;
+                    } else if (name === 'Oppo Behind - Set Shot') {
+                        summary.oppoEfficiencyData.behindSet = total;
+                    } else if (name === 'Oppo Behind - Field Play') {
+                        summary.oppoEfficiencyData.behindField = total;
+                    } else if (name === 'Oppo Goal - Field Play') {
+                        summary.oppoEfficiencyData.goalField = total;
+                    } else if (name === 'Oppo Goal - Set Shot') {
+                        summary.oppoEfficiencyData.goalSet = total;
+                    } else if (name === 'Oppo Forward 50 Entry (Fast)') {
+                        summary.oppoEfficiencyData.i50fast = total;
+                    } else if (name === 'Oppo Forward 50 Entry (Slow)') {
+                        summary.oppoEfficiencyData.i50slow = total;
+                    } else if (name.toLowerCase().includes('oppo')) {
+                        summary.oppoStats.push({ name, value: total });
+                    } else if (!summary.keyStats.hasOwnProperty(name) && !stoppageMatch && name !== 'Result' && !name.includes('Inside 50 (') && !name.includes('Goal -') && !name.includes('Behind -') && !name.includes('Score Margins') && !name.includes('Change in Score')) {
+                         summary.teamStats.push({ name, value: total });
+                    }
+                });
+                return summary;
+            }
+            
+            function renderSummaryView(summaryData, matchDetails) {
+                const { teamStats, oppoStats, stoppageData, i50Data, teamScoringData, oppoEfficiencyData, keyStats } = summaryData;
+
+                const stoppageEl = document.getElementById('stoppage-analysis');
+                stoppageEl.innerHTML = `<h3 class="text-2xl font-bold mb-6 text-center">Stoppage Analysis</h3><div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center"><div id="summary-stoppage-centre"></div><div id="summary-stoppage-between-arcs"></div><div id="summary-stoppage-forward-50"></div><div id="summary-stoppage-defensive-50"></div></div>`;
+                renderStoppageCharts(stoppageData);
+
+                const i50El = document.getElementById('inside-50-analysis');
+                i50El.innerHTML = `<h3 class="text-2xl font-bold mb-6 text-center">Inside 50 Analysis</h3><div class="flex flex-col items-center"><div id="summary-i50-chart-container" class="text-center w-full max-w-sm"></div><div class="mt-6 space-y-2 text-lg text-center"><p id="summary-i50-efficiency-text"></p><p id="summary-oppo-i50-efficiency-text"></p></div></div>`;
+                renderInside50Chart(i50Data);
+                displayI50Efficiency(i50Data.total, teamScoringData, matchDetails);
+                displayOppoI50Efficiency(oppoEfficiencyData, matchDetails);
+
+                const keyStatsEl = document.getElementById('key-stats-section');
+                keyStatsEl.innerHTML = `<h3 class="text-2xl font-bold mb-6 text-center">Key Team Stats</h3><div id="summary-key-stats-grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4"></div>`;
+                renderKeyStatsCards(keyStats);
+                
+                const detailedStatsEl = document.getElementById('detailed-stats-section');
+                detailedStatsEl.innerHTML = `<div class="card"><h3 class="text-xl font-bold mb-4">Camden Cats Stats</h3><div id="summary-team-stats-list"></div></div><div class="card"><h3 class="text-xl font-bold mb-4">${matchDetails.opposition}'s Stats</h3><div id="summary-oppo-stats-list"></div></div>`;
+                populateStatsList(document.getElementById('summary-team-stats-list'), teamStats, matchDetails);
+                populateStatsList(document.getElementById('summary-oppo-stats-list'), oppoStats, matchDetails);
+            }
+
+            function renderQxqView(allStats, matchDetails) {
+                const container = document.getElementById('qxq-table-container');
+                const statGroups = [
+                    { name: 'Forward Line Attacking Statistics', stats: ['Inside 50 (Drop Zone)', 'Inside 50 (Rebound Zone)', 'Inside 50 Mark - Contested', 'Inside 50 Mark - Uncontested'] },
+                    { name: 'Forward Line Defensive Statistics', stats: ['Oppo Fast Defensive Exit', 'Oppo Slow Defensive Exit', 'Oppo Kick out - Fast', 'Oppo Kick out - Slow', 'Oppo Defensive 50 Mark'] },
+                    { name: 'Stoppages', stats: ['Centre Stoppage Win', 'Centre Stoppage Loss', 'Centre Stoppage Neutral', 'Between Arcs Stoppage Win', 'Between Arcs Stoppage Loss', 'Between Arcs Stoppage Neutral', 'Forward 50 Stoppage Win', 'Forward 50 Stoppage Loss', 'Forward 50 Stoppage Neutral', 'Defensive 50 Stoppage Win', 'Defensive 50 Stoppage Loss', 'Defensive 50 Stoppage Neutral'] },
+                    { name: 'Defensive Line Statistics', stats: ['Oppo Forward 50 Entry (Fast)', 'Oppo Forward 50 Entry (Slow)', 'Fast Rebound 50', 'Kick out - Fast', 'Kick out - Slow', 'Switch and Release', 'Switch and Slow', 'Defensive 50 Mark'] },
+                    { name: 'Team Plays', stats: ['Chase Down Tackle', 'Fast Through The Middle', 'Forward HB', 'Handball Recieve', 'Inside 45 kick'] },
+                    { name: 'Camden Scoring', stats: ['Goal - Field Play', 'Behind - Field Play', 'Goal - Set Shot', 'Behind - Set Shot'] },
+                    { name: 'Opposition Scoring', stats: ['Oppo Goal - Field Play', 'Oppo Behind - Field Play', 'Oppo Goal - Set Shot', 'Oppo Behind - Set Shot'] },
+                    { name: 'Turnovers', stats: ['Direct Turnover - D50', 'Direct Turnover - Between Arcs', 'Direct Turnover - F50'] }
+                ];
+                const statFormatting = { good: ['Inside 50', 'Mark', 'Rebound', 'Tackle', 'Fast', 'Forward HB', 'Recieve', 'kick', 'Switch and Release', 'Stoppage Win', 'Goal'], bad: ['Oppo', 'Stoppage Loss', 'Turnover'], neutral: ['Stoppage Neutral', 'Switch and Slow'] };
+                const getStatType = (name) => { if (statFormatting.bad.some(term => name.includes(term))) return 'bad'; if (statFormatting.good.some(term => name.includes(term))) return 'good'; return 'neutral'; };
+                
+                const findStat = (name) => allStats.find(s => s.Statistic.trim().toLowerCase() === name.trim().toLowerCase()) || {};
+
+                const createFormattedScoreRow = (title, columnNames) => {
+                    const scoreDataRow = allStats[0] || {}; // Data is consistent, so take from the first row
+                    const qValues = columnNames.map(colName => scoreDataRow[colName]);
+                    const numericValues = qValues.map(v => parseInt(v)).filter(v => !isNaN(v));
+                    
+                    if (numericValues.length === 0) {
+                         return `<tr><td class="stat-name-col">${title}</td><td>-</td><td>-</td><td>-</td><td>-</td><td class="total-col"></td><td class="avg-col"></td></tr>`;
+                    }
+
+                    const maxVal = Math.max(...numericValues);
+                    const minVal = Math.min(...numericValues);
+
+                    let rowHTML = `<tr><td class="stat-name-col">${title}</td>`;
+
+                    qValues.forEach((originalText) => {
+                        const val = parseInt(originalText);
+                        let highlightClass = '';
+
+                        if (!isNaN(val) && maxVal !== minVal) { 
+                            if (val === maxVal) {
+                                highlightClass = 'highlight-good';
+                            } else if (val === minVal) {
+                                highlightClass = 'highlight-bad';
+                            } else {
+                                highlightClass = 'highlight-neutral';
+                            }
+                        }
+                        rowHTML += `<td class="${highlightClass}">${originalText || '-'}</td>`;
+                    });
+
+                    rowHTML += `<td class="total-col"></td><td class="avg-col"></td></tr>`;
+                    return rowHTML;
+                };
+
+                let tableHTML = `<table class="qxq-table"><thead><tr><th>Statistic</th><th>Quarter 1</th><th>Quarter 2</th><th>Quarter 3</th><th>Quarter 4</th><th class="total-col">Game Total</th><th class="avg-col">Quarter Avg</th></tr></thead><tbody>`;
+                
+                tableHTML += createFormattedScoreRow('Absolute Score Margins', ['Q1_Score_Diff', 'Q2_Score_Diff', 'Q3_Score_Diff', 'Q4_Score_Diff']);
+                tableHTML += createFormattedScoreRow('Camden Change in Score', ['Q1_Score_Change', 'Q2_Score_Change', 'Q3_Score_Change', 'Q4_Score_Change']);
+                
+                statGroups.forEach(group => {
+                    tableHTML += `<tr class="group-header"><td colspan="7">${group.name}</td></tr>`;
+                    group.stats.forEach(statName => {
+                        const stat = findStat(statName);
+                        const qValues = [parseInt(stat.Q1_Count) || 0, parseInt(stat.Q2_Count) || 0, parseInt(stat.Q3_Count) || 0, parseInt(stat.Q4_Count) || 0];
+                        const total = qValues.reduce((a, b) => a + b, 0);
+                        const avg = (total / 4).toFixed(1);
+                        const maxVal = Math.max(...qValues);
+                        const type = getStatType(statName);
+                        tableHTML += `<tr><td class="stat-name-col">${statName.replace('Oppo ', `${matchDetails.opposition} `)}</td>`;
+                        qValues.forEach((val, i) => {
+                            const highlightClass = (val === maxVal && maxVal > 0) ? `highlight-${type}` : '';
+                            tableHTML += `<td class="${highlightClass}">${stat[`Q${i+1}_Count`] || '-'}</td>`;
+                        });
+                        tableHTML += `<td class="total-col">${total}</td><td class="avg-col">${avg}</td></tr>`;
+                    });
+                });
+                container.innerHTML = tableHTML + `</tbody></table>`;
+            }
+
+            function populateStatsList(element, stats, matchDetails) {
+                element.innerHTML = '';
+                if (stats.length === 0) {
+                    element.innerHTML = '<p class="text-gray-400 p-4 text-center">No other stats recorded.</p>';
+                    return;
+                }
+                stats.sort((a, b) => a.name.localeCompare(b.name)).forEach(stat => {
+                    element.innerHTML += `<div class="stat-item"><span class="stat-name">${stat.name.replace('Oppo ', `${matchDetails.opposition} `)}</span><span class="stat-value">${stat.value}</span></div>`;
+                });
+            }
+
+            function renderStoppageCharts(stoppageData) {
+                const types = ['Centre', 'Between Arcs', 'Forward 50', 'Defensive 50'];
+                types.forEach(type => {
+                    const data = stoppageData[type];
+                    const total = (data.win || 0) + (data.loss || 0) + (data.neutral || 0);
+                    const container = document.getElementById(`summary-stoppage-${type.toLowerCase().replace(/ /g, '-')}`);
+                    if (!container) return;
+                    if (stoppageCharts[type]) stoppageCharts[type].destroy();
+                    container.innerHTML = `<h4 class="text-lg font-semibold mb-2">${type}</h4><div class="donut-chart-container"><canvas id="summary-${type}-chart"></canvas><div class="donut-chart-total"><div class="total-number">${total}</div><div class="total-label">Total</div></div></div>`;
+                    if (total > 0) {
+                        const ctx = document.getElementById(`summary-${type}-chart`).getContext('2d');
+                        stoppageCharts[type] = new Chart(ctx, { type: 'doughnut', data: { labels: ['Win', 'Loss', 'Neutral'], datasets: [{ data: [data.win, data.loss, data.neutral], backgroundColor: ['#10b981', '#ef4444', '#6b7280'], borderColor: '#1f2937', borderWidth: 4 }] }, options: { responsive: true, maintainAspectRatio: false, cutout: '60%', plugins: { legend: { display: false }, tooltip: { enabled: false }, datalabels: { display: (c) => c.dataset.data[c.dataIndex] > 0, color: '#fff', font: { weight: 'bold', size: 14 } } } } });
+                    }
+                });
+            }
+            
+            function renderInside50Chart(i50Data) {
+                const container = document.getElementById('summary-i50-chart-container');
+                if (!container) return;
+                if (i50Chart) i50Chart.destroy();
+                container.innerHTML = `<div class="donut-chart-container"><canvas id="summary-i50-chart"></canvas><div class="donut-chart-total"><div class="total-number">${i50Data.total || 0}</div><div class="total-label">Total Entries</div></div></div>`;
+                const totalDeliveries = (i50Data.dropZone || 0) + (i50Data.reboundZone || 0);
+                if (totalDeliveries > 0) {
+                    const ctx = document.getElementById('summary-i50-chart').getContext('2d');
+                    i50Chart = new Chart(ctx, { type: 'doughnut', data: { labels: ['Drop Zone', 'Rebound Zone'], datasets: [{ data: [i50Data.dropZone, i50Data.reboundZone], backgroundColor: ['#8b5cf6', '#f97316'], borderColor: '#1f2937', borderWidth: 4 }] }, options: { responsive: true, maintainAspectRatio: false, cutout: '70%', plugins: { legend: { display: true, position: 'bottom', labels: { color: '#d1d5db', padding: 20, boxWidth: 12, usePointStyle: true } }, datalabels: { display: (c) => c.dataset.data[c.dataIndex] > 0, color: '#fff', font: { weight: 'bold' }, formatter: (v) => `${((v/totalDeliveries)*100).toFixed(0)}%` }, tooltip: { callbacks: { label: (c) => `${c.label}: ${c.parsed}` } } } } });
+                }
+            }
+
+            function displayI50Efficiency(totalI50s, scoringData) {
+                const efficiencyEl = document.getElementById('summary-i50-efficiency-text');
+                if (!efficiencyEl) return;
+                const totalScoringShots = (scoringData.behindSet || 0) + (scoringData.behindField || 0) + (scoringData.goalField || 0) + (scoringData.goalSet || 0);
+                if (totalI50s > 0 && totalScoringShots > 0) {
+                    efficiencyEl.innerHTML = `Camden Cats needed <span class="font-bold text-white text-xl">${(totalI50s / totalScoringShots).toFixed(1)}</span> Inside 50's per scoring opportunity.`;
+                } else {
+                    efficiencyEl.innerHTML = 'Not enough data to calculate Camden Cats I50 efficiency.';
+                }
+            }
+
+            function displayOppoI50Efficiency(oppoData, matchDetails) {
+                const efficiencyEl = document.getElementById('summary-oppo-i50-efficiency-text');
+                if (!efficiencyEl) return;
+                const totalScoringShots = (oppoData.behindSet || 0) + (oppoData.behindField || 0) + (oppoData.goalField || 0) + (oppoData.goalSet || 0);
+                const totalI50s = (oppoData.i50fast || 0) + (oppoData.i50slow || 0);
+                if (totalI50s > 0 && totalScoringShots > 0) {
+                    efficiencyEl.innerHTML = `${matchDetails.opposition} needed <span class="font-bold text-white text-xl">${(totalI50s / totalScoringShots).toFixed(1)}</span> Inside 50's per scoring opportunity.`;
+                } else {
+                    efficiencyEl.innerHTML = `Not enough data to calculate ${matchDetails.opposition} I50 efficiency.`;
+                }
+            }
+
+            function renderKeyStatsCards(keyStats) {
+                const grid = document.getElementById('summary-key-stats-grid');
+                if (!grid) return;
+                grid.innerHTML = '';
+                const forward50Marks = (keyStats['Inside 50 Mark - Uncontested'] || 0) + (keyStats['Inside 50 Mark - Contested'] || 0);
+                const statsToDisplay = [
+                    { title: 'Forward 50 Marks', value: forward50Marks }, { title: 'Defensive 50 Mark', value: keyStats['Defensive 50 Mark'] || 0 },
+                    { title: 'Fast Rebound 50', value: keyStats['Fast Rebound 50'] || 0 }, { title: 'Chase Down Tackle', value: keyStats['Chase Down Tackle'] || 0 },
+                    { title: 'Fast Through The Middle', value: keyStats['Fast Through The Middle'] || 0 }, { title: 'Forward HB', value: keyStats['Forward HB'] || 0 },
+                    { title: 'Handball Receive', value: keyStats['Handball Recieve'] || 0 }, { title: 'Inside 45 Kick', value: keyStats['Inside 45 kick'] || 0 },
+                    { title: 'Switch and Release', value: keyStats['Switch and Release'] || 0 }, { title: 'Switch and Slow', value: keyStats['Switch and Slow'] || 0 }
+                ];
+                statsToDisplay.forEach(stat => {
+                    grid.innerHTML += `<div class="key-stat-card"><h4 class="key-stat-card-title">${stat.title}</h4><p class="key-stat-card-value">${stat.value}</p></div>`;
+                });
+            }
+            
+            // --- EVENT LISTENERS ---
+            summaryToggle.addEventListener('click', () => {
+                summaryView.classList.remove('hidden');
+                qxqView.classList.add('hidden');
+                summaryToggle.classList.add('active');
+                qxqToggle.classList.remove('active');
+            });
+
+            qxqToggle.addEventListener('click', () => {
+                summaryView.classList.add('hidden');
+                qxqView.classList.remove('hidden');
+                summaryToggle.classList.remove('active');
+                qxqToggle.classList.add('active');
+            });
+
+            initialize();
+        });
+    </script>
+
+</body>
+</html>
