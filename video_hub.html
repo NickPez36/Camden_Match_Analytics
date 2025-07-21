@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camden Cats - Video Hub</title>
+    
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Custom styles to extend Tailwind */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+
+    <!-- Header -->
+    <header class="bg-gray-800/50 backdrop-blur-sm shadow-md sticky top-0 z-20">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <a href="landing.html" class="flex items-center">
+                        <img src="assets/camden_cats_logo.jpg" alt="Camden Cats Logo" class="h-10 w-10 rounded-full object-cover" 
+                             onerror="this.onerror=null; this.src='https://placehold.co/40x40/1a202c/ffffff?text=Logo';">
+                        <span class="ml-3 font-semibold text-xl">Camden Cats Analytics</span>
+                    </a>
+                </div>
+                <div class="flex items-center space-x-4">
+                     <a href="landing.html" class="text-sm font-medium text-gray-400 hover:text-white transition-colors duration-200">Back to Dashboard</a>
+                    <button id="logout-button" class="text-sm font-medium text-gray-400 hover:text-white transition-colors duration-200">Logout</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="text-center">
+            <h1 class="text-4xl font-bold tracking-tight">Match Video Hub</h1>
+            <p class="mt-3 max-w-2xl mx-auto text-lg text-gray-400">Review match footage, player edits, and coaching analysis for the 2025 season.</p>
+        </div>
+
+        <!-- Game Cards Grid -->
+        <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+
+            <!-- Round 1 Card -->
+            <a href="https://drive.google.com/drive/folders/10671E80v43L9Qp95DK6ueQ7dzz953-iE?usp=sharing" target="_blank" rel="noopener noreferrer" class="group block bg-gray-800 rounded-xl hover:bg-gray-700 transition-all duration-300 ease-in-out transform hover:-translate-y-1">
+                <div class="p-5">
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="text-lg font-bold text-blue-400">Round 1</span>
+                        <span class="text-sm font-medium text-gray-500">29.03.2025</span>
+                    </div>
+                    <div class="flex flex-col items-center text-center">
+                        <img src="./assets/Parramatta_Goannas_Logo.png" alt="Parramatta Goannas Logo" class="h-32 w-32 object-contain mb-4" onerror="this.onerror=null;this.src='https://placehold.co/128x128/1f2937/ffffff?text=Goannas';">
+                        <h3 class="text-xl font-semibold text-white">Parramatta Goannas</h3>
+                    </div>
+                </div>
+                <div class="bg-gray-700/50 px-5 py-3">
+                    <div class="text-center text-blue-400 font-semibold group-hover:text-white transition duration-300">View Videos &rarr;</div>
+                </div>
+            </a>
+
+            <!-- Round 2 Card (No Video) -->
+            <div class="block bg-gray-800 rounded-xl opacity-50 cursor-not-allowed">
+                <div class="p-5">
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="text-lg font-bold text-gray-500">Round 2</span>
+                        <span class="text-sm font-medium text-gray-500">05.04.2025</span>
+                    </div>
+                    <div class="flex flex-col items-center text-center">
+                        <img src="./assets/Southern_Power_logo.png" alt="Southern Power Logo" class="h-32 w-32 object-contain mb-4" onerror="this.onerror=null;this.src='https://placehold.co/128x128/1f2937/ffffff?text=Power';">
+                        <h3 class="text-xl font-semibold text-gray-300">Southern Power</h3>
+                    </div>
+                </div>
+                <div class="bg-gray-700/50 px-5 py-3">
+                    <div class="text-center text-gray-500 font-semibold">No Video Available</div>
+                </div>
+            </div>
+
+            <!-- Round 3 Card (Bye) -->
+            <div class="bg-gray-800 rounded-xl flex items-center justify-center h-full">
+                <div class="p-5 text-center">
+                    <span class="text-lg font-bold text-gray-400">Round 3</span>
+                    <h3 class="text-2xl font-semibold text-white mt-2">BYE</h3>
+                </div>
+            </div>
+
+            <!-- Round 4 Card -->
+            <a href="https://drive.google.com/drive/folders/1JH6VP6or0iu2uIwcB0M6DGYuX9VsTXN4?usp=drive_link" target="_blank" rel="noopener noreferrer" class="group block bg-gray-800 rounded-xl hover:bg-gray-700 transition-all duration-300 ease-in-out transform hover:-translate-y-1">
+                <div class="p-5">
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="text-lg font-bold text-blue-400">Round 4</span>
+                        <span class="text-sm font-medium text-gray-500">26.04.2025</span>
+                    </div>
+                    <div class="flex flex-col items-center text-center">
+                        <img src="./assets/Sydney_University_logo.png" alt="Sydney University Logo" class="h-32 w-32 object-contain mb-4" onerror="this.onerror=null;this.src='https://placehold.co/128x128/1f2937/ffffff?text=Uni';">
+                        <h3 class="text-xl font-semibold text-white">Sydney University</h3>
+                    </div>
+                </div>
+                <div class="bg-gray-700/50 px-5 py-3">
+                    <div class="text-center text-blue-400 font-semibold group-hover:text-white transition duration-300">View Videos &rarr;</div>
+                </div>
+            </a>
+
+            <!-- Round 5 Card -->
+            <a href="https://drive.google.com/drive/folders/1SfhI-CVC427i18zs1MrgsZmk4BvK-N8r?usp=drive_link" target="_blank" rel="noopener noreferrer" class="group block bg-gray-800 rounded-xl hover:bg-gray-700 transition-all duration-300 ease-in-out transform hover:-translate-y-1">
+                <div class="p-5">
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="text-lg font-bold text-blue-400">Round 5</span>
+                        <span class="text-sm font-medium text-gray-500">03.05.2025</span>
+                    </div>
+                    <div class="flex flex-col items-center text-center">
+                        <img src="./assets/UNSW_logo.png" alt="UNSW Logo" class="h-32 w-32 object-contain mb-4" onerror="this.onerror=null;this.src='https://placehold.co/128x128/1f2937/ffffff?text=UNSW';">
+                        <h3 class="text-xl font-semibold text-white">UNSW</h3>
+                    </div>
+                </div>
+                <div class="bg-gray-700/50 px-5 py-3">
+                    <div class="text-center text-blue-400 font-semibold group-hover:text-white transition duration-300">View Videos &rarr;</div>
+                </div>
+            </a>
+
+            <!-- Round 6 Card -->
+            <a href="https://drive.google.com/drive/folders/1BWyL0mpP_M4GzAaIrzKtbpNCS9Ovbc6S?usp=drive_link" target="_blank" rel="noopener noreferrer" class="group block bg-gray-800 rounded-xl hover:bg-gray-700 transition-all duration-300 ease-in-out transform hover:-translate-y-1">
+                <div class="p-5">
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="text-lg font-bold text-blue-400">Round 6</span>
+                        <span class="text-sm font-medium text-gray-500">17.05.2025</span>
+                    </div>
+                    <div class="flex flex-col items-center text-center">
+                        <img src="./assets/Pennant_Hills_logo.png" alt="Pennant Hills Logo" class="h-32 w-32 object-contain mb-4" onerror="this.onerror=null;this.src='https://placehold.co/128x128/1f2937/ffffff?text=Hills';">
+                        <h3 class="text-xl font-semibold text-white">Pennant Hills</h3>
+                    </div>
+                </div>
+                <div class="bg-gray-700/50 px-5 py-3">
+                    <div class="text-center text-blue-400 font-semibold group-hover:text-white transition duration-300">View Videos &rarr;</div>
+                </div>
+            </a>
+
+            <!-- Round 7 Card -->
+            <a href="https://drive.google.com/drive/folders/13S1ltxZWyUU0P5PsGE0jv_2SpeyJw-3c?usp=sharing" target="_blank" rel="noopener noreferrer" class="group block bg-gray-800 rounded-xl hover:bg-gray-700 transition-all duration-300 ease-in-out transform hover:-translate-y-1">
+                <div class="p-5">
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="text-lg font-bold text-blue-400">Round 7</span>
+                        <span class="text-sm font-medium text-gray-500">19.07.2025</span>
+                    </div>
+                    <div class="flex flex-col items-center text-center">
+                        <img src="./assets/St_George_logo.png" alt="St George Logo" class="h-32 w-32 object-contain mb-4" onerror="this.onerror=null;this.src='https://placehold.co/128x128/1f2937/ffffff?text=George';">
+                        <h3 class="text-xl font-semibold text-white">St George</h3>
+                    </div>
+                </div>
+                <div class="bg-gray-700/50 px-5 py-3">
+                    <div class="text-center text-blue-400 font-semibold group-hover:text-white transition duration-300">View Videos &rarr;</div>
+                </div>
+            </a>
+            
+            <!-- Round 8 Card -->
+            <a href="https://drive.google.com/drive/folders/1LzilozofeQdu28IKgNO-4Io5_zdj6tu7?usp=drive_link" target="_blank" rel="noopener noreferrer" class="group block bg-gray-800 rounded-xl hover:bg-gray-700 transition-all duration-300 ease-in-out transform hover:-translate-y-1">
+                <div class="p-5">
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="text-lg font-bold text-blue-400">Round 8</span>
+                        <span class="text-sm font-medium text-gray-500">31.05.2025</span>
+                    </div>
+                    <div class="flex flex-col items-center text-center">
+                        <img src="./assets/Parramatta_Goannas_logo.png" alt="Parramatta Goannas Logo" class="h-32 w-32 object-contain mb-4" onerror="this.onerror=null;this.src='https://placehold.co/128x128/1f2937/ffffff?text=Goannas';">
+                        <h3 class="text-xl font-semibold text-white">Parramatta Goannas</h3>
+                    </div>
+                </div>
+                <div class="bg-gray-700/50 px-5 py-3">
+                    <div class="text-center text-blue-400 font-semibold group-hover:text-white transition duration-300">View Videos &rarr;</div>
+                </div>
+            </a>
+
+            <!-- Round 9 Card -->
+            <a href="https://drive.google.com/drive/folders/1LzjUOWjCsbhvhpH8hS83LQehEIn2mZn9?usp=drive_link" target="_blank" rel="noopener noreferrer" class="group block bg-gray-800 rounded-xl hover:bg-gray-700 transition-all duration-300 ease-in-out transform hover:-translate-y-1">
+                <div class="p-5">
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="text-lg font-bold text-blue-400">Round 9</span>
+                        <span class="text-sm font-medium text-gray-500">14.06.2025</span>
+                    </div>
+                    <div class="flex flex-col items-center text-center">
+                        <img src="./assets/Inner_West_logo.png" alt="Inner West Logo" class="h-32 w-32 object-contain mb-4" onerror="this.onerror=null;this.src='https://placehold.co/128x128/1f2937/ffffff?text=West';">
+                        <h3 class="text-xl font-semibold text-white">Inner West</h3>
+                    </div>
+                </div>
+                <div class="bg-gray-700/50 px-5 py-3">
+                    <div class="text-center text-blue-400 font-semibold group-hover:text-white transition duration-300">View Videos &rarr;</div>
+                </div>
+            </a>
+
+            <!-- Round 10 Card -->
+            <a href="https://drive.google.com/drive/folders/1DXCHZqPCxUimZmQGhf4p_dcwrZ3V_v4x?usp=drive_link" target="_blank" rel="noopener noreferrer" class="group block bg-gray-800 rounded-xl hover:bg-gray-700 transition-all duration-300 ease-in-out transform hover:-translate-y-1">
+                <div class="p-5">
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="text-lg font-bold text-blue-400">Round 10</span>
+                        <span class="text-sm font-medium text-gray-500">21.06.2025</span>
+                    </div>
+                    <div class="flex flex-col items-center text-center">
+                        <img src="./assets/Sydney_University_logo.png" alt="Sydney University Logo" class="h-32 w-32 object-contain mb-4" onerror="this.onerror=null;this.src='https://placehold.co/128x128/1f2937/ffffff?text=Uni';">
+                        <h3 class="text-xl font-semibold text-white">Sydney University</h3>
+                    </div>
+                </div>
+                <div class="bg-gray-700/50 px-5 py-3">
+                    <div class="text-center text-blue-400 font-semibold group-hover:text-white transition duration-300">View Videos &rarr;</div>
+                </div>
+            </a>
+
+            <!-- Round 11 Card -->
+            <a href="https://drive.google.com/drive/folders/1pbN9rkZWz-u0f_OfIR_3qlVE7vfL7Cii?usp=drive_link" target="_blank" rel="noopener noreferrer" class="group block bg-gray-800 rounded-xl hover:bg-gray-700 transition-all duration-300 ease-in-out transform hover:-translate-y-1">
+                <div class="p-5">
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="text-lg font-bold text-blue-400">Round 11</span>
+                        <span class="text-sm font-medium text-gray-500">28.06.2025</span>
+                    </div>
+                    <div class="flex flex-col items-center text-center">
+                        <img src="./assets/UNSW_logo.png" alt="UNSW Logo" class="h-32 w-32 object-contain mb-4" onerror="this.onerror=null;this.src='https://placehold.co/128x128/1f2937/ffffff?text=UNSW';">
+                        <h3 class="text-xl font-semibold text-white">UNSW</h3>
+                    </div>
+                </div>
+                <div class="bg-gray-700/50 px-5 py-3">
+                    <div class="text-center text-blue-400 font-semibold group-hover:text-white transition duration-300">View Videos &rarr;</div>
+                </div>
+            </a>
+
+            <!-- Round 12 Card -->
+            <a href="https://drive.google.com/drive/folders/1qEE8jQlnfnLkmCqC3BLHYoobkLMIBTcI?usp=drive_link" target="_blank" rel="noopener noreferrer" class="group block bg-gray-800 rounded-xl hover:bg-gray-700 transition-all duration-300 ease-in-out transform hover:-translate-y-1">
+                <div class="p-5">
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="text-lg font-bold text-blue-400">Round 12</span>
+                        <span class="text-sm font-medium text-gray-500">05.07.2025</span>
+                    </div>
+                    <div class="flex flex-col items-center text-center">
+                        <img src="./assets/North_Shore_logo.png" alt="North Shore Logo" class="h-32 w-32 object-contain mb-4" onerror="this.onerror=null;this.src='https://placehold.co/128x128/1f2937/ffffff?text=Shore';">
+                        <h3 class="text-xl font-semibold text-white">North Shore</h3>
+                    </div>
+                </div>
+                <div class="bg-gray-700/50 px-5 py-3">
+                    <div class="text-center text-blue-400 font-semibold group-hover:text-white transition duration-300">View Videos &rarr;</div>
+                </div>
+            </a>
+
+            <!-- Round 13 Card (Bye) -->
+            <div class="bg-gray-800 rounded-xl flex items-center justify-center h-full">
+                <div class="p-5 text-center">
+                    <span class="text-lg font-bold text-gray-400">Round 13</span>
+                    <h3 class="text-2xl font-semibold text-white mt-2">BYE</h3>
+                </div>
+            </div>
+
+            <!-- Round 14 Card -->
+            <a href="https://drive.google.com/drive/folders/1UK-bvyhDJT7gf8T2hqeRKNgS19v5KtVO?usp=sharing" target="_blank" rel="noopener noreferrer" class="group block bg-gray-800 rounded-xl hover:bg-gray-700 transition-all duration-300 ease-in-out transform hover:-translate-y-1">
+                <div class="p-5">
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="text-lg font-bold text-blue-400">Round 14</span>
+                        <span class="text-sm font-medium text-gray-500">26.07.2025</span>
+                    </div>
+                    <div class="flex flex-col items-center text-center">
+                        <img src="./assets/Southern_Power_logo.png" alt="Southern Power Logo" class="h-32 w-32 object-contain mb-4" onerror="this.onerror=null;this.src='https://placehold.co/128x128/1f2937/ffffff?text=Power';">
+                        <h3 class="text-xl font-semibold text-white">Southern Power</h3>
+                    </div>
+                </div>
+                <div class="bg-gray-700/50 px-5 py-3">
+                    <div class="text-center text-blue-400 font-semibold group-hover:text-white transition duration-300">View Videos &rarr;</div>
+                </div>
+            </a>
+
+            <!-- Round 15 Card -->
+            <a href="https://drive.google.com/drive/folders/1UJMQNboz_stYDH0gegJwFnX_Zg3j68NU?usp=drive_link" target="_blank" rel="noopener noreferrer" class="group block bg-gray-800 rounded-xl hover:bg-gray-700 transition-all duration-300 ease-in-out transform hover:-translate-y-1">
+                <div class="p-5">
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="text-lg font-bold text-blue-400">Round 15</span>
+                        <span class="text-sm font-medium text-gray-500">02.08.2025</span>
+                    </div>
+                    <div class="flex flex-col items-center text-center">
+                        <img src="./assets/Pennant_Hills_logo.png" alt="Pennant Hills Logo" class="h-32 w-32 object-contain mb-4" onerror="this.onerror=null;this.src='https://placehold.co/128x128/1f2937/ffffff?text=Hills';">
+                        <h3 class="text-xl font-semibold text-white">Pennant Hills</h3>
+                    </div>
+                </div>
+                <div class="bg-gray-700/50 px-5 py-3">
+                    <div class="text-center text-blue-400 font-semibold group-hover:text-white transition duration-300">View Videos &rarr;</div>
+                </div>
+            </a>
+
+            <!-- Round 16 Card -->
+            <a href="https://drive.google.com/drive/folders/1qStJWrIoho1JfQMHJG1SFcj3nImZolFc?usp=drive_link" target="_blank" rel="noopener noreferrer" class="group block bg-gray-800 rounded-xl hover:bg-gray-700 transition-all duration-300 ease-in-out transform hover:-translate-y-1">
+                <div class="p-5">
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="text-lg font-bold text-blue-400">Round 16</span>
+                        <span class="text-sm font-medium text-gray-500">09.08.2025</span>
+                    </div>
+                    <div class="flex flex-col items-center text-center">
+                        <img src="./assets/St_George_logo.png" alt="St George Logo" class="h-32 w-32 object-contain mb-4" onerror="this.onerror=null;this.src='https://placehold.co/128x128/1f2937/ffffff?text=George';">
+                        <h3 class="text-xl font-semibold text-white">St George</h3>
+                    </div>
+                </div>
+                <div class="bg-gray-700/50 px-5 py-3">
+                    <div class="text-center text-blue-400 font-semibold group-hover:text-white transition duration-300">View Videos &rarr;</div>
+                </div>
+            </a>
+
+            <!-- Round 17 Card -->
+            <a href="https://drive.google.com/drive/folders/1z9AIp6jdN4vmE9vHNp4scj6YoHcY1j0U?usp=drive_link" target="_blank" rel="noopener noreferrer" class="group block bg-gray-800 rounded-xl hover:bg-gray-700 transition-all duration-300 ease-in-out transform hover:-translate-y-1">
+                <div class="p-5">
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="text-lg font-bold text-blue-400">Round 17</span>
+                        <span class="text-sm font-medium text-gray-500">16.08.2025</span>
+                    </div>
+                    <div class="flex flex-col items-center text-center">
+                        <img src="./assets/Inner_West_logo.png" alt="Inner West Logo" class="h-32 w-32 object-contain mb-4" onerror="this.onerror=null;this.src='https://placehold.co/128x128/1f2937/ffffff?text=West';">
+                        <h3 class="text-xl font-semibold text-white">Inner West</h3>
+                    </div>
+                </div>
+                <div class="bg-gray-700/50 px-5 py-3">
+                    <div class="text-center text-blue-400 font-semibold group-hover:text-white transition duration-300">View Videos &rarr;</div>
+                </div>
+            </a>
+
+            <!-- Round 18 Card -->
+            <a href="https://drive.google.com/drive/folders/1_kIPPN7LtWtmh-MDqJV9cFalSvxszkMx?usp=drive_link" target="_blank" rel="noopener noreferrer" class="group block bg-gray-800 rounded-xl hover:bg-gray-700 transition-all duration-300 ease-in-out transform hover:-translate-y-1">
+                <div class="p-5">
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="text-lg font-bold text-blue-400">Round 18</span>
+                        <span class="text-sm font-medium text-gray-500">23.08.2025</span>
+                    </div>
+                    <div class="flex flex-col items-center text-center">
+                        <img src="./assets/North_Shore_logo.png" alt="North Shore Logo" class="h-32 w-32 object-contain mb-4" onerror="this.onerror=null;this.src='https://placehold.co/128x128/1f2937/ffffff?text=Shore';">
+                        <h3 class="text-xl font-semibold text-white">North Shore</h3>
+                    </div>
+                </div>
+                <div class="bg-gray-700/50 px-5 py-3">
+                    <div class="text-center text-blue-400 font-semibold group-hover:text-white transition duration-300">View Videos &rarr;</div>
+                </div>
+            </a>
+
+        </div>
+    </main>
+    
+    <script>
+        // --- AUTHENTICATION CHECK ---
+        if (sessionStorage.getItem('isLoggedIn') !== 'true') {
+            window.location.href = 'index.html';
+        }
+        document.getElementById('logout-button').addEventListener('click', function() {
+            sessionStorage.removeItem('isLoggedIn');
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>
