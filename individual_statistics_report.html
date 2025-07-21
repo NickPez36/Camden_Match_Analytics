@@ -117,32 +117,26 @@
 
         // --- STATE AND CONFIGURATION ---
         let playerData = [];
-        let sortState = { key: 'Player', direction: 'asc' };
+        // [FIXED] Default sort key changed from 'Player' to 'Name'
+        let sortState = { key: 'Name', direction: 'asc' };
         
-        // List of CSV files available in the 'data' folder
         const csvFiles = [ 
-            'data/RD12_North Shore_07072025_Indv.csv',
+            'data/RD12_North Shore_05072025_Indv.csv',
             'data/RD11_UNSW_28062025_Indv.csv'
         ];
 
         // --- DATA PROCESSING LOGIC ---
         
-        // Initialize the application
         function initializeApp() {
-            // Populate file selector dropdown
             csvFiles.forEach(fileName => {
                 const option = document.createElement('option');
                 option.value = fileName;
-                // Clean up file name for display
                 option.textContent = fileName.replace('data/', '').replace(/_/g, ' ').replace('.csv', '').replace(' Indv', '');
                 fileSelector.appendChild(option);
             });
-
-            // Add event listeners
             loadFileBtn.addEventListener('click', loadSelectedFile);
         }
 
-        // Fetch and process the selected CSV file
         async function loadSelectedFile() {
             const fileName = fileSelector.value;
             if (!fileName) {
@@ -167,7 +161,6 @@
             }
         }
         
-        // Parse the file name to get match details
         function parseFileName(fileName) {
             const nameWithoutExt = fileName.replace('data/', '').replace('.csv', '');
             const parts = nameWithoutExt.split('_');
@@ -187,10 +180,8 @@
             return { round, opposition, date: formattedDate };
         }
 
-        // Parse CSV text into an array of objects
         function parseCSV(text) {
             const lines = text.trim().split('\n');
-            // More robust header parsing to remove potential BOM characters
             const headers = lines[0].split(',').map(h => h.trim().replace(/\uFEFF/g, ''));
             return lines.slice(1).map(line => {
                 const values = line.split(',');
@@ -202,10 +193,8 @@
             });
         }
 
-
         // --- RENDERING LOGIC ---
 
-        // Main render function
         function renderReport(matchDetails) {
             matchInfoTitle.textContent = `Camden Cats vs ${matchDetails.opposition}`;
             matchInfoDate.textContent = `${matchDetails.round} - ${matchDetails.date}`;
@@ -217,56 +206,69 @@
         
         function renderMatchResult() {
             matchResultContainer.innerHTML = '';
-            if (playerData.length > 0 && playerData[0].hasOwnProperty('Result')) {
-                const result = playerData[0].Result.toUpperCase();
+            if (playerData.length > 0 && playerData[0].hasOwnProperty('Results')) {
+                const result = playerData[0].Results.toUpperCase();
                 let resultCardHTML = '';
                 if (result === 'WIN') {
-                    resultCardHTML = `<div class="bg-green-500 text-white text-sm font-bold px-4 py-2 rounded-lg inline-block">Match Won</div>`;
-                } else if (result === 'LOST') {
-                    resultCardHTML = `<div class="bg-red-500 text-white text-sm font-bold px-4 py-2 rounded-lg inline-block">Camden Lost</div>`;
+                    resultCardHTML = `<div class="bg-green-600 text-white text-sm font-bold px-4 py-2 rounded-lg inline-block shadow-lg">MATCH WON</div>`;
+                } else if (result === 'LOSS' || result === 'LOST') {
+                    resultCardHTML = `<div class="bg-red-600 text-white text-sm font-bold px-4 py-2 rounded-lg inline-block shadow-lg">MATCH LOST</div>`;
                 }
                 matchResultContainer.innerHTML = resultCardHTML;
             }
         }
         
-        // Render the top performer cards
         function renderTopPerformers() {
             topPerformersContainer.innerHTML = '';
             if (playerData.length === 0) return;
 
             const allHeaders = Object.keys(playerData[0]);
-            // Exclude non-statistical or non-relevant columns from top performer cards
-            const statsToExclude = ['No', 'Player', 'Round', 'Opposition', 'Result', 'Rotations', 'On Ground %', 'Efficiency'];
-            const statsToDisplay = allHeaders.filter(h => !statsToExclude.includes(h));
+            // [FIXED] 'Player' changed to 'Name' in the exclusion list
+            const statsToExclude = ['No', 'Name', 'Round', 'Opposition', 'Results', 'Rotations', 'On Ground %', 'Efficiency'];
+            const statsToDisplay = allHeaders.filter(h => !statsToExclude.includes(h) && playerData.some(p => typeof p[h] === 'number'));
 
             statsToDisplay.forEach(stat => {
-                // Ensure we only work with numeric stats
                 const numericData = playerData.filter(p => p && typeof p[stat] === 'number');
-                if (numericData.length === 0) return; // Skip if no numeric data for this stat
+                if (numericData.length === 0) return;
 
                 const maxValue = Math.max(...numericData.map(p => p[stat]));
-                
-                // Find all players who have this max value
                 const topPlayers = playerData.filter(p => p[stat] === maxValue);
 
                 if (topPlayers.length > 0) {
-                    const playerNames = topPlayers.map(p => p.Player).join(', ');
+                    // [FIXED] Changed p.Player to p.Name to get the correct athlete name
+                    const playerNames = topPlayers.map(p => p.Name).join(', ');
                     const card = document.createElement('div');
                     card.className = 'bg-gray-800 p-5 rounded-xl text-center flex flex-col';
                     card.innerHTML = `
-                        <p class="text-sm text-gray-400 font-medium h-10">Most ${stat.replace(/_/g, ' ')}</p>
-                        <p class="text-xl font-bold text-white mt-2 flex-grow">${playerNames}</p>
-                        <p class="text-2xl font-semibold text-blue-400 mt-1">${maxValue}</p>
+                        <p class="text-sm text-gray-400 font-medium flex-grow">Most ${stat.replace(/_/g, ' ')}</p>
+                        <p class="text-3xl font-bold text-blue-400 my-2">${maxValue}</p>
+                        <p class="text-base font-semibold text-white flex-grow">${playerNames}</p>
                     `;
                     topPerformersContainer.appendChild(card);
                 }
             });
         }
 
-        // Render the main statistics table
         function renderStatsTable() {
-            if (playerData.length === 0) return;
-            // Sort data
+            if (playerData.length === 0) {
+                statsTableContainer.innerHTML = '';
+                return;
+            }
+
+            const topValuesByStat = {};
+            // [FIXED] 'Player' changed to 'Name' in the exclusion list
+            const statsToHighlight = Object.keys(playerData[0]).filter(h => 
+                !['No', 'Name', 'Round', 'Opposition', 'Results', 'On Ground %', 'Efficiency'].includes(h) && 
+                playerData.some(p => typeof p[h] === 'number')
+            );
+
+            statsToHighlight.forEach(stat => {
+                const values = playerData.map(p => p[stat]).filter(v => typeof v === 'number');
+                const uniqueSorted = [...new Set(values)].sort((a, b) => b - a);
+                const threshold = uniqueSorted.length > 2 ? uniqueSorted[2] : (uniqueSorted.length > 0 ? uniqueSorted[uniqueSorted.length - 1] : -Infinity);
+                topValuesByStat[stat] = uniqueSorted.filter(v => v >= threshold);
+            });
+
             playerData.sort((a, b) => {
                 const valA = a[sortState.key];
                 const valB = b[sortState.key];
@@ -278,12 +280,9 @@
                 return String(valA).localeCompare(String(valB)) * direction;
             });
 
-            // Get headers from the first player object, excluding non-table columns
-            const headers = Object.keys(playerData[0]).filter(h => !['No', 'Round', 'Opposition', 'Result'].includes(h));
+            const headers = Object.keys(playerData[0]).filter(h => !['No', 'Round', 'Opposition', 'Results'].includes(h));
 
-            let tableHTML = `<div class="overflow-x-auto">
-                <table class="w-full text-sm text-left text-gray-400">
-                <thead class="text-xs text-gray-400 uppercase bg-gray-700"><tr>`;
+            let tableHTML = `<div class="overflow-x-auto"><table class="w-full text-sm text-left text-gray-400"><thead class="text-xs text-gray-400 uppercase bg-gray-700"><tr>`;
             
             headers.forEach(h => {
                 const sortIndicator = sortState.key === h ? (sortState.direction === 'asc' ? ' ▲' : ' ▼') : '';
@@ -295,11 +294,23 @@
                 tableHTML += `<tr class="border-b border-gray-700 hover:bg-gray-600/50">`;
                 headers.forEach(header => {
                     const value = player[header];
-                    const isPlayerName = header === 'Player';
+                    // [FIXED] Changed check from 'Player' to 'Name'
+                    const isPlayerName = header === 'Name';
+                    
+                    let cellClass = '';
+                    if (topValuesByStat[header] && topValuesByStat[header].includes(value)) {
+                        // [FIXED] Corrected the check for Direct_Turnovers. The key from the CSV must match exactly.
+                        if (header === 'Direct Turnovers') {
+                            cellClass = 'bg-red-500 text-white font-bold rounded';
+                        } else {
+                            cellClass = 'bg-green-500 text-white font-bold rounded';
+                        }
+                    }
+
                     if(isPlayerName) {
                         tableHTML += `<th scope="row" class="px-6 py-4 font-medium text-white whitespace-nowrap">${value}</th>`;
                     } else {
-                        tableHTML += `<td class="px-6 py-4">${value}</td>`;
+                        tableHTML += `<td class="px-6 py-4 text-center ${cellClass}">${value !== undefined ? value : ''}</td>`;
                     }
                 });
                 tableHTML += `</tr>`;
@@ -308,7 +319,6 @@
             tableHTML += `</tbody></table></div>`;
             statsTableContainer.innerHTML = tableHTML;
             
-            // Add event listeners for sorting
             statsTableContainer.querySelectorAll('.sortable-header').forEach(th => {
                 th.addEventListener('click', (e) => {
                     const key = e.currentTarget.dataset.sortKey;
@@ -316,7 +326,8 @@
                         sortState.direction = sortState.direction === 'asc' ? 'desc' : 'asc';
                     } else {
                         sortState.key = key;
-                        sortState.direction = 'desc'; // Default to descending for stats
+                        // [FIXED] Default sort direction for 'Name' is ascending
+                        sortState.direction = key === 'Name' ? 'asc' : 'desc';
                     }
                     renderStatsTable();
                 });
