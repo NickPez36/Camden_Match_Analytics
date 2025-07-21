@@ -1,0 +1,48 @@
+﻿Round,Opponent,Result,Oppo Score,Camden Score,Q1_Score_Diff,Q2_Score_Diff,Q3_Score_Diff,Q4_Score_Diff,Q1_Score_Change,Q2_Score_Change,Q3_Score_Change,Q4_Score_Change,Statistic,Q1_Count,Q2_Count,Q3_Count,Q4_Count,Game_Count
+Round 12,North Shore,WIN,32,54,0,25,17,22,0,25,-8,5,Inside 50,10,8,6,12,36
+Round 12,North Shore,WIN,32,54,0,25,17,22,0,25,-8,5,Inside 50 (Drop Zone),4,3,4,5,16
+Round 12,North Shore,WIN,32,54,0,25,17,22,0,25,-8,5,Inside 50 (Rebound Zone),6,5,2,7,20
+Round 12,North Shore,WIN,32,54,0,25,17,22,0,25,-8,5,Direct Turnover - F50,0,0,1,1,2
+Round 12,North Shore,WIN,32,54,0,25,17,22,0,25,-8,5,Direct Turnover - Between Arcs,0,3,1,6,10
+Round 12,North Shore,WIN,32,54,0,25,17,22,0,25,-8,5,Direct Turnover - D50,0,1,2,1,4
+Round 12,North Shore,WIN,32,54,0,25,17,22,0,25,-8,5,Defensive 50 Mark,4,2,1,3,10
+Round 12,North Shore,WIN,32,54,0,25,17,22,0,25,-8,5,Inside 50 Mark - Uncontested,0,2,0,2,4
+Round 12,North Shore,WIN,32,54,0,25,17,22,0,25,-8,5,Oppo Defensive 50 Mark,0,1,0,0,1
+Round 12,North Shore,WIN,32,54,0,25,17,22,0,25,-8,5,Oppo Forward 50 Mark,3,1,3,1,8
+Round 12,North Shore,WIN,32,54,0,25,17,22,0,25,-8,5,Inside 50 Mark - Contested,0,0,1,1,2
+Round 12,North Shore,WIN,32,54,0,25,17,22,0,25,-8,5,Between Arcs Stoppage Loss,2,2,6,1,11
+Round 12,North Shore,WIN,32,54,0,25,17,22,0,25,-8,5,Between Arcs Stoppage Neutral,7,4,5,6,22
+Round 12,North Shore,WIN,32,54,0,25,17,22,0,25,-8,5,Between Arcs Stoppage Win,6,6,2,6,20
+Round 12,North Shore,WIN,32,54,0,25,17,22,0,25,-8,5,Centre Stoppage Loss,0,2,1,1,4
+Round 12,North Shore,WIN,32,54,0,25,17,22,0,25,-8,5,Centre Stoppage Neutral,0,3,1,1,5
+Round 12,North Shore,WIN,32,54,0,25,17,22,0,25,-8,5,Centre Stoppage Win,2,2,2,0,6
+Round 12,North Shore,WIN,32,54,0,25,17,22,0,25,-8,5,Defensive 50 Stoppage Loss,1,1,0,0,2
+Round 12,North Shore,WIN,32,54,0,25,17,22,0,25,-8,5,Defensive 50 Stoppage Neutral,2,1,1,2,6
+Round 12,North Shore,WIN,32,54,0,25,17,22,0,25,-8,5,Defensive 50 Stoppage Win,2,0,4,1,7
+Round 12,North Shore,WIN,32,54,0,25,17,22,0,25,-8,5,Forward 50 Stoppage Loss,2,1,0,3,6
+Round 12,North Shore,WIN,32,54,0,25,17,22,0,25,-8,5,Forward 50 Stoppage Neutral,1,2,0,4,7
+Round 12,North Shore,WIN,32,54,0,25,17,22,0,25,-8,5,Forward 50 Stoppage Win,1,2,1,1,5
+Round 12,North Shore,WIN,32,54,0,25,17,22,0,25,-8,5,Behind - Set Shot,0,0,0,1,1
+Round 12,North Shore,WIN,32,54,0,25,17,22,0,25,-8,5,Oppo Behind - Field Play,0,0,2,1,3
+Round 12,North Shore,WIN,32,54,0,25,17,22,0,25,-8,5,Behind - Field Play,2,1,2,0,5
+Round 12,North Shore,WIN,32,54,0,25,17,22,0,25,-8,5,Goal - Field Play,1,3,1,0,5
+Round 12,North Shore,WIN,32,54,0,25,17,22,0,25,-8,5,Goal - Set Shot,0,2,0,1,3
+Round 12,North Shore,WIN,32,54,0,25,17,22,0,25,-8,5,Oppo Behind - Set Shot,2,0,2,1,5
+Round 12,North Shore,WIN,32,54,0,25,17,22,0,25,-8,5,Oppo Goal - Field Play,0,1,0,0,1
+Round 12,North Shore,WIN,32,54,0,25,17,22,0,25,-8,5,Oppo Goal - Set Shot,1,0,2,0,3
+Round 12,North Shore,WIN,32,54,0,25,17,22,0,25,-8,5,Fast Rebound 50,2,1,2,6,11
+Round 12,North Shore,WIN,32,54,0,25,17,22,0,25,-8,5,Kick out - Slow,2,0,4,2,8
+Round 12,North Shore,WIN,32,54,0,25,17,22,0,25,-8,5,Oppo Fast Defensive Exit,4,0,3,3,10
+Round 12,North Shore,WIN,32,54,0,25,17,22,0,25,-8,5,Oppo Forward 50 Entry (Fast),9,5,13,8,35
+Round 12,North Shore,WIN,32,54,0,25,17,22,0,25,-8,5,Oppo Forward 50 Entry (Slow),2,2,0,1,5
+Round 12,North Shore,WIN,32,54,0,25,17,22,0,25,-8,5,Oppo Kick out - Fast,1,1,1,1,4
+Round 12,North Shore,WIN,32,54,0,25,17,22,0,25,-8,5,Oppo Kick out - Slow,1,0,1,0,2
+Round 12,North Shore,WIN,32,54,0,25,17,22,0,25,-8,5,Oppo Slow Defensive Exit,1,2,0,3,6
+Round 12,North Shore,WIN,32,54,0,25,17,22,0,25,-8,5,Slow Defensive Exit,9,3,3,1,16
+Round 12,North Shore,WIN,32,54,0,25,17,22,0,25,-8,5,Chase Down Tackle,2,2,5,1,10
+Round 12,North Shore,WIN,32,54,0,25,17,22,0,25,-8,5,Fast Through The Middle,0,1,1,1,3
+Round 12,North Shore,WIN,32,54,0,25,17,22,0,25,-8,5,Forward HB,5,7,2,8,22
+Round 12,North Shore,WIN,32,54,0,25,17,22,0,25,-8,5,Handball Recieve,5,1,1,1,8
+Round 12,North Shore,WIN,32,54,0,25,17,22,0,25,-8,5,Inside 45 kick,4,4,5,3,16
+Round 12,North Shore,WIN,32,54,0,25,17,22,0,25,-8,5,Switch and Release,0,0,2,1,3
+Round 12,North Shore,WIN,32,54,0,25,17,22,0,25,-8,5,Switch and Slow,3,0,0,0,3
