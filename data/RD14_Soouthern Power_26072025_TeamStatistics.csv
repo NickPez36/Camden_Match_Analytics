@@ -1,0 +1,48 @@
+﻿Round,Opponent,Result,Oppo Score,Camden Score,Q1_Score_Diff,Q2_Score_Diff,Q3_Score_Diff,Q4_Score_Diff,Q1_Score_Change,Q2_Score_Change,Q3_Score_Change,Q4_Score_Change,Statistic,Q1_Count,Q2_Count,Q3_Count,Q4_Count,Game_Count
+Round 14,Southern Power,WIN,10,122,48,73,91,122,48,25,18,31,Inside 50,15,15,10,14,54
+Round 14,Southern Power,WIN,10,122,48,73,91,122,48,25,18,31,Inside 50 (Drop Zone),8,10,6,8,32
+Round 14,Southern Power,WIN,10,122,48,73,91,122,48,25,18,31,Inside 50 (Rebound Zone),7,5,4,6,22
+Round 14,Southern Power,WIN,10,122,48,73,91,122,48,25,18,31,Direct Turnover - D50,0,0,0,1,1
+Round 14,Southern Power,WIN,10,122,48,73,91,122,48,25,18,31,Direct Turnover - F50,0,2,2,0,4
+Round 14,Southern Power,WIN,10,122,48,73,91,122,48,25,18,31,Direct Turnover - Between Arcs,1,0,3,1,5
+Round 14,Southern Power,WIN,10,122,48,73,91,122,48,25,18,31,Defensive 50 Mark,3,1,2,2,8
+Round 14,Southern Power,WIN,10,122,48,73,91,122,48,25,18,31,Inside 50 Mark - Contested,3,1,1,1,6
+Round 14,Southern Power,WIN,10,122,48,73,91,122,48,25,18,31,Inside 50 Mark - Uncontested,3,4,2,1,10
+Round 14,Southern Power,WIN,10,122,48,73,91,122,48,25,18,31,Oppo Defensive 50 Mark,1,0,1,3,5
+Round 14,Southern Power,WIN,10,122,48,73,91,122,48,25,18,31,Oppo Forward 50 Mark,0,1,2,0,3
+Round 14,Southern Power,WIN,10,122,48,73,91,122,48,25,18,31,Defensive 50 Stoppage Loss,0,0,0,3,3
+Round 14,Southern Power,WIN,10,122,48,73,91,122,48,25,18,31,Defensive 50 Stoppage Neutral,0,0,2,0,2
+Round 14,Southern Power,WIN,10,122,48,73,91,122,48,25,18,31,Defensive 50 Stoppage Win,0,1,0,1,2
+Round 14,Southern Power,WIN,10,122,48,73,91,122,48,25,18,31,Between Arcs Stoppage Loss,1,4,4,3,12
+Round 14,Southern Power,WIN,10,122,48,73,91,122,48,25,18,31,Between Arcs Stoppage Neutral,1,6,5,2,14
+Round 14,Southern Power,WIN,10,122,48,73,91,122,48,25,18,31,Between Arcs Stoppage Win,2,5,2,1,10
+Round 14,Southern Power,WIN,10,122,48,73,91,122,48,25,18,31,Centre Stoppage Loss,2,0,1,4,7
+Round 14,Southern Power,WIN,10,122,48,73,91,122,48,25,18,31,Centre Stoppage Neutral,1,2,1,0,4
+Round 14,Southern Power,WIN,10,122,48,73,91,122,48,25,18,31,Centre Stoppage Win,5,3,4,2,14
+Round 14,Southern Power,WIN,10,122,48,73,91,122,48,25,18,31,Forward 50 Stoppage Loss,1,0,0,1,2
+Round 14,Southern Power,WIN,10,122,48,73,91,122,48,25,18,31,Forward 50 Stoppage Neutral,7,2,0,2,11
+Round 14,Southern Power,WIN,10,122,48,73,91,122,48,25,18,31,Forward 50 Stoppage Win,2,1,0,0,3
+Round 14,Southern Power,WIN,10,122,48,73,91,122,48,25,18,31,Oppo Behind - Field Play,0,0,1,0,1
+Round 14,Southern Power,WIN,10,122,48,73,91,122,48,25,18,31,Oppo Goal - Field Play,0,0,1,0,1
+Round 14,Southern Power,WIN,10,122,48,73,91,122,48,25,18,31,Behind - Field Play,5,1,2,1,9
+Round 14,Southern Power,WIN,10,122,48,73,91,122,48,25,18,31,Behind - Set Shot,1,1,1,1,4
+Round 14,Southern Power,WIN,10,122,48,73,91,122,48,25,18,31,Goal - Field Play,4,2,2,3,11
+Round 14,Southern Power,WIN,10,122,48,73,91,122,48,25,18,31,Goal - Set Shot,3,2,2,2,9
+Round 14,Southern Power,WIN,10,122,48,73,91,122,48,25,18,31,Oppo Behind - Set Shot,0,1,2,0,3
+Round 14,Southern Power,WIN,10,122,48,73,91,122,48,25,18,31,Fast Rebound 50,4,3,6,5,18
+Round 14,Southern Power,WIN,10,122,48,73,91,122,48,25,18,31,Kick out - Fast,0,1,1,0,2
+Round 14,Southern Power,WIN,10,122,48,73,91,122,48,25,18,31,Oppo Forward 50 Entry (Fast),4,1,7,4,16
+Round 14,Southern Power,WIN,10,122,48,73,91,122,48,25,18,31,Oppo Forward 50 Entry (Slow),1,4,2,2,9
+Round 14,Southern Power,WIN,10,122,48,73,91,122,48,25,18,31,Oppo Kick out - Fast,1,1,1,0,3
+Round 14,Southern Power,WIN,10,122,48,73,91,122,48,25,18,31,Oppo Kick out - Slow,4,1,2,2,9
+Round 14,Southern Power,WIN,10,122,48,73,91,122,48,25,18,31,Oppo Slow Defensive Exit,1,6,3,3,13
+Round 14,Southern Power,WIN,10,122,48,73,91,122,48,25,18,31,Slow Defensive Exit,2,0,0,2,4
+Round 14,Southern Power,WIN,10,122,48,73,91,122,48,25,18,31,Kick out - Slow,0,0,2,0,2
+Round 14,Southern Power,WIN,10,122,48,73,91,122,48,25,18,31,Oppo Fast Defensive Exit,0,2,1,2,5
+Round 14,Southern Power,WIN,10,122,48,73,91,122,48,25,18,31,Fast Through The Middle,0,3,0,1,4
+Round 14,Southern Power,WIN,10,122,48,73,91,122,48,25,18,31,Forward HB,10,10,17,13,50
+Round 14,Southern Power,WIN,10,122,48,73,91,122,48,25,18,31,Handball Recieve,10,5,8,8,31
+Round 14,Southern Power,WIN,10,122,48,73,91,122,48,25,18,31,Inside 45 kick,4,6,7,6,23
+Round 14,Southern Power,WIN,10,122,48,73,91,122,48,25,18,31,Repeat Stoppage,1,0,0,0,1
+Round 14,Southern Power,WIN,10,122,48,73,91,122,48,25,18,31,Switch and Release,2,1,1,2,6
+Round 14,Southern Power,WIN,10,122,48,73,91,122,48,25,18,31,Chase Down Tackle,0,4,1,2,7
