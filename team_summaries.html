@@ -105,12 +105,13 @@
 
             <!-- Tabs Navigation -->
             <div id="tabs-container" class="hidden mb-8">
-                <div class="grid grid-cols-2 lg:grid-cols-5 bg-gray-800 rounded-lg p-1 gap-1">
+                <div class="grid grid-cols-2 lg:grid-cols-6 bg-gray-800 rounded-lg p-1 gap-1">
                     <button data-tab="scoring-zone" class="tab-button w-full">Scoring Zone</button>
                     <button data-tab="transitions" class="tab-button w-full">D50 to F50</button>
                     <button data-tab="i45-conversion" class="tab-button w-full">I45 Conversion</button>
                     <button data-tab="scoring-efficiency" class="tab-button w-full">Scoring Efficiency</button>
                     <button data-tab="gps-summary" class="tab-button w-full">GPS Summaries</button>
+                    <button data-tab="turnovers" class="tab-button w-full">Turnover Consequences</button>
                 </div>
             </div>
 
@@ -191,6 +192,12 @@
                     <div class="card"><h2 class="text-2xl font-bold text-white mb-6 text-center">GPS Win/Loss Averages</h2><div class="grid grid-cols-1 lg:grid-cols-2 gap-8"><div class="card border-2 border-green-500/50 bg-gray-900/50"><h3 class="text-xl font-semibold text-green-400 mb-4 text-center">Winning Games (<span id="win-count">0</span>)</h3><div id="gps-win-summary" class="space-y-3"></div></div><div class="card border-2 border-red-500/50 bg-gray-900/50"><h3 class="text-xl font-semibold text-red-400 mb-4 text-center">Losing Games (<span id="loss-count">0</span>)</h3><div id="gps-loss-summary" class="space-y-3"></div></div></div></div>
                     <div class="card"><h3 class="text-xl font-semibold text-white mb-4">Team Averages Per Match</h3><div class="table-container"><table class="min-w-full"><thead class="bg-gray-700 sticky top-0"><tr><th scope="col" class="px-3 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">File Name</th><th scope="col" class="px-3 py-3 text-center text-xs font-medium text-gray-300 uppercase tracking-wider">Result</th><th scope="col" class="px-3 py-3 text-center text-xs font-medium text-gray-300 uppercase tracking-wider">Total Dist. (m)</th><th scope="col" class="px-3 py-3 text-center text-xs font-medium text-gray-300 uppercase tracking-wider">Sprint Dist. (m)</th><th scope="col" class="px-3 py-3 text-center text-xs font-medium text-gray-300 uppercase tracking-wider">Sprint Efforts</th><th scope="col" class="px-3 py-3 text-center text-xs font-medium text-gray-300 uppercase tracking-wider">Hard Running (m)</th><th scope="col" class="px-3 py-3 text-center text-xs font-medium text-gray-300 uppercase tracking-wider">Hard Running Efforts</th><th scope="col" class="px-3 py-3 text-center text-xs font-medium text-gray-300 uppercase tracking-wider">Work Rate (m/min)</th></tr></thead><tbody id="gps-summary-body" class="divide-y divide-gray-700"></tbody></table></div></div>
                 </div>
+                
+                <!-- Tab 6: Turnover Consequences -->
+                <div id="turnovers-content" class="tab-content space-y-8">
+                    <div class="card"><h2 class="text-2xl font-bold text-white mb-6 text-center">Overall Turnover Consequences</h2><div class="grid grid-cols-1 md:grid-cols-2 gap-6"><div class="card text-center col-span-1 md:col-span-2 bg-gray-900/50"><h3 class="text-lg font-medium text-gray-400">Opposition Points Per Turnover</h3><p id="points-per-turnover" class="text-4xl font-bold text-red-400 mt-2">0.0</p><p id="points-per-turnover-count" class="text-sm text-gray-500 mt-1">(0 points from 0 turnovers)</p></div><div class="card text-center bg-gray-900/50"><h3 class="text-lg font-medium text-gray-400">D50 TO ➔ Oppo Score %</h3><p id="d50-turnover-pct" class="text-4xl font-bold text-red-400 mt-2">0%</p><p id="d50-turnover-count" class="text-sm text-gray-500 mt-1">(0 scores from 0 turnovers)</p></div><div class="card text-center bg-gray-900/50"><h3 class="text-lg font-medium text-gray-400">Midfield TO ➔ Oppo I50 %</h3><p id="arcs-turnover-pct" class="text-4xl font-bold text-orange-400 mt-2">0%</p><p id="arcs-turnover-count" class="text-sm text-gray-500 mt-1">(0 entries from 0 turnovers)</p></div><div class="card text-center col-span-1 md:col-span-2 bg-gray-900/50"><h3 class="text-lg font-medium text-gray-400">F50 TO ➔ Oppo I50 %</h3><p id="f50-turnover-pct" class="text-4xl font-bold text-yellow-400 mt-2">0%</p><p id="f50-turnover-count" class="text-sm text-gray-500 mt-1">(0 entries from 0 turnovers)</p></div></div></div>
+                    <div class="card"><h3 class="text-xl font-semibold text-white mb-4">Match-by-Match Breakdown</h3><div class="table-container"><table class="min-w-full"><thead class="bg-gray-700 sticky top-0"><tr><th scope="col" class="px-2 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">File Name</th><th scope="col" class="px-2 py-3 text-center text-xs font-medium text-gray-300 uppercase tracking-wider">Oppo Pts/TO</th><th scope="col" class="px-2 py-3 text-center text-xs font-medium text-gray-300 uppercase tracking-wider">D50 TO %</th><th scope="col" class="px-2 py-3 text-center text-xs font-medium text-gray-300 uppercase tracking-wider">Mid TO %</th><th scope="col" class="px-2 py-3 text-center text-xs font-medium text-gray-300 uppercase tracking-wider">F50 TO %</th></tr></thead><tbody id="turnover-summary-body" class="divide-y divide-gray-700"></tbody></table></div></div>
+                </div>
             </div>
             
             <div id="no-results" class="text-center py-8 text-gray-500 hidden"><p>No relevant data found in the provided files to generate analysis.</p></div>
@@ -238,6 +245,9 @@
             const gpsLossSummary = document.getElementById('gps-loss-summary');
             const winCountSpan = document.getElementById('win-count');
             const lossCountSpan = document.getElementById('loss-count');
+            // Tab 6: Turnover Consequences
+            const d50TurnoverPct = document.getElementById('d50-turnover-pct'), d50TurnoverCount = document.getElementById('d50-turnover-count'), arcsTurnoverPct = document.getElementById('arcs-turnover-pct'), arcsTurnoverCount = document.getElementById('arcs-turnover-count'), f50TurnoverPct = document.getElementById('f50-turnover-pct'), f50TurnoverCount = document.getElementById('f50-turnover-count'), turnoverSummaryBody = document.getElementById('turnover-summary-body'), pointsPerTurnover = document.getElementById('points-per-turnover'), pointsPerTurnoverCount = document.getElementById('points-per-turnover-count');
+
 
             // --- Event Listeners ---
             tabsContainer.addEventListener('click', (e) => { if (e.target.matches('.tab-button')) switchTab(e.target.dataset.tab); });
@@ -373,11 +383,12 @@
                 })).sort((a, b) => a.start - b.start);
 
                 const teamGoalEvents = ["Goal - Field Play", "Goal - Set Shot"], teamBehindEvents = ["Behind - Field Play", "Behind - Set Shot"], teamScoringEvents = [...teamGoalEvents, ...teamBehindEvents], oppoGoalEvents = ["Oppo Goal - Field Play", "Oppo Goal - Set Shot"], oppoBehindEvents = ["Oppo Behind - Field Play", "Oppo Behind - Set Shot"], oppoScoringEvents = [...oppoGoalEvents, ...oppoBehindEvents], oppoI50Events = ["Oppo Forward 50 Entry (Fast)", "Oppo Forward 50 Entry (Slow)"];
-                const setShotEvents = ["Goal - Set Shot", "Behind - Set Shot"];
+                const setShotEvents = ["Goal - Set Shot", "Behind - Set Shot"], fieldPlayEvents = ["Goal - Field Play", "Behind - Field Play"];
                 
                 let teamI50s = 0, teamScores = 0, teamGoals = 0, oppoI50s = 0, oppoScores = 0, oppoGoals = 0, dropZoneScores = 0, reboundZoneScores = 0, dropZoneGoals = 0, reboundZoneGoals = 0, transitionAttempts = 0, successfulTransitions = 0, i45Kicks = 0, successfulI45Conversions = 0;
                 let dropZoneSetShotScores = 0, dropZoneFieldPlayScores = 0, reboundZoneSetShotScores = 0, reboundZoneFieldPlayScores = 0;
                 let dropZoneSetShotGoals = 0, dropZoneFieldPlayGoals = 0, reboundZoneSetShotGoals = 0, reboundZoneFieldPlayGoals = 0;
+                let d50Turnovers = 0, d50Consequences = 0, arcsTurnovers = 0, arcsConsequences = 0, f50Turnovers = 0, f50Consequences = 0;
 
                 allEvents.forEach((event, i) => {
                     if (event.code === "Inside 50") teamI50s++;
@@ -392,21 +403,14 @@
                                 const isDropZone = allEvents[j].code === "Inside 50 (Drop Zone)";
                                 const isSetShot = setShotEvents.includes(event.code);
                                 const isGoal = teamGoalEvents.includes(event.code);
-                                
                                 if (isDropZone) {
                                     dropZoneScores++;
                                     if (isSetShot) dropZoneSetShotScores++; else dropZoneFieldPlayScores++;
-                                    if (isGoal) {
-                                        dropZoneGoals++;
-                                        if (isSetShot) dropZoneSetShotGoals++; else dropZoneFieldPlayGoals++;
-                                    }
+                                    if (isGoal) { dropZoneGoals++; if (isSetShot) dropZoneSetShotGoals++; else dropZoneFieldPlayGoals++; }
                                 } else { 
                                     reboundZoneScores++;
                                     if (isSetShot) reboundZoneSetShotScores++; else reboundZoneFieldPlayScores++;
-                                    if (isGoal) {
-                                        reboundZoneGoals++;
-                                        if (isSetShot) reboundZoneSetShotGoals++; else reboundZoneFieldPlayGoals++;
-                                    }
+                                    if (isGoal) { reboundZoneGoals++; if (isSetShot) reboundZoneSetShotGoals++; else reboundZoneFieldPlayGoals++; }
                                 }
                                 break;
                             }
@@ -429,9 +433,32 @@
                             if (subsequentEvent.code === "Inside 50" && subsequentEvent.start <= event.end + 10) { successfulI45Conversions++; break; }
                         }
                     }
+                    // Turnover Consequences
+                    if (event.code === "Direct Turnover - D50") {
+                        d50Turnovers++;
+                        for (let j = i + 1; j < allEvents.length; j++) {
+                            if (allEvents[j].start > event.end + 20) break;
+                            if (oppoScoringEvents.includes(allEvents[j].code)) { d50Consequences++; break; }
+                        }
+                    } else if (event.code === "Direct Turnover - Between Arcs") {
+                        arcsTurnovers++;
+                        for (let j = i + 1; j < allEvents.length; j++) {
+                            if (allEvents[j].start > event.end + 20) break;
+                            if (oppoI50Events.includes(allEvents[j].code)) { arcsConsequences++; break; }
+                        }
+                    } else if (event.code === "Direct Turnover - F50") {
+                        f50Turnovers++;
+                        for (let j = i + 1; j < allEvents.length; j++) {
+                            if (allEvents[j].start > event.end + 30) break;
+                            if (oppoI50Events.includes(allEvents[j].code)) { f50Consequences++; break; }
+                        }
+                    }
                 });
+            
+                const totalTurnovers = d50Turnovers + arcsTurnovers + f50Turnovers;
+                const oppositionScoreInPoints = (oppoGoals * 6) + (oppoScores - oppoGoals);
 
-                return { fileName, teamI50s, teamScores, teamGoals, oppoI50s, oppoScores, oppoGoals, dropZoneScores, reboundZoneScores, dropZoneGoals, reboundZoneGoals, transitionAttempts, successfulTransitions, i45Kicks, successfulI45Conversions, dropZoneSetShotScores, dropZoneFieldPlayScores, reboundZoneSetShotScores, reboundZoneFieldPlayScores, dropZoneSetShotGoals, dropZoneFieldPlayGoals, reboundZoneSetShotGoals, reboundZoneFieldPlayGoals };
+                return { fileName, teamI50s, teamScores, teamGoals, oppoI50s, oppoScores, oppoGoals, dropZoneScores, reboundZoneScores, dropZoneGoals, reboundZoneGoals, transitionAttempts, successfulTransitions, i45Kicks, successfulI45Conversions, dropZoneSetShotScores, dropZoneFieldPlayScores, reboundZoneSetShotScores, reboundZoneFieldPlayScores, dropZoneSetShotGoals, dropZoneFieldPlayGoals, reboundZoneSetShotGoals, reboundZoneFieldPlayGoals, d50Turnovers, d50Consequences, arcsTurnovers, arcsConsequences, f50Turnovers, f50Consequences, totalTurnovers, oppositionScoreInPoints };
             }
 
             function parseAndAnalyzeGpsFile(csvString, fileName) {
@@ -495,24 +522,20 @@
                     dropZoneCount.textContent = `(${overall.dropZoneScores} of ${overall.teamScores} scores)`;
                     reboundZonePercentage.textContent = `${overall.teamScores > 0 ? ((overall.reboundZoneScores / overall.teamScores) * 100).toFixed(1) : '0.0'}%`;
                     reboundZoneCount.textContent = `(${overall.reboundZoneScores} of ${overall.teamScores} scores)`;
-                    
                     dropZoneSetShotScorePct.textContent = `${overall.dropZoneScores > 0 ? ((overall.dropZoneSetShotScores / overall.dropZoneScores) * 100).toFixed(1) : '0.0'}%`;
                     dropZoneFieldPlayScorePct.textContent = `${overall.dropZoneScores > 0 ? ((overall.dropZoneFieldPlayScores / overall.dropZoneScores) * 100).toFixed(1) : '0.0'}%`;
                     reboundZoneSetShotScorePct.textContent = `${overall.reboundZoneScores > 0 ? ((overall.reboundZoneSetShotScores / overall.reboundZoneScores) * 100).toFixed(1) : '0.0'}%`;
                     reboundZoneFieldPlayScorePct.textContent = `${overall.reboundZoneScores > 0 ? ((overall.reboundZoneFieldPlayScores / overall.reboundZoneScores) * 100).toFixed(1) : '0.0'}%`;
-
                     if (overall.teamGoals > 0) {
                         goalResultsSection.classList.remove('hidden');
                         goalDropZonePercentage.textContent = `${((overall.dropZoneGoals / overall.teamGoals) * 100).toFixed(1)}%`;
                         goalDropZoneCount.textContent = `(${overall.dropZoneGoals} of ${overall.teamGoals} goals)`;
                         goalReboundZonePercentage.textContent = `${(((overall.teamGoals - overall.dropZoneGoals) / overall.teamGoals) * 100).toFixed(1)}%`;
                         goalReboundZoneCount.textContent = `(${overall.teamGoals - overall.dropZoneGoals} of ${overall.teamGoals} goals)`;
-
                         dropZoneSetShotGoalPct.textContent = `${overall.dropZoneGoals > 0 ? ((overall.dropZoneSetShotGoals / overall.dropZoneGoals) * 100).toFixed(1) : '0.0'}%`;
                         dropZoneFieldPlayGoalPct.textContent = `${overall.dropZoneGoals > 0 ? ((overall.dropZoneFieldPlayGoals / overall.dropZoneGoals) * 100).toFixed(1) : '0.0'}%`;
                         reboundZoneSetShotGoalPct.textContent = `${overall.reboundZoneGoals > 0 ? ((overall.reboundZoneSetShotGoals / overall.reboundZoneGoals) * 100).toFixed(1) : '0.0'}%`;
                         reboundZoneFieldPlayGoalPct.textContent = `${overall.reboundZoneGoals > 0 ? ((overall.reboundZoneFieldPlayGoals / overall.reboundZoneGoals) * 100).toFixed(1) : '0.0'}%`;
-
                     } else { goalResultsSection.classList.add('hidden'); }
                     matchSummaryBody.innerHTML = '';
                     allMatchStats.forEach(match => {
@@ -559,6 +582,26 @@
                         const oppoPerGoal = match.oppoGoals > 0 ? (match.oppoI50s / match.oppoGoals).toFixed(1) : 'N/A';
                         row.innerHTML = `<td class="px-2 py-4 whitespace-nowrap text-sm font-medium text-gray-300">${match.fileName}</td><td class="px-2 py-4 text-center text-sm text-indigo-400 font-semibold">${teamPerScore}</td><td class="px-2 py-4 text-center text-sm text-indigo-400 font-semibold">${teamPerGoal}</td><td class="px-2 py-4 text-center text-sm text-rose-400 font-semibold">${oppoPerScore}</td><td class="px-2 py-4 text-center text-sm text-rose-400 font-semibold">${oppoPerGoal}</td>`;
                         efficiencySummaryBody.appendChild(row);
+                    });
+
+                    // Turnover Consequences
+                    pointsPerTurnover.textContent = `${overall.totalTurnovers > 0 ? (overall.oppositionScoreInPoints / overall.totalTurnovers).toFixed(1) : '0.0'}`;
+                    pointsPerTurnoverCount.textContent = `(${overall.oppositionScoreInPoints} points from ${overall.totalTurnovers} turnovers)`;
+                    d50TurnoverPct.textContent = `${overall.d50Turnovers > 0 ? ((overall.d50Consequences / overall.d50Turnovers) * 100).toFixed(1) : '0.0'}%`;
+                    d50TurnoverCount.textContent = `(${overall.d50Consequences} scores from ${overall.d50Turnovers} turnovers)`;
+                    arcsTurnoverPct.textContent = `${overall.arcsTurnovers > 0 ? ((overall.arcsConsequences / overall.arcsTurnovers) * 100).toFixed(1) : '0.0'}%`;
+                    arcsTurnoverCount.textContent = `(${overall.arcsConsequences} entries from ${overall.arcsTurnovers} turnovers)`;
+                    f50TurnoverPct.textContent = `${overall.f50Turnovers > 0 ? ((overall.f50Consequences / overall.f50Turnovers) * 100).toFixed(1) : '0.0'}%`;
+                    f50TurnoverCount.textContent = `(${overall.f50Consequences} entries from ${overall.f50Turnovers} turnovers)`;
+                    turnoverSummaryBody.innerHTML = '';
+                    allMatchStats.forEach(match => {
+                        const row = document.createElement('tr'); row.className = 'hover:bg-gray-800 transition-colors duration-200';
+                        const ptsPerTO = match.totalTurnovers > 0 ? (match.oppositionScoreInPoints / match.totalTurnovers).toFixed(1) : '0.0';
+                        const d50Pct = match.d50Turnovers > 0 ? ((match.d50Consequences / match.d50Turnovers) * 100).toFixed(1) : '0.0';
+                        const arcsPct = match.arcsTurnovers > 0 ? ((match.arcsConsequences / match.arcsTurnovers) * 100).toFixed(1) : '0.0';
+                        const f50Pct = match.f50Turnovers > 0 ? ((match.f50Consequences / match.f50Turnovers) * 100).toFixed(1) : '0.0';
+                        row.innerHTML = `<td class="px-2 py-4 whitespace-nowrap text-sm font-medium text-gray-300">${match.fileName}</td><td class="px-2 py-4 text-center text-sm text-red-400 font-semibold">${ptsPerTO}</td><td class="px-2 py-4 text-center text-sm text-red-400 font-semibold">${d50Pct}%</td><td class="px-2 py-4 text-center text-sm text-orange-400 font-semibold">${arcsPct}%</td><td class="px-2 py-4 text-center text-sm text-yellow-400 font-semibold">${f50Pct}%</td>`;
+                        turnoverSummaryBody.appendChild(row);
                     });
                 }
 
