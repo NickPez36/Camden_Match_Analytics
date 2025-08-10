@@ -1,0 +1,8751 @@
+﻿<file>
+<ALL_INSTANCES>
+<instance>
+<ID>1</ID>
+<start>12.136979166666666</start>
+<end>13.136979166666666</end>
+<code>Whistle</code>
+</instance>
+<instance>
+<ID>2</ID>
+<start>12.776660284998467</start>
+<end>38.377300024997695</end>
+<code>Forward HB</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>3</ID>
+<start>18.896597772992585</start>
+<end>26.695935950998646</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>4</ID>
+<start>22.224270304</start>
+<end>30.224270304</end>
+<code>Centre Stoppage Neutral</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>5</ID>
+<start>27.675232012</start>
+<end>36.432158984</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>6</ID>
+<start>33.645737572</start>
+<end>36.432158984</end>
+<code>Forward Half - Cats in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>7</ID>
+<start>35.37712276899886</start>
+<end>60.37712276899886</end>
+<code>Between Arcs Stoppage Neutral</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>8</ID>
+<start>36.432158984</start>
+<end>39.09348599299504</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>9</ID>
+<start>40.107312202</start>
+<end>63.107312202</end>
+<code>Inside 45 kick</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>10</ID>
+<start>45.594948292991894</start>
+<end>51.317318552</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>11</ID>
+<start>49.966422173</start>
+<end>72.966422173</end>
+<code>Chase Down Tackle</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>12</ID>
+<start>51.317318552</start>
+<end>56.299810154</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>13</ID>
+<start>51.317318552</start>
+<end>56.299810154</end>
+<code>Forward Half - Cats in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>14</ID>
+<start>56.299810154</start>
+<end>58.035564118</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>15</ID>
+<start>58.035564118</start>
+<end>62.32026939</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>16</ID>
+<start>62.32026939</start>
+<end>65.85747254</end>
+<code>Forward Half - Opposition in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>17</ID>
+<start>62.32026939</start>
+<end>65.85747254</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>18</ID>
+<start>64.685230278998</start>
+<end>89.685230278998</end>
+<code>Between Arcs Stoppage Neutral</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>19</ID>
+<start>65.85747254</start>
+<end>67.69647638699435</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>20</ID>
+<start>74.49559937699706</start>
+<end>80.946809732</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>21</ID>
+<start>85.19537744399153</start>
+<end>98.135991984</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>22</ID>
+<start>91.18379908299927</start>
+<end>121.18379908299927</end>
+<code>Oppo Forward 50 Entry (Fast)</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>23</ID>
+<start>94.89480071199466</start>
+<end>98.135991984</end>
+<code>Forward Half - Cats in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>24</ID>
+<start>98.135991984</start>
+<end>99.697683418</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>25</ID>
+<start>99.697683418</start>
+<end>113.946995074</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>26</ID>
+<start>105.84669141</start>
+<end>113.946995074</end>
+<code>Forward Half - Opposition in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>27</ID>
+<start>113.946995074</start>
+<end>118.8975025</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>28</ID>
+<start>118.8975025</start>
+<end>120.511118022</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>29</ID>
+<start>120.511118022</start>
+<end>121.29594296099415</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>30</ID>
+<start>126.78988204799563</start>
+<end>151.78988204799563</end>
+<code>Defensive 50 Stoppage Neutral</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>31</ID>
+<start>129.863381869</start>
+<end>181.863381869</end>
+<code>Oppo Behind - Set Shot</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>32</ID>
+<start>131.8822804860002</start>
+<end>163.8822804860002</end>
+<code>Slow Defensive Exit</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>33</ID>
+<start>132.88232017799746</start>
+<end>162.88232017799746</end>
+<code>Direct Turnover - Between Arcs</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>34</ID>
+<start>134.89593171899938</start>
+<end>145.4938917319918</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>35</ID>
+<start>138.89049239600095</start>
+<end>170.89049239600095</end>
+<code>Oppo Forward 50 Entry (Slow)</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>36</ID>
+<start>143.68984771099838</start>
+<end>170.68984771099838</end>
+<code>Oppo Forward 50 Mark</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>37</ID>
+<start>148.349210486</start>
+<end>154.261345258</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>38</ID>
+<start>154.261345258</start>
+<end>170.398714414</end>
+<code>Forward Half - Opposition in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>39</ID>
+<start>154.261345258</start>
+<end>170.398714414</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>40</ID>
+<start>167.08790913499936</start>
+<end>201.08790913499936</end>
+<code>Kick out - Slow</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>41</ID>
+<start>178.175805586</start>
+<end>201.175805586</end>
+<code>Chase Down Tackle</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>42</ID>
+<start>180.59276458999614</start>
+<end>210.59276458999614</end>
+<code>Direct Turnover - Between Arcs</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>43</ID>
+<start>180.79565645399717</start>
+<end>190.078092148</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>44</ID>
+<start>186.614376016</start>
+<end>209.614376016</end>
+<code>Inside 45 kick</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>45</ID>
+<start>190.078092148</start>
+<end>191.723806066</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>46</ID>
+<start>191.723806066</start>
+<end>194.727061764</end>
+<code>Forward Half - Opposition in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>47</ID>
+<start>191.723806066</start>
+<end>194.727061764</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>48</ID>
+<start>194.727061764</start>
+<end>195.742209222</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>49</ID>
+<start>195.742209222</start>
+<end>202.397190788</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>50</ID>
+<start>200.325610619</start>
+<end>227.325610619</end>
+<code>Oppo Forward 50 Mark</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>51</ID>
+<start>201.49427118398938</start>
+<end>202.397190788</end>
+<code>Forward Half - Cats in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>52</ID>
+<start>201.859468716</start>
+<end>231.859468716</end>
+<code>Oppo Forward 50 Entry (Fast)</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>53</ID>
+<start>202.397190788</start>
+<end>225.0765625</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>54</ID>
+<start>210.296709462</start>
+<end>225.0765625</end>
+<code>Forward Half - Opposition in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>55</ID>
+<start>236.19148616099724</start>
+<end>261.1914861609972</end>
+<code>Defensive 50 Stoppage Loss</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>56</ID>
+<start>245.178917487999</start>
+<end>297.178917487999</end>
+<code>Oppo Behind - Set Shot</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>57</ID>
+<start>247.2964338269974</start>
+<end>255.79599813399457</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>58</ID>
+<start>261.295135861993</start>
+<end>284.6003479119993</end>
+<code>Forward Half - Opposition in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>59</ID>
+<start>261.295135861993</start>
+<end>284.6003479119993</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>60</ID>
+<start>283.47720805299514</start>
+<end>317.47720805299514</end>
+<code>Kick out - Slow</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>61</ID>
+<start>294.98594378199573</start>
+<end>326.98594378199573</end>
+<code>Oppo Forward 50 Entry (Slow)</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>62</ID>
+<start>296.9967748970015</start>
+<end>306.9853374</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>63</ID>
+<start>303.6770210439989</start>
+<end>335.6770210439989</end>
+<code>Oppo Behind - Field Play</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>64</ID>
+<start>306.9853374</start>
+<end>321.801594378</end>
+<code>Forward Half - Opposition in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>65</ID>
+<start>306.9853374</start>
+<end>321.801594378</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>66</ID>
+<start>317.08200874399546</start>
+<end>346.08200874399546</end>
+<code>Kick out - Fast</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>67</ID>
+<start>321.801594378</start>
+<end>325.794405317996</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>68</ID>
+<start>325.9877309899988</start>
+<end>348.9877309899988</end>
+<code>Handball Recieve</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>69</ID>
+<start>331.63525627</start>
+<end>337.1961070869919</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>70</ID>
+<start>334.38395620199975</start>
+<end>357.38395620199975</end>
+<code>Inside 45 kick</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>71</ID>
+<start>335.663715299</start>
+<end>365.663715299</end>
+<code>Direct Turnover - Between Arcs</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>72</ID>
+<start>337.1961070869919</start>
+<end>338.5934930650004</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>73</ID>
+<start>338.6815300259996</start>
+<end>361.6815300259996</end>
+<code>Handball Recieve</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>74</ID>
+<start>340.998823888</start>
+<end>357.70981501</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>75</ID>
+<start>343.3811733069981</start>
+<end>373.3811733069981</end>
+<code>Oppo Forward 50 Entry (Fast)</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>76</ID>
+<start>346.8799119379989</start>
+<end>378.8799119379989</end>
+<code>Oppo Behind - Field Play</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>77</ID>
+<start>357.70981501</start>
+<end>367.69552725099805</end>
+<code>Forward Half - Opposition in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>78</ID>
+<start>357.70981501</start>
+<end>367.69552725099805</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>79</ID>
+<start>360.28100282200023</start>
+<end>389.28100282200023</end>
+<code>Kick out - Fast</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>80</ID>
+<start>367.69552725099805</start>
+<end>368.69508170799213</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>81</ID>
+<start>375.696572296998</start>
+<end>410.629924648</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>82</ID>
+<start>381.0828948409951</start>
+<end>419.7871988309962</end>
+<code>Switch and Slow</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>83</ID>
+<start>410.629924648</start>
+<end>411.768617964</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>84</ID>
+<start>411.768617964</start>
+<end>415.34030698</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>85</ID>
+<start>415.34030698</start>
+<end>416.2002719129956</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>86</ID>
+<start>418.6821328419981</start>
+<end>443.6821328419981</end>
+<code>Between Arcs Stoppage Loss</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>87</ID>
+<start>428.995725185991</start>
+<end>443.19608511099506</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>88</ID>
+<start>431.97935229699806</start>
+<end>454.97935229699806</end>
+<code>Inside 45 kick</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>89</ID>
+<start>433.98356524599757</start>
+<end>460.98356524599757</end>
+<code>Inside 50 (Rebound Zone)</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>90</ID>
+<start>433.98356524599757</start>
+<end>463.98356524599757</end>
+<code>Inside 50</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>91</ID>
+<start>445.8820398759993</start>
+<end>474.8820398759993</end>
+<code>Oppo Fast Defensive Exit</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>92</ID>
+<start>446.1946472859936</start>
+<end>455.510128752</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>93</ID>
+<start>446.1946472859936</start>
+<end>455.510128752</end>
+<code>Forward Half - Cats in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>94</ID>
+<start>455.510128752</start>
+<end>462.23704782</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>95</ID>
+<start>455.88435169099705</start>
+<end>485.88435169099705</end>
+<code>Oppo Forward 50 Entry (Fast)</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>96</ID>
+<start>462.23704782</start>
+<end>479.03607275</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>97</ID>
+<start>463.99469112999634</start>
+<end>479.03607275</end>
+<code>Forward Half - Opposition in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>98</ID>
+<start>479.03607275</start>
+<end>481.5948531809912</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>99</ID>
+<start>483.5849254650002</start>
+<end>515.5849254650002</end>
+<code>Oppo Behind - Field Play</code>
+<label>
+<text>Quarter 1</text>
+</label>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>100</ID>
+<start>484.33792565</start>
+<end>509.33792565</end>
+<code>Defensive 50 Stoppage Loss</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>101</ID>
+<start>494.0963731349934</start>
+<end>499.765631818</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>102</ID>
+<start>499.765631818</start>
+<end>504.29362839</end>
+<code>Forward Half - Opposition in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>103</ID>
+<start>499.765631818</start>
+<end>504.29362839</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>104</ID>
+<start>504.29362839</start>
+<end>505.849643374</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>105</ID>
+<start>514.0825753809995</start>
+<end>548.0825753809995</end>
+<code>Kick out - Slow</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>106</ID>
+<start>522.395200884993</start>
+<end>549.108100248</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>107</ID>
+<start>531.0788356710011</start>
+<end>554.0788356710011</end>
+<code>Forward HB</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>108</ID>
+<start>549.108100248</start>
+<end>553.6958297759905</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>109</ID>
+<start>552.678259326</start>
+<end>577.678259326</end>
+<code>Between Arcs Stoppage Loss</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>110</ID>
+<start>558.090077967996</start>
+<end>588.090077967996</end>
+<code>Direct Turnover - Between Arcs</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>111</ID>
+<start>558.5903427539972</start>
+<end>582.0898916459956</end>
+<code>Forward HB</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>112</ID>
+<start>562.1959935309945</start>
+<end>566.566666667</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>113</ID>
+<start>566.566666667</start>
+<end>568.332796131</end>
+<code>Forward Half - Opposition in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>114</ID>
+<start>566.566666667</start>
+<end>568.332796131</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>115</ID>
+<start>568.332796131</start>
+<end>573.761733649</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>116</ID>
+<start>573.761733649</start>
+<end>576.851988015</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>117</ID>
+<start>576.851988015</start>
+<end>579.5956774859948</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>118</ID>
+<start>579.5956774859948</start>
+<end>590.259107897</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>119</ID>
+<start>580.918925502</start>
+<end>603.918925502</end>
+<code>Inside 45 kick</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>120</ID>
+<start>581.0886459709981</start>
+<end>604.0886459709981</end>
+<code>Handball Recieve</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>121</ID>
+<start>585.198809485</start>
+<end>615.198809485</end>
+<code>Direct Turnover - Between Arcs</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>122</ID>
+<start>585.9872754579966</start>
+<end>608.9872754579966</end>
+<code>Handball Recieve</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>123</ID>
+<start>586.093649121</start>
+<end>590.259107897</end>
+<code>Forward Half - Opposition in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>124</ID>
+<start>590.259107897</start>
+<end>591.0940366339962</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>125</ID>
+<start>591.0940366339962</start>
+<end>601.092324171</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>126</ID>
+<start>597.9936401439977</start>
+<end>601.092324171</end>
+<code>Forward Half - Cats in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>127</ID>
+<start>601.092324171</start>
+<end>601.092324171</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>128</ID>
+<start>601.092324171</start>
+<end>607.241146265</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>129</ID>
+<start>601.977283355997</start>
+<end>631.977283355997</end>
+<code>Oppo Forward 50 Entry (Fast)</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>130</ID>
+<start>607.241146265</start>
+<end>624.431514259</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>131</ID>
+<start>611.9644672970012</start>
+<end>634.9644672970012</end>
+<code>Forward HB</code>
+<label>
+<text>Quarter 1</text>
+</label>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>132</ID>
+<start>614.5858896039994</start>
+<end>641.5858896039994</end>
+<code>Fast Rebound 50</code>
+<label>
+<text>Quarter 1</text>
+</label>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>133</ID>
+<start>617.1868073939979</start>
+<end>640.1868073939979</end>
+<code>Inside 45 kick</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>134</ID>
+<start>617.2954259999932</start>
+<end>624.431514259</end>
+<code>Forward Half - Opposition in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>135</ID>
+<start>624.431514259</start>
+<end>641.081348095</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>136</ID>
+<start>628.1870712819971</start>
+<end>660.1870712819971</end>
+<code>Oppo Forward 50 Entry (Slow)</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>137</ID>
+<start>634.2849361579962</start>
+<end>661.2849361579962</end>
+<code>Oppo Forward 50 Mark</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>138</ID>
+<start>639.2791181499991</start>
+<end>691.2791181499991</end>
+<code>Oppo Goal - Set Shot</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>139</ID>
+<start>641.081348095</start>
+<end>641.978115729</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>140</ID>
+<start>641.978115729</start>
+<end>681.0003393970027</end>
+<code>Forward Half - Opposition in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>141</ID>
+<start>641.978115729</start>
+<end>681.0003393970027</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>142</ID>
+<start>722.7906020369967</start>
+<end>747.7906020369967</end>
+<code>Centre Stoppage Loss</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>143</ID>
+<start>723.985604012</start>
+<end>753.985604012</end>
+<code>Oppo Forward 50 Entry (Fast)</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>144</ID>
+<start>733.5954062549977</start>
+<end>738.122474311</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>145</ID>
+<start>738.122474311</start>
+<end>749.542797537</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>146</ID>
+<start>740.2960241679964</start>
+<end>749.542797537</end>
+<code>Forward Half - Opposition in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>147</ID>
+<start>740.390395247997</start>
+<end>772.390395247997</end>
+<code>Slow Defensive Exit</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>148</ID>
+<start>749.542797537</start>
+<end>751.331788815</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>149</ID>
+<start>751.331788815</start>
+<end>754.278188553</end>
+<code>Forward Half - Opposition in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>150</ID>
+<start>751.331788815</start>
+<end>754.278188553</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>151</ID>
+<start>754.278188553</start>
+<end>757.5966415539957</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>152</ID>
+<start>755.8869579149957</start>
+<end>785.8869579149957</end>
+<code>Direct Turnover - Between Arcs</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>153</ID>
+<start>759.295377035996</start>
+<end>771.435690743</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>154</ID>
+<start>760.0853453879952</start>
+<end>783.0853453879952</end>
+<code>Handball Recieve</code>
+<label>
+<text>Quarter 1</text>
+</label>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>155</ID>
+<start>771.435690743</start>
+<end>773.811463459</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>156</ID>
+<start>773.811463459</start>
+<end>777.532678931</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>157</ID>
+<start>777.532678931</start>
+<end>809.270135477</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>158</ID>
+<start>790.6935486979947</start>
+<end>809.270135477</end>
+<code>Forward Half - Opposition in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>159</ID>
+<start>795.0866450049978</start>
+<end>818.0866450049978</end>
+<code>Chase Down Tackle</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>160</ID>
+<start>802.1811656119978</start>
+<end>825.1811656119978</end>
+<code>Inside 45 kick</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>161</ID>
+<start>809.270135477</start>
+<end>809.8959005559977</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>162</ID>
+<start>811.8960456849999</start>
+<end>821.781234989</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>163</ID>
+<start>815.5796389620003</start>
+<end>840.5796389620003</end>
+<code>Between Arcs Stoppage Loss</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>164</ID>
+<start>821.781234989</start>
+<end>822.0951402899972</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>165</ID>
+<start>828.3959510639986</start>
+<end>830.775051251</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>166</ID>
+<start>830.775051251</start>
+<end>834.383516631</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>167</ID>
+<start>834.383516631</start>
+<end>839.8970698309937</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>168</ID>
+<start>839.8970698309937</start>
+<end>851.164370495</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>169</ID>
+<start>847.1803192549975</start>
+<end>872.1803192549975</end>
+<code>Between Arcs Stoppage Neutral</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>170</ID>
+<start>857.7962800840002</start>
+<end>864.6957837729935</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>171</ID>
+<start>865.308365294</start>
+<end>890.308365294</end>
+<code>Between Arcs Stoppage Loss</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>172</ID>
+<start>874.4939324579992</start>
+<end>882.1959706349926</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>173</ID>
+<start>895.0959423279986</start>
+<end>903.147954611</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>174</ID>
+<start>900.6957842059925</start>
+<end>903.147954611</end>
+<code>Forward Half - Opposition in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>175</ID>
+<start>903.147954611</start>
+<end>905.611558179</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>176</ID>
+<start>905.611558179</start>
+<end>911.4952960549941</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>177</ID>
+<start>908.596074281995</start>
+<end>911.4952960549941</end>
+<code>Forward Half - Opposition in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>178</ID>
+<start>911.4952960549941</start>
+<end>917.783441943</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>179</ID>
+<start>917.783441943</start>
+<end>919.6961422329948</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>180</ID>
+<start>919.6961422329948</start>
+<end>920.4947665799906</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>181</ID>
+<start>933.6852383880002</start>
+<end>958.6852383880002</end>
+<code>Between Arcs Stoppage Neutral</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>182</ID>
+<start>942.6958692969969</start>
+<end>951.1939165249964</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>183</ID>
+<start>947.0794644620001</start>
+<end>972.0794644620001</end>
+<code>Between Arcs Stoppage Neutral</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>184</ID>
+<start>956.5955374849938</start>
+<end>964.095759373996</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>185</ID>
+<start>956.993109314997</start>
+<end>986.993109314997</end>
+<code>Direct Turnover - Between Arcs</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>186</ID>
+<start>960.0926454769993</start>
+<end>985.0926454769993</end>
+<code>Between Arcs Stoppage Win</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>187</ID>
+<start>971.3966932389924</start>
+<end>974.900033111</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>188</ID>
+<start>974.900033111</start>
+<end>981.4971041549968</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>189</ID>
+<start>975.5792024869978</start>
+<end>1007.5792024869978</end>
+<code>Oppo Forward 50 Entry (Slow)</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>190</ID>
+<start>987.1959097109935</start>
+<end>998.994178071</end>
+<code>Forward Half - Opposition in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>191</ID>
+<start>987.1959097109935</start>
+<end>998.994178071</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>192</ID>
+<start>988.069861024</start>
+<end>1015.069861024</end>
+<code>Fast Rebound 50</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>193</ID>
+<start>988.6820829060008</start>
+<end>1018.6820829060008</end>
+<code>Oppo Forward 50 Entry (Fast)</code>
+<label>
+<text>Quarter 1</text>
+</label>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>194</ID>
+<start>989.0881673299959</start>
+<end>1012.0881673299959</end>
+<code>Handball Recieve</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>195</ID>
+<start>990.9789925009986</start>
+<end>1017.9789925009986</end>
+<code>Defensive 50 Mark</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>196</ID>
+<start>998.994178071</start>
+<end>1002.1948583399894</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>197</ID>
+<start>1000.823892575</start>
+<end>1052.823892575</end>
+<code>Oppo Goal - Set Shot</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>198</ID>
+<start>1002.1948583399894</start>
+<end>1005.349804629</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>199</ID>
+<start>1005.349804629</start>
+<end>1006.517183289</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>200</ID>
+<start>1006.517183289</start>
+<end>1010.114140855</end>
+<code>Forward Half - Opposition in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>201</ID>
+<start>1006.517183289</start>
+<end>1010.114140855</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>202</ID>
+<start>1010.114140855</start>
+<end>1017.643473103</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>203</ID>
+<start>1017.643473103</start>
+<end>1017.643473103</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>204</ID>
+<start>1023.0941085129951</start>
+<end>1040.7004302279986</end>
+<code>Forward Half - Opposition in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>205</ID>
+<start>1023.0941085129951</start>
+<end>1040.7004302279986</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>206</ID>
+<start>1078.7891632579986</start>
+<end>1103.7891632579986</end>
+<code>Centre Stoppage Win</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>207</ID>
+<start>1084.068429294</start>
+<end>1114.068429294</end>
+<code>Direct Turnover - F50</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>208</ID>
+<start>1085.0950029549942</start>
+<end>1092.703946969</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>209</ID>
+<start>1086.068429294</start>
+<end>1113.068429294</end>
+<code>Inside 50 (Drop Zone)</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>210</ID>
+<start>1086.068429294</start>
+<end>1113.068429294</end>
+<code>Oppo Defensive 50 Mark</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>211</ID>
+<start>1086.068429294</start>
+<end>1116.068429294</end>
+<code>Inside 50</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>212</ID>
+<start>1092.703946969</start>
+<end>1105.688067263</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>213</ID>
+<start>1097.0957699859932</start>
+<end>1105.688067263</end>
+<code>Forward Half - Cats in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>214</ID>
+<start>1105.688067263</start>
+<end>1137.096245625</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>215</ID>
+<start>1108.186539926999</start>
+<end>1140.186539926999</end>
+<code>Oppo Slow Defensive Exit</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>216</ID>
+<start>1122.2805838880006</start>
+<end>1149.2805838880006</end>
+<code>Inside 50 (Drop Zone)</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>217</ID>
+<start>1122.2805838880006</start>
+<end>1152.2805838880006</end>
+<code>Inside 50</code>
+<label>
+<text>Quarter 1</text>
+</label>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>218</ID>
+<start>1123.7900212680006</start>
+<end>1153.7900212680006</end>
+<code>Direct Turnover - F50</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>219</ID>
+<start>1133.2801186810009</start>
+<end>1165.2801186810009</end>
+<code>Oppo Slow Defensive Exit</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>220</ID>
+<start>1137.096245625</start>
+<end>1139.642889563</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>221</ID>
+<start>1139.642889563</start>
+<end>1144.469473801</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>222</ID>
+<start>1139.642889563</start>
+<end>1144.469473801</end>
+<code>Forward Half - Cats in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>223</ID>
+<start>1144.469473801</start>
+<end>1161.989622239</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>224</ID>
+<start>1161.989622239</start>
+<end>1164.0953078359903</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>225</ID>
+<start>1166.49243236</start>
+<end>1196.49243236</end>
+<code>Direct Turnover - Between Arcs</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>226</ID>
+<start>1170.0900232699985</start>
+<end>1195.0900232699985</end>
+<code>Between Arcs Stoppage Win</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>227</ID>
+<start>1177.2770262529991</start>
+<end>1207.2770262529991</end>
+<code>Oppo Forward 50 Entry (Fast)</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>228</ID>
+<start>1177.2952951720022</start>
+<end>1184.857020013</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>229</ID>
+<start>1184.857020013</start>
+<end>1189.112317255</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>230</ID>
+<start>1184.857020013</start>
+<end>1189.112317255</end>
+<code>Forward Half - Cats in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>231</ID>
+<start>1188.177102644</start>
+<end>1211.177102644</end>
+<code>Chase Down Tackle</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>232</ID>
+<start>1189.112317255</start>
+<end>1206.900074791</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>233</ID>
+<start>1193.7960817490016</start>
+<end>1206.900074791</end>
+<code>Forward Half - Opposition in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>234</ID>
+<start>1194.8886431689987</start>
+<end>1225.8886431689987</end>
+<code>Switch and Release</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>235</ID>
+<start>1201.500176207</start>
+<end>1231.500176207</end>
+<code>Direct Turnover - Between Arcs</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>236</ID>
+<start>1206.900074791</start>
+<end>1206.900074791</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>237</ID>
+<start>1206.900074791</start>
+<end>1223.258069199</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>238</ID>
+<start>1222.7805876559962</start>
+<end>1249.7805876559962</end>
+<code>Inside 50 (Drop Zone)</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>239</ID>
+<start>1222.7805876559962</start>
+<end>1252.7805876559962</end>
+<code>Inside 50</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>240</ID>
+<start>1223.159803045</start>
+<end>1253.159803045</end>
+<code>Direct Turnover - F50</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>241</ID>
+<start>1223.258069199</start>
+<end>1230.754883829</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>242</ID>
+<start>1230.754883829</start>
+<end>1233.035600671</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>243</ID>
+<start>1235.8951857119955</start>
+<end>1245.094160033</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>244</ID>
+<start>1235.8951857119955</start>
+<end>1245.094160033</end>
+<code>Forward Half - Cats in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>245</ID>
+<start>1243.863807406</start>
+<end>1272.863807406</end>
+<code>Oppo Fast Defensive Exit</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>246</ID>
+<start>1245.094160033</start>
+<end>1257.458988323</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>247</ID>
+<start>1248.520362292</start>
+<end>1271.520362292</end>
+<code>Forward HB</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>248</ID>
+<start>1257.458988323</start>
+<end>1263.937962793</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>249</ID>
+<start>1262.5831791689968</start>
+<end>1285.5831791689968</end>
+<code>Inside 45 kick</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>250</ID>
+<start>1263.937962793</start>
+<end>1265.9929836729966</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>251</ID>
+<start>1269.3962799389976</start>
+<end>1273.147806781</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>252</ID>
+<start>1273.147806781</start>
+<end>1281.337887679</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>253</ID>
+<start>1280.783849633998</start>
+<end>1305.783849633998</end>
+<code>Between Arcs Stoppage Win</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>254</ID>
+<start>1281.337887679</start>
+<end>1287.4954131719912</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>255</ID>
+<start>1292.695785305998</start>
+<end>1295.434406857</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>256</ID>
+<start>1295.434406857</start>
+<end>1297.112187259</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>257</ID>
+<start>1296.3871417819962</start>
+<end>1321.3871417819962</end>
+<code>Between Arcs Stoppage Loss</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>258</ID>
+<start>1297.112187259</start>
+<end>1300.996102220993</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>259</ID>
+<start>1305.8963840289964</start>
+<end>1310.528052337</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>260</ID>
+<start>1310.528052337</start>
+<end>1313.053732123</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>261</ID>
+<start>1313.053732123</start>
+<end>1313.053732123</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>262</ID>
+<start>1317.5851195009993</start>
+<end>1344.5851195009993</end>
+<code>Inside 50 (Drop Zone)</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>263</ID>
+<start>1317.5851195009993</start>
+<end>1347.5851195009993</end>
+<code>Inside 50</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>264</ID>
+<start>1324.5949834929963</start>
+<end>1340.0959497499948</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>265</ID>
+<start>1333.3947386489992</start>
+<end>1340.0959497499948</end>
+<code>Forward Half - Cats in Possession</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>266</ID>
+<start>1340.0959497499948</start>
+<end>1343.396903034997</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 1</text>
+</label>
+</instance>
+<instance>
+<ID>267</ID>
+<start>1345.2839447319977</start>
+<end>1370.2839447319977</end>
+<code>Centre Stoppage Loss</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>268</ID>
+<start>1352.1368489583333</start>
+<end>1353.1368489583333</end>
+<code>Whistle</code>
+</instance>
+<instance>
+<ID>269</ID>
+<start>1357.389768293</start>
+<end>1360.813239225</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>270</ID>
+<start>1360.813239225</start>
+<end>1364.385907623</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>271</ID>
+<start>1364.385907623</start>
+<end>1366.244981407</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>272</ID>
+<start>1364.385907623</start>
+<end>1366.244981407</end>
+<code>Forward Half - Cats in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>273</ID>
+<start>1365.6896321059978</start>
+<end>1395.6896321059978</end>
+<code>Oppo Forward 50 Entry (Fast)</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>274</ID>
+<start>1366.244981407</start>
+<end>1366.244981407</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>275</ID>
+<start>1370.919437419</start>
+<end>1387.909009271</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>276</ID>
+<start>1374.5901248789953</start>
+<end>1397.5901248789953</end>
+<code>Handball Recieve</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>277</ID>
+<start>1380.1954908479968</start>
+<end>1387.909009271</end>
+<code>Forward Half - Opposition in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>278</ID>
+<start>1384.47169137</start>
+<end>1436.47169137</end>
+<code>Oppo Goal - Set Shot</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>279</ID>
+<start>1387.909009271</start>
+<end>1390.031156001</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>280</ID>
+<start>1390.031156001</start>
+<end>1391.961031381</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>281</ID>
+<start>1391.961031381</start>
+<end>1393.693731680995</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>282</ID>
+<start>1401.4958495319959</start>
+<end>1426.800009495</end>
+<code>Forward Half - Opposition in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>283</ID>
+<start>1401.4958495319959</start>
+<end>1426.800009495</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>284</ID>
+<start>1452.879632043998</start>
+<end>1477.879632043998</end>
+<code>Centre Stoppage Win</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>285</ID>
+<start>1454.1776646689991</start>
+<end>1477.1776646689991</end>
+<code>Handball Recieve</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>286</ID>
+<start>1463.7960269569974</start>
+<end>1468.348115146</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>287</ID>
+<start>1464.794703428</start>
+<end>1487.794703428</end>
+<code>Forward HB</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>288</ID>
+<start>1468.348115146</start>
+<end>1491.3959337089893</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>289</ID>
+<start>1469.0836161779996</start>
+<end>1496.0836161779996</end>
+<code>Inside 50 (Drop Zone)</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>290</ID>
+<start>1469.0836161779996</start>
+<end>1499.0836161779996</end>
+<code>Inside 50</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>291</ID>
+<start>1469.184008657997</start>
+<end>1492.184008657997</end>
+<code>Forward HB</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>292</ID>
+<start>1471.794078918</start>
+<end>1494.794078918</end>
+<code>Handball Recieve</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>293</ID>
+<start>1476.5939915519937</start>
+<end>1491.3959337089893</end>
+<code>Forward Half - Cats in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>294</ID>
+<start>1487.96728419</start>
+<end>1516.96728419</end>
+<code>Oppo Fast Defensive Exit</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>295</ID>
+<start>1491.3959337089893</start>
+<end>1493.9959089140004</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>296</ID>
+<start>1493.9959089140004</start>
+<end>1531.84721427</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+<label>
+<text>Quarter 2</text>
+</label>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>297</ID>
+<start>1510.2842506859968</start>
+<end>1542.2842506859968</end>
+<code>Oppo Forward 50 Entry (Slow)</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>298</ID>
+<start>1519.9933822329974</start>
+<end>1527.1950513689926</end>
+<code>Forward Half - Opposition in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>299</ID>
+<start>1528.2970910029949</start>
+<end>1531.84721427</end>
+<code>Forward Half - Opposition in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>300</ID>
+<start>1531.84721427</start>
+<end>1533.770593818</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>301</ID>
+<start>1533.770593818</start>
+<end>1542.696041992002</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>302</ID>
+<start>1542.696041992002</start>
+<end>1544.1957901179908</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>303</ID>
+<start>1543.0780056289968</start>
+<end>1573.0780056289968</end>
+<code>Direct Turnover - Between Arcs</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>304</ID>
+<start>1545.9769617419995</start>
+<end>1570.9769617419995</end>
+<code>Between Arcs Stoppage Win</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>305</ID>
+<start>1547.485175282</start>
+<end>1574.485175282</end>
+<code>Oppo Forward 50 Mark</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>306</ID>
+<start>1547.485175282</start>
+<end>1577.485175282</end>
+<code>Oppo Forward 50 Entry (Fast)</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>307</ID>
+<start>1555.386592878996</start>
+<end>1582.386592878996</end>
+<code>Oppo Forward 50 Mark</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>308</ID>
+<start>1556.3942679789939</start>
+<end>1561.195604164</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>309</ID>
+<start>1561.195604164</start>
+<end>1564.8950541099925</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>310</ID>
+<start>1564.8950541099925</start>
+<end>1579.259185208</end>
+<code>Forward Half - Opposition in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>311</ID>
+<start>1564.8950541099925</start>
+<end>1579.259185208</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>312</ID>
+<start>1570.1848084429973</start>
+<end>1599.9841438139968</end>
+<code>Switch and Slow</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>313</ID>
+<start>1579.259185208</start>
+<end>1594.142150714</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>314</ID>
+<start>1594.142150714</start>
+<end>1594.7971076049976</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>315</ID>
+<start>1596.9842670149992</start>
+<end>1621.9842670149992</end>
+<code>Between Arcs Stoppage Win</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>316</ID>
+<start>1600.15173331</start>
+<end>1623.15173331</end>
+<code>Forward HB</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>317</ID>
+<start>1607.6958540679964</start>
+<end>1611.123456042</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>318</ID>
+<start>1611.123456042</start>
+<end>1618.2934199329961</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>319</ID>
+<start>1618.2934199329961</start>
+<end>1622.167254026</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>320</ID>
+<start>1623.8930110389988</start>
+<end>1646.585564206</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>321</ID>
+<start>1624.304053716</start>
+<end>1654.304053716</end>
+<code>Direct Turnover - Between Arcs</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>322</ID>
+<start>1629.390993674</start>
+<end>1659.390993674</end>
+<code>Oppo Forward 50 Entry (Fast)</code>
+<label>
+<text>Quarter 2</text>
+</label>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>323</ID>
+<start>1629.9901169969978</start>
+<end>1652.9901169969978</end>
+<code>Inside 45 kick</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>324</ID>
+<start>1631.9777358739982</start>
+<end>1660.9777358739982</end>
+<code>Oppo Goal - Field Play</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>325</ID>
+<start>1646.585564206</start>
+<end>1653.2002136759997</end>
+<code>Forward Half - Opposition in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>326</ID>
+<start>1646.585564206</start>
+<end>1653.2002136759997</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>327</ID>
+<start>1690.743236291</start>
+<end>1715.743236291</end>
+<code>Centre Stoppage Loss</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>328</ID>
+<start>1697.6907316819993</start>
+<end>1727.6907316819993</end>
+<code>Direct Turnover - Between Arcs</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>329</ID>
+<start>1699.3859933000006</start>
+<end>1722.3859933000006</end>
+<code>Forward HB</code>
+<label>
+<text>Quarter 2</text>
+</label>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>330</ID>
+<start>1700.882288400996</start>
+<end>1723.882288400996</end>
+<code>Handball Recieve</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>331</ID>
+<start>1702.4936068429931</start>
+<end>1705.800282951</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>332</ID>
+<start>1705.800282951</start>
+<end>1710.814365537</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>333</ID>
+<start>1707.1955137199923</start>
+<end>1710.814365537</end>
+<code>Forward Half - Opposition in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>334</ID>
+<start>1710.814365537</start>
+<end>1712.498638681</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>335</ID>
+<start>1712.498638681</start>
+<end>1719.7955840119946</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>336</ID>
+<start>1717.3970672729977</start>
+<end>1719.7955840119946</end>
+<code>Forward Half - Cats in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>337</ID>
+<start>1719.7955840119946</start>
+<end>1745.4957806189898</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>338</ID>
+<start>1724.8880786719953</start>
+<end>1754.8880786719953</end>
+<code>Oppo Forward 50 Entry (Fast)</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>339</ID>
+<start>1739.7936353799914</start>
+<end>1745.4957806189898</end>
+<code>Forward Half - Opposition in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>340</ID>
+<start>1743.224383643</start>
+<end>1773.224383643</end>
+<code>Direct Turnover - D50</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>341</ID>
+<start>1744.2859335179978</start>
+<end>1767.2859335179978</end>
+<code>Handball Recieve</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>342</ID>
+<start>1745.4957806189898</start>
+<end>1749.851648583</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>343</ID>
+<start>1748.8812464659986</start>
+<end>1771.8812464659986</end>
+<code>Inside 45 kick</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>344</ID>
+<start>1749.851648583</start>
+<end>1756.4964598489926</end>
+<code>Forward Half - Opposition in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>345</ID>
+<start>1749.851648583</start>
+<end>1756.4964598489926</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>346</ID>
+<start>1756.4964598489926</start>
+<end>1758.650982001</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>347</ID>
+<start>1757.787094924</start>
+<end>1787.787094924</end>
+<code>Oppo Forward 50 Entry (Fast)</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>348</ID>
+<start>1758.650982001</start>
+<end>1764.985625335</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>349</ID>
+<start>1764.7865529679991</start>
+<end>1791.7865529679991</end>
+<code>Fast Rebound 50</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>350</ID>
+<start>1764.985625335</start>
+<end>1765.292962627995</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>351</ID>
+<start>1765.292962627995</start>
+<end>1767.031495803</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>352</ID>
+<start>1767.031495803</start>
+<end>1769.295734154995</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>353</ID>
+<start>1769.295734154995</start>
+<end>1772.976317821</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>354</ID>
+<start>1772.976317821</start>
+<end>1776.095791462993</end>
+<code>Forward Half - Opposition in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>355</ID>
+<start>1772.976317821</start>
+<end>1776.095791462993</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>356</ID>
+<start>1776.095791462993</start>
+<end>1778.896135318989</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>357</ID>
+<start>1778.896135318989</start>
+<end>1798.77925485</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>358</ID>
+<start>1798.77925485</start>
+<end>1803.820188424</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>359</ID>
+<start>1806.396405261996</start>
+<end>1833.555503506</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>360</ID>
+<start>1819.0867837039987</start>
+<end>1844.6856876669992</end>
+<code>Forward HB</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>361</ID>
+<start>1825.4777507349959</start>
+<end>1852.4777507349959</end>
+<code>Inside 50 (Rebound Zone)</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>362</ID>
+<start>1825.4777507349959</start>
+<end>1855.4777507349959</end>
+<code>Inside 50</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>363</ID>
+<start>1825.4808516339988</start>
+<end>1848.4808516339988</end>
+<code>Forward HB</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>364</ID>
+<start>1833.555503506</start>
+<end>1847.690219714</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>365</ID>
+<start>1835.5960471689968</start>
+<end>1847.690219714</end>
+<code>Forward Half - Cats in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>366</ID>
+<start>1842.988427403999</start>
+<end>1874.988427403999</end>
+<code>Oppo Slow Defensive Exit</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>367</ID>
+<start>1847.690219714</start>
+<end>1852.5959776599996</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>368</ID>
+<start>1852.5959776599996</start>
+<end>1856.988313302</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>369</ID>
+<start>1853.7971493289922</start>
+<end>1856.988313302</end>
+<code>Forward Half - Cats in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>370</ID>
+<start>1856.988313302</start>
+<end>1864.000983568</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>371</ID>
+<start>1864.000983568</start>
+<end>1869.784596576</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>372</ID>
+<start>1868.1827439269994</start>
+<end>1895.1827439269994</end>
+<code>Inside 50 (Drop Zone)</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>373</ID>
+<start>1868.1827439269994</start>
+<end>1898.1827439269994</end>
+<code>Inside 50</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>374</ID>
+<start>1869.784596576</start>
+<end>1881.37058323</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>375</ID>
+<start>1881.37058323</start>
+<end>1891.5001835909964</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>376</ID>
+<start>1881.37058323</start>
+<end>1891.5001835909964</end>
+<code>Forward Half - Cats in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>377</ID>
+<start>1893.1347005208333</start>
+<end>1899.700414234002</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>378</ID>
+<start>1904.1852266819988</start>
+<end>1929.1852266819988</end>
+<code>Forward 50 Stoppage Neutral</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>379</ID>
+<start>1912.670100839</start>
+<end>1920.2958366929931</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>380</ID>
+<start>1917.3798408879977</start>
+<end>1942.3798408879977</end>
+<code>Forward 50 Stoppage Loss</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>381</ID>
+<start>1919.2785915449979</start>
+<end>1951.2785915449979</end>
+<code>Oppo Slow Defensive Exit</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>382</ID>
+<start>1928.396236966994</start>
+<end>1932.653770027</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>383</ID>
+<start>1932.653770027</start>
+<end>1935.447251847</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>384</ID>
+<start>1935.447251847</start>
+<end>1937.582804519</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>385</ID>
+<start>1936.2920100349972</start>
+<end>1959.2920100349972</end>
+<code>Inside 45 kick</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>386</ID>
+<start>1937.582804519</start>
+<end>1944.6957440529993</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>387</ID>
+<start>1938.480721622999</start>
+<end>1981.805307733</end>
+<code>Switch and Slow</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>388</ID>
+<start>1944.384633970998</start>
+<end>1967.384633970998</end>
+<code>Inside 45 kick</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>389</ID>
+<start>1944.6957440529993</start>
+<end>1947.8947870499971</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>390</ID>
+<start>1947.8947870499971</start>
+<end>1982.917319189</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>391</ID>
+<start>1958.793888866994</start>
+<end>1982.917319189</end>
+<code>Forward Half - Cats in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>392</ID>
+<start>1959.9827071079983</start>
+<end>1986.9827071079983</end>
+<code>Inside 50 (Drop Zone)</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>393</ID>
+<start>1959.9827071079983</start>
+<end>1989.9827071079983</end>
+<code>Inside 50</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>394</ID>
+<start>1977.7901329320002</start>
+<end>2009.7901329320002</end>
+<code>Oppo Slow Defensive Exit</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>395</ID>
+<start>1982.917319189</start>
+<end>2018.026348203</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>396</ID>
+<start>2004.2763405029966</start>
+<end>2027.2763405029966</end>
+<code>Forward HB</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>397</ID>
+<start>2010.8808587419976</start>
+<end>2062.8808587419976</end>
+<code>Goal - Set Shot</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>398</ID>
+<start>2010.887191519997</start>
+<end>2037.887191519997</end>
+<code>Inside 50 (Drop Zone)</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>399</ID>
+<start>2010.887191519997</start>
+<end>2040.887191519997</end>
+<code>Inside 50</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>400</ID>
+<start>2011.6852993919972</start>
+<end>2034.6852993919972</end>
+<code>Forward HB</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>401</ID>
+<start>2018.026348203</start>
+<end>2030.359878681</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>402</ID>
+<start>2019.395780403995</start>
+<end>2030.359878681</end>
+<code>Forward Half - Cats in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>403</ID>
+<start>2030.359878681</start>
+<end>2035.909180143</end>
+<code>Forward Half - Opposition in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>404</ID>
+<start>2030.359878681</start>
+<end>2035.909180143</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>405</ID>
+<start>2035.909180143</start>
+<end>2053.000330118005</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>406</ID>
+<start>2035.909180143</start>
+<end>2053.000330118005</end>
+<code>Forward Half - Cats in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>407</ID>
+<start>2096.6950295819925</start>
+<end>2106.496006369997</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>408</ID>
+<start>2104.4822002069986</start>
+<end>2129.4822002069986</end>
+<code>Centre Stoppage Loss</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>409</ID>
+<start>2107.049795906</start>
+<end>2134.049795906</end>
+<code>Oppo Forward 50 Mark</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>410</ID>
+<start>2107.9796155799972</start>
+<end>2159.9796155799972</end>
+<code>Oppo Goal - Set Shot</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>411</ID>
+<start>2118.393571852997</start>
+<end>2152.100134038</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>412</ID>
+<start>2122.395792563999</start>
+<end>2152.100134038</end>
+<code>Forward Half - Opposition in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>413</ID>
+<start>2180.7814650439946</start>
+<end>2205.7814650439946</end>
+<code>Centre Stoppage Neutral</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>414</ID>
+<start>2187.097461081998</start>
+<end>2192.297088165995</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>415</ID>
+<start>2192.297088165995</start>
+<end>2193.997021485998</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>416</ID>
+<start>2193.997021485998</start>
+<end>2198.196326312996</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>417</ID>
+<start>2196.1813663579997</start>
+<end>2226.1813663579997</end>
+<code>Direct Turnover - F50</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>418</ID>
+<start>2197.9256398</start>
+<end>2224.9256398</end>
+<code>Inside 50 (Rebound Zone)</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>419</ID>
+<start>2197.9256398</start>
+<end>2227.9256398</end>
+<code>Inside 50</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>420</ID>
+<start>2199.385984682999</start>
+<end>2222.385984682999</end>
+<code>Inside 45 kick</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>421</ID>
+<start>2205.169578272</start>
+<end>2218.399952136</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>422</ID>
+<start>2206.128270577</start>
+<end>2238.128270577</end>
+<code>Oppo Slow Defensive Exit</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>423</ID>
+<start>2213.196000287998</start>
+<end>2218.399952136</end>
+<code>Forward Half - Cats in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>424</ID>
+<start>2218.399952136</start>
+<end>2230.4963925499983</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>425</ID>
+<start>2219.291920411</start>
+<end>2246.291920411</end>
+<code>Inside 50 (Drop Zone)</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>426</ID>
+<start>2219.291920411</start>
+<end>2249.291920411</end>
+<code>Inside 50</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>427</ID>
+<start>2225.9832712679995</start>
+<end>2254.700208314001</end>
+<code>Behind - Field Play</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>428</ID>
+<start>2230.4963925499983</start>
+<end>2246.1004334460054</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>429</ID>
+<start>2230.9953947879926</start>
+<end>2246.1004334460054</end>
+<code>Forward Half - Cats in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>430</ID>
+<start>2239.4858267819973</start>
+<end>2268.4858267819973</end>
+<code>Oppo Kick out - Fast</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>431</ID>
+<start>2252.5953580409973</start>
+<end>2264.9971218579944</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>432</ID>
+<start>2253.389947340996</start>
+<end>2276.389947340996</end>
+<code>Inside 45 kick</code>
+<label>
+<text>Quarter 2</text>
+</label>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>433</ID>
+<start>2254.286468834998</start>
+<end>2281.286468834998</end>
+<code>Inside 50 (Drop Zone)</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>434</ID>
+<start>2254.286468834998</start>
+<end>2284.286468834998</end>
+<code>Inside 50</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>435</ID>
+<start>2255.9855556070006</start>
+<end>2278.9855556070006</end>
+<code>Forward HB</code>
+<label>
+<text>Quarter 2</text>
+</label>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>436</ID>
+<start>2257.482301762998</start>
+<end>2280.482301762998</end>
+<code>Handball Recieve</code>
+<label>
+<text>Quarter 2</text>
+</label>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>437</ID>
+<start>2257.889790707997</start>
+<end>2289.889790707997</end>
+<code>Behind - Field Play</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>438</ID>
+<start>2264.9971218579944</start>
+<end>2268.4937745449997</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>439</ID>
+<start>2268.4937745449997</start>
+<end>2279.1000798810032</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>440</ID>
+<start>2268.4937745449997</start>
+<end>2279.1000798810032</end>
+<code>Forward Half - Cats in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>441</ID>
+<start>2272.9785383679987</start>
+<end>2301.9785383679987</end>
+<code>Oppo Kick out - Fast</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>442</ID>
+<start>2285.9955562189994</start>
+<end>2310.295745083998</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>443</ID>
+<start>2286.6933972790007</start>
+<end>2316.6933972790007</end>
+<code>Oppo Forward 50 Entry (Fast)</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>444</ID>
+<start>2299.8968385979974</start>
+<end>2310.295745083998</end>
+<code>Forward Half - Opposition in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>445</ID>
+<start>2302.078839159</start>
+<end>2325.078839159</end>
+<code>Handball Recieve</code>
+<label>
+<text>Quarter 2</text>
+</label>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>446</ID>
+<start>2304.0767009809983</start>
+<end>2327.0767009809983</end>
+<code>Forward HB</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>447</ID>
+<start>2305.604325205</start>
+<end>2328.604325205</end>
+<code>Handball Recieve</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>448</ID>
+<start>2310.295745083998</start>
+<end>2313.0950026489977</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>449</ID>
+<start>2313.0950026489977</start>
+<end>2324.800172992998</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>450</ID>
+<start>2330.085383446997</start>
+<end>2357.085383446997</end>
+<code>Oppo Forward 50 Mark</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>451</ID>
+<start>2330.487092652</start>
+<end>2355.487092652</end>
+<code>Defensive 50 Stoppage Win</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>452</ID>
+<start>2338.695175557994</start>
+<end>2343.5960060239995</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>453</ID>
+<start>2343.5960060239995</start>
+<end>2346.948148497</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>454</ID>
+<start>2346.948148497</start>
+<end>2355.8003149169963</end>
+<code>Forward Half - Opposition in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>455</ID>
+<start>2346.948148497</start>
+<end>2355.8003149169963</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>456</ID>
+<start>2352.166996461</start>
+<end>2382.166996461</end>
+<code>Direct Turnover - D50</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>457</ID>
+<start>2356.4958011179974</start>
+<end>2369.700440931</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>458</ID>
+<start>2378.895685956995</start>
+<end>2393.8002964509974</end>
+<code>Forward Half - Opposition in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>459</ID>
+<start>2378.895685956995</start>
+<end>2393.8002964509974</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>460</ID>
+<start>2393.487067571998</start>
+<end>2425.487067571998</end>
+<code>Slow Defensive Exit</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>461</ID>
+<start>2399.277147769997</start>
+<end>2429.277147769997</end>
+<code>Direct Turnover - Between Arcs</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>462</ID>
+<start>2406.696506296</start>
+<end>2420.1961202299954</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>463</ID>
+<start>2419.0769903759997</start>
+<end>2451.0769903759997</end>
+<code>Oppo Forward 50 Entry (Slow)</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>464</ID>
+<start>2420.1961202299954</start>
+<end>2453.587601619</end>
+<code>Forward Half - Opposition in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>465</ID>
+<start>2420.1961202299954</start>
+<end>2453.587601619</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>466</ID>
+<start>2453.587601619</start>
+<end>2454.854224949</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>467</ID>
+<start>2454.854224949</start>
+<end>2457.294342612</end>
+<code>Forward Half - Opposition in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>468</ID>
+<start>2454.854224949</start>
+<end>2457.294342612</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>469</ID>
+<start>2457.294342612</start>
+<end>2461.194878061996</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>470</ID>
+<start>2466.9822229529996</start>
+<end>2491.9822229529996</end>
+<code>Defensive 50 Stoppage Neutral</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>471</ID>
+<start>2471.778174969997</start>
+<end>2498.778174969997</end>
+<code>Defensive 50 Mark</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>472</ID>
+<start>2473.895737090994</start>
+<end>2486.029507663</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>473</ID>
+<start>2479.104304537</start>
+<end>2509.104304537</end>
+<code>Direct Turnover - Between Arcs</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>474</ID>
+<start>2479.104304537</start>
+<end>2511.104304537</end>
+<code>Slow Defensive Exit</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>475</ID>
+<start>2483.690913648998</start>
+<end>2515.690913648998</end>
+<code>Oppo Forward 50 Entry (Slow)</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>476</ID>
+<start>2486.029507663</start>
+<end>2491.113978493993</end>
+<code>Forward Half - Opposition in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>477</ID>
+<start>2486.029507663</start>
+<end>2491.113978493993</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>478</ID>
+<start>2491.113978493993</start>
+<end>2501.721971563</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>479</ID>
+<start>2501.721971563</start>
+<end>2513.489586783</end>
+<code>Forward Half - Opposition in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>480</ID>
+<start>2501.721971563</start>
+<end>2513.489586783</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>481</ID>
+<start>2517.384444427999</start>
+<end>2542.384444427999</end>
+<code>Defensive 50 Stoppage Win</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>482</ID>
+<start>2527.5960764719953</start>
+<end>2539.100480982</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>483</ID>
+<start>2536.381289335998</start>
+<end>2568.381289335998</end>
+<code>Oppo Forward 50 Entry (Slow)</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>484</ID>
+<start>2542.5956216499912</start>
+<end>2559.211171989</end>
+<code>Forward Half - Opposition in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>485</ID>
+<start>2542.5956216499912</start>
+<end>2559.211171989</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>486</ID>
+<start>2559.211171989</start>
+<end>2565.874158871</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>487</ID>
+<start>2564.276684841997</start>
+<end>2594.276684841997</end>
+<code>Oppo Forward 50 Entry (Fast)</code>
+<label>
+<text>Quarter 2</text>
+</label>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>488</ID>
+<start>2565.690904957</start>
+<end>2592.690904957</end>
+<code>Defensive 50 Mark</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>489</ID>
+<start>2565.874158871</start>
+<end>2573.615494563</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>490</ID>
+<start>2573.615494563</start>
+<end>2585.589374859</end>
+<code>Forward Half - Opposition in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>491</ID>
+<start>2573.615494563</start>
+<end>2585.589374859</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>492</ID>
+<start>2582.10722791</start>
+<end>2612.10722791</end>
+<code>Direct Turnover - F50</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>493</ID>
+<start>2582.731510412</start>
+<end>2609.731510412</end>
+<code>Inside 50 (Rebound Zone)</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>494</ID>
+<start>2582.731510412</start>
+<end>2612.731510412</end>
+<code>Inside 50</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>495</ID>
+<start>2585.589374859</start>
+<end>2603.198836259</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>496</ID>
+<start>2595.691175952997</start>
+<end>2624.691175952997</end>
+<code>Oppo Fast Defensive Exit</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>497</ID>
+<start>2598.5959762859925</start>
+<end>2603.198836259</end>
+<code>Forward Half - Cats in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>498</ID>
+<start>2603.198836259</start>
+<end>2625.095813420997</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>499</ID>
+<start>2613.5848229859976</start>
+<end>2636.5848229859976</end>
+<code>Chase Down Tackle</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>500</ID>
+<start>2622.895919475997</start>
+<end>2625.095813420997</end>
+<code>Forward Half - Opposition in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>501</ID>
+<start>2625.095813420997</start>
+<end>2626.5977547709945</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>502</ID>
+<start>2626.5977547709945</start>
+<end>2628.9961687339974</end>
+<code>Forward Half - Opposition in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>503</ID>
+<start>2626.5977547709945</start>
+<end>2628.9961687339974</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>504</ID>
+<start>2628.9961687339974</start>
+<end>2630.595343073998</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>505</ID>
+<start>2629.5792067189955</start>
+<end>2659.5792067189955</end>
+<code>Direct Turnover - Between Arcs</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>506</ID>
+<start>2637.4955867919984</start>
+<end>2649.895288314997</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>507</ID>
+<start>2645.6782635219965</start>
+<end>2675.6782635219965</end>
+<code>Oppo Forward 50 Entry (Fast)</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>508</ID>
+<start>2649.895288314997</start>
+<end>2650.5107218089947</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>509</ID>
+<start>2650.5107218089947</start>
+<end>2667.8959987319977</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>510</ID>
+<start>2652.9900656359964</start>
+<end>2684.9900656359964</end>
+<code>Oppo Behind - Field Play</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>511</ID>
+<start>2656.1971769159945</start>
+<end>2667.8959987319977</end>
+<code>Forward Half - Opposition in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>512</ID>
+<start>2667.8959987319977</start>
+<end>2672.407368001</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 2</text>
+</label>
+</instance>
+<instance>
+<ID>513</ID>
+<start>2683.878550314997</start>
+<end>2708.878550314997</end>
+<code>Centre Stoppage Loss</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>514</ID>
+<start>2687.678580610994</start>
+<end>2719.678580610994</end>
+<code>Oppo Forward 50 Entry (Slow)</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>515</ID>
+<start>2689.6930338541665</start>
+<end>2690.6930338541665</end>
+<code>Whistle</code>
+</instance>
+<instance>
+<ID>516</ID>
+<start>2694.912782619</start>
+<end>2698.338253989</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>517</ID>
+<start>2695.1833316779994</start>
+<end>2724.1833316779994</end>
+<code>Oppo Goal - Field Play</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>518</ID>
+<start>2698.338253989</start>
+<end>2713.498698523</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 3</text>
+</label>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>519</ID>
+<start>2699.2972054579986</start>
+<end>2713.498698523</end>
+<code>Forward Half - Opposition in Possession</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>520</ID>
+<start>2713.498698523</start>
+<end>2715.40018854999</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>521</ID>
+<start>2745.8802210149975</start>
+<end>2770.8802210149975</end>
+<code>Centre Stoppage Loss</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>522</ID>
+<start>2757.068622055</start>
+<end>2760.978194413</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>523</ID>
+<start>2760.978194413</start>
+<end>2764.4952063979867</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 3</text>
+</label>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>524</ID>
+<start>2761.59707718499</start>
+<end>2764.4952063979867</end>
+<code>Forward Half - Opposition in Possession</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>525</ID>
+<start>2764.4952063979867</start>
+<end>2767.6952437710006</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>526</ID>
+<start>2765.586154561</start>
+<end>2790.586154561</end>
+<code>Between Arcs Stoppage Neutral</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>527</ID>
+<start>2774.4859134950007</start>
+<end>2799.4859134950007</end>
+<code>Between Arcs Stoppage Win</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>528</ID>
+<start>2774.6952064799993</start>
+<end>2781.292993185992</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>529</ID>
+<start>2776.080685931997</start>
+<end>2809.080685931997</end>
+<code>Fast Through The Middle</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>530</ID>
+<start>2777.5815844999997</start>
+<end>2807.5815844999997</end>
+<code>Direct Turnover - F50</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>531</ID>
+<start>2778.80620337</start>
+<end>2801.80620337</end>
+<code>Handball Recieve</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>532</ID>
+<start>2780.203463069</start>
+<end>2807.203463069</end>
+<code>Inside 50 (Rebound Zone)</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>533</ID>
+<start>2780.203463069</start>
+<end>2807.203463069</end>
+<code>Oppo Defensive 50 Mark</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>534</ID>
+<start>2780.203463069</start>
+<end>2810.203463069</end>
+<code>Inside 50</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>535</ID>
+<start>2788.843704641</start>
+<end>2789.795739222003</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>536</ID>
+<start>2789.795739222003</start>
+<end>2791.596329117</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>537</ID>
+<start>2791.596329117</start>
+<end>2792.748259729</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>538</ID>
+<start>2792.2855264139994</start>
+<end>2824.2855264139994</end>
+<code>Oppo Slow Defensive Exit</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>539</ID>
+<start>2792.748259729</start>
+<end>2799.947654365</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 3</text>
+</label>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>540</ID>
+<start>2795.1957245779963</start>
+<end>2799.947654365</end>
+<code>Forward Half - Cats in Possession</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>541</ID>
+<start>2799.947654365</start>
+<end>2874.800218148006</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 3</text>
+</label>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>542</ID>
+<start>2826.0920607899993</start>
+<end>2878.0920607899993</end>
+<code>Oppo Goal - Set Shot</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>543</ID>
+<start>2828.2940937850008</start>
+<end>2874.800218148006</end>
+<code>Forward Half - Opposition in Possession</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>544</ID>
+<start>2902.1832357559992</start>
+<end>2927.1832357559992</end>
+<code>Centre Stoppage Win</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>545</ID>
+<start>2913.295893525994</start>
+<end>2916.153366879</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>546</ID>
+<start>2916.153366879</start>
+<end>2968.845212199</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>547</ID>
+<start>2934.7780662460023</start>
+<end>2957.7780662460023</end>
+<code>Inside 45 kick</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>548</ID>
+<start>2957.684049479167</start>
+<end>2987.684049479167</end>
+<code>Direct Turnover - Between Arcs</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>549</ID>
+<start>2980.195009885004</start>
+<end>2987.554030885</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>550</ID>
+<start>2987.554030885</start>
+<end>2987.554030885</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>551</ID>
+<start>2992.7842261789956</start>
+<end>3017.7842261789956</end>
+<code>Between Arcs Stoppage Win</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>552</ID>
+<start>3002.393524761985</start>
+<end>3008.434491865</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>553</ID>
+<start>3008.434491865</start>
+<end>3009.832314579</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>554</ID>
+<start>3009.832314579</start>
+<end>3009.832314579</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>555</ID>
+<start>3010.993373580991</start>
+<end>3024.294566123</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>556</ID>
+<start>3011.704183046</start>
+<end>3041.704183046</end>
+<code>Direct Turnover - Between Arcs</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>557</ID>
+<start>3024.294566123</start>
+<end>3025.6963973919987</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>558</ID>
+<start>3025.6963973919987</start>
+<end>3030.154195555</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>559</ID>
+<start>3030.154195555</start>
+<end>3034.116815449</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>560</ID>
+<start>3034.116815449</start>
+<end>3036.304114995</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>561</ID>
+<start>3034.917588481</start>
+<end>3057.917588481</end>
+<code>Handball Recieve</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>562</ID>
+<start>3036.304114995</start>
+<end>3038.575890421</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>563</ID>
+<start>3038.575890421</start>
+<end>3049.286021389</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>564</ID>
+<start>3049.286021389</start>
+<end>3057.3952805679974</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 3</text>
+</label>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>565</ID>
+<start>3054.175253949</start>
+<end>3057.3952805679974</end>
+<code>Forward Half - Cats in Possession</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>566</ID>
+<start>3057.3952805679974</start>
+<end>3059.508481823</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>567</ID>
+<start>3059.508481823</start>
+<end>3098.673918769</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 3</text>
+</label>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>568</ID>
+<start>3075.742384503</start>
+<end>3107.742384503</end>
+<code>Oppo Forward 50 Entry (Slow)</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>569</ID>
+<start>3079.883333385</start>
+<end>3106.883333385</end>
+<code>Defensive 50 Mark</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>570</ID>
+<start>3086.1961869540023</start>
+<end>3098.673918769</end>
+<code>Forward Half - Opposition in Possession</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>571</ID>
+<start>3087.1807980119984</start>
+<end>3118.1807980119984</end>
+<code>Switch and Release</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>572</ID>
+<start>3087.606306141</start>
+<end>3117.606306141</end>
+<code>Direct Turnover - Between Arcs</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>573</ID>
+<start>3098.673918769</start>
+<end>3109.685848883</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>574</ID>
+<start>3109.685848883</start>
+<end>3124.168677469</end>
+<code>Forward Half - Opposition in Possession</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>575</ID>
+<start>3109.685848883</start>
+<end>3124.168677469</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>576</ID>
+<start>3129.8875422809942</start>
+<end>3154.8875422809942</end>
+<code>Between Arcs Stoppage Win</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>577</ID>
+<start>3141.296906441001</start>
+<end>3144.422253675</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>578</ID>
+<start>3144.422253675</start>
+<end>3149.7962625999903</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>579</ID>
+<start>3149.7962625999903</start>
+<end>3151.036266973</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>580</ID>
+<start>3159.4804057600004</start>
+<end>3184.4804057600004</end>
+<code>Between Arcs Stoppage Loss</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>581</ID>
+<start>3166.635111499</start>
+<end>3173.146033477</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>582</ID>
+<start>3168.6800545479923</start>
+<end>3200.6800545479923</end>
+<code>Oppo Forward 50 Entry (Slow)</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>583</ID>
+<start>3173.146033477</start>
+<end>3192.70019807999</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 3</text>
+</label>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>584</ID>
+<start>3182.595094130003</start>
+<end>3192.70019807999</end>
+<code>Forward Half - Opposition in Possession</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>585</ID>
+<start>3193.049443804</start>
+<end>3223.049443804</end>
+<code>Direct Turnover - Between Arcs</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>586</ID>
+<start>3197.3775297959937</start>
+<end>3222.3775297959937</end>
+<code>Defensive 50 Stoppage Win</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>587</ID>
+<start>3198.848663179</start>
+<end>3225.848663179</end>
+<code>Defensive 50 Mark</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>588</ID>
+<start>3198.848663179</start>
+<end>3228.848663179</end>
+<code>Oppo Forward 50 Entry (Fast)</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>589</ID>
+<start>3206.9938572599935</start>
+<end>3211.647832329</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>590</ID>
+<start>3208.492223724003</start>
+<end>3241.492223724003</end>
+<code>Fast Through The Middle</code>
+<label>
+<text>Quarter 3</text>
+</label>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>591</ID>
+<start>3210.973436448</start>
+<end>3233.973436448</end>
+<code>Inside 45 kick</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>592</ID>
+<start>3210.973436448</start>
+<end>3237.973436448</end>
+<code>Fast Rebound 50</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>593</ID>
+<start>3211.647832329</start>
+<end>3215.196471727992</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>594</ID>
+<start>3212.4803414409985</start>
+<end>3239.4803414409985</end>
+<code>Inside 50 (Drop Zone)</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>595</ID>
+<start>3212.4803414409985</start>
+<end>3242.4803414409985</end>
+<code>Inside 50</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>596</ID>
+<start>3215.196471727992</start>
+<end>3219.157513625</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 3</text>
+</label>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>597</ID>
+<start>3215.9971931039827</start>
+<end>3219.157513625</end>
+<code>Forward Half - Opposition in Possession</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>598</ID>
+<start>3219.157513625</start>
+<end>3242.200314102014</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 3</text>
+</label>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>599</ID>
+<start>3229.619900539</start>
+<end>3242.200314102014</end>
+<code>Forward Half - Cats in Possession</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>600</ID>
+<start>3235.3867209549967</start>
+<end>3267.3867209549967</end>
+<code>Oppo Slow Defensive Exit</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>601</ID>
+<start>3238.588745340998</start>
+<end>3263.588745340998</end>
+<code>Forward 50 Stoppage Loss</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>602</ID>
+<start>3250.7967870120015</start>
+<end>3254.054776955</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>603</ID>
+<start>3254.054776955</start>
+<end>3254.054776955</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>604</ID>
+<start>3254.054776955</start>
+<end>3258.576935849</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>605</ID>
+<start>3258.576935849</start>
+<end>3263.115708731</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>606</ID>
+<start>3263.115708731</start>
+<end>3324.600154894997</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 3</text>
+</label>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>607</ID>
+<start>3263.3845127299983</start>
+<end>3293.3845127299983</end>
+<code>Oppo Forward 50 Entry (Fast)</code>
+<label>
+<text>Quarter 3</text>
+</label>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>608</ID>
+<start>3267.4820069800016</start>
+<end>3294.4820069800016</end>
+<code>Oppo Forward 50 Mark</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>609</ID>
+<start>3271.282062393</start>
+<end>3324.600154894997</end>
+<code>Forward Half - Opposition in Possession</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>610</ID>
+<start>3285.1856224600024</start>
+<end>3337.1856224600024</end>
+<code>Oppo Goal - Set Shot</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>611</ID>
+<start>3365.548762686</start>
+<end>3390.548762686</end>
+<code>Centre Stoppage Win</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>612</ID>
+<start>3373.0874573109977</start>
+<end>3383.0957762629987</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>613</ID>
+<start>3383.0957762629987</start>
+<end>3396.044776887</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 3</text>
+</label>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>614</ID>
+<start>3388.1936690809935</start>
+<end>3396.044776887</end>
+<code>Forward Half - Cats in Possession</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>615</ID>
+<start>3396.044776887</start>
+<end>3398.6942388470025</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>616</ID>
+<start>3398.6942388470025</start>
+<end>3402.1966240439965</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>617</ID>
+<start>3405.1844336399936</start>
+<end>3432.1844336399936</end>
+<code>Inside 50 (Drop Zone)</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>618</ID>
+<start>3405.1844336399936</start>
+<end>3435.1844336399936</end>
+<code>Inside 50</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>619</ID>
+<start>3407.0881268440007</start>
+<end>3432.0881268440007</end>
+<code>Between Arcs Stoppage Win</code>
+<label>
+<text>Quarter 3</text>
+</label>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>620</ID>
+<start>3418.094544754986</start>
+<end>3422.201092273</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>621</ID>
+<start>3422.201092273</start>
+<end>3437.815185519</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>622</ID>
+<start>3422.201092273</start>
+<end>3437.815185519</end>
+<code>Forward Half - Cats in Possession</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>623</ID>
+<start>3432.184034959999</start>
+<end>3464.184034959999</end>
+<code>Oppo Slow Defensive Exit</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>624</ID>
+<start>3437.815185519</start>
+<end>3447.803253167</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>625</ID>
+<start>3449.595899639004</start>
+<end>3462.319354551</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>626</ID>
+<start>3462.319354551</start>
+<end>3466.2931181189947</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>627</ID>
+<start>3473.374361952</start>
+<end>3498.374361952</end>
+<code>Between Arcs Stoppage Loss</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>628</ID>
+<start>3479.784553500002</start>
+<end>3511.784553500002</end>
+<code>Oppo Forward 50 Entry (Slow)</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>629</ID>
+<start>3489.034463113</start>
+<end>3519.034463113</end>
+<code>Direct Turnover - Between Arcs</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>630</ID>
+<start>3491.034463113</start>
+<end>3524.034463113</end>
+<code>Fast Through The Middle</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>631</ID>
+<start>3492.232355035</start>
+<end>3505.944918719</end>
+<code>Forward Half - Opposition in Possession</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>632</ID>
+<start>3492.232355035</start>
+<end>3505.944918719</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>633</ID>
+<start>3492.9781336919987</start>
+<end>3515.9781336919987</end>
+<code>Forward HB</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>634</ID>
+<start>3493.089961576993</start>
+<end>3520.089961576993</end>
+<code>Fast Rebound 50</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>635</ID>
+<start>3505.944918719</start>
+<end>3511.566081407</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>636</ID>
+<start>3511.566081407</start>
+<end>3521.541886733</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>637</ID>
+<start>3520.289387530003</start>
+<end>3552.289387530003</end>
+<code>Oppo Forward 50 Entry (Slow)</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>638</ID>
+<start>3521.541886733</start>
+<end>3521.8971808609904</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>639</ID>
+<start>3529.295830135996</start>
+<end>3544.052321637</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>640</ID>
+<start>3531.719207404</start>
+<end>3554.719207404</end>
+<code>Forward HB</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>641</ID>
+<start>3544.052321637</start>
+<end>3546.102675549</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>642</ID>
+<start>3545.086299363</start>
+<end>3576.086299363</end>
+<code>Switch and Release</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>643</ID>
+<start>3546.102675549</start>
+<end>3554.588404225</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>644</ID>
+<start>3554.588404225</start>
+<end>3558.694825334997</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>645</ID>
+<start>3560.782294667</start>
+<end>3632.2002942390022</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 3</text>
+</label>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>646</ID>
+<start>3564.1807246089948</start>
+<end>3587.1807246089948</end>
+<code>Inside 45 kick</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>647</ID>
+<start>3575.288865762</start>
+<end>3602.288865762</end>
+<code>Inside 50 (Rebound Zone)</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>648</ID>
+<start>3575.288865762</start>
+<end>3605.288865762</end>
+<code>Inside 50</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>649</ID>
+<start>3579.25417267</start>
+<end>3606.25417267</end>
+<code>Inside 50 Mark - Uncontested</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>650</ID>
+<start>3585.387039818001</start>
+<end>3637.387039818001</end>
+<code>Goal - Set Shot</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>651</ID>
+<start>3585.393924466993</start>
+<end>3632.2002942390022</end>
+<code>Forward Half - Cats in Possession</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>652</ID>
+<start>3663.69334952</start>
+<end>3688.69334952</end>
+<code>Centre Stoppage Neutral</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>653</ID>
+<start>3676.0961466230005</start>
+<end>3682.69519614099</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>654</ID>
+<start>3676.312975998</start>
+<end>3701.312975998</end>
+<code>Between Arcs Stoppage Loss</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>655</ID>
+<start>3687.2958486829984</start>
+<end>3694.899520266</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>656</ID>
+<start>3693.281052490002</start>
+<end>3720.281052490002</end>
+<code>Inside 50 (Drop Zone)</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>657</ID>
+<start>3693.281052490002</start>
+<end>3723.281052490002</end>
+<code>Inside 50</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>658</ID>
+<start>3693.6848681509937</start>
+<end>3716.6848681509937</end>
+<code>Forward HB</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>659</ID>
+<start>3694.899520266</start>
+<end>3717.000408898001</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 3</text>
+</label>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>660</ID>
+<start>3707.0880210490013</start>
+<end>3759.0880210490013</end>
+<code>Goal - Set Shot</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>661</ID>
+<start>3707.195616110996</start>
+<end>3717.000408898001</end>
+<code>Forward Half - Cats in Possession</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>662</ID>
+<start>3720.37100626</start>
+<end>3749.0002331760065</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>663</ID>
+<start>3720.37100626</start>
+<end>3749.0002331760065</end>
+<code>Forward Half - Cats in Possession</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>664</ID>
+<start>3780.0768833690013</start>
+<end>3810.0768833690013</end>
+<code>Oppo Forward 50 Entry (Fast)</code>
+<label>
+<text>Quarter 3</text>
+</label>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>665</ID>
+<start>3782.0788570939953</start>
+<end>3807.0788570939953</end>
+<code>Centre Stoppage Loss</code>
+<label>
+<text>Quarter 3</text>
+</label>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>666</ID>
+<start>3782.180582086002</start>
+<end>3834.180582086002</end>
+<code>Oppo Goal - Set Shot</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>667</ID>
+<start>3782.484352961999</start>
+<end>3809.484352961999</end>
+<code>Oppo Forward 50 Mark</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>668</ID>
+<start>3792.894046511006</start>
+<end>3796.994444836</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>669</ID>
+<start>3796.994444836</start>
+<end>3831.1004531580115</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 3</text>
+</label>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>670</ID>
+<start>3797.9960432199987</start>
+<end>3831.1004531580115</end>
+<code>Forward Half - Opposition in Possession</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>671</ID>
+<start>3855.1773656789956</start>
+<end>3880.1773656789956</end>
+<code>Centre Stoppage Loss</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>672</ID>
+<start>3863.99930292</start>
+<end>3886.99930292</end>
+<code>Forward HB</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>673</ID>
+<start>3863.99930292</start>
+<end>3886.99930292</end>
+<code>Forward HB</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>674</ID>
+<start>3864.5956662429912</start>
+<end>3870.228576911</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>675</ID>
+<start>3867.681939180996</start>
+<end>3890.681939180996</end>
+<code>Chase Down Tackle</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>676</ID>
+<start>3870.228576911</start>
+<end>3872.438420165</end>
+<code>Forward Half - Opposition in Possession</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>677</ID>
+<start>3870.228576911</start>
+<end>3872.438420165</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>678</ID>
+<start>3871.4849337410014</start>
+<end>3896.4849337410014</end>
+<code>Between Arcs Stoppage Neutral</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>679</ID>
+<start>3872.438420165</start>
+<end>3873.931937913</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>680</ID>
+<start>3873.931937913</start>
+<end>3878.491013577</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>681</ID>
+<start>3878.491013577</start>
+<end>3883.197288926998</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>682</ID>
+<start>3880.337912491</start>
+<end>3905.337912491</end>
+<code>Between Arcs Stoppage Neutral</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>683</ID>
+<start>3890.966710863</start>
+<end>3896.893950627996</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>684</ID>
+<start>3894.758796555</start>
+<end>3919.758796555</end>
+<code>Between Arcs Stoppage Loss</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>685</ID>
+<start>3899.690094614997</start>
+<end>3931.690094614997</end>
+<code>Oppo Forward 50 Entry (Slow)</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>686</ID>
+<start>3901.796568389001</start>
+<end>3910.3948618859977</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>687</ID>
+<start>3906.1883016049956</start>
+<end>3935.1883016049956</end>
+<code>Oppo Goal - Field Play</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>688</ID>
+<start>3914.0970611609932</start>
+<end>3926.3004574189954</end>
+<code>Forward Half - Opposition in Possession</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>689</ID>
+<start>3914.0970611609932</start>
+<end>3926.3004574189954</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>690</ID>
+<start>3962.498927221</start>
+<end>3987.498927221</end>
+<code>Centre Stoppage Win</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>691</ID>
+<start>3962.991084970994</start>
+<end>3989.991084970994</end>
+<code>Inside 50 (Drop Zone)</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>692</ID>
+<start>3962.991084970994</start>
+<end>3992.991084970994</end>
+<code>Inside 50</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>693</ID>
+<start>3963.1824121490026</start>
+<end>3987.0822178889966</end>
+<code>Forward HB</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>694</ID>
+<start>3972.0952451480066</start>
+<end>3977.613676547</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>695</ID>
+<start>3977.613676547</start>
+<end>3990.958248541</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>696</ID>
+<start>3977.613676547</start>
+<end>3990.958248541</end>
+<code>Forward Half - Cats in Possession</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>697</ID>
+<start>3990.958248541</start>
+<end>3992.1773891499897</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>698</ID>
+<start>3994.7860410849967</start>
+<end>4019.7860410849967</end>
+<code>Forward 50 Stoppage Neutral</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>699</ID>
+<start>4005.1956236259966</start>
+<end>4020.900181986008</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 3</text>
+</label>
+</instance>
+<instance>
+<ID>700</ID>
+<start>4023.992584920997</start>
+<end>4048.992584920997</end>
+<code>Centre Stoppage Neutral</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>701</ID>
+<start>4027.6930338541665</start>
+<end>4028.6930338541665</end>
+<code>Whistle</code>
+</instance>
+<instance>
+<ID>702</ID>
+<start>4033.1969004290054</start>
+<end>4040.4952281849987</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>703</ID>
+<start>4034.9887921559994</start>
+<end>4059.9887921559994</end>
+<code>Between Arcs Stoppage Neutral</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>704</ID>
+<start>4043.937621625</start>
+<end>4068.937621625</end>
+<code>Between Arcs Stoppage Win</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>705</ID>
+<start>4044.895999226004</start>
+<end>4051.5959467260036</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>706</ID>
+<start>4054.5828001049954</start>
+<end>4081.5828001049954</end>
+<code>Inside 50 (Drop Zone)</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>707</ID>
+<start>4054.5828001049954</start>
+<end>4084.5828001049954</end>
+<code>Inside 50</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>708</ID>
+<start>4054.800000001</start>
+<end>4081.800000001</end>
+<code>Inside 50 Mark - Contested</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>709</ID>
+<start>4055.856073819</start>
+<end>4078.856073819</end>
+<code>Forward HB</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>710</ID>
+<start>4055.884818185</start>
+<end>4059.102076509</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>711</ID>
+<start>4059.102076509</start>
+<end>4102.300427164007</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 4</text>
+</label>
+<label>
+<text>Quarter 4</text>
+</label>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>712</ID>
+<start>4059.7776180059973</start>
+<end>4111.777618005997</end>
+<code>Goal - Set Shot</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>713</ID>
+<start>4064.808756594991</start>
+<end>4066.996237913994</end>
+<code>Forward Half - Cats in Possession</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>714</ID>
+<start>4069.044172177</start>
+<end>4102.300427164007</end>
+<code>Forward Half - Cats in Possession</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>715</ID>
+<start>4123.466511134</start>
+<end>4153.466511134</end>
+<code>Direct Turnover - Between Arcs</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>716</ID>
+<start>4125.176912367995</start>
+<end>4150.176912367995</end>
+<code>Centre Stoppage Win</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>717</ID>
+<start>4137.095344249001</start>
+<end>4140.816396252</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>718</ID>
+<start>4140.816396252</start>
+<end>4144.894264558</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>719</ID>
+<start>4144.894264558</start>
+<end>4159.584533336</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 4</text>
+</label>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>720</ID>
+<start>4148.640437853</start>
+<end>4171.640437853</end>
+<code>Forward HB</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>721</ID>
+<start>4155.694659638991</start>
+<end>4159.584533336</end>
+<code>Forward Half - Opposition in Possession</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>722</ID>
+<start>4159.584533336</start>
+<end>4160.759868222</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>723</ID>
+<start>4160.759868222</start>
+<end>4165.933393582</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 4</text>
+</label>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>724</ID>
+<start>4163.87207912</start>
+<end>4165.933393582</end>
+<code>Forward Half - Cats in Possession</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>725</ID>
+<start>4165.933393582</start>
+<end>4173.386091754</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>726</ID>
+<start>4174.841797563</start>
+<end>4199.841797563</end>
+<code>Between Arcs Stoppage Neutral</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>727</ID>
+<start>4183.095930554002</start>
+<end>4190.795967959997</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>728</ID>
+<start>4183.882011186997</start>
+<end>4208.882011186997</end>
+<code>Between Arcs Stoppage Loss</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>729</ID>
+<start>4195.795878982002</start>
+<end>4206.501738212</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>730</ID>
+<start>4206.501738212</start>
+<end>4210.072763972</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>731</ID>
+<start>4210.072763972</start>
+<end>4224.3961826209825</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>732</ID>
+<start>4220.785585569002</start>
+<end>4251.785585569002</end>
+<code>Switch and Release</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>733</ID>
+<start>4224.3961826209825</start>
+<end>4232.794094068989</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 4</text>
+</label>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>734</ID>
+<start>4225.49729052599</start>
+<end>4241.291377976</end>
+<code>Forward Half - Cats in Possession</code>
+<label>
+<text>Quarter 4</text>
+</label>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>735</ID>
+<start>4228.6774727630045</start>
+<end>4255.6774727630045</end>
+<code>Inside 50 (Drop Zone)</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>736</ID>
+<start>4228.6774727630045</start>
+<end>4258.6774727630045</end>
+<code>Inside 50</code>
+<label>
+<text>Quarter 4</text>
+</label>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>737</ID>
+<start>4228.877859126994</start>
+<end>4258.877859126994</end>
+<code>Direct Turnover - D50</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>738</ID>
+<start>4239.978477409998</start>
+<end>4271.978477409998</end>
+<code>Oppo Slow Defensive Exit</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>739</ID>
+<start>4240.001616625998</start>
+<end>4249.808775424</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 4</text>
+</label>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>740</ID>
+<start>4243.7961116129845</start>
+<end>4249.808775424</end>
+<code>Forward Half - Cats in Possession</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>741</ID>
+<start>4249.808775424</start>
+<end>4308.99397469</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 4</text>
+</label>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>742</ID>
+<start>4280.080764884995</start>
+<end>4307.080764884995</end>
+<code>Oppo Forward 50 Mark</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>743</ID>
+<start>4282.0847621540015</start>
+<end>4314.0847621540015</end>
+<code>Oppo Forward 50 Entry (Slow)</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>744</ID>
+<start>4285.894795431993</start>
+<end>4308.99397469</end>
+<code>Forward Half - Opposition in Possession</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>745</ID>
+<start>4289.191210031999</start>
+<end>4321.191210031999</end>
+<code>Oppo Behind - Field Play</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>746</ID>
+<start>4308.187781619</start>
+<end>4342.187781619</end>
+<code>Kick out - Slow</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>747</ID>
+<start>4316.279157166999</start>
+<end>4346.279157166999</end>
+<code>Direct Turnover - Between Arcs</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>748</ID>
+<start>4322.092012049985</start>
+<end>4339.095196762002</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>749</ID>
+<start>4339.095196762002</start>
+<end>4360.000401205998</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 4</text>
+</label>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>750</ID>
+<start>4346.295875733994</start>
+<end>4360.000401205998</end>
+<code>Forward Half - Opposition in Possession</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>751</ID>
+<start>4361.859049479167</start>
+<end>4386.859049479167</end>
+<code>Between Arcs Stoppage Neutral</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>752</ID>
+<start>4375.294136680995</start>
+<end>4384.895114799993</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>753</ID>
+<start>4380.300000001</start>
+<end>4410.300000001</end>
+<code>Direct Turnover - Between Arcs</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>754</ID>
+<start>4383.853207613</start>
+<end>4408.853207613</end>
+<code>Between Arcs Stoppage Win</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>755</ID>
+<start>4384.895114799993</start>
+<end>4395.208987626</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>756</ID>
+<start>4387.086003570998</start>
+<end>4410.086003570998</end>
+<code>Forward HB</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>757</ID>
+<start>4395.208987626</start>
+<end>4403.872771846</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>758</ID>
+<start>4398.372356627</start>
+<end>4430.372356627</end>
+<code>Oppo Forward 50 Entry (Slow)</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>759</ID>
+<start>4401.877423044</start>
+<end>4428.877423044</end>
+<code>Oppo Forward 50 Mark</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>760</ID>
+<start>4403.872771846</start>
+<end>4452.000402972996</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 4</text>
+</label>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>761</ID>
+<start>4405.493566043999</start>
+<end>4452.000402972996</end>
+<code>Forward Half - Opposition in Possession</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>762</ID>
+<start>4407.979345842993</start>
+<end>4434.979345842993</end>
+<code>Oppo Forward 50 Mark</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>763</ID>
+<start>4414.586644103996</start>
+<end>4466.586644103996</end>
+<code>Oppo Goal - Set Shot</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>764</ID>
+<start>4489.749280212</start>
+<end>4514.749280212</end>
+<code>Centre Stoppage Win</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>765</ID>
+<start>4498.657322224</start>
+<end>4521.657322224</end>
+<code>Handball Recieve</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>766</ID>
+<start>4502.69591387299</start>
+<end>4504.956077589</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>767</ID>
+<start>4503.245305972</start>
+<end>4533.245305972</end>
+<code>Direct Turnover - Between Arcs</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>768</ID>
+<start>4504.956077589</start>
+<end>4524.784482255</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 4</text>
+</label>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>769</ID>
+<start>4505.490743017999</start>
+<end>4528.490743017999</end>
+<code>Handball Recieve</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>770</ID>
+<start>4516.572297593</start>
+<end>4524.784482255</end>
+<code>Forward Half - Cats in Possession</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>771</ID>
+<start>4524.784482255</start>
+<end>4568.495615018998</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 4</text>
+</label>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>772</ID>
+<start>4546.493356052</start>
+<end>4578.493356052</end>
+<code>Oppo Forward 50 Entry (Slow)</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>773</ID>
+<start>4550.785103349997</start>
+<end>4580.785103349997</end>
+<code>Direct Turnover - D50</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>774</ID>
+<start>4559.077172863998</start>
+<end>4591.077172863998</end>
+<code>Oppo Behind - Field Play</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>775</ID>
+<start>4562.395856835004</start>
+<end>4568.495615018998</end>
+<code>Forward Half - Opposition in Possession</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>776</ID>
+<start>4568.495615018998</start>
+<end>4570.597629458</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>777</ID>
+<start>4570.597629458</start>
+<end>4576.310439202</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 4</text>
+</label>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>778</ID>
+<start>4575.594872557</start>
+<end>4576.310439202</end>
+<code>Forward Half - Cats in Possession</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>779</ID>
+<start>4576.310439202</start>
+<end>4579.028740318</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>780</ID>
+<start>4579.028740318</start>
+<end>4582.000420440998</end>
+<code>Forward Half - Opposition in Possession</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>781</ID>
+<start>4579.028740318</start>
+<end>4582.000420440998</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>782</ID>
+<start>4579.177318639002</start>
+<end>4613.177318639002</end>
+<code>Kick out - Slow</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>783</ID>
+<start>4583.036229671</start>
+<end>4613.036229671</end>
+<code>Direct Turnover - Between Arcs</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>784</ID>
+<start>4590.036229671</start>
+<end>4613.036229671</end>
+<code>Forward HB</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>785</ID>
+<start>4592.131306514</start>
+<end>4605.190068336</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>786</ID>
+<start>4600.290460748996</start>
+<end>4623.290460748996</end>
+<code>Inside 45 kick</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>787</ID>
+<start>4605.190068336</start>
+<end>4611.795799185992</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 4</text>
+</label>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>788</ID>
+<start>4606.277305903</start>
+<end>4629.277305903</end>
+<code>Handball Recieve</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>789</ID>
+<start>4608.493922589988</start>
+<end>4611.795799185992</end>
+<code>Forward Half - Opposition in Possession</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>790</ID>
+<start>4608.577747316994</start>
+<end>4635.577747316994</end>
+<code>Inside 50 (Rebound Zone)</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>791</ID>
+<start>4608.577747316994</start>
+<end>4638.577747316994</end>
+<code>Inside 50</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>792</ID>
+<start>4611.795799185992</start>
+<end>4628.345082488</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 4</text>
+</label>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>793</ID>
+<start>4620.791719688</start>
+<end>4628.345082488</end>
+<code>Forward Half - Cats in Possession</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>794</ID>
+<start>4628.345082488</start>
+<end>4633.395773185985</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>795</ID>
+<start>4642.781539354995</start>
+<end>4667.781539354995</end>
+<code>Forward 50 Stoppage Neutral</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>796</ID>
+<start>4649.795801238999</start>
+<end>4655.054821512</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>797</ID>
+<start>4654.527130828</start>
+<end>4679.527130828</end>
+<code>Forward 50 Stoppage Loss</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>798</ID>
+<start>4655.054821512</start>
+<end>4657.096802836</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>799</ID>
+<start>4657.096802836</start>
+<end>4661.334801184</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>800</ID>
+<start>4657.780935677993</start>
+<end>4684.780935677993</end>
+<code>Inside 50 (Rebound Zone)</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>801</ID>
+<start>4657.780935677993</start>
+<end>4687.780935677993</end>
+<code>Inside 50</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>802</ID>
+<start>4666.589255108</start>
+<end>4673.911975444</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>803</ID>
+<start>4673.911975444</start>
+<end>4679.286790978</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>804</ID>
+<start>4673.911975444</start>
+<end>4679.286790978</end>
+<code>Forward Half - Cats in Possession</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>805</ID>
+<start>4679.286790978</start>
+<end>4682.595486247998</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>806</ID>
+<start>4687.780358965993</start>
+<end>4712.780358965993</end>
+<code>Forward 50 Stoppage Neutral</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>807</ID>
+<start>4694.493436069993</start>
+<end>4699.295634966995</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>808</ID>
+<start>4699.295634966995</start>
+<end>4700.95588093</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>809</ID>
+<start>4700.95588093</start>
+<end>4702.6955459519895</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>810</ID>
+<start>4708.478200777</start>
+<end>4733.478200777</end>
+<code>Between Arcs Stoppage Neutral</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>811</ID>
+<start>4715.395902254001</start>
+<end>4728.396103384996</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>812</ID>
+<start>4723.584494337999</start>
+<end>4748.584494337999</end>
+<code>Between Arcs Stoppage Neutral</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>813</ID>
+<start>4735.994503208991</start>
+<end>4741.196593539993</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>814</ID>
+<start>4738.985506221996</start>
+<end>4763.985506221996</end>
+<code>Between Arcs Stoppage Neutral</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>815</ID>
+<start>4745.693324141003</start>
+<end>4750.781917766</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>816</ID>
+<start>4750.781917766</start>
+<end>4752.121587096</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>817</ID>
+<start>4752.121587096</start>
+<end>4758.297114360997</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>818</ID>
+<start>4758.479549331</start>
+<end>4785.479549331</end>
+<code>Inside 50 (Rebound Zone)</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>819</ID>
+<start>4758.479549331</start>
+<end>4788.479549331</end>
+<code>Inside 50</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>820</ID>
+<start>4759.091723321</start>
+<end>4784.091723321</end>
+<code>Between Arcs Stoppage Win</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>821</ID>
+<start>4768.8963143099945</start>
+<end>4774.316789406</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>822</ID>
+<start>4769.683973517994</start>
+<end>4798.683973517994</end>
+<code>Oppo Fast Defensive Exit</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>823</ID>
+<start>4771.2871039890015</start>
+<end>4798.2871039890015</end>
+<code>Inside 50 (Drop Zone)</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>824</ID>
+<start>4771.2871039890015</start>
+<end>4801.2871039890015</end>
+<code>Inside 50</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>825</ID>
+<start>4773.910836349</start>
+<end>4800.910836349</end>
+<code>Oppo Defensive 50 Mark</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>826</ID>
+<start>4774.316789406</start>
+<end>4777.925088286</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>827</ID>
+<start>4774.316789406</start>
+<end>4777.925088286</end>
+<code>Forward Half - Cats in Possession</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>828</ID>
+<start>4777.925088286</start>
+<end>4785.793178545001</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>829</ID>
+<start>4783.191883102999</start>
+<end>4812.191883102999</end>
+<code>Oppo Fast Defensive Exit</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>830</ID>
+<start>4785.793178545001</start>
+<end>4787.541661484</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>831</ID>
+<start>4787.541661484</start>
+<end>4790.194880155994</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>832</ID>
+<start>4790.194880155994</start>
+<end>4793.816369058</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>833</ID>
+<start>4793.816369058</start>
+<end>4856.004529122</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 4</text>
+</label>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>834</ID>
+<start>4801.296171298007</start>
+<end>4856.004529122</end>
+<code>Forward Half - Opposition in Possession</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>835</ID>
+<start>4804.227906274</start>
+<end>4836.227906274</end>
+<code>Oppo Forward 50 Entry (Slow)</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>836</ID>
+<start>4808.137678368</start>
+<end>4835.137678368</end>
+<code>Oppo Forward 50 Mark</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>837</ID>
+<start>4814.058739574</start>
+<end>4866.058739574</end>
+<code>Oppo Behind - Set Shot</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>838</ID>
+<start>4846.088741901991</start>
+<end>4875.088741901991</end>
+<code>Kick out - Fast</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>839</ID>
+<start>4857.392767204996</start>
+<end>4880.392767204996</end>
+<code>Inside 45 kick</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>840</ID>
+<start>4858.233290614</start>
+<end>4891.871919524</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 4</text>
+</label>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>841</ID>
+<start>4860.990036541995</start>
+<end>4883.990036541995</end>
+<code>Inside 45 kick</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>842</ID>
+<start>4869.704575755</start>
+<end>4899.704575755</end>
+<code>Direct Turnover - D50</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>843</ID>
+<start>4871.704575755</start>
+<end>4898.704575755</end>
+<code>Inside 50 (Rebound Zone)</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>844</ID>
+<start>4871.704575755</start>
+<end>4901.704575755</end>
+<code>Inside 50</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>845</ID>
+<start>4874.297848274</start>
+<end>4901.297848274</end>
+<code>Oppo Defensive 50 Mark</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>846</ID>
+<start>4885.79514025399</start>
+<end>4891.871919524</end>
+<code>Forward Half - Cats in Possession</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>847</ID>
+<start>4891.871919524</start>
+<end>4915.708518878</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 4</text>
+</label>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>848</ID>
+<start>4910.596601275984</start>
+<end>4915.708518878</end>
+<code>Forward Half - Opposition in Possession</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>849</ID>
+<start>4915.708518878</start>
+<end>4917.511454276</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>850</ID>
+<start>4920.743823856</start>
+<end>4945.743823856</end>
+<code>Between Arcs Stoppage Win</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>851</ID>
+<start>4928.189800309999</start>
+<end>4955.189800309999</end>
+<code>Inside 50 (Rebound Zone)</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>852</ID>
+<start>4928.189800309999</start>
+<end>4958.189800309999</end>
+<code>Inside 50</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>853</ID>
+<start>4928.585093476999</start>
+<end>4980.585093476999</end>
+<code>Goal - Set Shot</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>854</ID>
+<start>4928.979590855003</start>
+<end>4951.979590855003</end>
+<code>Handball Recieve</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>855</ID>
+<start>4931.994043829982</start>
+<end>4936.101195522</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>856</ID>
+<start>4936.101195522</start>
+<end>4939.800553262994</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>857</ID>
+<start>4940.953947138</start>
+<end>4976.400409347009</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 4</text>
+</label>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>858</ID>
+<start>4940.953947138</start>
+<end>4976.400409347009</end>
+<code>Forward Half - Cats in Possession</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>859</ID>
+<start>5018.064399768</start>
+<end>5043.064399768</end>
+<code>Centre Stoppage Win</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>860</ID>
+<start>5021.076875385</start>
+<end>5044.076875385</end>
+<code>Handball Recieve</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>861</ID>
+<start>5030.294336739994</start>
+<end>5033.386015182</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>862</ID>
+<start>5033.386015182</start>
+<end>5046.716165678</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 4</text>
+</label>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>863</ID>
+<start>5036.895016362998</start>
+<end>5046.716165678</end>
+<code>Forward Half - Cats in Possession</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>864</ID>
+<start>5046.716165678</start>
+<end>5051.800199011998</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>865</ID>
+<start>5055.926568556</start>
+<end>5080.926568556</end>
+<code>Between Arcs Stoppage Neutral</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>866</ID>
+<start>5063.393126156993</start>
+<end>5071.694744487005</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>867</ID>
+<start>5073.375993027</start>
+<end>5100.375993027</end>
+<code>Inside 50 (Rebound Zone)</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>868</ID>
+<start>5073.375993027</start>
+<end>5103.375993027</end>
+<code>Inside 50</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>869</ID>
+<start>5073.718863938</start>
+<end>5098.718863938</end>
+<code>Between Arcs Stoppage Win</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>870</ID>
+<start>5084.122284624</start>
+<end>5088.909204986</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>871</ID>
+<start>5088.909204986</start>
+<end>5095.297046590996</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 4</text>
+</label>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>872</ID>
+<start>5089.297039700002</start>
+<end>5095.297046590996</end>
+<code>Forward Half - Cats in Possession</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>873</ID>
+<start>5095.297046590996</start>
+<end>5096.395063547987</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>874</ID>
+<start>5099.699583426</start>
+<end>5124.699583426</end>
+<code>Forward 50 Stoppage Loss</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>875</ID>
+<start>5111.194015211003</start>
+<end>5114.56117263</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>876</ID>
+<start>5114.56117263</start>
+<end>5119.66416001</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>877</ID>
+<start>5119.66416001</start>
+<end>5125.200160575005</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>878</ID>
+<start>5129.180607446994</start>
+<end>5154.180607446994</end>
+<code>Between Arcs Stoppage Win</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>879</ID>
+<start>5129.880640475995</start>
+<end>5159.880640475995</end>
+<code>Direct Turnover - Between Arcs</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>880</ID>
+<start>5135.281795006992</start>
+<end>5158.281795006992</end>
+<code>Inside 45 kick</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>881</ID>
+<start>5139.495522971</start>
+<end>5147.021216174</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>882</ID>
+<start>5147.021216174</start>
+<end>5154.500354425009</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>883</ID>
+<start>5151.991142636996</start>
+<end>5181.991142636996</end>
+<code>Oppo Forward 50 Entry (Fast)</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>884</ID>
+<start>5155.8970938489865</start>
+<end>5177.427031138</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 4</text>
+</label>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>885</ID>
+<start>5162.6924610999995</start>
+<end>5189.6924610999995</end>
+<code>Fast Rebound 50</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>886</ID>
+<start>5167.895180067996</start>
+<end>5177.427031138</end>
+<code>Forward Half - Opposition in Possession</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>887</ID>
+<start>5177.427031138</start>
+<end>5181.708924066</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>888</ID>
+<start>5181.708924066</start>
+<end>5184.116923136</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>889</ID>
+<start>5184.116923136</start>
+<end>5186.795506483986</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 4</text>
+</label>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>890</ID>
+<start>5185.09699271499</start>
+<end>5186.795506483986</end>
+<code>Forward Half - Opposition in Possession</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>891</ID>
+<start>5186.795506483986</start>
+<end>5191.200307149993</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>892</ID>
+<start>5192.086848092</start>
+<end>5217.086848092</end>
+<code>Between Arcs Stoppage Win</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>893</ID>
+<start>5193.80414439</start>
+<end>5216.80414439</end>
+<code>Handball Recieve</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>894</ID>
+<start>5194.400043269</start>
+<end>5221.400043269</end>
+<code>Inside 50 (Rebound Zone)</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>895</ID>
+<start>5194.400043269</start>
+<end>5224.400043269</end>
+<code>Inside 50</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>896</ID>
+<start>5203.295990115991</start>
+<end>5207.915416337</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>897</ID>
+<start>5207.915416337</start>
+<end>5264.000158204006</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 4</text>
+</label>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>898</ID>
+<start>5211.696080841996</start>
+<end>5264.000158204006</end>
+<code>Forward Half - Cats in Possession</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>899</ID>
+<start>5217.078218358994</start>
+<end>5269.078218358994</end>
+<code>Goal - Set Shot</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>900</ID>
+<start>5312.885954833996</start>
+<end>5342.885954833996</end>
+<code>Oppo Forward 50 Entry (Fast)</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>901</ID>
+<start>5314.391141154998</start>
+<end>5339.391141154998</end>
+<code>Centre Stoppage Loss</code>
+<label>
+<text>Quarter 4</text>
+</label>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>902</ID>
+<start>5323.395098225004</start>
+<end>5328.348246423</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>903</ID>
+<start>5328.348246423</start>
+<end>5335.000304170005</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 4</text>
+</label>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>904</ID>
+<start>5330.095122055007</start>
+<end>5335.000304170005</end>
+<code>Forward Half - Opposition in Possession</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>905</ID>
+<start>5336.096090626</start>
+<end>5341.103378709</end>
+<code>In Dispute</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>906</ID>
+<start>5341.103378709</start>
+<end>5343.025505363</end>
+<code>Forward Half - Opposition in Possession</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>907</ID>
+<start>5341.103378709</start>
+<end>5343.025505363</end>
+<code>Opposition in Possession</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+<instance>
+<ID>908</ID>
+<start>5345.594840751006</start>
+<end>5356.600191439995</end>
+<code>Cats in Possession</code>
+<label>
+<text>Quarter 4</text>
+</label>
+</instance>
+</ALL_INSTANCES>
+<ROWS>
+<row>
+<code>Cats in Possession</code>
+<R>14392</R>
+<G>37008</G>
+<B>57568</B>
+</row>
+<row>
+<code>Forward Half - Cats in Possession</code>
+<R>14392</R>
+<G>37008</G>
+<B>57568</B>
+</row>
+<row>
+<code>Forward Half - Opposition in Possession</code>
+<R>14392</R>
+<G>37008</G>
+<B>57568</B>
+</row>
+<row>
+<code>In Dispute</code>
+<R>14392</R>
+<G>37008</G>
+<B>57568</B>
+</row>
+<row>
+<code>Opposition in Possession</code>
+<R>14392</R>
+<G>37008</G>
+<B>57568</B>
+</row>
+<row>
+<code>Whistle</code>
+<R>14392</R>
+<G>37008</G>
+<B>57568</B>
+</row>
+<row>
+<code>Inside 50</code>
+<R>20046</R>
+<G>9509</G>
+<B>65535</B>
+</row>
+<row>
+<code>Inside 50 (Drop Zone)</code>
+<R>20046</R>
+<G>9509</G>
+<B>65535</B>
+</row>
+<row>
+<code>Inside 50 (Rebound Zone)</code>
+<R>20046</R>
+<G>9509</G>
+<B>65535</B>
+</row>
+<row>
+<code>Direct Turnover - Between Arcs</code>
+<R>24672</R>
+<G>24672</G>
+<B>24672</B>
+</row>
+<row>
+<code>Direct Turnover - D50</code>
+<R>24672</R>
+<G>24672</G>
+<B>24672</B>
+</row>
+<row>
+<code>Direct Turnover - F50</code>
+<R>24672</R>
+<G>24672</G>
+<B>24672</B>
+</row>
+<row>
+<code>Defensive 50 Mark</code>
+<R>29041</R>
+<G>0</G>
+<B>41377</B>
+</row>
+<row>
+<code>Inside 50 Mark - Contested</code>
+<R>29041</R>
+<G>0</G>
+<B>41377</B>
+</row>
+<row>
+<code>Inside 50 Mark - Uncontested</code>
+<R>29041</R>
+<G>0</G>
+<B>41377</B>
+</row>
+<row>
+<code>Oppo Defensive 50 Mark</code>
+<R>29041</R>
+<G>0</G>
+<B>41377</B>
+</row>
+<row>
+<code>Oppo Forward 50 Mark</code>
+<R>29041</R>
+<G>0</G>
+<B>41377</B>
+</row>
+<row>
+<code>Between Arcs Stoppage Loss</code>
+<R>37779</R>
+<G>65535</G>
+<B>23387</B>
+</row>
+<row>
+<code>Between Arcs Stoppage Neutral</code>
+<R>37779</R>
+<G>65535</G>
+<B>23387</B>
+</row>
+<row>
+<code>Between Arcs Stoppage Win</code>
+<R>37779</R>
+<G>65535</G>
+<B>23387</B>
+</row>
+<row>
+<code>Centre Stoppage Loss</code>
+<R>37779</R>
+<G>65535</G>
+<B>23387</B>
+</row>
+<row>
+<code>Centre Stoppage Neutral</code>
+<R>37779</R>
+<G>65535</G>
+<B>23387</B>
+</row>
+<row>
+<code>Centre Stoppage Win</code>
+<R>37779</R>
+<G>65535</G>
+<B>23387</B>
+</row>
+<row>
+<code>Defensive 50 Stoppage Loss</code>
+<R>37779</R>
+<G>65535</G>
+<B>23387</B>
+</row>
+<row>
+<code>Defensive 50 Stoppage Neutral</code>
+<R>37779</R>
+<G>65535</G>
+<B>23387</B>
+</row>
+<row>
+<code>Defensive 50 Stoppage Win</code>
+<R>37779</R>
+<G>65535</G>
+<B>23387</B>
+</row>
+<row>
+<code>Forward 50 Stoppage Loss</code>
+<R>37779</R>
+<G>65535</G>
+<B>23387</B>
+</row>
+<row>
+<code>Forward 50 Stoppage Neutral</code>
+<R>37779</R>
+<G>65535</G>
+<B>23387</B>
+</row>
+<row>
+<code>Behind - Field Play</code>
+<R>52171</R>
+<G>5911</G>
+<B>1285</B>
+</row>
+<row>
+<code>Goal - Set Shot</code>
+<R>52171</R>
+<G>5911</G>
+<B>1285</B>
+</row>
+<row>
+<code>Oppo Behind - Field Play</code>
+<R>52171</R>
+<G>5911</G>
+<B>1285</B>
+</row>
+<row>
+<code>Oppo Behind - Set Shot</code>
+<R>52171</R>
+<G>5911</G>
+<B>1285</B>
+</row>
+<row>
+<code>Oppo Goal - Field Play</code>
+<R>52171</R>
+<G>5911</G>
+<B>1285</B>
+</row>
+<row>
+<code>Oppo Goal - Set Shot</code>
+<R>52171</R>
+<G>5911</G>
+<B>1285</B>
+</row>
+<row>
+<code>Fast Rebound 50</code>
+<R>65021</R>
+<G>42662</G>
+<B>28270</B>
+</row>
+<row>
+<code>Kick out - Fast</code>
+<R>65021</R>
+<G>42662</G>
+<B>28270</B>
+</row>
+<row>
+<code>Kick out - Slow</code>
+<R>65021</R>
+<G>42662</G>
+<B>28270</B>
+</row>
+<row>
+<code>Oppo Fast Defensive Exit</code>
+<R>65021</R>
+<G>42662</G>
+<B>28270</B>
+</row>
+<row>
+<code>Oppo Forward 50 Entry (Fast)</code>
+<R>65021</R>
+<G>42662</G>
+<B>28270</B>
+</row>
+<row>
+<code>Oppo Forward 50 Entry (Slow)</code>
+<R>65021</R>
+<G>42662</G>
+<B>28270</B>
+</row>
+<row>
+<code>Oppo Kick out - Fast</code>
+<R>65021</R>
+<G>42662</G>
+<B>28270</B>
+</row>
+<row>
+<code>Oppo Slow Defensive Exit</code>
+<R>65021</R>
+<G>42662</G>
+<B>28270</B>
+</row>
+<row>
+<code>Slow Defensive Exit</code>
+<R>65021</R>
+<G>42662</G>
+<B>28270</B>
+</row>
+<row>
+<code>Chase Down Tackle</code>
+<R>65278</R>
+<G>54227</G>
+<B>2570</B>
+</row>
+<row>
+<code>Fast Through The Middle</code>
+<R>65278</R>
+<G>54227</G>
+<B>2570</B>
+</row>
+<row>
+<code>Forward HB</code>
+<R>65278</R>
+<G>54227</G>
+<B>2570</B>
+</row>
+<row>
+<code>Handball Recieve</code>
+<R>65278</R>
+<G>54227</G>
+<B>2570</B>
+</row>
+<row>
+<code>Inside 45 kick</code>
+<R>65278</R>
+<G>54227</G>
+<B>2570</B>
+</row>
+<row>
+<code>Switch and Release</code>
+<R>65278</R>
+<G>54227</G>
+<B>2570</B>
+</row>
+<row>
+<code>Switch and Slow</code>
+<R>65278</R>
+<G>54227</G>
+<B>2570</B>
+</row>
+</ROWS>
+</file>
