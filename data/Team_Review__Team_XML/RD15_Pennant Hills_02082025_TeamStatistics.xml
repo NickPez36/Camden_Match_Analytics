@@ -1,0 +1,4410 @@
+﻿<file>
+<ALL_INSTANCES>
+<instance>
+<ID>1</ID>
+<start>279.34052083333336</start>
+<end>299.34052083333336</end>
+<code>Whistle</code>
+</instance>
+<instance>
+<ID>2</ID>
+<start>282.59855945733256</start>
+<end>307.59855945733256</end>
+<code>Centre Stoppage Win</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>3</ID>
+<start>287.0986634079988</start>
+<end>314.0986634079988</end>
+<code>Inside 50 (Drop Zone)</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>4</ID>
+<start>287.0986634079988</start>
+<end>317.0986634079988</end>
+<code>Inside 50</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>5</ID>
+<start>287.398984063</start>
+<end>310.398984063</end>
+<code>Forward HB</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>6</ID>
+<start>290.037117981</start>
+<end>313.037117981</end>
+<code>Forward HB</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>7</ID>
+<start>290.09836863266474</start>
+<end>317.09836863266474</end>
+<code>Oppo Defensive 50 Mark</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>8</ID>
+<start>298.5994889243336</start>
+<end>330.5994889243336</end>
+<code>Oppo Slow Defensive Exit</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>9</ID>
+<start>324.813792258</start>
+<end>347.813792258</end>
+<code>Handball Recieve</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>10</ID>
+<start>328.09897936966456</start>
+<end>355.09897936966456</end>
+<code>Inside 50 (Drop Zone)</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>11</ID>
+<start>328.09897936966456</start>
+<end>358.09897936966456</end>
+<code>Inside 50</code>
+<label>
+<text>Q1</text>
+</label>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>12</ID>
+<start>336.69927478699947</start>
+<end>365.69927478699947</end>
+<code>Oppo Fast Defensive Exit</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>13</ID>
+<start>341.9987442456651</start>
+<end>372.9987442456651</end>
+<code>Switch and Release</code>
+<label>
+<text>Q1</text>
+</label>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>14</ID>
+<start>344.698542287667</start>
+<end>367.698542287667</end>
+<code>Inside 45 kick</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>15</ID>
+<start>345.8987422036651</start>
+<end>372.8987422036651</end>
+<code>Inside 50 (Rebound Zone)</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>16</ID>
+<start>345.8987422036651</start>
+<end>375.8987422036651</end>
+<code>Inside 50</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>17</ID>
+<start>346.39844736733374</start>
+<end>376.39844736733374</end>
+<code>Direct Turnover - F50</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>18</ID>
+<start>348.093234288</start>
+<end>375.093234288</end>
+<code>Oppo Defensive 50 Mark</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>19</ID>
+<start>352.1983485326666</start>
+<end>384.1983485326666</end>
+<code>Oppo Slow Defensive Exit</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>20</ID>
+<start>367.69909032433276</start>
+<end>390.69909032433276</end>
+<code>Forward HB</code>
+<label>
+<text>Q1</text>
+</label>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>21</ID>
+<start>369.3987058256648</start>
+<end>392.3987058256648</end>
+<code>Handball Recieve</code>
+<label>
+<text>Q1</text>
+</label>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>22</ID>
+<start>371.3993517416664</start>
+<end>394.3993517416664</end>
+<code>Forward HB</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>23</ID>
+<start>375.0989462086659</start>
+<end>398.0989462086659</end>
+<code>Forward HB</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>24</ID>
+<start>375.1984405333321</start>
+<end>398.1984405333321</end>
+<code>Handball Recieve</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>25</ID>
+<start>398.3988953346646</start>
+<end>423.3988953346646</end>
+<code>Between Arcs Stoppage Neutral</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>26</ID>
+<start>420.29895537533133</start>
+<end>445.29895537533133</end>
+<code>Between Arcs Stoppage Neutral</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>27</ID>
+<start>431.89837745333256</start>
+<end>456.89837745333256</end>
+<code>Between Arcs Stoppage Win</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>28</ID>
+<start>455.29848812033174</start>
+<end>480.29848812033174</end>
+<code>Between Arcs Stoppage Neutral</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>29</ID>
+<start>462.09873186899904</start>
+<end>493.09873186899904</end>
+<code>Switch and Release</code>
+<label>
+<text>Q1</text>
+</label>
+<label>
+<text>Q1</text>
+</label>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>30</ID>
+<start>464.8994125773308</start>
+<end>494.8994125773308</end>
+<code>Direct Turnover - F50</code>
+<label>
+<text>Q1</text>
+</label>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>31</ID>
+<start>465.2984524523338</start>
+<end>492.2984524523338</end>
+<code>Inside 50 (Rebound Zone)</code>
+<label>
+<text>Q1</text>
+</label>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>32</ID>
+<start>465.2984524523338</start>
+<end>495.2984524523338</end>
+<code>Inside 50</code>
+<label>
+<text>Q1</text>
+</label>
+<label>
+<text>Q1</text>
+</label>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>33</ID>
+<start>468.1616666666667</start>
+<end>491.1616666666667</end>
+<code>Inside 45 kick</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>34</ID>
+<start>475.7985898276658</start>
+<end>504.7985898276658</end>
+<code>Oppo Fast Defensive Exit</code>
+<label>
+<text>Q1</text>
+</label>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>35</ID>
+<start>479.7990832449993</start>
+<end>502.7990832449993</end>
+<code>Chase Down Tackle</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>36</ID>
+<start>503.9984967859991</start>
+<end>528.9984967859991</end>
+<code>Between Arcs Stoppage Win</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>37</ID>
+<start>504.29862623933343</start>
+<end>527.2986262393334</end>
+<code>Forward HB</code>
+<label>
+<text>Q1</text>
+</label>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>38</ID>
+<start>506.69671707199905</start>
+<end>529.696717071999</end>
+<code>Handball Recieve</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>39</ID>
+<start>521.3988978323335</start>
+<end>551.3988978323335</end>
+<code>Oppo Forward 50 Entry (Fast)</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>40</ID>
+<start>524.7990052456668</start>
+<end>551.7990052456668</end>
+<code>Defensive 50 Mark</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>41</ID>
+<start>532.31172282</start>
+<end>562.31172282</end>
+<code>Direct Turnover - Between Arcs</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>42</ID>
+<start>535.3991262469999</start>
+<end>558.3991262469999</end>
+<code>Inside 45 kick</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>43</ID>
+<start>552.7992370830002</start>
+<end>577.7992370830002</end>
+<code>Between Arcs Stoppage Neutral</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>44</ID>
+<start>562.598760165665</start>
+<end>587.598760165665</end>
+<code>Between Arcs Stoppage Win</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>45</ID>
+<start>566.5978434489989</start>
+<end>593.5978434489989</end>
+<code>Inside 50 (Rebound Zone)</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>46</ID>
+<start>566.5978434489989</start>
+<end>596.5978434489989</end>
+<code>Inside 50</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>47</ID>
+<start>579.62867941</start>
+<end>611.62867941</end>
+<code>Behind - Field Play</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>48</ID>
+<start>603.0985740673327</start>
+<end>632.0985740673327</end>
+<code>Oppo Kick out - Slow</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>49</ID>
+<start>623.063198077</start>
+<end>646.063198077</end>
+<code>Forward HB</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>50</ID>
+<start>623.0987306639984</start>
+<end>650.0987306639984</end>
+<code>Inside 50 (Rebound Zone)</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>51</ID>
+<start>623.0987306639984</start>
+<end>653.0987306639984</end>
+<code>Inside 50</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>52</ID>
+<start>645.9990753733334</start>
+<end>677.9990753733334</end>
+<code>Oppo Slow Defensive Exit</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>53</ID>
+<start>676.4989144979983</start>
+<end>701.4989144979983</end>
+<code>Between Arcs Stoppage Neutral</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>54</ID>
+<start>703.323042667</start>
+<end>728.323042667</end>
+<code>Between Arcs Stoppage Loss</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>55</ID>
+<start>709.9987466659978</start>
+<end>732.9987466659978</end>
+<code>Forward HB</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>56</ID>
+<start>710.498302991665</start>
+<end>733.498302991665</end>
+<code>Forward HB</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>57</ID>
+<start>710.6977542830001</start>
+<end>737.6977542830001</end>
+<code>Inside 50 (Drop Zone)</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>58</ID>
+<start>710.6977542830001</start>
+<end>740.6977542830001</end>
+<code>Inside 50</code>
+<label>
+<text>Q1</text>
+</label>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>59</ID>
+<start>713.8988791589992</start>
+<end>740.8988791589992</end>
+<code>Oppo Defensive 50 Mark</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>60</ID>
+<start>721.194463451</start>
+<end>748.194463451</end>
+<code>Inside 50 Mark - Uncontested</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>61</ID>
+<start>726.9988480433326</start>
+<end>753.9988480433326</end>
+<code>Inside 50 Mark - Uncontested</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>62</ID>
+<start>729.5986474596659</start>
+<end>752.5986474596659</end>
+<code>Inside 45 kick</code>
+<label>
+<text>Q1</text>
+</label>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>63</ID>
+<start>738.04390471</start>
+<end>790.04390471</end>
+<code>Goal - Set Shot</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>64</ID>
+<start>812.6984558329984</start>
+<end>837.6984558329984</end>
+<code>Centre Stoppage Loss</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>65</ID>
+<start>829.7984828319996</start>
+<end>854.7984828319996</end>
+<code>Between Arcs Stoppage Neutral</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>66</ID>
+<start>840.911629874</start>
+<end>865.911629874</end>
+<code>Between Arcs Stoppage Loss</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>67</ID>
+<start>843.030326173</start>
+<end>866.030326173</end>
+<code>Forward HB</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>68</ID>
+<start>849.0979904903318</start>
+<end>876.0979904903318</end>
+<code>Inside 50 (Drop Zone)</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>69</ID>
+<start>849.0979904903318</start>
+<end>879.0979904903318</end>
+<code>Inside 50</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>70</ID>
+<start>852.916158735</start>
+<end>875.916158735</end>
+<code>Handball Recieve</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>71</ID>
+<start>865.6986032826662</start>
+<end>897.6986032826662</end>
+<code>Oppo Slow Defensive Exit</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>72</ID>
+<start>885.1987053526645</start>
+<end>912.1987053526645</end>
+<code>Inside 50 (Rebound Zone)</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>73</ID>
+<start>885.1987053526645</start>
+<end>915.1987053526645</end>
+<code>Inside 50</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>74</ID>
+<start>905.1982412689977</start>
+<end>937.1982412689977</end>
+<code>Oppo Slow Defensive Exit</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>75</ID>
+<start>910.2988415623336</start>
+<end>935.2988415623336</end>
+<code>Forward 50 Stoppage Loss</code>
+<label>
+<text>Q1</text>
+</label>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>76</ID>
+<start>922.101199739</start>
+<end>952.101199739</end>
+<code>Direct Turnover - Between Arcs</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>77</ID>
+<start>922.4980926889998</start>
+<end>945.4980926889998</end>
+<code>Handball Recieve</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>78</ID>
+<start>927.0985604393327</start>
+<end>950.0985604393327</end>
+<code>Inside 45 kick</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>79</ID>
+<start>953.810964064</start>
+<end>976.810964064</end>
+<code>Forward HB</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>80</ID>
+<start>963.8986231193315</start>
+<end>986.8986231193315</end>
+<code>Handball Recieve</code>
+<label>
+<text>Q1</text>
+</label>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>81</ID>
+<start>964.2988222856657</start>
+<end>991.2988222856657</end>
+<code>Inside 50 (Drop Zone)</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>82</ID>
+<start>964.2988222856657</start>
+<end>994.2988222856657</end>
+<code>Inside 50</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>83</ID>
+<start>964.7985704529991</start>
+<end>987.7985704529991</end>
+<code>Inside 45 kick</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>84</ID>
+<start>970.5983925329998</start>
+<end>1000.5983925329998</end>
+<code>Direct Turnover - F50</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>85</ID>
+<start>990.897923042664</start>
+<end>1022.897923042664</end>
+<code>Oppo Slow Defensive Exit</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>86</ID>
+<start>999.298090834665</start>
+<end>1026.298090834665</end>
+<code>Inside 50 (Drop Zone)</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>87</ID>
+<start>999.298090834665</start>
+<end>1029.298090834665</end>
+<code>Inside 50</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>88</ID>
+<start>1011.0997580006667</start>
+<end>1040.0997580006667</end>
+<code>Goal - Field Play</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>89</ID>
+<start>1073.9988843149995</start>
+<end>1098.9988843149995</end>
+<code>Centre Stoppage Neutral</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>90</ID>
+<start>1094.1987428319999</start>
+<end>1119.1987428319999</end>
+<code>Between Arcs Stoppage Loss</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>91</ID>
+<start>1099.2986638743332</start>
+<end>1126.2986638743332</end>
+<code>Inside 50 (Rebound Zone)</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>92</ID>
+<start>1099.2986638743332</start>
+<end>1129.2986638743332</end>
+<code>Inside 50</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>93</ID>
+<start>1099.9987901663314</start>
+<end>1124.396662416332</end>
+<code>Forward HB</code>
+<label>
+<text>Q1</text>
+</label>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>94</ID>
+<start>1110.998145664666</start>
+<end>1162.998145664666</end>
+<code>Goal - Set Shot</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>95</ID>
+<start>1188.398783331665</start>
+<end>1213.398783331665</end>
+<code>Centre Stoppage Neutral</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>96</ID>
+<start>1200.8989185826656</start>
+<end>1225.8989185826656</end>
+<code>Between Arcs Stoppage Win</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>97</ID>
+<start>1207.5975941669979</start>
+<end>1234.5975941669979</end>
+<code>Inside 50 (Drop Zone)</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>98</ID>
+<start>1207.5975941669979</start>
+<end>1237.5975941669979</end>
+<code>Inside 50</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>99</ID>
+<start>1208.9987032503311</start>
+<end>1231.9987032503311</end>
+<code>Forward HB</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>100</ID>
+<start>1215.3989924196655</start>
+<end>1267.3989924196655</end>
+<code>Goal - Set Shot</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>101</ID>
+<start>1217.265612875</start>
+<end>1240.265612875</end>
+<code>Handball Recieve</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>102</ID>
+<start>1217.8010330306654</start>
+<end>1244.8010330306654</end>
+<code>Inside 50 Mark - Uncontested</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>103</ID>
+<start>1291.3986841253325</start>
+<end>1316.3986841253325</end>
+<code>Centre Stoppage Win</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>104</ID>
+<start>1321.398658875999</start>
+<end>1344.398658875999</end>
+<code>Inside 45 kick</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>105</ID>
+<start>1325.0986747503334</start>
+<end>1348.0986747503334</end>
+<code>Forward HB</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>106</ID>
+<start>1348.4825833333334</start>
+<end>1373.4825833333334</end>
+<code>Between Arcs Stoppage Neutral</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>107</ID>
+<start>1366.8989705413314</start>
+<end>1391.8989705413314</end>
+<code>Between Arcs Stoppage Neutral</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>108</ID>
+<start>1381.2974373733327</start>
+<end>1406.2974373733327</end>
+<code>Between Arcs Stoppage Win</code>
+<label>
+<text>Q1</text>
+</label>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>109</ID>
+<start>1384.0988449163312</start>
+<end>1408.5997247496657</end>
+<code>Forward HB</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>110</ID>
+<start>1388.6971409163323</start>
+<end>1415.6971409163323</end>
+<code>Inside 50 (Rebound Zone)</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>111</ID>
+<start>1388.6971409163323</start>
+<end>1418.6971409163323</end>
+<code>Inside 50</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>112</ID>
+<start>1389.6985726239998</start>
+<end>1412.6985726239998</end>
+<code>Forward HB</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>113</ID>
+<start>1393.098565623998</start>
+<end>1422.098565623998</end>
+<code>Goal - Field Play</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>114</ID>
+<start>1455.8987848369986</start>
+<end>1480.8987848369986</end>
+<code>Centre Stoppage Neutral</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>115</ID>
+<start>1465.9008832946668</start>
+<end>1496.9008832946668</end>
+<code>Switch and Release</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>116</ID>
+<start>1467.3998328370003</start>
+<end>1492.3998328370003</end>
+<code>Between Arcs Stoppage Loss</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>117</ID>
+<start>1469.598422628999</start>
+<end>1492.598422628999</end>
+<code>Inside 45 kick</code>
+<label>
+<text>Q1</text>
+</label>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>118</ID>
+<start>1474.8987523283322</start>
+<end>1501.8987523283322</end>
+<code>Inside 50 (Rebound Zone)</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>119</ID>
+<start>1474.8987523283322</start>
+<end>1504.8987523283322</end>
+<code>Inside 50</code>
+<label>
+<text>Q1</text>
+</label>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>120</ID>
+<start>1476.8986895776657</start>
+<end>1508.8986895776657</end>
+<code>Behind - Field Play</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>121</ID>
+<start>1503.0982361683323</start>
+<end>1532.0982361683323</end>
+<code>Oppo Kick out - Slow</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>122</ID>
+<start>1528.7973137103327</start>
+<end>1553.7973137103327</end>
+<code>Between Arcs Stoppage Win</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>123</ID>
+<start>1529.1993424186646</start>
+<end>1556.1993424186646</end>
+<code>Inside 50 (Rebound Zone)</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>124</ID>
+<start>1529.1993424186646</start>
+<end>1559.1993424186646</end>
+<code>Inside 50</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>125</ID>
+<start>1531.632543877</start>
+<end>1558.632543877</end>
+<code>Inside 50 Mark - Contested</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>126</ID>
+<start>1538.0993433303333</start>
+<end>1565.0993433303333</end>
+<code>Inside 50 Mark - Uncontested</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>127</ID>
+<start>1547.5985730439977</start>
+<end>1599.5985730439977</end>
+<code>Goal - Set Shot</code>
+<label>
+<text>Q1</text>
+</label>
+</instance>
+<instance>
+<ID>128</ID>
+<start>1802.2979419566655</start>
+<end>1822.2979419566655</end>
+<code>Whistle</code>
+</instance>
+<instance>
+<ID>129</ID>
+<start>1807.9988177479986</start>
+<end>1832.9988177479986</end>
+<code>Centre Stoppage Neutral</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>130</ID>
+<start>1816.9979836643317</start>
+<end>1841.9979836643317</end>
+<code>Between Arcs Stoppage Win</code>
+<label>
+<text>Q2</text>
+</label>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>131</ID>
+<start>1818.4982405450003</start>
+<end>1845.4982405450003</end>
+<code>Inside 50 (Drop Zone)</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>132</ID>
+<start>1818.4982405450003</start>
+<end>1848.4982405450003</end>
+<code>Inside 50</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>133</ID>
+<start>1819.2980710039994</start>
+<end>1842.2980710039994</end>
+<code>Forward HB</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>134</ID>
+<start>1820.3986542070002</start>
+<end>1843.3986542070002</end>
+<code>Forward HB</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>135</ID>
+<start>1847.0989424623326</start>
+<end>1872.0989424623326</end>
+<code>Forward 50 Stoppage Neutral</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>136</ID>
+<start>1869.7983110033329</start>
+<end>1894.7983110033329</end>
+<code>Forward 50 Stoppage Neutral</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>137</ID>
+<start>1889.0983711290003</start>
+<end>1914.0983711290003</end>
+<code>Forward 50 Stoppage Neutral</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>138</ID>
+<start>1906.855408827</start>
+<end>1938.855408827</end>
+<code>Behind - Field Play</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>139</ID>
+<start>1910.128095129</start>
+<end>1935.128095129</end>
+<code>Forward 50 Stoppage Win</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>140</ID>
+<start>1929.2979107069984</start>
+<end>1958.2979107069984</end>
+<code>Oppo Kick out - Slow</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>141</ID>
+<start>1956.2988239403323</start>
+<end>1981.2988239403323</end>
+<code>Forward 50 Stoppage Neutral</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>142</ID>
+<start>1973.698709898</start>
+<end>1998.698709898</end>
+<code>Forward 50 Stoppage Neutral</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>143</ID>
+<start>1975.7981937906645</start>
+<end>2004.7981937906645</end>
+<code>Goal - Field Play</code>
+<label>
+<text>Q2</text>
+</label>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>144</ID>
+<start>1979.4989445823321</start>
+<end>2006.4989445823321</end>
+<code>Inside 50 (Rebound Zone)</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>145</ID>
+<start>1979.4989445823321</start>
+<end>2009.4989445823321</end>
+<code>Inside 50</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>146</ID>
+<start>2037.9912997860001</start>
+<end>2062.991299786</end>
+<code>Centre Stoppage Loss</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>147</ID>
+<start>2042.597549573998</start>
+<end>2067.1987144899986</end>
+<code>Forward HB</code>
+<label>
+<text>Q2</text>
+</label>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>148</ID>
+<start>2045.111156032</start>
+<end>2075.111156032</end>
+<code>Direct Turnover - Between Arcs</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>149</ID>
+<start>2045.9986243239991</start>
+<end>2068.998624323999</end>
+<code>Handball Recieve</code>
+<label>
+<text>Q2</text>
+</label>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>150</ID>
+<start>2047.4982139486656</start>
+<end>2073.2991002406666</end>
+<code>Forward HB</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>151</ID>
+<start>2067.499283694664</start>
+<end>2092.499283694664</end>
+<code>Between Arcs Stoppage Neutral</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>152</ID>
+<start>2079.689409153</start>
+<end>2104.689409153</end>
+<code>Between Arcs Stoppage Loss</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>153</ID>
+<start>2085.611667573</start>
+<end>2115.611667573</end>
+<code>Oppo Forward 50 Entry (Fast)</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>154</ID>
+<start>2088.26650016</start>
+<end>2115.26650016</end>
+<code>Oppo Forward 50 Mark</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>155</ID>
+<start>2104.5978979986667</start>
+<end>2131.5978979986667</end>
+<code>Oppo Forward 50 Mark</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>156</ID>
+<start>2138.897593282</start>
+<end>2166.702454574331</end>
+<code>Forward HB</code>
+<label>
+<text>Q2</text>
+</label>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>157</ID>
+<start>2146.0010490746645</start>
+<end>2173.0010490746645</end>
+<code>Fast Rebound 50</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>158</ID>
+<start>2159.298526112667</start>
+<end>2182.298526112667</end>
+<code>Chase Down Tackle</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>159</ID>
+<start>2173.4988238623337</start>
+<end>2198.4988238623337</end>
+<code>Between Arcs Stoppage Neutral</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>160</ID>
+<start>2186.1984701126653</start>
+<end>2211.1984701126653</end>
+<code>Between Arcs Stoppage Neutral</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>161</ID>
+<start>2199.6985844573333</start>
+<end>2224.6985844573333</end>
+<code>Between Arcs Stoppage Neutral</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>162</ID>
+<start>2207.4990801880017</start>
+<end>2237.4990801880017</end>
+<code>Oppo Forward 50 Entry (Fast)</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>163</ID>
+<start>2253.006274563</start>
+<end>2276.006274563</end>
+<code>Handball Recieve</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>164</ID>
+<start>2255.9984406523345</start>
+<end>2282.9984406523345</end>
+<code>Fast Rebound 50</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>165</ID>
+<start>2267.4982117783356</start>
+<end>2294.4982117783356</end>
+<code>Inside 50 (Drop Zone)</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>166</ID>
+<start>2267.4982117783356</start>
+<end>2297.4982117783356</end>
+<code>Inside 50</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>167</ID>
+<start>2267.9962359446645</start>
+<end>2290.9962359446645</end>
+<code>Handball Recieve</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>168</ID>
+<start>2271.398325527998</start>
+<end>2300.398325527998</end>
+<code>Goal - Field Play</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>169</ID>
+<start>2340.398291838001</start>
+<end>2365.398291838001</end>
+<code>Centre Stoppage Neutral</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>170</ID>
+<start>2354.130521879</start>
+<end>2384.130521879</end>
+<code>Oppo Forward 50 Entry (Fast)</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>171</ID>
+<start>2356.097687296334</start>
+<end>2381.097687296334</end>
+<code>Between Arcs Stoppage Loss</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>172</ID>
+<start>2360.497979350664</start>
+<end>2387.497979350664</end>
+<code>Fast Rebound 50</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>173</ID>
+<start>2380.5994174336647</start>
+<end>2405.5994174336647</end>
+<code>Between Arcs Stoppage Win</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>174</ID>
+<start>2386.998768476998</start>
+<end>2409.998768476998</end>
+<code>Handball Recieve</code>
+<label>
+<text>Q2</text>
+</label>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>175</ID>
+<start>2387.0987871836655</start>
+<end>2414.0987871836655</end>
+<code>Inside 50 (Drop Zone)</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>176</ID>
+<start>2387.0987871836655</start>
+<end>2417.0987871836655</end>
+<code>Inside 50</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>177</ID>
+<start>2389.498548142999</start>
+<end>2412.498548142999</end>
+<code>Forward HB</code>
+<label>
+<text>Q2</text>
+</label>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>178</ID>
+<start>2393.798516642998</start>
+<end>2425.798516642998</end>
+<code>Behind - Field Play</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>179</ID>
+<start>2422.5982557933335</start>
+<end>2451.5982557933335</end>
+<code>Oppo Kick out - Slow</code>
+<label>
+<text>Q2</text>
+</label>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>180</ID>
+<start>2423.7999398346633</start>
+<end>2450.7999398346633</end>
+<code>Inside 50 (Drop Zone)</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>181</ID>
+<start>2423.7999398346633</start>
+<end>2453.7999398346633</end>
+<code>Inside 50</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>182</ID>
+<start>2427.197811292997</start>
+<end>2456.197811292997</end>
+<code>Goal - Field Play</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>183</ID>
+<start>2488.998422089002</start>
+<end>2513.998422089002</end>
+<code>Centre Stoppage Neutral</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>184</ID>
+<start>2494.7990098399982</start>
+<end>2524.7990098399982</end>
+<code>Oppo Forward 50 Entry (Fast)</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>185</ID>
+<start>2503.798448692001</start>
+<end>2526.798448692001</end>
+<code>Handball Recieve</code>
+<label>
+<text>Q2</text>
+</label>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>186</ID>
+<start>2505.8986880246657</start>
+<end>2532.8986880246657</end>
+<code>Fast Rebound 50</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>187</ID>
+<start>2532.898903608999</start>
+<end>2557.898903608999</end>
+<code>Between Arcs Stoppage Win</code>
+<label>
+<text>Q2</text>
+</label>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>188</ID>
+<start>2536.0991368580003</start>
+<end>2559.0991368580003</end>
+<code>Forward HB</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>189</ID>
+<start>2562.0987714143344</start>
+<end>2587.0987714143344</end>
+<code>Between Arcs Stoppage Win</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>190</ID>
+<start>2562.3968882483305</start>
+<end>2589.3968882483305</end>
+<code>Inside 50 (Rebound Zone)</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>191</ID>
+<start>2562.3968882483305</start>
+<end>2592.3968882483305</end>
+<code>Inside 50</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>192</ID>
+<start>2598.998427414001</start>
+<end>2625.998427414001</end>
+<code>Inside 50 Mark - Uncontested</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>193</ID>
+<start>2600.898698081998</start>
+<end>2625.898698081998</end>
+<code>Forward 50 Stoppage Win</code>
+<label>
+<text>Q2</text>
+</label>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>194</ID>
+<start>2601.929849248</start>
+<end>2653.929849248</end>
+<code>Behind - Set Shot</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>195</ID>
+<start>2642.0979265729998</start>
+<end>2671.0979265729998</end>
+<code>Oppo Kick out - Slow</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>196</ID>
+<start>2679.2984162003327</start>
+<end>2704.2984162003327</end>
+<code>Between Arcs Stoppage Win</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>197</ID>
+<start>2684.076296584</start>
+<end>2711.076296584</end>
+<code>Inside 50 (Drop Zone)</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>198</ID>
+<start>2684.076296584</start>
+<end>2714.076296584</end>
+<code>Inside 50</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>199</ID>
+<start>2687.686626275</start>
+<end>2719.686626275</end>
+<code>Behind - Field Play</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>200</ID>
+<start>2710.398141859667</start>
+<end>2739.398141859667</end>
+<code>Oppo Kick out - Slow</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>201</ID>
+<start>2714.599253442</start>
+<end>2741.599253442</end>
+<code>Inside 50 (Rebound Zone)</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>202</ID>
+<start>2714.599253442</start>
+<end>2744.599253442</end>
+<code>Inside 50</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>203</ID>
+<start>2740.1983344843316</start>
+<end>2772.1983344843316</end>
+<code>Slow Defensive Exit</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>204</ID>
+<start>2744.198402985001</start>
+<end>2769.198402985001</end>
+<code>Forward 50 Stoppage Loss</code>
+<label>
+<text>Q2</text>
+</label>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>205</ID>
+<start>2774.4989498596688</start>
+<end>2799.4989498596688</end>
+<code>Between Arcs Stoppage Win</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>206</ID>
+<start>2775.8988539003335</start>
+<end>2802.8988539003335</end>
+<code>Inside 50 (Rebound Zone)</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>207</ID>
+<start>2775.8988539003335</start>
+<end>2805.8988539003335</end>
+<code>Inside 50</code>
+<label>
+<text>Q2</text>
+</label>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>208</ID>
+<start>2784.926451984</start>
+<end>2813.926451984</end>
+<code>Goal - Field Play</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>209</ID>
+<start>2785.498736109001</start>
+<end>2808.498736109001</end>
+<code>Forward HB</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>210</ID>
+<start>2839.5987175873297</start>
+<end>2864.5987175873297</end>
+<code>Centre Stoppage Neutral</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>211</ID>
+<start>2852.4986524630017</start>
+<end>2877.4986524630017</end>
+<code>Between Arcs Stoppage Neutral</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>212</ID>
+<start>2868.098819796334</start>
+<end>2893.098819796334</end>
+<code>Between Arcs Stoppage Neutral</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>213</ID>
+<start>2879.398757379334</start>
+<end>2904.398757379334</end>
+<code>Between Arcs Stoppage Win</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>214</ID>
+<start>2899.0986806266637</start>
+<end>2926.0986806266637</end>
+<code>Inside 50 (Drop Zone)</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>215</ID>
+<start>2899.0986806266637</start>
+<end>2929.0986806266637</end>
+<code>Inside 50</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>216</ID>
+<start>2920.023932502</start>
+<end>2952.023932502</end>
+<code>Behind - Field Play</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>217</ID>
+<start>2926.944425001</start>
+<end>2951.944425001</end>
+<code>Forward 50 Stoppage Win</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>218</ID>
+<start>2938.098579619999</start>
+<end>2967.098579619999</end>
+<code>Oppo Kick out - Fast</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>219</ID>
+<start>2964.902834036</start>
+<end>2987.902834036</end>
+<code>Handball Recieve</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>220</ID>
+<start>2980.898218309666</start>
+<end>3005.898218309666</end>
+<code>Between Arcs Stoppage Neutral</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>221</ID>
+<start>2992.1990074776654</start>
+<end>3015.1990074776654</end>
+<code>Inside 45 kick</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>222</ID>
+<start>3006.2979123099976</start>
+<end>3033.2979123099976</end>
+<code>Inside 50 (Drop Zone)</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>223</ID>
+<start>3006.2979123099976</start>
+<end>3036.2979123099976</end>
+<code>Inside 50</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>224</ID>
+<start>3009.098715643663</start>
+<end>3032.098715643663</end>
+<code>Forward HB</code>
+<label>
+<text>Q2</text>
+</label>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>225</ID>
+<start>3009.998487393</start>
+<end>3041.998487393</end>
+<code>Behind - Field Play</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>226</ID>
+<start>3023.127857352</start>
+<end>3052.127857352</end>
+<code>Oppo Kick out - Fast</code>
+<label>
+<text>Q2</text>
+</label>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>227</ID>
+<start>3031.299269852332</start>
+<end>3058.299269852332</end>
+<code>Inside 50 (Drop Zone)</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>228</ID>
+<start>3031.299269852332</start>
+<end>3061.299269852332</end>
+<code>Inside 50</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>229</ID>
+<start>3031.698803435333</start>
+<end>3054.698803435333</end>
+<code>Inside 45 kick</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>230</ID>
+<start>3043.02749002</start>
+<end>3075.02749002</end>
+<code>Behind - Field Play</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>231</ID>
+<start>3066.398151628664</start>
+<end>3095.398151628664</end>
+<code>Oppo Kick out - Slow</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>232</ID>
+<start>3077.1979565453316</start>
+<end>3104.1979565453316</end>
+<code>Inside 50 (Drop Zone)</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>233</ID>
+<start>3077.1979565453316</start>
+<end>3107.1979565453316</end>
+<code>Inside 50</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>234</ID>
+<start>3077.1983592953334</start>
+<end>3100.1983592953334</end>
+<code>Inside 45 kick</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>235</ID>
+<start>3080.998040628999</start>
+<end>3112.998040628999</end>
+<code>Behind - Field Play</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>236</ID>
+<start>3109.8983895039987</start>
+<end>3138.8983895039987</end>
+<code>Oppo Kick out - Slow</code>
+<label>
+<text>Q2</text>
+</label>
+</instance>
+<instance>
+<ID>237</ID>
+<start>3347.834835375</start>
+<end>3367.834835375</end>
+<code>Whistle</code>
+</instance>
+<instance>
+<ID>238</ID>
+<start>3351.598962586333</start>
+<end>3376.598962586333</end>
+<code>Centre Stoppage Win</code>
+<label>
+<text>Q3</text>
+</label>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>239</ID>
+<start>3353.698639419</start>
+<end>3379.1012272106664</end>
+<code>Forward HB</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>240</ID>
+<start>3359.2983023276665</start>
+<end>3386.2983023276665</end>
+<code>Inside 50 (Rebound Zone)</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>241</ID>
+<start>3359.2983023276665</start>
+<end>3389.2983023276665</end>
+<code>Inside 50</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>242</ID>
+<start>3362.6988860783335</start>
+<end>3394.6988860783335</end>
+<code>Behind - Field Play</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>243</ID>
+<start>3362.735764335</start>
+<end>3385.735764335</end>
+<code>Forward HB</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>244</ID>
+<start>3381.997674291333</start>
+<end>3410.997674291333</end>
+<code>Oppo Kick out - Slow</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>245</ID>
+<start>3395.408014625</start>
+<end>3418.408014625</end>
+<code>Forward HB</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>246</ID>
+<start>3398.898733705667</start>
+<end>3425.898733705667</end>
+<code>Inside 50 (Drop Zone)</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>247</ID>
+<start>3398.898733705667</start>
+<end>3428.898733705667</end>
+<code>Inside 50</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>248</ID>
+<start>3404.398492649</start>
+<end>3436.398492649</end>
+<code>Behind - Field Play</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>249</ID>
+<start>3407.372655581</start>
+<end>3430.372655581</end>
+<code>Forward HB</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>250</ID>
+<start>3428.398721873333</start>
+<end>3455.398721873333</end>
+<code>Inside 50 (Rebound Zone)</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>251</ID>
+<start>3428.398721873333</start>
+<end>3458.398721873333</end>
+<code>Inside 50</code>
+<label>
+<text>Q3</text>
+</label>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>252</ID>
+<start>3428.798281790333</start>
+<end>3457.798281790333</end>
+<code>Oppo Kick out - Slow</code>
+<label>
+<text>Q3</text>
+</label>
+<label>
+<text>Q3</text>
+</label>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>253</ID>
+<start>3430.9978218310002</start>
+<end>3457.9978218310002</end>
+<code>Inside 50 Mark - Uncontested</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>254</ID>
+<start>3433.39767882</start>
+<end>3460.39767882</end>
+<code>Inside 50 Mark - Uncontested</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>255</ID>
+<start>3436.1983662483335</start>
+<end>3488.1983662483335</end>
+<code>Goal - Set Shot</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>256</ID>
+<start>3521.1986012083335</start>
+<end>3546.1986012083335</end>
+<code>Centre Stoppage Neutral</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>257</ID>
+<start>3532.397885874667</start>
+<end>3559.397885874667</end>
+<code>Inside 50 (Drop Zone)</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>258</ID>
+<start>3532.397885874667</start>
+<end>3562.397885874667</end>
+<code>Inside 50</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>259</ID>
+<start>3533.4983403346664</start>
+<end>3558.4983403346664</end>
+<code>Between Arcs Stoppage Win</code>
+<label>
+<text>Q3</text>
+</label>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>260</ID>
+<start>3543.473502127</start>
+<end>3572.473502127</end>
+<code>Oppo Fast Defensive Exit</code>
+<label>
+<text>Q3</text>
+</label>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>261</ID>
+<start>3544.5990016263336</start>
+<end>3571.5990016263336</end>
+<code>Inside 50 (Drop Zone)</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>262</ID>
+<start>3544.5990016263336</start>
+<end>3574.5990016263336</end>
+<code>Inside 50</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>263</ID>
+<start>3558.2989562506664</start>
+<end>3590.2989562506664</end>
+<code>Oppo Slow Defensive Exit</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>264</ID>
+<start>3605.098742125667</start>
+<end>3630.098742125667</end>
+<code>Between Arcs Stoppage Win</code>
+<label>
+<text>Q3</text>
+</label>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>265</ID>
+<start>3607.3985916266665</start>
+<end>3633.399029502</end>
+<code>Forward HB</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>266</ID>
+<start>3618.290636335</start>
+<end>3648.290636335</end>
+<code>Direct Turnover - F50</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>267</ID>
+<start>3618.5984299593338</start>
+<end>3645.5984299593338</end>
+<code>Inside 50 (Rebound Zone)</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>268</ID>
+<start>3618.5984299593338</start>
+<end>3648.5984299593338</end>
+<code>Inside 50</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>269</ID>
+<start>3620.398422584</start>
+<end>3643.398422584</end>
+<code>Forward HB</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>270</ID>
+<start>3625.799035195333</start>
+<end>3652.799035195333</end>
+<code>Inside 50 (Drop Zone)</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>271</ID>
+<start>3625.799035195333</start>
+<end>3655.799035195333</end>
+<code>Inside 50</code>
+<label>
+<text>Q3</text>
+</label>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>272</ID>
+<start>3627.699439946</start>
+<end>3656.699439946</end>
+<code>Oppo Fast Defensive Exit</code>
+<label>
+<text>Q3</text>
+</label>
+<label>
+<text>Q3</text>
+</label>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>273</ID>
+<start>3628.4985884043335</start>
+<end>3655.4985884043335</end>
+<code>Oppo Defensive 50 Mark</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>274</ID>
+<start>3632.659653335</start>
+<end>3664.659653335</end>
+<code>Oppo Slow Defensive Exit</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>275</ID>
+<start>3661.198922253</start>
+<end>3688.198922253</end>
+<code>Inside 50 (Drop Zone)</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>276</ID>
+<start>3661.198922253</start>
+<end>3691.198922253</end>
+<code>Inside 50</code>
+<label>
+<text>Q3</text>
+</label>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>277</ID>
+<start>3661.1990890026664</start>
+<end>3684.1990890026664</end>
+<code>Inside 45 kick</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>278</ID>
+<start>3663.6987163773333</start>
+<end>3690.6987163773333</end>
+<code>Inside 50 Mark - Uncontested</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>279</ID>
+<start>3673.598381208333</start>
+<end>3725.598381208333</end>
+<code>Goal - Set Shot</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>280</ID>
+<start>3750.398211500333</start>
+<end>3775.398211500333</end>
+<code>Centre Stoppage Win</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>281</ID>
+<start>3760.6980358766664</start>
+<end>3787.6980358766664</end>
+<code>Inside 50 (Drop Zone)</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>282</ID>
+<start>3760.6980358766664</start>
+<end>3790.6980358766664</end>
+<code>Inside 50</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>283</ID>
+<start>3764.100012461</start>
+<end>3791.100012461</end>
+<code>Inside 50 Mark - Uncontested</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>284</ID>
+<start>3765.054388544</start>
+<end>3817.054388544</end>
+<code>Goal - Set Shot</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>285</ID>
+<start>3839.9990183339996</start>
+<end>3864.9990183339996</end>
+<code>Centre Stoppage Win</code>
+<label>
+<text>Q3</text>
+</label>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>286</ID>
+<start>3842.53927406</start>
+<end>3869.53927406</end>
+<code>Inside 50 (Rebound Zone)</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>287</ID>
+<start>3842.53927406</start>
+<end>3872.53927406</end>
+<code>Inside 50</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>288</ID>
+<start>3843.8010245423334</start>
+<end>3866.8010245423334</end>
+<code>Forward HB</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>289</ID>
+<start>3844.598723519</start>
+<end>3876.598723519</end>
+<code>Behind - Field Play</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>290</ID>
+<start>3845.663084459</start>
+<end>3868.663084459</end>
+<code>Forward HB</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>291</ID>
+<start>3862.298360269333</start>
+<end>3891.298360269333</end>
+<code>Oppo Kick out - Slow</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>292</ID>
+<start>3877.914534727</start>
+<end>3900.914534727</end>
+<code>Handball Recieve</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>293</ID>
+<start>3878.0986345303336</start>
+<end>3905.0986345303336</end>
+<code>Inside 50 (Drop Zone)</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>294</ID>
+<start>3878.0986345303336</start>
+<end>3908.0986345303336</end>
+<code>Inside 50</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>295</ID>
+<start>3879.34016024</start>
+<end>3906.34016024</end>
+<code>Inside 50 Mark - Uncontested</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>296</ID>
+<start>3882.7994231706666</start>
+<end>3934.7994231706666</end>
+<code>Goal - Set Shot</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>297</ID>
+<start>3965.4986058396667</start>
+<end>3990.4986058396667</end>
+<code>Centre Stoppage Neutral</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>298</ID>
+<start>3976.19899838</start>
+<end>4001.19899838</end>
+<code>Between Arcs Stoppage Neutral</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>299</ID>
+<start>3986.6991203346665</start>
+<end>4013.6991203346665</end>
+<code>Inside 50 (Drop Zone)</code>
+<label>
+<text>Q3</text>
+</label>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>300</ID>
+<start>3986.6991203346665</start>
+<end>4016.6991203346665</end>
+<code>Inside 50</code>
+<label>
+<text>Q3</text>
+</label>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>301</ID>
+<start>3987.898413503</start>
+<end>4012.898413503</end>
+<code>Between Arcs Stoppage Win</code>
+<label>
+<text>Q3</text>
+</label>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>302</ID>
+<start>3988.198787002333</start>
+<end>4015.198787002333</end>
+<code>Inside 50 Mark - Uncontested</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>303</ID>
+<start>3990.298925420667</start>
+<end>4042.298925420667</end>
+<code>Goal - Set Shot</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>304</ID>
+<start>4063.998231133</start>
+<end>4088.998231133</end>
+<code>Centre Stoppage Neutral</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>305</ID>
+<start>4077.9995151283333</start>
+<end>4098.600107503334</end>
+<code>Between Arcs Stoppage Neutral</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>306</ID>
+<start>4092.598569087</start>
+<end>4117.598569087</end>
+<code>Between Arcs Stoppage Loss</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>307</ID>
+<start>4105.198599963667</start>
+<end>4128.198599963667</end>
+<code>Forward HB</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>308</ID>
+<start>4105.552990464</start>
+<end>4132.552990464</end>
+<code>Inside 50 (Rebound Zone)</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>309</ID>
+<start>4105.552990464</start>
+<end>4135.552990464</end>
+<code>Inside 50</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>310</ID>
+<start>4106.799255439666</start>
+<end>4133.799255439666</end>
+<code>Oppo Defensive 50 Mark</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>311</ID>
+<start>4113.6988123383335</start>
+<end>4145.6988123383335</end>
+<code>Oppo Slow Defensive Exit</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>312</ID>
+<start>4141.698310505</start>
+<end>4166.698310505</end>
+<code>Between Arcs Stoppage Loss</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>313</ID>
+<start>4143.998553932333</start>
+<end>4173.998553932333</end>
+<code>Direct Turnover - Between Arcs</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>314</ID>
+<start>4161.298056586</start>
+<end>4184.298056586</end>
+<code>Forward HB</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>315</ID>
+<start>4167.698604170333</start>
+<end>4194.698604170333</end>
+<code>Inside 50 (Drop Zone)</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>316</ID>
+<start>4167.698604170333</start>
+<end>4197.698604170333</end>
+<code>Inside 50</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>317</ID>
+<start>4168.641673671</start>
+<end>4195.641673671</end>
+<code>Inside 50 Mark - Uncontested</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>318</ID>
+<start>4170.397274128</start>
+<end>4193.397274128</end>
+<code>Forward HB</code>
+<label>
+<text>Q3</text>
+</label>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>319</ID>
+<start>4176.782916838</start>
+<end>4228.782916838</end>
+<code>Behind - Set Shot</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>320</ID>
+<start>4215.298267172334</start>
+<end>4244.298267172334</end>
+<code>Oppo Kick out - Fast</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>321</ID>
+<start>4247.998110047667</start>
+<end>4272.998110047667</end>
+<code>Between Arcs Stoppage Neutral</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>322</ID>
+<start>4316.698605956666</start>
+<end>4348.698605956666</end>
+<code>Oppo Forward 50 Entry (Slow)</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>323</ID>
+<start>4329.798185643333</start>
+<end>4356.798185643333</end>
+<code>Fast Rebound 50</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>324</ID>
+<start>4343.798902840666</start>
+<end>4374.798902840666</end>
+<code>Switch and Release</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>325</ID>
+<start>4343.800185603</start>
+<end>4366.800185603</end>
+<code>Chase Down Tackle</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>326</ID>
+<start>4356.2606354</start>
+<end>4383.2606354</end>
+<code>Inside 50 (Rebound Zone)</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>327</ID>
+<start>4356.2606354</start>
+<end>4383.2606354</end>
+<code>Inside 50 Mark - Uncontested</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>328</ID>
+<start>4356.2606354</start>
+<end>4386.2606354</end>
+<code>Inside 50</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>329</ID>
+<start>4363.998650249667</start>
+<end>4415.998650249667</end>
+<code>Goal - Set Shot</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>330</ID>
+<start>4454.898211444333</start>
+<end>4479.898211444333</end>
+<code>Centre Stoppage Win</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>331</ID>
+<start>4482.398365580667</start>
+<end>4509.398365580667</end>
+<code>Inside 50 (Drop Zone)</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>332</ID>
+<start>4482.398365580667</start>
+<end>4512.398365580667</end>
+<code>Inside 50</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>333</ID>
+<start>4487.798378914667</start>
+<end>4519.798378914667</end>
+<code>Behind - Field Play</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>334</ID>
+<start>4506.198610330333</start>
+<end>4535.198610330333</end>
+<code>Oppo Kick out - Fast</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>335</ID>
+<start>4517.998701184333</start>
+<end>4540.998701184333</end>
+<code>Forward HB</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>336</ID>
+<start>4519.29865612</start>
+<end>4546.29865612</end>
+<code>Inside 50 (Drop Zone)</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>337</ID>
+<start>4519.29865612</start>
+<end>4549.29865612</end>
+<code>Inside 50</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>338</ID>
+<start>4521.398795284666</start>
+<end>4544.398795284666</end>
+<code>Inside 45 kick</code>
+<label>
+<text>Q3</text>
+</label>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>339</ID>
+<start>4532.498699870333</start>
+<end>4564.498699870333</end>
+<code>Oppo Slow Defensive Exit</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>340</ID>
+<start>4553.098513021</start>
+<end>4576.098513021</end>
+<code>Forward HB</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>341</ID>
+<start>4603.534890923</start>
+<end>4628.534890923</end>
+<code>Between Arcs Stoppage Win</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>342</ID>
+<start>4645.398399892333</start>
+<end>4670.398399892333</end>
+<code>Between Arcs Stoppage Loss</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>343</ID>
+<start>4653.598360483334</start>
+<end>4676.598360483334</end>
+<code>Forward HB</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>344</ID>
+<start>4657.798359692666</start>
+<end>4680.798359692666</end>
+<code>Forward HB</code>
+<label>
+<text>Q3</text>
+</label>
+</instance>
+<instance>
+<ID>345</ID>
+<start>4742.278195916</start>
+<end>4762.278195916</end>
+<code>Whistle</code>
+</instance>
+<instance>
+<ID>346</ID>
+<start>4745.298212956</start>
+<end>4770.298212956</end>
+<code>Centre Stoppage Win</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>347</ID>
+<start>4749.530992915</start>
+<end>4772.530992915</end>
+<code>Forward HB</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>348</ID>
+<start>4750.397882009667</start>
+<end>4777.397882009667</end>
+<code>Inside 50 (Drop Zone)</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>349</ID>
+<start>4750.397882009667</start>
+<end>4780.397882009667</end>
+<code>Inside 50</code>
+<label>
+<text>Q4</text>
+</label>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>350</ID>
+<start>4752.198479593333</start>
+<end>4775.198479593333</end>
+<code>Handball Recieve</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>351</ID>
+<start>4753.198291427333</start>
+<end>4780.198291427333</end>
+<code>Inside 50 Mark - Uncontested</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>352</ID>
+<start>4756.998506647</start>
+<end>4785.998506647</end>
+<code>Goal - Field Play</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>353</ID>
+<start>4759.188253929</start>
+<end>4782.188253929</end>
+<code>Forward HB</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>354</ID>
+<start>4828.9987812126665</start>
+<end>4853.9987812126665</end>
+<code>Centre Stoppage Win</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>355</ID>
+<start>4830.198557341</start>
+<end>4860.198557341</end>
+<code>Oppo Forward 50 Entry (Fast)</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>356</ID>
+<start>4841.29823979</start>
+<end>4868.29823979</end>
+<code>Fast Rebound 50</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>357</ID>
+<start>4872.155974593</start>
+<end>4899.155974593</end>
+<code>Inside 50 (Drop Zone)</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>358</ID>
+<start>4872.155974593</start>
+<end>4902.155974593</end>
+<code>Inside 50</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>359</ID>
+<start>4873.701484634</start>
+<end>4898.701484634</end>
+<code>Between Arcs Stoppage Neutral</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>360</ID>
+<start>4879.898079666</start>
+<end>4908.898079666</end>
+<code>Goal - Field Play</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>361</ID>
+<start>4883.098761249999</start>
+<end>4906.098761249999</end>
+<code>Inside 45 kick</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>362</ID>
+<start>4938.027095056</start>
+<end>4963.027095056</end>
+<code>Centre Stoppage Win</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>363</ID>
+<start>4947.307974484</start>
+<end>4974.307974484</end>
+<code>Inside 50 (Rebound Zone)</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>364</ID>
+<start>4947.307974484</start>
+<end>4977.307974484</end>
+<code>Inside 50</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>365</ID>
+<start>4948.098321734667</start>
+<end>4971.098321734667</end>
+<code>Forward HB</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>366</ID>
+<start>4954.398032093333</start>
+<end>5006.398032093333</end>
+<code>Goal - Set Shot</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>367</ID>
+<start>4955.298543748667</start>
+<end>4982.298543748667</end>
+<code>Inside 50 Mark - Uncontested</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>368</ID>
+<start>4958.298398540333</start>
+<end>4981.298398540333</end>
+<code>Inside 45 kick</code>
+<label>
+<text>Q4</text>
+</label>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>369</ID>
+<start>5037.06346143</start>
+<end>5062.06346143</end>
+<code>Centre Stoppage Win</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>370</ID>
+<start>5040.76963728</start>
+<end>5067.76963728</end>
+<code>Inside 50 (Rebound Zone)</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>371</ID>
+<start>5040.76963728</start>
+<end>5070.76963728</end>
+<code>Inside 50</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>372</ID>
+<start>5047.865284692</start>
+<end>5076.865284692</end>
+<code>Goal - Field Play</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>373</ID>
+<start>5103.398295926667</start>
+<end>5128.398295926667</end>
+<code>Centre Stoppage Loss</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>374</ID>
+<start>5143.398115124333</start>
+<end>5168.398115124333</end>
+<code>Between Arcs Stoppage Win</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>375</ID>
+<start>5173.09857367</start>
+<end>5198.09857367</end>
+<code>Between Arcs Stoppage Neutral</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>376</ID>
+<start>5187.398810010666</start>
+<end>5212.398810010666</end>
+<code>Between Arcs Stoppage Neutral</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>377</ID>
+<start>5190.498043019334</start>
+<end>5217.498043019334</end>
+<code>Inside 50 (Drop Zone)</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>378</ID>
+<start>5190.498043019334</start>
+<end>5220.498043019334</end>
+<code>Inside 50</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>379</ID>
+<start>5192.849594353</start>
+<end>5221.849594353</end>
+<code>Goal - Field Play</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>380</ID>
+<start>5249.198759801333</start>
+<end>5274.198759801333</end>
+<code>Centre Stoppage Neutral</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>381</ID>
+<start>5262.198832384</start>
+<end>5287.198832384</end>
+<code>Between Arcs Stoppage Win</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>382</ID>
+<start>5276.091058971</start>
+<end>5303.091058971</end>
+<code>Inside 50 (Rebound Zone)</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>383</ID>
+<start>5276.091058971</start>
+<end>5306.091058971</end>
+<code>Inside 50</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>384</ID>
+<start>5276.598555778666</start>
+<end>5303.598555778666</end>
+<code>Inside 50 Mark - Uncontested</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>385</ID>
+<start>5282.4989201533335</start>
+<end>5309.4989201533335</end>
+<code>Inside 50 Mark - Uncontested</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>386</ID>
+<start>5285.599146196333</start>
+<end>5308.599146196333</end>
+<code>Inside 45 kick</code>
+<label>
+<text>Q4</text>
+</label>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>387</ID>
+<start>5285.797974194999</start>
+<end>5314.797974194999</end>
+<code>Goal - Field Play</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>388</ID>
+<start>5290.798117987333</start>
+<end>5313.798117987333</end>
+<code>Forward HB</code>
+<label>
+<text>Q4</text>
+</label>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>389</ID>
+<start>5342.098120869333</start>
+<end>5369.098120869333</end>
+<code>Defensive 50 Mark</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>390</ID>
+<start>5342.795665887</start>
+<end>5367.795665887</end>
+<code>Centre Stoppage Loss</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>391</ID>
+<start>5344.698131954333</start>
+<end>5375.698131954333</end>
+<code>Switch and Release</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>392</ID>
+<start>5359.9992859956665</start>
+<end>5386.9992859956665</end>
+<code>Inside 50 (Drop Zone)</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>393</ID>
+<start>5359.9992859956665</start>
+<end>5389.9992859956665</end>
+<code>Inside 50</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>394</ID>
+<start>5362.0984002039995</start>
+<end>5385.0984002039995</end>
+<code>Handball Recieve</code>
+<label>
+<text>Q4</text>
+</label>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>395</ID>
+<start>5363.294170871</start>
+<end>5392.294170871</end>
+<code>Goal - Field Play</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>396</ID>
+<start>5423.197917553666</start>
+<end>5448.197917553666</end>
+<code>Centre Stoppage Loss</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>397</ID>
+<start>5449.899011925667</start>
+<end>5476.899011925667</end>
+<code>Inside 50 (Rebound Zone)</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>398</ID>
+<start>5449.899011925667</start>
+<end>5479.899011925667</end>
+<code>Inside 50</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>399</ID>
+<start>5453.598701009334</start>
+<end>5478.598701009334</end>
+<code>Between Arcs Stoppage Win</code>
+<label>
+<text>Q4</text>
+</label>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>400</ID>
+<start>5484.298377093333</start>
+<end>5509.298377093333</end>
+<code>Forward 50 Stoppage Neutral</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>401</ID>
+<start>5493.533692178</start>
+<end>5525.533692178</end>
+<code>Oppo Slow Defensive Exit</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>402</ID>
+<start>5498.498392553333</start>
+<end>5523.498392553333</end>
+<code>Forward 50 Stoppage Loss</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>403</ID>
+<start>5504.798402946333</start>
+<end>5531.798402946333</end>
+<code>Inside 50 (Rebound Zone)</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>404</ID>
+<start>5504.798402946333</start>
+<end>5534.798402946333</end>
+<code>Inside 50</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>405</ID>
+<start>5506.498509362334</start>
+<end>5529.498509362334</end>
+<code>Inside 45 kick</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>406</ID>
+<start>5513.779639136</start>
+<end>5545.779639136</end>
+<code>Behind - Field Play</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>407</ID>
+<start>5530.698093458666</start>
+<end>5559.698093458666</end>
+<code>Oppo Kick out - Fast</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>408</ID>
+<start>5545.896973839</start>
+<end>5572.896973839</end>
+<code>Inside 50 (Drop Zone)</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>409</ID>
+<start>5545.896973839</start>
+<end>5575.896973839</end>
+<code>Inside 50</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>410</ID>
+<start>5547.638669422</start>
+<end>5574.638669422</end>
+<code>Inside 50 Mark - Uncontested</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>411</ID>
+<start>5552.098642096334</start>
+<end>5604.098642096334</end>
+<code>Goal - Set Shot</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>412</ID>
+<start>5633.445008681</start>
+<end>5658.445008681</end>
+<code>Centre Stoppage Neutral</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>413</ID>
+<start>5643.597779646</start>
+<end>5670.597779646</end>
+<code>Inside 50 (Drop Zone)</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>414</ID>
+<start>5643.597779646</start>
+<end>5673.597779646</end>
+<code>Inside 50</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>415</ID>
+<start>5646.377295099</start>
+<end>5669.377295099</end>
+<code>Forward HB</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>416</ID>
+<start>5646.377295099</start>
+<end>5671.377295099</end>
+<code>Between Arcs Stoppage Win</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>417</ID>
+<start>5648.799210949333</start>
+<end>5677.799210949333</end>
+<code>Goal - Field Play</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>418</ID>
+<start>5702.698210200333</start>
+<end>5729.698210200333</end>
+<code>Inside 50 (Drop Zone)</code>
+<label>
+<text>Q4</text>
+</label>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>419</ID>
+<start>5702.698210200333</start>
+<end>5732.698210200333</end>
+<code>Inside 50</code>
+<label>
+<text>Q4</text>
+</label>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>420</ID>
+<start>5703.198372937999</start>
+<end>5728.198372937999</end>
+<code>Centre Stoppage Win</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>421</ID>
+<start>5703.995256784667</start>
+<end>5730.995256784667</end>
+<code>Inside 50 Mark - Uncontested</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>422</ID>
+<start>5721.498870595333</start>
+<end>5773.498870595333</end>
+<code>Goal - Set Shot</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>423</ID>
+<start>5721.598074219</start>
+<end>5748.598074219</end>
+<code>Inside 50 Mark - Uncontested</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>424</ID>
+<start>5790.898155137999</start>
+<end>5815.898155137999</end>
+<code>Centre Stoppage Win</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>425</ID>
+<start>5793.780664304</start>
+<end>5816.780664304</end>
+<code>Forward HB</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>426</ID>
+<start>5800.098710470333</start>
+<end>5827.098710470333</end>
+<code>Inside 50 (Drop Zone)</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>427</ID>
+<start>5800.098710470333</start>
+<end>5830.098710470333</end>
+<code>Inside 50</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>428</ID>
+<start>5804.198545805333</start>
+<end>5833.198545805333</end>
+<code>Goal - Field Play</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>429</ID>
+<start>5808.198055012001</start>
+<end>5831.198055012001</end>
+<code>Handball Recieve</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>430</ID>
+<start>5860.962963013</start>
+<end>5885.962963013</end>
+<code>Centre Stoppage Neutral</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>431</ID>
+<start>5873.798928513999</start>
+<end>5898.798928513999</end>
+<code>Between Arcs Stoppage Loss</code>
+<label>
+<text>Q4</text>
+</label>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>432</ID>
+<start>5878.401780722334</start>
+<end>5901.401780722334</end>
+<code>Chase Down Tackle</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>433</ID>
+<start>5882.900661994334</start>
+<end>5913.900661994334</end>
+<code>Switch and Release</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>434</ID>
+<start>5883.1991412219995</start>
+<end>5906.1991412219995</end>
+<code>Handball Recieve</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>435</ID>
+<start>5894.6987422856655</start>
+<end>5921.6987422856655</end>
+<code>Inside 50 (Drop Zone)</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>436</ID>
+<start>5894.6987422856655</start>
+<end>5924.6987422856655</end>
+<code>Inside 50</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>437</ID>
+<start>5896.198407972666</start>
+<end>5948.198407972666</end>
+<code>Behind - Set Shot</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>438</ID>
+<start>5896.944193982</start>
+<end>5923.944193982</end>
+<code>Inside 50 Mark - Contested</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>439</ID>
+<start>5938.37163364</start>
+<end>5967.37163364</end>
+<code>Oppo Kick out - Fast</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>440</ID>
+<start>5988.498964136334</start>
+<end>6013.498964136334</end>
+<code>Between Arcs Stoppage Neutral</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>441</ID>
+<start>6013.186742116</start>
+<end>6044.186742116</end>
+<code>Switch and Release</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>442</ID>
+<start>6031.498110781333</start>
+<end>6058.498110781333</end>
+<code>Inside 50 (Drop Zone)</code>
+<label>
+<text>Q4</text>
+</label>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>443</ID>
+<start>6031.498110781333</start>
+<end>6061.498110781333</end>
+<code>Inside 50</code>
+<label>
+<text>Q4</text>
+</label>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>444</ID>
+<start>6032.798526074</start>
+<end>6059.798526074</end>
+<code>Inside 50 Mark - Uncontested</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+<instance>
+<ID>445</ID>
+<start>6046.999125512333</start>
+<end>6098.999125512333</end>
+<code>Goal - Set Shot</code>
+<label>
+<text>Q4</text>
+</label>
+</instance>
+</ALL_INSTANCES>
+<ROWS>
+<row>
+<code>Whistle</code>
+<R>0</R>
+<G>0</G>
+<B>0</B>
+</row>
+<row>
+<code>Inside 50</code>
+<R>20046</R>
+<G>9509</G>
+<B>65535</B>
+</row>
+<row>
+<code>Inside 50 (Drop Zone)</code>
+<R>20046</R>
+<G>9509</G>
+<B>65535</B>
+</row>
+<row>
+<code>Inside 50 (Rebound Zone)</code>
+<R>20046</R>
+<G>9509</G>
+<B>65535</B>
+</row>
+<row>
+<code>Direct Turnover - Between Arcs</code>
+<R>24672</R>
+<G>24672</G>
+<B>24672</B>
+</row>
+<row>
+<code>Direct Turnover - F50</code>
+<R>24672</R>
+<G>24672</G>
+<B>24672</B>
+</row>
+<row>
+<code>Defensive 50 Mark</code>
+<R>29041</R>
+<G>0</G>
+<B>41377</B>
+</row>
+<row>
+<code>Inside 50 Mark - Contested</code>
+<R>29041</R>
+<G>0</G>
+<B>41377</B>
+</row>
+<row>
+<code>Inside 50 Mark - Uncontested</code>
+<R>29041</R>
+<G>0</G>
+<B>41377</B>
+</row>
+<row>
+<code>Oppo Defensive 50 Mark</code>
+<R>29041</R>
+<G>0</G>
+<B>41377</B>
+</row>
+<row>
+<code>Oppo Forward 50 Mark</code>
+<R>29041</R>
+<G>0</G>
+<B>41377</B>
+</row>
+<row>
+<code>Between Arcs Stoppage Loss</code>
+<R>37779</R>
+<G>65535</G>
+<B>23387</B>
+</row>
+<row>
+<code>Between Arcs Stoppage Neutral</code>
+<R>37779</R>
+<G>65535</G>
+<B>23387</B>
+</row>
+<row>
+<code>Between Arcs Stoppage Win</code>
+<R>37779</R>
+<G>65535</G>
+<B>23387</B>
+</row>
+<row>
+<code>Centre Stoppage Loss</code>
+<R>37779</R>
+<G>65535</G>
+<B>23387</B>
+</row>
+<row>
+<code>Centre Stoppage Neutral</code>
+<R>37779</R>
+<G>65535</G>
+<B>23387</B>
+</row>
+<row>
+<code>Centre Stoppage Win</code>
+<R>37779</R>
+<G>65535</G>
+<B>23387</B>
+</row>
+<row>
+<code>Forward 50 Stoppage Loss</code>
+<R>37779</R>
+<G>65535</G>
+<B>23387</B>
+</row>
+<row>
+<code>Forward 50 Stoppage Neutral</code>
+<R>37779</R>
+<G>65535</G>
+<B>23387</B>
+</row>
+<row>
+<code>Forward 50 Stoppage Win</code>
+<R>37779</R>
+<G>65535</G>
+<B>23387</B>
+</row>
+<row>
+<code>Behind - Field Play</code>
+<R>52171</R>
+<G>5911</G>
+<B>1285</B>
+</row>
+<row>
+<code>Behind - Set Shot</code>
+<R>52171</R>
+<G>5911</G>
+<B>1285</B>
+</row>
+<row>
+<code>Goal - Field Play</code>
+<R>52171</R>
+<G>5911</G>
+<B>1285</B>
+</row>
+<row>
+<code>Goal - Set Shot</code>
+<R>52171</R>
+<G>5911</G>
+<B>1285</B>
+</row>
+<row>
+<code>Fast Rebound 50</code>
+<R>65021</R>
+<G>42662</G>
+<B>28270</B>
+</row>
+<row>
+<code>Oppo Fast Defensive Exit</code>
+<R>65021</R>
+<G>42662</G>
+<B>28270</B>
+</row>
+<row>
+<code>Oppo Forward 50 Entry (Fast)</code>
+<R>65021</R>
+<G>42662</G>
+<B>28270</B>
+</row>
+<row>
+<code>Oppo Kick out - Fast</code>
+<R>65021</R>
+<G>42662</G>
+<B>28270</B>
+</row>
+<row>
+<code>Oppo Kick out - Slow</code>
+<R>65021</R>
+<G>42662</G>
+<B>28270</B>
+</row>
+<row>
+<code>Oppo Slow Defensive Exit</code>
+<R>65021</R>
+<G>42662</G>
+<B>28270</B>
+</row>
+<row>
+<code>Slow Defensive Exit</code>
+<R>65021</R>
+<G>42662</G>
+<B>28270</B>
+</row>
+<row>
+<code>Oppo Forward 50 Entry (Slow)</code>
+<R>65060</R>
+<G>42551</G>
+<B>28345</B>
+</row>
+<row>
+<code>Chase Down Tackle</code>
+<R>65278</R>
+<G>54227</G>
+<B>2570</B>
+</row>
+<row>
+<code>Forward HB</code>
+<R>65278</R>
+<G>54227</G>
+<B>2570</B>
+</row>
+<row>
+<code>Handball Recieve</code>
+<R>65278</R>
+<G>54227</G>
+<B>2570</B>
+</row>
+<row>
+<code>Inside 45 kick</code>
+<R>65278</R>
+<G>54227</G>
+<B>2570</B>
+</row>
+<row>
+<code>Switch and Release</code>
+<R>65278</R>
+<G>54227</G>
+<B>2570</B>
+</row>
+</ROWS>
+</file>
