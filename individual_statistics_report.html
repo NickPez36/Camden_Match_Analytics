@@ -4,31 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Camden Cats - Individual Statistics Report</title>
-    
-    <!-- Chart.js for visualizations -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    
+
     <!-- Tailwind CSS for styling -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
+
     <style>
-        /* Custom styles to extend Tailwind */
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        /* Style for the sortable table headers */
-        .sortable-header {
-            cursor: pointer;
-            transition: background-color 0.2s;
-        }
-        .sortable-header:hover {
-            background-color: #374151; /* gray-700 */
-        }
+        body { font-family: 'Inter', sans-serif; }
+        .sortable-header { cursor: pointer; transition: background-color 0.2s; }
+        .sortable-header:hover { background-color: #374151; } /* gray-700 */
     </style>
 </head>
 <body class="bg-gray-900 text-white">
@@ -39,7 +27,7 @@
             <div class="flex items-center justify-between h-16">
                 <div class="flex items-center">
                     <a href="landing.html" class="flex items-center">
-                        <img src="assets/camden_cats_logo.jpg" alt="Camden Cats Logo" class="h-10 w-10 rounded-full object-cover" 
+                        <img src="assets/camden_cats_logo.jpg" alt="Camden Cats Logo" class="h-10 w-10 rounded-full object-cover"
                              onerror="this.onerror=null; this.src='https://placehold.co/40x40/1a202c/ffffff?text=Logo';">
                         <span class="ml-3 font-semibold text-xl">Camden Cats Analytics</span>
                     </a>
@@ -82,7 +70,7 @@
                 <p id="match-info-date" class="text-gray-400"></p>
                 <div id="match-result-container" class="flex justify-center mt-4"></div>
             </div>
-            
+
             <!-- Top Performers Section -->
             <div id="top-performers-container">
                 <h3 class="text-2xl font-bold text-center mb-6">Top Performers</h3>
@@ -96,12 +84,15 @@
 
     <script>
         // --- AUTHENTICATION CHECK ---
+        /*
         if (sessionStorage.getItem('isLoggedIn') !== 'true') {
             window.location.href = 'index.html';
         }
+        */
         document.getElementById('logout-button').addEventListener('click', function() {
             sessionStorage.removeItem('isLoggedIn');
-            window.location.href = 'index.html';
+            console.log("User has been logged out.");
+            // window.location.href = 'index.html';
         });
 
         // --- DOM ELEMENT REFERENCES ---
@@ -117,66 +108,101 @@
 
         // --- STATE AND CONFIGURATION ---
         let playerData = [];
-        // [FIXED] Default sort key changed from 'Player' to 'Name'
         let sortState = { key: 'Name', direction: 'asc' };
-        
-        const csvFiles = [ 
-            'data/RD1_Parramatta Goannas_29032025_Indv.csv',
-            'data/RD4_Sydney University_26042025_Indv.csv',
-            'data/RD5_UNSW_03052025_Indv.csv',
-            'data/RD6_Pennant Hills_17052025_Indv.csv',
-            'data/RD7_St George_19072025_Indv.csv',
-            'data/RD8_Parramatta Goannas_31052025_Indv.csv',
-            'data/RD9_Inner West_14062025_Indv.csv',
-            'data/RD10_Sydney University_21062025_Indv.csv',
-            'data/RD11_UNSW_28062025_Indv.csv',
-            'data/RD12_North Shore_05072025_Indv.csv',
-            'data/RD14_Southern Power_26072025_Indv.csv',
-            'data/RD15_Pennant Hills_02082025_Indv.csv'
-        ];
+
+        // --- GITHUB API CONFIGURATION ---
+        const GITHUB_USER = 'NickPez36';
+        const GITHUB_REPO = 'Camden_Match_Analytics';
+        const GITHUB_PATH = 'data/Team_Review_Indv_XML';
+        const API_URL = `https://api.github.com/repos/${GITHUB_USER}/${GITHUB_REPO}/contents/${GITHUB_PATH}`;
+
 
         // --- DATA PROCESSING LOGIC ---
-        
-        function initializeApp() {
-            csvFiles.forEach(fileName => {
-                const option = document.createElement('option');
-                option.value = fileName;
-                option.textContent = fileName.replace('data/', '').replace(/_/g, ' ').replace('.csv', '').replace(' Indv', '');
-                fileSelector.appendChild(option);
-            });
+
+        /**
+         * Initializes the application by fetching the list of XML files from the GitHub repository.
+         */
+        async function initializeApp() {
+            try {
+                const response = await fetch(API_URL);
+                if (!response.ok) throw new Error(`GitHub API error: ${response.statusText}`);
+                const files = await response.json();
+
+                fileSelector.innerHTML = '<option value="">-- Please choose a game --</option>';
+
+                files
+                    .filter(file => file.type === 'file' && file.name.endsWith('.xml'))
+                    .forEach(file => {
+                        const option = document.createElement('option');
+                        option.value = file.download_url;
+                        option.textContent = file.name.replace(/_/g, ' ').replace('.xml', '').replace(' Indv', '');
+                        option.dataset.fileName = file.name;
+                        fileSelector.appendChild(option);
+                    });
+            } catch (error) {
+                console.error('Failed to fetch file list from GitHub:', error);
+            }
             loadFileBtn.addEventListener('click', loadSelectedFile);
         }
 
+        /**
+         * Loads and processes the selected XML file, automatically detecting encoding.
+         */
         async function loadSelectedFile() {
-            const fileName = fileSelector.value;
-            if (!fileName) {
-                alert('Please select a file to load.');
+            const selectedOption = fileSelector.options[fileSelector.selectedIndex];
+            const fileUrl = selectedOption.value;
+            const fileName = selectedOption.dataset.fileName;
+
+            if (!fileUrl) {
+                console.warn('Please select a file to load.');
                 return;
             }
+
             loadingIndicator.classList.remove('hidden');
             reportContent.classList.add('hidden');
+
             try {
-                const response = await fetch(fileName);
-                if (!response.ok) throw new Error(`Network response was not ok. Could not find file: ${fileName}`);
-                const csvText = await response.text();
-                playerData = parseCSV(csvText);
+                const response = await fetch(fileUrl);
+                if (!response.ok) throw new Error(`Network response was not ok. Could not fetch file: ${fileUrl}`);
+                
+                // [FIX] Automatically detect and handle both UTF-8 and UTF-16LE file encodings.
+                const arrayBuffer = await response.arrayBuffer();
+                const uint8 = new Uint8Array(arrayBuffer);
+                let xmlText;
+
+                // Check for UTF-16LE Byte Order Mark (BOM)
+                if (uint8[0] === 0xFF && uint8[1] === 0xFE) {
+                    const decoder = new TextDecoder('utf-16le');
+                    xmlText = decoder.decode(arrayBuffer);
+                } else {
+                    // Default to UTF-8 for all other cases (including files with no BOM)
+                    const decoder = new TextDecoder('utf-8');
+                    xmlText = decoder.decode(arrayBuffer);
+                }
+
+                playerData = parseAndAggregateXML(xmlText);
                 const matchDetails = parseFileName(fileName);
                 renderReport(matchDetails);
                 reportContent.classList.remove('hidden');
             } catch (error) {
                 console.error('Error loading or processing file:', error);
-                alert(`Failed to load the file: ${fileName}. Make sure it exists in your repository and the path is correct.`);
             } finally {
                 loadingIndicator.classList.add('hidden');
             }
         }
-        
+
+        /**
+         * Parses the filename to extract match details like round, opposition, date, and result.
+         */
         function parseFileName(fileName) {
-            const nameWithoutExt = fileName.replace('data/', '').replace('.csv', '');
+            const nameWithoutExt = fileName.replace('.xml', '');
             const parts = nameWithoutExt.split('_');
+            
             const round = parts[0].replace('RD', 'Round ');
-            const dateStr = parts[parts.length - 2];
-            const opposition = parts.slice(1, -2).join(' ');
+            const result = parts[parts.length - 2].toUpperCase();
+            const dateStr = parts[parts.length - 3];
+            const opposition = parts.slice(1, -3).join(' ');
+
             let formattedDate = '';
             if (dateStr && dateStr.length === 8) {
                 const day = dateStr.substring(0, 2);
@@ -184,57 +210,127 @@
                 const year = dateStr.substring(4, 8);
                 const dateObj = new Date(`${year}-${month}-${day}T00:00:00`);
                 if (!isNaN(dateObj)) {
-                    formattedDate = dateObj.toLocaleDateString('en-AU', { day: 'numeric', month: 'long', year: 'numeric' });
+                    formattedDate = dateObj.toLocaleDateString('en-AU', {
+                        day: 'numeric',
+                        month: 'long',
+                        year: 'numeric'
+                    });
                 }
             }
-            return { round, opposition, date: formattedDate };
+            return { round, opposition, date: formattedDate, result };
         }
 
-        function parseCSV(text) {
-            const lines = text.trim().split('\n');
-            const headers = lines[0].split(',').map(h => h.trim().replace(/\uFEFF/g, ''));
-            return lines.slice(1).map(line => {
-                const values = line.split(',');
-                return headers.reduce((obj, header, i) => {
-                    const value = values[i] ? values[i].trim() : '';
-                    obj[header] = isNaN(value) || value === '' ? value : Number(value);
-                    return obj;
-                }, {});
+        /**
+         * Parses XML, aggregates stats, calculates assists and other derived stats.
+         */
+        function parseAndAggregateXML(xmlText) {
+            const parser = new DOMParser();
+            const xmlDoc = parser.parseFromString(xmlText, "application/xml");
+            const instances = Array.from(xmlDoc.getElementsByTagName('instance'));
+
+            const statsByPlayer = {};
+            const allStatTypes = new Set(['Goal Assists', 'Score Assists']); // Pre-populate with new stats
+            const eventLog = [];
+
+            // First pass: Aggregate basic stats and create an event log
+            instances.forEach(instance => {
+                const codeNode = instance.querySelector('code');
+                const playerCode = codeNode ? codeNode.textContent : null;
+                const labelNodes = instance.querySelectorAll('label');
+                let statType = null;
+
+                for (const label of labelNodes) {
+                    const group = label.querySelector('group');
+                    if (group && group.textContent === 'Stat') {
+                        statType = label.querySelector('text').textContent;
+                        break;
+                    }
+                }
+
+                if (playerCode && statType && playerCode !== 'Whistle') {
+                    const standardizedPlayerName = playerCode.replace(/[.,]/g, ' ').replace(/\s+/g, ' ').trim();
+                    
+                    if (!statsByPlayer[standardizedPlayerName]) {
+                        statsByPlayer[standardizedPlayerName] = {};
+                    }
+                    statsByPlayer[standardizedPlayerName][statType] = (statsByPlayer[standardizedPlayerName][statType] || 0) + 1;
+                    allStatTypes.add(statType);
+                    eventLog.push({ player: standardizedPlayerName, stat: statType });
+                }
             });
+
+            // Second pass: Calculate assists by analyzing the event log
+            eventLog.forEach((event, i) => {
+                if (event.stat === 'Goal' || event.stat === 'Behind') {
+                    const scorer = event.player;
+                    // Look backwards from the event before the score
+                    for (let j = i - 1; j >= 0; j--) {
+                        const prevEvent = eventLog[j];
+                        // Find the last possession (Kick or Handball)
+                        if (prevEvent.stat === 'Kick' || prevEvent.stat === 'Handball') {
+                            const potentialAssister = prevEvent.player;
+                            // A player cannot assist their own score
+                            if (potentialAssister !== scorer) {
+                                statsByPlayer[potentialAssister]['Score Assists'] = (statsByPlayer[potentialAssister]['Score Assists'] || 0) + 1;
+                                if (event.stat === 'Goal') {
+                                    statsByPlayer[potentialAssister]['Goal Assists'] = (statsByPlayer[potentialAssister]['Goal Assists'] || 0) + 1;
+                                }
+                                // Assist found, stop searching for this score
+                                break; 
+                            }
+                            // If the scorer had the last possession, continue looking further back
+                        }
+                    }
+                }
+            });
+            
+            const aggregatedData = Object.entries(statsByPlayer).map(([playerName, stats]) => {
+                const playerRecord = { Name: playerName };
+                allStatTypes.forEach(stat => {
+                    playerRecord[stat] = stats[stat] || 0;
+                });
+                return playerRecord;
+            });
+
+            // Calculate Total Disposals for each player
+            aggregatedData.forEach(player => {
+                const kicks = player['Kick'] || 0;
+                const handballs = player['Handball'] || 0;
+                player['Total Disposals'] = kicks + handballs;
+            });
+            
+            return aggregatedData;
         }
+
 
         // --- RENDERING LOGIC ---
 
         function renderReport(matchDetails) {
             matchInfoTitle.textContent = `Camden Cats vs ${matchDetails.opposition}`;
             matchInfoDate.textContent = `${matchDetails.round} - ${matchDetails.date}`;
-            
-            renderMatchResult();
+
+            renderMatchResult(matchDetails.result);
             renderTopPerformers();
             renderStatsTable();
         }
-        
-        function renderMatchResult() {
+
+        function renderMatchResult(result) {
             matchResultContainer.innerHTML = '';
-            if (playerData.length > 0 && playerData[0].hasOwnProperty('Results')) {
-                const result = playerData[0].Results.toUpperCase();
-                let resultCardHTML = '';
-                if (result === 'WIN') {
-                    resultCardHTML = `<div class="bg-green-600 text-white text-sm font-bold px-4 py-2 rounded-lg inline-block shadow-lg">MATCH WON</div>`;
-                } else if (result === 'LOSS' || result === 'LOST') {
-                    resultCardHTML = `<div class="bg-red-600 text-white text-sm font-bold px-4 py-2 rounded-lg inline-block shadow-lg">MATCH LOST</div>`;
-                }
-                matchResultContainer.innerHTML = resultCardHTML;
+            let resultCardHTML = '';
+            if (result === 'WIN') {
+                resultCardHTML = `<div class="bg-green-600 text-white text-sm font-bold px-4 py-2 rounded-lg inline-block shadow-lg">MATCH WON</div>`;
+            } else if (result === 'LOSS' || result === 'LOST') {
+                resultCardHTML = `<div class="bg-red-600 text-white text-sm font-bold px-4 py-2 rounded-lg inline-block shadow-lg">MATCH LOST</div>`;
             }
+            matchResultContainer.innerHTML = resultCardHTML;
         }
-        
+
         function renderTopPerformers() {
             topPerformersContainer.innerHTML = '';
             if (playerData.length === 0) return;
 
             const allHeaders = Object.keys(playerData[0]);
-            // [FIXED] 'Player' changed to 'Name' in the exclusion list
-            const statsToExclude = ['No', 'Name', 'Round', 'Opposition', 'Results', 'Rotations', 'On Ground %', 'Efficiency'];
+            const statsToExclude = ['Name'];
             const statsToDisplay = allHeaders.filter(h => !statsToExclude.includes(h) && playerData.some(p => typeof p[h] === 'number'));
 
             statsToDisplay.forEach(stat => {
@@ -242,10 +338,11 @@
                 if (numericData.length === 0) return;
 
                 const maxValue = Math.max(...numericData.map(p => p[stat]));
+                 if (maxValue === 0) return;
+                
                 const topPlayers = playerData.filter(p => p[stat] === maxValue);
 
                 if (topPlayers.length > 0) {
-                    // [FIXED] Changed p.Player to p.Name to get the correct athlete name
                     const playerNames = topPlayers.map(p => p.Name).join(', ');
                     const card = document.createElement('div');
                     card.className = 'bg-gray-800 p-5 rounded-xl text-center flex flex-col';
@@ -266,17 +363,16 @@
             }
 
             const topValuesByStat = {};
-            // [FIXED] 'Player' changed to 'Name' in the exclusion list
-            const statsToHighlight = Object.keys(playerData[0]).filter(h => 
-                !['No', 'Name', 'Round', 'Opposition', 'Results', 'On Ground %', 'Efficiency'].includes(h) && 
-                playerData.some(p => typeof p[h] === 'number')
+            const statsToHighlight = Object.keys(playerData[0]).filter(h =>
+                h !== 'Name' && playerData.some(p => typeof p[h] === 'number')
             );
 
             statsToHighlight.forEach(stat => {
                 const values = playerData.map(p => p[stat]).filter(v => typeof v === 'number');
+                if (values.length === 0) return;
                 const uniqueSorted = [...new Set(values)].sort((a, b) => b - a);
-                const threshold = uniqueSorted.length > 2 ? uniqueSorted[2] : (uniqueSorted.length > 0 ? uniqueSorted[uniqueSorted.length - 1] : -Infinity);
-                topValuesByStat[stat] = uniqueSorted.filter(v => v >= threshold);
+                const threshold = uniqueSorted.length > 2 ? uniqueSorted[2] : uniqueSorted[uniqueSorted.length - 1];
+                topValuesByStat[stat] = uniqueSorted.filter(v => v >= threshold && v > 0);
             });
 
             playerData.sort((a, b) => {
@@ -289,11 +385,16 @@
                 }
                 return String(valA).localeCompare(String(valB)) * direction;
             });
+            
+            const desiredOrder = ['Kick', 'Handball', 'Total Disposals', 'Mark', 'Tackle', 'Inside 50', 'Hit Out', 'Goal', 'Behind', 'Goal Assists', 'Score Assists', 'Direct Turnover'];
+            const availableHeaders = Object.keys(playerData[0]).filter(h => h !== 'Name');
+            const sortedHeaders = desiredOrder.filter(h => availableHeaders.includes(h));
+            const remainingHeaders = availableHeaders.filter(h => !desiredOrder.includes(h));
+            const headers = ['Name', ...sortedHeaders, ...remainingHeaders];
 
-            const headers = Object.keys(playerData[0]).filter(h => !['No', 'Round', 'Opposition', 'Results'].includes(h));
 
             let tableHTML = `<div class="overflow-x-auto"><table class="w-full text-sm text-left text-gray-400"><thead class="text-xs text-gray-400 uppercase bg-gray-700"><tr>`;
-            
+
             headers.forEach(h => {
                 const sortIndicator = sortState.key === h ? (sortState.direction === 'asc' ? ' ▲' : ' ▼') : '';
                 tableHTML += `<th scope="col" class="px-6 py-3 sortable-header" data-sort-key="${h}">${h.replace(/_/g, ' ')}${sortIndicator}</th>`;
@@ -303,24 +404,22 @@
             playerData.forEach(player => {
                 tableHTML += `<tr class="border-b border-gray-700 hover:bg-gray-600/50">`;
                 headers.forEach(header => {
-                    const value = player[header];
-                    // [FIXED] Changed check from 'Player' to 'Name'
+                    const value = player[header] || 0; // Default to 0 if a stat is missing for a player
                     const isPlayerName = header === 'Name';
-                    
+
                     let cellClass = '';
                     if (topValuesByStat[header] && topValuesByStat[header].includes(value)) {
-                        // [FIXED] Corrected the check for Direct_Turnovers. The key from the CSV must match exactly.
-                        if (header === 'Direct Turnovers') {
+                        if (header === 'Direct Turnover') {
                             cellClass = 'bg-red-500 text-white font-bold rounded';
                         } else {
                             cellClass = 'bg-green-500 text-white font-bold rounded';
                         }
                     }
 
-                    if(isPlayerName) {
+                    if (isPlayerName) {
                         tableHTML += `<th scope="row" class="px-6 py-4 font-medium text-white whitespace-nowrap">${value}</th>`;
                     } else {
-                        tableHTML += `<td class="px-6 py-4 text-center ${cellClass}">${value !== undefined ? value : ''}</td>`;
+                        tableHTML += `<td class="px-6 py-4 text-center ${cellClass}">${value}</td>`;
                     }
                 });
                 tableHTML += `</tr>`;
@@ -328,7 +427,7 @@
 
             tableHTML += `</tbody></table></div>`;
             statsTableContainer.innerHTML = tableHTML;
-            
+
             statsTableContainer.querySelectorAll('.sortable-header').forEach(th => {
                 th.addEventListener('click', (e) => {
                     const key = e.currentTarget.dataset.sortKey;
@@ -336,7 +435,6 @@
                         sortState.direction = sortState.direction === 'asc' ? 'desc' : 'asc';
                     } else {
                         sortState.key = key;
-                        // [FIXED] Default sort direction for 'Name' is ascending
                         sortState.direction = key === 'Name' ? 'asc' : 'desc';
                     }
                     renderStatsTable();
