@@ -23,11 +23,14 @@
         /* Custom styles to complement Tailwind */
         body {
             font-family: 'Inter', sans-serif;
+            background-color: #111827; /* bg-gray-900 */
+            color: #f9fafb; /* text-gray-50 */
         }
         .card {
             background-color: #1f2937; /* bg-gray-800 */
             border-radius: 0.75rem; /* rounded-xl */
             padding: 1.5rem; /* p-6 */
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
         }
         .stat-item {
             display: flex;
@@ -94,6 +97,8 @@
         .qxq-table .highlight-neutral { background-color: rgba(252, 211, 77, 0.2); }
         .qxq-table .total-col { font-weight: 700; border-left: 1px solid #4b5563; }
         .qxq-table .avg-col { font-weight: 700; }
+        #loading-indicator p { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .5; } }
     </style>
 </head>
 <body class="bg-gray-900 text-white">
@@ -104,14 +109,10 @@
             <div class="flex items-center justify-between h-16">
                 <div class="flex items-center">
                     <a href="landing.html" class="flex items-center">
-                        <img src="assets/camden_cats_logo.jpg" alt="Camden Cats Logo" class="h-10 w-10 rounded-full object-cover" 
+                        <img src="https://raw.githubusercontent.com/NickPez36/Camden_Match_Analytics/main/assets/camden_cats_logo.jpg" alt="Camden Cats Logo" class="h-10 w-10 rounded-full object-cover" 
                              onerror="this.onerror=null; this.src='https://placehold.co/40x40/1a202c/ffffff?text=Logo';">
                         <span class="ml-3 font-semibold text-xl">Camden Cats Analytics</span>
                     </a>
-                </div>
-                <div class="flex items-center space-x-4">
-                     <a href="landing.html" class="text-sm font-medium text-gray-400 hover:text-white transition-colors duration-200">Back to Dashboard</a>
-                    <button id="logout-button" class="text-sm font-medium text-gray-400 hover:text-white transition-colors duration-200">Logout</button>
                 </div>
             </div>
         </div>
@@ -131,7 +132,7 @@
                 <label for="file-selector" class="sr-only">Game File</label>
                 <select id="file-selector" class="w-full bg-gray-700 border border-gray-600 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-3"></select>
              </div>
-             <div id="loading-indicator" class="hidden text-center mt-4"><p class="text-gray-400">Loading data...</p></div>
+             <div id="loading-indicator" class="hidden text-center mt-4"><p>Loading data...</p></div>
         </div>
 
         <div id="initial-message" class="text-center py-16 mt-8 bg-gray-800 rounded-xl">
@@ -150,6 +151,7 @@
             <!-- Match Summary View -->
             <main id="summary-view" class="space-y-8">
                 <section id="summary-match-details" class="card"></section>
+                <section id="score-worm-section" class="card"></section>
                 <section id="stoppage-analysis" class="card"></section>
                 <section id="inside-50-analysis" class="card"></section>
                 <section id="key-stats-section" class="card"></section>
@@ -167,38 +169,21 @@
     </main>
 
     <script>
-        // --- AUTHENTICATION CHECK ---
-        if (sessionStorage.getItem('isLoggedIn') !== 'true') {
-            window.location.href = 'index.html';
-        }
-        document.getElementById('logout-button').addEventListener('click', function() {
-            sessionStorage.removeItem('isLoggedIn');
-            window.location.href = 'index.html';
-        });
-
         document.addEventListener('DOMContentLoaded', () => {
             Chart.register(ChartDataLabels);
 
             // --- CONFIGURATION ---
-            const TEAM_STATS_FILES = [
-                "data/RD1_Parramatta Goannas_29032025_TeamStatistics.csv",
-                "data/RD4_Sydney University_26042025_TeamStatistics.csv",
-                "data/RD5_UNSW_03052025_TeamStatistics.csv",
-                "data/RD6_Pennant Hills_17052025_TeamStatistics.csv",
-                "data/RD7_St George_19072025_TeamStatistics.csv",
-                "data/RD8_Parramatta Goannas_31052025_TeamStatistics.csv",
-                "data/RD9_Inner West_14062025_TeamStatistics.csv",
-                "data/RD10_Sydney University_21062025_TeamStatistics.csv",
-                "data/RD11_UNSW_28062025_TeamStatistics.csv",
-                "data/RD12_North Shore_05072025_TeamStatistics.csv",
-                "data/RD14_Southern Power_26072025_TeamStatistics.csv",
-                "data/RD15_Pennant Hills_02082025_TeamStatistics.csv"
-                // Add more team statistics files here
-            ];
-            const PRELOAD_FILENAME = "RD12_North Shore_07072025_TeamStatistics.csv";
+            const GITHUB_USER = "NickPez36";
+            const GITHUB_REPO = "Camden_Match_Analytics";
+            const GITHUB_BRANCH = "main";
+            const XML_FOLDER_PATH = "data/Team_Review__Team_XML";
+            
+            const GITHUB_API_URL = `https://api.github.com/repos/${GITHUB_USER}/${GITHUB_REPO}/contents/${XML_FOLDER_PATH}?ref=${GITHUB_BRANCH}`;
+            const GITHUB_RAW_URL_BASE = `https://raw.githubusercontent.com/${GITHUB_USER}/${GITHUB_REPO}/${GITHUB_BRANCH}/`;
 
             // --- DOM REFERENCES ---
             const fileSelector = document.getElementById('file-selector');
+            const loadingIndicator = document.getElementById('loading-indicator');
             const initialMessage = document.getElementById('initial-message');
             const reportWrapper = document.getElementById('report-content-wrapper');
             const summaryView = document.getElementById('summary-view');
@@ -209,24 +194,42 @@
             
             let stoppageCharts = {};
             let i50Chart = null;
+            let scoreWormChart = null;
 
             // --- INITIALIZATION ---
-            function initialize() {
+            async function initialize() {
                 fileSelector.innerHTML = '<option value="">Select a match file</option>';
-                TEAM_STATS_FILES.forEach(filePath => {
-                    const option = document.createElement('option');
-                    option.value = filePath;
-                    option.textContent = filePath.split('/').pop().replace(/_/g, ' ').replace(' TeamStatistics.csv', '');
-                    fileSelector.appendChild(option);
-                });
                 fileSelector.addEventListener('change', (e) => loadAndProcessFile(e.target.value));
 
-                const preloadFilePath = TEAM_STATS_FILES.find(path => path.endsWith(PRELOAD_FILENAME));
-                if (preloadFilePath) {
-                    fileSelector.value = preloadFilePath;
-                    loadAndProcessFile(preloadFilePath);
-                } else {
-                     initialMessage.classList.remove('hidden');
+                try {
+                    const response = await fetch(GITHUB_API_URL, { cache: 'no-cache' });
+                    if (!response.ok) {
+                        let errorDetails = `${response.status} ${response.statusText}`;
+                        try {
+                            const errorJson = await response.json();
+                            if (errorJson.message) errorDetails += ` - ${errorJson.message}`;
+                        } catch (e) { /* Ignore */ }
+                        throw new Error(`GitHub API error: ${errorDetails}`);
+                    }
+                    const files = await response.json();
+                    
+                    if (!Array.isArray(files)) {
+                         throw new Error("Received an invalid response from the GitHub API.");
+                    }
+
+                    files
+                        .filter(file => file.type === 'file' && file.name.endsWith('.xml'))
+                        .forEach(file => {
+                            const option = document.createElement('option');
+                            option.value = file.path;
+                            option.textContent = file.name.replace('.xml', '').replace(/_/g, ' ');
+                            fileSelector.appendChild(option);
+                        });
+                } catch (error) {
+                    console.error("Error fetching file list from GitHub:", error);
+                    initialMessage.classList.remove('hidden');
+                    initialMessage.querySelector('h3').textContent = 'Error Loading Files';
+                    initialMessage.querySelector('p').textContent = `Could not fetch files from GitHub. ${error.message}.`;
                 }
             }
             
@@ -237,27 +240,45 @@
                     return;
                 }
                 
+                loadingIndicator.classList.remove('hidden');
+                initialMessage.classList.add('hidden');
+                reportWrapper.classList.add('hidden');
+                
                 try {
-                    const response = await fetch(filePath);
+                    const fileUrl = GITHUB_RAW_URL_BASE + filePath;
+                    const response = await fetch(fileUrl);
                     if (!response.ok) throw new Error(`Network response was not ok for ${filePath}`);
-                    const csvText = await response.text();
+                    
+                    const buffer = await response.arrayBuffer();
+                    const uint8 = new Uint8Array(buffer);
+                    let xmlText;
+                    if (uint8[0] === 0xFF && uint8[1] === 0xFE) {
+                        xmlText = new TextDecoder('utf-16le').decode(buffer);
+                    } else if (uint8[0] === 0xFE && uint8[1] === 0xFF) {
+                        xmlText = new TextDecoder('utf-16be').decode(buffer);
+                    } else {
+                        xmlText = new TextDecoder('utf-8').decode(buffer);
+                    }
                     
                     const matchDetails = parseFileName(filePath.split('/').pop());
-                    processCsvData(csvText, matchDetails);
+                    processXmlData(xmlText, matchDetails);
 
                 } catch (error) {
                     console.error("Error loading or processing file:", error);
-                    alert(`Failed to load report: ${error.message}`);
                     initialMessage.classList.remove('hidden');
+                    initialMessage.querySelector('h3').textContent = 'Error Loading Report';
+                    initialMessage.querySelector('p').textContent = `Failed to load or process the report file. ${error.message}`;
                     reportWrapper.classList.add('hidden');
+                } finally {
+                    loadingIndicator.classList.add('hidden');
                 }
             }
             
             function parseFileName(fileName) {
-                const nameWithoutExt = fileName.replace('.csv', '');
+                const nameWithoutExt = fileName.replace('.xml', '');
                 const parts = nameWithoutExt.split('_');
                 let details = { round: 'N/A', opposition: 'N/A', date: 'N/A' };
-                if (parts.length >= 4) {
+                if (parts.length >= 3) {
                     details.round = parts[0].replace('RD', 'Round ');
                     details.opposition = parts[1];
                     const dateStr = parts[2];
@@ -274,40 +295,157 @@
                 return details;
             }
 
-            function processCsvData(csv, matchDetails) {
-                const lines = csv.split(/\r\n|\n/).filter(line => line.trim() !== '');
-                if (lines.length < 2) {
-                    alert('CSV file is empty or has no data rows.');
-                    return;
-                }
+            function processXmlData(xmlText, matchDetails) {
+                const parser = new DOMParser();
+                const xmlDoc = parser.parseFromString(xmlText, "application/xml");
                 
-                const headers = lines[0].split(',').map(h => h.trim());
-                const allStats = lines.slice(1).map(row => {
-                    const values = row.split(',');
-                    const statData = {};
-                    headers.forEach((header, i) => { statData[header] = values[i] ? values[i].trim() : ''; });
-                    return statData;
+                if (xmlDoc.getElementsByTagName("parsererror").length > 0) {
+                    throw new Error("Failed to parse XML file.");
+                }
+
+                const instances = Array.from(xmlDoc.getElementsByTagName('instance'));
+                
+                const allStats = {};
+                const scoreEvents = [];
+                const allEvents = [];
+
+                instances.forEach(instance => {
+                    const codeElement = instance.querySelector('code');
+                    const startElement = instance.querySelector('start');
+                    if (!codeElement || !startElement) return;
+
+                    const statName = codeElement.textContent.trim();
+                    const startTime = parseFloat(startElement.textContent);
+                    
+                    const labelElements = instance.querySelectorAll('label > text');
+                    let quarter = null;
+
+                    labelElements.forEach(label => {
+                        const text = label.textContent.trim().toLowerCase();
+                        // UPDATED: Handle both "Quarter X" and "QX" formats
+                        if (text.startsWith('quarter ')) {
+                            quarter = text.replace('quarter ', 'q');
+                        } else if (text.match(/^q[1-4]$/)) {
+                            quarter = text;
+                        }
+                    });
+
+                    if (!quarter) return;
+                    
+                    allEvents.push({ time: startTime, quarter });
+
+                    if (!allStats[statName]) {
+                        allStats[statName] = { Statistic: statName, Q1_Count: 0, Q2_Count: 0, Q3_Count: 0, Q4_Count: 0, Game_Count: 0 };
+                    }
+                    const qKey = quarter.toUpperCase() + '_Count';
+                    if (allStats[statName][qKey] !== undefined) allStats[statName][qKey]++;
+                    allStats[statName].Game_Count++;
+
+                    if (statName.toLowerCase().includes('goal') || statName.toLowerCase().includes('behind')) {
+                        let points = statName.toLowerCase().includes('goal') ? 6 : 1;
+                        let team = statName.toLowerCase().includes('oppo') ? 'oppo' : 'camden';
+                        scoreEvents.push({ time: startTime, quarter, team, points });
+                    }
                 });
 
-                // Correctly get the match result from the first data row's "Result" column.
-                matchDetails.result = allStats[0] ? allStats[0].Result.trim() : 'N/A';
+                const scoreWormData = generateScoreWormData(scoreEvents, allEvents);
                 
-                displayReport(allStats, matchDetails);
+                const statsArray = Object.values(allStats);
+                const scoreCalcs = calculateQuarterlyScores(scoreWormData.quarterScores);
+                const finalStatsArray = statsArray.map(stat => ({ ...stat, ...scoreCalcs }));
+                matchDetails.result = scoreCalcs.Q4_Score_Diff > 0 ? 'WIN' : 'LOSS';
+                
+                displayReport(finalStatsArray, matchDetails, scoreWormData);
+            }
+            
+            function generateScoreWormData(scoreEvents, allEvents) {
+                if (allEvents.length === 0) {
+                    return {
+                        continuousData: [{ x: 0, y: 0 }],
+                        quarterBoundaries: {},
+                        quarterScores: { camden: { q1: 0, q2: 0, q3: 0, q4: 0 }, oppo: { q1: 0, q2: 0, q3: 0, q4: 0 } }
+                    };
+                }
+
+                scoreEvents.sort((a, b) => a.time - b.time);
+                
+                const quarterTimings = {};
+                ['q1', 'q2', 'q3', 'q4'].forEach(q => {
+                    const quarterEvents = allEvents.filter(e => e.quarter === q);
+                    if (quarterEvents.length > 0) {
+                        quarterTimings[q] = {
+                            start: Math.min(...quarterEvents.map(e => e.time)),
+                            end: Math.max(...quarterEvents.map(e => e.time))
+                        };
+                        quarterTimings[q].duration = quarterTimings[q].end - quarterTimings[q].start;
+                    }
+                });
+
+                const continuousData = [{ x: 0, y: 0, isQuarterEnd: false }];
+                let runningMargin = 0;
+                const quarterScores = { camden: { q1: 0, q2: 0, q3: 0, q4: 0 }, oppo: { q1: 0, q2: 0, q3: 0, q4: 0 }};
+                const quarterBoundaries = {};
+
+                for (let i = 1; i <= 4; i++) {
+                    const qKey = `q${i}`;
+                    const quarterInfo = quarterTimings[qKey];
+                    if (!quarterInfo) continue;
+
+                    const quarterStartOffset = (i - 1) * 25;
+                    const quarterScoreEvents = scoreEvents.filter(e => e.quarter === qKey);
+
+                    quarterScoreEvents.forEach(event => {
+                         if (event.team === 'camden') {
+                            runningMargin += event.points;
+                            quarterScores.camden[event.quarter] += event.points;
+                        } else {
+                            runningMargin -= event.points;
+                            quarterScores.oppo[event.quarter] += event.points;
+                        }
+
+                        const timeIntoQuarter = event.time - quarterInfo.start;
+                        const normalizedTime = quarterInfo.duration > 0 ? (timeIntoQuarter / quarterInfo.duration) * 25 : 25;
+                        const chartX = quarterStartOffset + normalizedTime;
+                        
+                        continuousData.push({ x: chartX, y: runningMargin, isQuarterEnd: false });
+                    });
+                    
+                    const boundaryTime = i * 25;
+                    quarterBoundaries[qKey] = boundaryTime;
+                    continuousData.push({ x: boundaryTime, y: runningMargin, isQuarterEnd: true });
+                }
+                
+                continuousData.sort((a,b) => a.x - b.x);
+
+                return { continuousData, quarterBoundaries, quarterScores };
             }
 
-            function displayReport(allStats, matchDetails) {
+            function calculateQuarterlyScores(quarterScores) {
+                const scoreCalcs = {
+                    Q1_Score_Change: quarterScores.camden.q1 - quarterScores.oppo.q1,
+                    Q2_Score_Change: quarterScores.camden.q2 - quarterScores.oppo.q2,
+                    Q3_Score_Change: quarterScores.camden.q3 - quarterScores.oppo.q3,
+                    Q4_Score_Change: quarterScores.camden.q4 - quarterScores.oppo.q4,
+                };
+                scoreCalcs.Q1_Score_Diff = scoreCalcs.Q1_Score_Change;
+                scoreCalcs.Q2_Score_Diff = scoreCalcs.Q1_Score_Diff + scoreCalcs.Q2_Score_Change;
+                scoreCalcs.Q3_Score_Diff = scoreCalcs.Q2_Score_Diff + scoreCalcs.Q3_Score_Change;
+                scoreCalcs.Q4_Score_Diff = scoreCalcs.Q3_Score_Diff + scoreCalcs.Q4_Score_Change;
+                return scoreCalcs;
+            }
+
+            function displayReport(allStats, matchDetails, scoreWormData) {
                 initialMessage.style.display = 'none';
                 reportWrapper.classList.remove('hidden');
                 
                 const summaryData = buildSummaryData(allStats);
                 renderMatchDetailsCard(matchDetails);
-                renderSummaryView(summaryData, matchDetails);
+                renderSummaryView(summaryData, matchDetails, scoreWormData);
 
                 const isQxqAvailable = allStats[0] && allStats[0].hasOwnProperty('Q1_Count');
                 if (isQxqAvailable) {
                     viewToggleContainer.style.display = 'flex';
                     renderQxqView(allStats, matchDetails);
-                    // Set default view
                     summaryView.classList.remove('hidden');
                     qxqView.classList.add('hidden');
                     summaryToggle.classList.add('active');
@@ -339,9 +477,23 @@
                     i50Data: {}, teamScoringData: {}, oppoEfficiencyData: {}, keyStats: {}
                 };
                 
+                const possessionStatsToExclude = [
+                    "in dispute",
+                    "cats in possession",
+                    "forward half - cats in possession",
+                    "opposition in possession",
+                    "forward half - opposition in possession"
+                ];
+
                 allStats.forEach(stat => {
                     const total = parseInt(stat.Game_Count) || 0;
                     const name = stat.Statistic;
+                    const lowerCaseName = name.toLowerCase();
+
+                    if (possessionStatsToExclude.includes(lowerCaseName)) {
+                        return; 
+                    }
+
                     const stoppageMatch = name.match(/(.*) Stoppage (Win|Loss|Neutral)/i);
                     
                     if (['Defensive 50 Mark', 'Inside 50 Mark - Uncontested', 'Inside 50 Mark - Contested', 'Fast Rebound 50', 'Chase Down Tackle', 'Fast Through The Middle', 'Forward HB', 'Handball Recieve', 'Inside 45 kick', 'Switch and Release', 'Switch and Slow'].includes(name)) {
@@ -378,15 +530,17 @@
                         summary.oppoEfficiencyData.i50slow = total;
                     } else if (name.toLowerCase().includes('oppo')) {
                         summary.oppoStats.push({ name, value: total });
-                    } else if (!summary.keyStats.hasOwnProperty(name) && !stoppageMatch && name !== 'Result' && !name.includes('Inside 50 (') && !name.includes('Goal -') && !name.includes('Behind -') && !name.includes('Score Margins') && !name.includes('Change in Score')) {
+                    } else if (!summary.keyStats.hasOwnProperty(name) && !stoppageMatch && name !== 'Result' && !name.includes('Inside 50 (') && !name.includes('Goal -') && !name.includes('Behind -')) {
                          summary.teamStats.push({ name, value: total });
                     }
                 });
                 return summary;
             }
             
-            function renderSummaryView(summaryData, matchDetails) {
+            function renderSummaryView(summaryData, matchDetails, scoreWormData) {
                 const { teamStats, oppoStats, stoppageData, i50Data, teamScoringData, oppoEfficiencyData, keyStats } = summaryData;
+
+                renderScoreWorm(scoreWormData);
 
                 const stoppageEl = document.getElementById('stoppage-analysis');
                 stoppageEl.innerHTML = `<h3 class="text-2xl font-bold mb-6 text-center">Stoppage Analysis</h3><div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center"><div id="summary-stoppage-centre"></div><div id="summary-stoppage-between-arcs"></div><div id="summary-stoppage-forward-50"></div><div id="summary-stoppage-defensive-50"></div></div>`;
@@ -411,10 +565,10 @@
             function renderQxqView(allStats, matchDetails) {
                 const container = document.getElementById('qxq-table-container');
                 const statGroups = [
-                    { name: 'Forward Line Attacking Statistics', stats: ['Inside 50 (Drop Zone)', 'Inside 50 (Rebound Zone)', 'Inside 50 Mark - Contested', 'Inside 50 Mark - Uncontested'] },
+                    { name: 'Forward Line Attacking Statistics', stats: ['Inside 50', 'Inside 50 (Drop Zone)', 'Inside 50 (Rebound Zone)', 'Inside 50 Mark - Contested', 'Inside 50 Mark - Uncontested'] },
                     { name: 'Forward Line Defensive Statistics', stats: ['Oppo Fast Defensive Exit', 'Oppo Slow Defensive Exit', 'Oppo Kick out - Fast', 'Oppo Kick out - Slow', 'Oppo Defensive 50 Mark'] },
                     { name: 'Stoppages', stats: ['Centre Stoppage Win', 'Centre Stoppage Loss', 'Centre Stoppage Neutral', 'Between Arcs Stoppage Win', 'Between Arcs Stoppage Loss', 'Between Arcs Stoppage Neutral', 'Forward 50 Stoppage Win', 'Forward 50 Stoppage Loss', 'Forward 50 Stoppage Neutral', 'Defensive 50 Stoppage Win', 'Defensive 50 Stoppage Loss', 'Defensive 50 Stoppage Neutral'] },
-                    { name: 'Defensive Line Statistics', stats: ['Oppo Forward 50 Entry (Fast)', 'Oppo Forward 50 Entry (Slow)', 'Fast Rebound 50', 'Kick out - Fast', 'Kick out - Slow', 'Switch and Release', 'Switch and Slow', 'Defensive 50 Mark'] },
+                    { name: 'Defensive Line Statistics', stats: ['Oppo Forward 50 Entry (Fast)', 'Oppo Forward 50 Entry (Slow)', 'Fast Rebound 50', 'Kick out - Slow', 'Switch and Release', 'Switch and Slow', 'Defensive 50 Mark'] },
                     { name: 'Team Plays', stats: ['Chase Down Tackle', 'Fast Through The Middle', 'Forward HB', 'Handball Recieve', 'Inside 45 kick'] },
                     { name: 'Camden Scoring', stats: ['Goal - Field Play', 'Behind - Field Play', 'Goal - Set Shot', 'Behind - Set Shot'] },
                     { name: 'Opposition Scoring', stats: ['Oppo Goal - Field Play', 'Oppo Behind - Field Play', 'Oppo Goal - Set Shot', 'Oppo Behind - Set Shot'] },
@@ -425,9 +579,9 @@
                 
                 const findStat = (name) => allStats.find(s => s.Statistic.trim().toLowerCase() === name.trim().toLowerCase()) || {};
 
-                const createFormattedScoreRow = (title, columnNames) => {
-                    const scoreDataRow = allStats[0] || {}; // Data is consistent, so take from the first row
-                    const qValues = columnNames.map(colName => scoreDataRow[colName]);
+                const createFormattedScoreRow = (title, columnKeys) => {
+                    const scoreDataRow = allStats[0] || {};
+                    const qValues = columnKeys.map(key => scoreDataRow[key]);
                     const numericValues = qValues.map(v => parseInt(v)).filter(v => !isNaN(v));
                     
                     if (numericValues.length === 0) {
@@ -439,20 +593,14 @@
 
                     let rowHTML = `<tr><td class="stat-name-col">${title}</td>`;
 
-                    qValues.forEach((originalText) => {
-                        const val = parseInt(originalText);
+                    qValues.forEach((val) => {
                         let highlightClass = '';
-
                         if (!isNaN(val) && maxVal !== minVal) { 
-                            if (val === maxVal) {
-                                highlightClass = 'highlight-good';
-                            } else if (val === minVal) {
-                                highlightClass = 'highlight-bad';
-                            } else {
-                                highlightClass = 'highlight-neutral';
-                            }
+                            if (val === maxVal) highlightClass = 'highlight-good';
+                            else if (val === minVal) highlightClass = 'highlight-bad';
+                            else highlightClass = 'highlight-neutral';
                         }
-                        rowHTML += `<td class="${highlightClass}">${originalText || '-'}</td>`;
+                        rowHTML += `<td class="${highlightClass}">${val ?? '-'}</td>`;
                     });
 
                     rowHTML += `<td class="total-col"></td><td class="avg-col"></td></tr>`;
@@ -461,8 +609,8 @@
 
                 let tableHTML = `<table class="qxq-table"><thead><tr><th>Statistic</th><th>Quarter 1</th><th>Quarter 2</th><th>Quarter 3</th><th>Quarter 4</th><th class="total-col">Game Total</th><th class="avg-col">Quarter Avg</th></tr></thead><tbody>`;
                 
-                tableHTML += createFormattedScoreRow('Absolute Score Margins', ['Q1_Score_Diff', 'Q2_Score_Diff', 'Q3_Score_Diff', 'Q4_Score_Diff']);
-                tableHTML += createFormattedScoreRow('Camden Change in Score', ['Q1_Score_Change', 'Q2_Score_Change', 'Q3_Score_Change', 'Q4_Score_Change']);
+                tableHTML += createFormattedScoreRow('Quarterly Margin', ['Q1_Score_Change', 'Q2_Score_Change', 'Q3_Score_Change', 'Q4_Score_Change']);
+                tableHTML += createFormattedScoreRow('Progressive Margin', ['Q1_Score_Diff', 'Q2_Score_Diff', 'Q3_Score_Diff', 'Q4_Score_Diff']);
                 
                 statGroups.forEach(group => {
                     tableHTML += `<tr class="group-header"><td colspan="7">${group.name}</td></tr>`;
@@ -470,13 +618,13 @@
                         const stat = findStat(statName);
                         const qValues = [parseInt(stat.Q1_Count) || 0, parseInt(stat.Q2_Count) || 0, parseInt(stat.Q3_Count) || 0, parseInt(stat.Q4_Count) || 0];
                         const total = qValues.reduce((a, b) => a + b, 0);
-                        const avg = (total / 4).toFixed(1);
+                        const avg = total > 0 ? (total / 4).toFixed(1) : '0.0';
                         const maxVal = Math.max(...qValues);
                         const type = getStatType(statName);
                         tableHTML += `<tr><td class="stat-name-col">${statName.replace('Oppo ', `${matchDetails.opposition} `)}</td>`;
                         qValues.forEach((val, i) => {
                             const highlightClass = (val === maxVal && maxVal > 0) ? `highlight-${type}` : '';
-                            tableHTML += `<td class="${highlightClass}">${stat[`Q${i+1}_Count`] || '-'}</td>`;
+                            tableHTML += `<td class="${highlightClass}">${stat[`Q${i+1}_Count`] || '0'}</td>`;
                         });
                         tableHTML += `<td class="total-col">${total}</td><td class="avg-col">${avg}</td></tr>`;
                     });
@@ -494,19 +642,143 @@
                     element.innerHTML += `<div class="stat-item"><span class="stat-name">${stat.name.replace('Oppo ', `${matchDetails.opposition} `)}</span><span class="stat-value">${stat.value}</span></div>`;
                 });
             }
+            
+            function renderScoreWorm(scoreWormData) {
+                const container = document.getElementById('score-worm-section');
+                if (!container) return;
+
+                container.innerHTML = `<h3 class="text-2xl font-bold mb-6 text-center">Score Worm</h3><div class="relative h-96"><canvas id="score-worm-chart"></canvas></div>`;
+
+                if (scoreWormChart) {
+                    scoreWormChart.destroy();
+                }
+                
+                const ctx = document.getElementById('score-worm-chart').getContext('2d');
+                const { continuousData, quarterBoundaries } = scoreWormData;
+
+                const backgroundPlugin = {
+                    id: 'scoreWormBackground',
+                    beforeDraw: (chart) => {
+                        const { ctx, chartArea: { top, bottom, left, right }, scales: { x } } = chart;
+                        ctx.save();
+                        
+                        Object.values(quarterBoundaries).forEach(time => {
+                            const xPos = x.getPixelForValue(time);
+                            ctx.beginPath();
+                            ctx.strokeStyle = 'rgba(255, 255, 255, 0.1)';
+                            ctx.lineWidth = 1;
+                            ctx.moveTo(xPos, top);
+                            ctx.lineTo(xPos, bottom);
+                            ctx.stroke();
+                        });
+
+                        let startX = left;
+                        ['Q1', 'Q2', 'Q3', 'Q4'].forEach((label, index) => {
+                            const qKey = `q${index + 1}`;
+                            const endX = quarterBoundaries[qKey] ? x.getPixelForValue(quarterBoundaries[qKey]) : right;
+                            const midX = startX + (endX - startX) / 2;
+                            
+                            ctx.font = 'bold 96px Inter, sans-serif';
+                            ctx.fillStyle = 'rgba(255, 255, 255, 0.05)';
+                            ctx.textAlign = 'center';
+                            ctx.textBaseline = 'middle';
+                            ctx.fillText(label, midX, (top + bottom) / 2);
+                            
+                            startX = endX;
+                        });
+
+                        ctx.restore();
+                    }
+                };
+
+                scoreWormChart = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        datasets: [{
+                            label: 'Score Margin',
+                            data: continuousData,
+                            stepped: 'before',
+                            segment: {
+                                borderColor: ctx => ctx.p1.raw.y >= 0 ? '#4ade80' : '#f87171'
+                            },
+                            borderWidth: 3,
+                            pointRadius: 0,
+                            pointHoverRadius: 6,
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: { display: false },
+                            tooltip: {
+                                mode: 'index',
+                                intersect: false,
+                                callbacks: {
+                                    title: (context) => `Match Timeline`,
+                                    label: (context) => `Margin: ${context.parsed.y}`
+                                }
+                            },
+                            datalabels: {
+                                display: (context) => context.dataset.data[context.dataIndex].isQuarterEnd,
+                                formatter: (value) => value.y,
+                                align: 'top',
+                                offset: 8,
+                                backgroundColor: '#111827',
+                                borderColor: (context) => context.dataset.data[context.dataIndex].y >= 0 ? '#4ade80' : '#f87171',
+                                borderWidth: 2,
+                                borderRadius: 4,
+                                color: 'white',
+                                padding: 6,
+                                font: { weight: 'bold' }
+                            }
+                        },
+                        scales: {
+                            x: {
+                                type: 'linear',
+                                min: 0,
+                                max: 100,
+                                title: { display: true, text: 'Match Timeline', color: '#9ca3af' },
+                                ticks: {
+                                    stepSize: 25,
+                                    color: '#9ca3af',
+                                    callback: function(value) {
+                                        if (value === 0) return 'Start';
+                                        if (value === 25) return 'QT';
+                                        if (value === 50) return 'HT';
+                                        if (value === 75) return '3QT';
+                                        if (value === 100) return 'FT';
+                                        return null;
+                                    }
+                                },
+                                grid: { color: 'transparent' }
+                            },
+                            y: {
+                                title: { display: true, text: 'Score Margin', color: '#9ca3af' },
+                                ticks: { color: '#9ca3af' },
+                                grid: { color: '#374151' },
+                                zeroLineColor: '#9ca3af',
+                                zeroLineWidth: 2
+                            }
+                        }
+                    },
+                    plugins: [backgroundPlugin, ChartDataLabels]
+                });
+            }
 
             function renderStoppageCharts(stoppageData) {
                 const types = ['Centre', 'Between Arcs', 'Forward 50', 'Defensive 50'];
                 types.forEach(type => {
-                    const data = stoppageData[type];
+                    const data = stoppageData[type] || {};
                     const total = (data.win || 0) + (data.loss || 0) + (data.neutral || 0);
-                    const container = document.getElementById(`summary-stoppage-${type.toLowerCase().replace(/ /g, '-')}`);
+                    const containerId = `summary-stoppage-${type.toLowerCase().replace(/ /g, '-')}`;
+                    const container = document.getElementById(containerId);
                     if (!container) return;
                     if (stoppageCharts[type]) stoppageCharts[type].destroy();
                     container.innerHTML = `<h4 class="text-lg font-semibold mb-2">${type}</h4><div class="donut-chart-container"><canvas id="summary-${type}-chart"></canvas><div class="donut-chart-total"><div class="total-number">${total}</div><div class="total-label">Total</div></div></div>`;
                     if (total > 0) {
                         const ctx = document.getElementById(`summary-${type}-chart`).getContext('2d');
-                        stoppageCharts[type] = new Chart(ctx, { type: 'doughnut', data: { labels: ['Win', 'Loss', 'Neutral'], datasets: [{ data: [data.win, data.loss, data.neutral], backgroundColor: ['#10b981', '#ef4444', '#6b7280'], borderColor: '#1f2937', borderWidth: 4 }] }, options: { responsive: true, maintainAspectRatio: false, cutout: '60%', plugins: { legend: { display: false }, tooltip: { enabled: false }, datalabels: { display: (c) => c.dataset.data[c.dataIndex] > 0, color: '#fff', font: { weight: 'bold', size: 14 } } } } });
+                        stoppageCharts[type] = new Chart(ctx, { type: 'doughnut', data: { labels: ['Win', 'Loss', 'Neutral'], datasets: [{ data: [data.win || 0, data.loss || 0, data.neutral || 0], backgroundColor: ['#10b981', '#ef4444', '#6b7280'], borderColor: '#1f2937', borderWidth: 4 }] }, options: { responsive: true, maintainAspectRatio: false, cutout: '60%', plugins: { legend: { display: false }, tooltip: { enabled: false }, datalabels: { display: (c) => c.dataset.data[c.dataIndex] > 0, color: '#fff', font: { weight: 'bold', size: 14 } } } } });
                     }
                 });
             }
