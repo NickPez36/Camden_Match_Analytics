@@ -27,7 +27,7 @@
             <div class="flex items-center justify-between h-16">
                 <div class="flex items-center">
                     <a href="landing.html" class="flex items-center">
-                        <img src="assets/camden_cats_logo.jpg" alt="Camden Cats Logo" class="h-10 w-10 rounded-full object-cover"
+                        <img src="https://raw.githubusercontent.com/NickPez36/Camden_Match_Analytics/main/assets/camden_cats_logo.jpg" alt="Camden Cats Logo" class="h-10 w-10 rounded-full object-cover"
                              onerror="this.onerror=null; this.src='https://placehold.co/40x40/1a202c/ffffff?text=Logo';">
                         <span class="ml-3 font-semibold text-xl">Camden Cats Analytics</span>
                     </a>
@@ -84,15 +84,9 @@
 
     <script>
         // --- AUTHENTICATION CHECK ---
-        /*
-        if (sessionStorage.getItem('isLoggedIn') !== 'true') {
-            window.location.href = 'index.html';
-        }
-        */
         document.getElementById('logout-button').addEventListener('click', function() {
             sessionStorage.removeItem('isLoggedIn');
             console.log("User has been logged out.");
-            // window.location.href = 'index.html';
         });
 
         // --- DOM ELEMENT REFERENCES ---
@@ -113,9 +107,12 @@
         // --- GITHUB API CONFIGURATION ---
         const GITHUB_USER = 'NickPez36';
         const GITHUB_REPO = 'Camden_Match_Analytics';
-        const GITHUB_PATH = 'data/Team_Review_Indv_XML';
-        const API_URL = `https://api.github.com/repos/${GITHUB_USER}/${GITHUB_REPO}/contents/${GITHUB_PATH}`;
-
+        const GITHUB_BRANCH = 'main';
+        const TEAM_XML_FOLDER = "data/Team_Review__Team_XML";
+        const INDV_XML_FOLDER = 'data/Team_Review_Indv_XML';
+        const API_URL_INDV = `https://api.github.com/repos/${GITHUB_USER}/${GITHUB_REPO}/contents/${INDV_XML_FOLDER}?ref=${GITHUB_BRANCH}`;
+        const API_URL_TEAM = `https://api.github.com/repos/${GITHUB_USER}/${GITHUB_REPO}/contents/${TEAM_XML_FOLDER}?ref=${GITHUB_BRANCH}`;
+        const GITHUB_RAW_URL_BASE = `https://raw.githubusercontent.com/${GITHUB_USER}/${GITHUB_REPO}/${GITHUB_BRANCH}/`;
 
         // --- DATA PROCESSING LOGIC ---
 
@@ -124,7 +121,7 @@
          */
         async function initializeApp() {
             try {
-                const response = await fetch(API_URL);
+                const response = await fetch(API_URL_INDV);
                 if (!response.ok) throw new Error(`GitHub API error: ${response.statusText}`);
                 const files = await response.json();
 
@@ -134,7 +131,7 @@
                     .filter(file => file.type === 'file' && file.name.endsWith('.xml'))
                     .forEach(file => {
                         const option = document.createElement('option');
-                        option.value = file.download_url;
+                        option.value = file.path; // Use path for easier matching later
                         option.textContent = file.name.replace(/_/g, ' ').replace('.xml', '').replace(' Indv', '');
                         option.dataset.fileName = file.name;
                         fileSelector.appendChild(option);
@@ -150,10 +147,10 @@
          */
         async function loadSelectedFile() {
             const selectedOption = fileSelector.options[fileSelector.selectedIndex];
-            const fileUrl = selectedOption.value;
+            const indvFilePath = selectedOption.value;
             const fileName = selectedOption.dataset.fileName;
 
-            if (!fileUrl) {
+            if (!indvFilePath) {
                 console.warn('Please select a file to load.');
                 return;
             }
@@ -162,25 +159,32 @@
             reportContent.classList.add('hidden');
 
             try {
-                const response = await fetch(fileUrl);
-                if (!response.ok) throw new Error(`Network response was not ok. Could not fetch file: ${fileUrl}`);
-                
-                // [FIX] Automatically detect and handle both UTF-8 and UTF-16LE file encodings.
-                const arrayBuffer = await response.arrayBuffer();
-                const uint8 = new Uint8Array(arrayBuffer);
-                let xmlText;
+                // Fetch and parse individual stats
+                const indvFileUrl = GITHUB_RAW_URL_BASE + indvFilePath;
+                const indvResponse = await fetch(indvFileUrl);
+                if (!indvResponse.ok) throw new Error(`Could not fetch individual file: ${indvFileUrl}`);
+                const indvBuffer = await indvResponse.arrayBuffer();
+                const indvXmlText = decodeXmlBuffer(indvBuffer);
+                playerData = parseAndAggregateXML(indvXmlText);
 
-                // Check for UTF-16LE Byte Order Mark (BOM)
-                if (uint8[0] === 0xFF && uint8[1] === 0xFE) {
-                    const decoder = new TextDecoder('utf-16le');
-                    xmlText = decoder.decode(arrayBuffer);
+                // Fetch and process team data for advanced stats
+                const teamFilePath = await findMatchingTeamFile(fileName);
+                if (teamFilePath) {
+                    const teamFileUrl = GITHUB_RAW_URL_BASE + teamFilePath;
+                    const teamResponse = await fetch(teamFileUrl);
+                    if (!teamResponse.ok) throw new Error(`Could not fetch team file: ${teamFileUrl}`);
+                    const teamBuffer = await teamResponse.arrayBuffer();
+                    const teamXmlText = decodeXmlBuffer(teamBuffer);
+                    
+                    // Run advanced analysis and merge results into playerData
+                    runAdvancedAnalysis(indvXmlText, teamXmlText);
                 } else {
-                    // Default to UTF-8 for all other cases (including files with no BOM)
-                    const decoder = new TextDecoder('utf-8');
-                    xmlText = decoder.decode(arrayBuffer);
+                    console.warn("No matching team file found. Advanced stats will not be calculated.");
                 }
+                
+                // Calculate Fantasy Points after all other stats are aggregated
+                calculateFantasyPoints();
 
-                playerData = parseAndAggregateXML(xmlText);
                 const matchDetails = parseFileName(fileName);
                 renderReport(matchDetails);
                 reportContent.classList.remove('hidden');
@@ -190,55 +194,63 @@
                 loadingIndicator.classList.add('hidden');
             }
         }
-
-        /**
-         * Parses the filename to extract match details like round, opposition, date, and result.
-         */
-        function parseFileName(fileName) {
-            const nameWithoutExt = fileName.replace('.xml', '');
-            const parts = nameWithoutExt.split('_');
-            
-            const round = parts[0].replace('RD', 'Round ');
-            const result = parts[parts.length - 2].toUpperCase();
-            const dateStr = parts[parts.length - 3];
-            const opposition = parts.slice(1, -3).join(' ');
-
-            let formattedDate = '';
-            if (dateStr && dateStr.length === 8) {
-                const day = dateStr.substring(0, 2);
-                const month = dateStr.substring(2, 4);
-                const year = dateStr.substring(4, 8);
-                const dateObj = new Date(`${year}-${month}-${day}T00:00:00`);
-                if (!isNaN(dateObj)) {
-                    formattedDate = dateObj.toLocaleDateString('en-AU', {
-                        day: 'numeric',
-                        month: 'long',
-                        year: 'numeric'
-                    });
-                }
+        
+        async function findMatchingTeamFile(individualFileName) {
+            const roundIdentifier = individualFileName.split('_')[0];
+            try {
+                const response = await fetch(API_URL_TEAM);
+                if (!response.ok) return null;
+                const teamFiles = await response.json();
+                const matchedFile = teamFiles.find(file => file.name.startsWith(roundIdentifier));
+                return matchedFile ? matchedFile.path : null;
+            } catch (error) {
+                console.error("Could not search for team files:", error);
+                return null;
             }
-            return { round, opposition, date: formattedDate, result };
         }
 
-        /**
-         * Parses XML, aggregates stats, calculates assists and other derived stats.
-         */
+        function decodeXmlBuffer(buffer) {
+            const uint8 = new Uint8Array(buffer);
+            if (uint8[0] === 0xFF && uint8[1] === 0xFE) return new TextDecoder('utf-16le').decode(buffer);
+            if (uint8[0] === 0xFE && uint8[1] === 0xFF) return new TextDecoder('utf-16be').decode(buffer);
+            return new TextDecoder('utf-8').decode(buffer);
+        }
+
+        function runAdvancedAnalysis(indvXmlText, teamXmlText) {
+            const teamData = parseAnalysisXml(teamXmlText);
+            const individualData = parseAnalysisXml(indvXmlText);
+            const mergedData = mergeStats(individualData, teamData);
+
+            const clearanceCounts = analyzeClearances(mergedData);
+            const ruckmanEffectiveness = analyzeRuckmen(mergedData);
+
+            // Merge new stats into the main playerData array
+            playerData.forEach(player => {
+                player['Clearances'] = clearanceCounts[player.Name] || 0;
+                const ruckmanStats = ruckmanEffectiveness[player.Name];
+                if (ruckmanStats && ruckmanStats.total > 0) {
+                    player['Hitout to Win %'] = ((ruckmanStats.wins / ruckmanStats.total) * 100).toFixed(1);
+                } else {
+                    player['Hitout to Win %'] = 'N/A';
+                }
+            });
+        }
+
         function parseAndAggregateXML(xmlText) {
             const parser = new DOMParser();
             const xmlDoc = parser.parseFromString(xmlText, "application/xml");
             const instances = Array.from(xmlDoc.getElementsByTagName('instance'));
 
             const statsByPlayer = {};
-            const allStatTypes = new Set(['Goal Assists', 'Score Assists']); // Pre-populate with new stats
+            const allStatTypes = new Set(['Goal Assists', 'Score Assists']);
             const eventLog = [];
 
-            // First pass: Aggregate basic stats and create an event log
             instances.forEach(instance => {
                 const codeNode = instance.querySelector('code');
                 const playerCode = codeNode ? codeNode.textContent : null;
-                const labelNodes = instance.querySelectorAll('label');
+                
                 let statType = null;
-
+                const labelNodes = instance.querySelectorAll('label');
                 for (const label of labelNodes) {
                     const group = label.querySelector('group');
                     if (group && group.textContent === 'Stat') {
@@ -259,26 +271,20 @@
                 }
             });
 
-            // Second pass: Calculate assists by analyzing the event log
             eventLog.forEach((event, i) => {
                 if (event.stat === 'Goal' || event.stat === 'Behind') {
                     const scorer = event.player;
-                    // Look backwards from the event before the score
                     for (let j = i - 1; j >= 0; j--) {
                         const prevEvent = eventLog[j];
-                        // Find the last possession (Kick or Handball)
                         if (prevEvent.stat === 'Kick' || prevEvent.stat === 'Handball') {
                             const potentialAssister = prevEvent.player;
-                            // A player cannot assist their own score
                             if (potentialAssister !== scorer) {
                                 statsByPlayer[potentialAssister]['Score Assists'] = (statsByPlayer[potentialAssister]['Score Assists'] || 0) + 1;
                                 if (event.stat === 'Goal') {
                                     statsByPlayer[potentialAssister]['Goal Assists'] = (statsByPlayer[potentialAssister]['Goal Assists'] || 0) + 1;
                                 }
-                                // Assist found, stop searching for this score
                                 break; 
                             }
-                            // If the scorer had the last possession, continue looking further back
                         }
                     }
                 }
@@ -292,16 +298,95 @@
                 return playerRecord;
             });
 
-            // Calculate Total Disposals for each player
             aggregatedData.forEach(player => {
-                const kicks = player['Kick'] || 0;
-                const handballs = player['Handball'] || 0;
-                player['Total Disposals'] = kicks + handballs;
+                player['Total Disposals'] = (player['Kick'] || 0) + (player['Handball'] || 0);
             });
             
             return aggregatedData;
         }
 
+        function calculateFantasyPoints() {
+            const fantasyPointsMap = {
+                'Kick': 3, 'Handball': 2, 'Mark': 3, 'Tackle': 4,
+                'Direct Turnover': -3, 'Hit Out': 1, 'Goal': 6, 'Behind': 1,
+                'Clearances': 2, 'Score Assists': 2, 'Inside 50': 2
+            };
+
+            playerData.forEach(player => {
+                let fantasyScore = 0;
+                for (const stat in fantasyPointsMap) {
+                    if (player[stat]) {
+                        fantasyScore += player[stat] * fantasyPointsMap[stat];
+                    }
+                }
+                player['Fantasy Points'] = fantasyScore;
+            });
+        }
+        
+        function parseAnalysisXml(xmlString) {
+            const parser = new DOMParser();
+            const xmlDoc = parser.parseFromString(xmlString, "application/xml");
+            if (xmlDoc.getElementsByTagName("parsererror").length > 0) throw new Error("Failed to parse XML for analysis.");
+            return Array.from(xmlDoc.getElementsByTagName('instance')).map(instance => {
+                const labels = Array.from(instance.querySelectorAll('label'));
+                let stat = '', quarter = '';
+                if (labels.length > 0) {
+                    const statLabel = labels.find(l => l.querySelector('group')?.textContent === 'Stat');
+                    const quarterLabel = labels.find(l => l.querySelector('group')?.textContent === 'Quarter');
+                    if (statLabel) stat = statLabel.querySelector('text')?.textContent || '';
+                    if (quarterLabel) quarter = quarterLabel.querySelector('text')?.textContent || '';
+                    else quarter = labels[0].querySelector('text')?.textContent || '';
+                }
+                return {
+                    start: parseFloat(instance.querySelector('start')?.textContent || 0),
+                    end: parseFloat(instance.querySelector('end')?.textContent || 0),
+                    code: instance.querySelector('code')?.textContent.replace(/[.,]/g, ' ').replace(/\s+/g, ' ').trim() || '',
+                    stat: stat,
+                };
+            });
+        }
+
+        function mergeStats(individualData, teamData) {
+            return teamData.map(teamEvent => ({
+                ...teamEvent,
+                playerActions: individualData.filter(playerAction =>
+                    playerAction.start >= teamEvent.start && playerAction.start <= teamEvent.end
+                )
+            }));
+        }
+        
+        function analyzeClearances(mergedData) {
+            const clearanceCounts = {};
+            const wonStoppages = mergedData.filter(event => event.code.includes('Stoppage Win'));
+            wonStoppages.forEach(event => {
+                const sortedActions = [...event.playerActions].sort((a, b) => a.start - b.start);
+                const firstAction = sortedActions.find(a => a.stat === 'Handball' || a.stat === 'Kick');
+                if (firstAction) {
+                    const playerName = firstAction.code;
+                    clearanceCounts[playerName] = (clearanceCounts[playerName] || 0) + 1;
+                }
+            });
+            return clearanceCounts;
+        }
+
+        function analyzeRuckmen(mergedData) {
+            const ruckmanStats = {};
+            const stoppages = mergedData.filter(event => event.code.includes('Stoppage'));
+            stoppages.forEach(event => {
+                const hitOutActions = event.playerActions.filter(a => a.stat === 'Hit Out');
+                const ruckmenInStoppage = [...new Set(hitOutActions.map(a => a.code))];
+                ruckmenInStoppage.forEach(playerName => {
+                    if (!ruckmanStats[playerName]) {
+                        ruckmanStats[playerName] = { wins: 0, losses: 0, neutrals: 0, total: 0 };
+                    }
+                    ruckmanStats[playerName].total++;
+                    if (event.code.includes('Win')) ruckmanStats[playerName].wins++;
+                    else if (event.code.includes('Loss')) ruckmanStats[playerName].losses++;
+                    else if (event.code.includes('Neutral')) ruckmanStats[playerName].neutrals++;
+                });
+            });
+            return ruckmanStats;
+        }
 
         // --- RENDERING LOGIC ---
 
@@ -386,7 +471,7 @@
                 return String(valA).localeCompare(String(valB)) * direction;
             });
             
-            const desiredOrder = ['Kick', 'Handball', 'Total Disposals', 'Mark', 'Tackle', 'Inside 50', 'Hit Out', 'Goal', 'Behind', 'Goal Assists', 'Score Assists', 'Direct Turnover'];
+            const desiredOrder = ['Kick', 'Handball', 'Total Disposals', 'Mark', 'Tackle', 'Clearances', 'Inside 50', 'Hit Out', 'Hitout to Win %', 'Goal', 'Behind', 'Goal Assists', 'Score Assists', 'Direct Turnover', 'Fantasy Points'];
             const availableHeaders = Object.keys(playerData[0]).filter(h => h !== 'Name');
             const sortedHeaders = desiredOrder.filter(h => availableHeaders.includes(h));
             const remainingHeaders = availableHeaders.filter(h => !desiredOrder.includes(h));
@@ -404,7 +489,7 @@
             playerData.forEach(player => {
                 tableHTML += `<tr class="border-b border-gray-700 hover:bg-gray-600/50">`;
                 headers.forEach(header => {
-                    const value = player[header] || 0; // Default to 0 if a stat is missing for a player
+                    const value = player[header] || 0;
                     const isPlayerName = header === 'Name';
 
                     let cellClass = '';
@@ -440,6 +525,34 @@
                     renderStatsTable();
                 });
             });
+        }
+         /**
+         * Parses the filename to extract match details like round, opposition, date, and result.
+         */
+        function parseFileName(fileName) {
+            const nameWithoutExt = fileName.replace('.xml', '');
+            const parts = nameWithoutExt.split('_');
+            
+            const round = parts[0].replace('RD', 'Round ');
+            const result = parts[parts.length - 2].toUpperCase();
+            const dateStr = parts[parts.length - 3];
+            const opposition = parts.slice(1, -3).join(' ');
+
+            let formattedDate = '';
+            if (dateStr && dateStr.length === 8) {
+                const day = dateStr.substring(0, 2);
+                const month = dateStr.substring(2, 4);
+                const year = dateStr.substring(4, 8);
+                const dateObj = new Date(`${year}-${month}-${day}T00:00:00`);
+                if (!isNaN(dateObj)) {
+                    formattedDate = dateObj.toLocaleDateString('en-AU', {
+                        day: 'numeric',
+                        month: 'long',
+                        year: 'numeric'
+                    });
+                }
+            }
+            return { round, opposition, date: formattedDate, result };
         }
 
         // --- INITIALIZATION ---
