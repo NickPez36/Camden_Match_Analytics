@@ -80,11 +80,11 @@
             background-color: #3b82f6; /* bg-blue-600 */
             color: white;
         }
-        .qxq-table { width: 100%; border-collapse: collapse; }
-        .qxq-table th, .qxq-table td { padding: 0.75rem; text-align: left; border-bottom: 1px solid #374151; }
-        .qxq-table th { background-color: #1f2937; font-weight: 600; color: #9ca3af; text-align: center; }
-        .qxq-table td { text-align: center; }
-        .qxq-table .stat-name-col { text-align: left; font-weight: 500; color: #d1d5db; }
+        .qxq-table, .stoppage-table { width: 100%; border-collapse: collapse; }
+        .qxq-table th, .qxq-table td, .stoppage-table th, .stoppage-table td { padding: 0.75rem; text-align: left; border-bottom: 1px solid #374151; }
+        .qxq-table th, .stoppage-table th { background-color: #1f2937; font-weight: 600; color: #9ca3af; text-align: center; }
+        .qxq-table td, .stoppage-table td { text-align: center; }
+        .qxq-table .stat-name-col, .stoppage-table .stat-name-col { text-align: left; font-weight: 500; color: #d1d5db; }
         .qxq-table .group-header td {
             background-color: #111827;
             color: white;
@@ -156,6 +156,48 @@
                 <section id="inside-50-analysis" class="card"></section>
                 <section id="key-stats-section" class="card"></section>
                 <section id="detailed-stats-section" class="grid grid-cols-1 lg:grid-cols-2 gap-8"></section>
+                
+                <!-- NEW: Stoppage Effectiveness (With Hit Out) -->
+                <section id="stoppage-effectiveness-with-hitout" class="card">
+                    <h2 class="text-2xl font-bold mb-4 text-center">Stoppage Effectiveness (With Hit Out)</h2>
+                    <div class="overflow-x-auto">
+                        <table class="stoppage-table">
+                            <thead>
+                                <tr>
+                                    <th>Stoppage Type</th>
+                                    <th>Win %</th>
+                                    <th>Neutral %</th>
+                                    <th>Loss %</th>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+                            <tbody id="stoppage-analysis-body">
+                                <!-- Data will be populated by script -->
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- NEW: Stoppage Effectiveness (No Hit Out) -->
+                <section id="stoppage-effectiveness-no-hitout" class="card">
+                     <h2 class="text-2xl font-bold mb-4 text-center">Stoppage Effectiveness (No Hit Out)</h2>
+                    <div class="overflow-x-auto">
+                        <table class="stoppage-table">
+                            <thead>
+                                <tr>
+                                    <th>Stoppage Type</th>
+                                    <th>Win %</th>
+                                    <th>Neutral %</th>
+                                    <th>Loss %</th>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+                            <tbody id="no-hit-out-analysis-body">
+                                <!-- Data will be populated by script -->
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
             </main>
 
             <!-- Quarter by Quarter View -->
@@ -176,9 +218,11 @@
             const GITHUB_USER = "NickPez36";
             const GITHUB_REPO = "Camden_Match_Analytics";
             const GITHUB_BRANCH = "main";
-            const XML_FOLDER_PATH = "data/Team_Review__Team_XML";
+            const TEAM_XML_FOLDER = "data/Team_Review__Team_XML";
+            const INDV_XML_FOLDER = "data/Team_Review_Indv_XML"; // New path for individual files
             
-            const GITHUB_API_URL = `https://api.github.com/repos/${GITHUB_USER}/${GITHUB_REPO}/contents/${XML_FOLDER_PATH}?ref=${GITHUB_BRANCH}`;
+            const GITHUB_API_URL_TEAM = `https://api.github.com/repos/${GITHUB_USER}/${GITHUB_REPO}/contents/${TEAM_XML_FOLDER}?ref=${GITHUB_BRANCH}`;
+            const GITHUB_API_URL_INDV = `https://api.github.com/repos/${GITHUB_USER}/${GITHUB_REPO}/contents/${INDV_XML_FOLDER}?ref=${GITHUB_BRANCH}`;
             const GITHUB_RAW_URL_BASE = `https://raw.githubusercontent.com/${GITHUB_USER}/${GITHUB_REPO}/${GITHUB_BRANCH}/`;
 
             // --- DOM REFERENCES ---
@@ -191,6 +235,8 @@
             const summaryToggle = document.getElementById('summary-toggle');
             const qxqToggle = document.getElementById('qxq-toggle');
             const viewToggleContainer = document.getElementById('view-toggle-container');
+            const stoppageAnalysisBody = document.getElementById('stoppage-analysis-body');
+            const noHitOutAnalysisBody = document.getElementById('no-hit-out-analysis-body');
             
             let stoppageCharts = {};
             let i50Chart = null;
@@ -202,20 +248,11 @@
                 fileSelector.addEventListener('change', (e) => loadAndProcessFile(e.target.value));
 
                 try {
-                    const response = await fetch(GITHUB_API_URL, { cache: 'no-cache' });
-                    if (!response.ok) {
-                        let errorDetails = `${response.status} ${response.statusText}`;
-                        try {
-                            const errorJson = await response.json();
-                            if (errorJson.message) errorDetails += ` - ${errorJson.message}`;
-                        } catch (e) { /* Ignore */ }
-                        throw new Error(`GitHub API error: ${errorDetails}`);
-                    }
+                    const response = await fetch(GITHUB_API_URL_TEAM, { cache: 'no-cache' });
+                    if (!response.ok) throw new Error(`GitHub API error: ${response.status} ${response.statusText}`);
                     const files = await response.json();
                     
-                    if (!Array.isArray(files)) {
-                         throw new Error("Received an invalid response from the GitHub API.");
-                    }
+                    if (!Array.isArray(files)) throw new Error("Invalid response from GitHub API.");
 
                     files
                         .filter(file => file.type === 'file' && file.name.endsWith('.xml'))
@@ -233,8 +270,8 @@
                 }
             }
             
-            async function loadAndProcessFile(filePath) {
-                if (!filePath) {
+            async function loadAndProcessFile(teamFilePath) {
+                if (!teamFilePath) {
                     initialMessage.classList.remove('hidden');
                     reportWrapper.classList.add('hidden');
                     return;
@@ -245,23 +282,19 @@
                 reportWrapper.classList.add('hidden');
                 
                 try {
-                    const fileUrl = GITHUB_RAW_URL_BASE + filePath;
-                    const response = await fetch(fileUrl);
-                    if (!response.ok) throw new Error(`Network response was not ok for ${filePath}`);
+                    const teamFileUrl = GITHUB_RAW_URL_BASE + teamFilePath;
+                    const teamResponse = await fetch(teamFileUrl);
+                    if (!teamResponse.ok) throw new Error(`Network response was not ok for ${teamFilePath}`);
                     
-                    const buffer = await response.arrayBuffer();
-                    const uint8 = new Uint8Array(buffer);
-                    let xmlText;
-                    if (uint8[0] === 0xFF && uint8[1] === 0xFE) {
-                        xmlText = new TextDecoder('utf-16le').decode(buffer);
-                    } else if (uint8[0] === 0xFE && uint8[1] === 0xFF) {
-                        xmlText = new TextDecoder('utf-16be').decode(buffer);
-                    } else {
-                        xmlText = new TextDecoder('utf-8').decode(buffer);
-                    }
-                    
-                    const matchDetails = parseFileName(filePath.split('/').pop());
-                    processXmlData(xmlText, matchDetails);
+                    // FIX: Use robust decoding for team file
+                    const teamBuffer = await teamResponse.arrayBuffer();
+                    const teamXmlText = decodeXmlBuffer(teamBuffer);
+
+                    const matchDetails = parseFileName(teamFilePath.split('/').pop());
+                    processXmlData(teamXmlText, matchDetails);
+
+                    // --- NEW: Stoppage Analysis Processing ---
+                    await runStoppageAnalysis(teamFilePath, teamXmlText);
 
                 } catch (error) {
                     console.error("Error loading or processing file:", error);
@@ -273,6 +306,141 @@
                     loadingIndicator.classList.add('hidden');
                 }
             }
+
+            // --- NEW: Stoppage Analysis Logic ---
+            async function runStoppageAnalysis(teamFilePath, teamXmlText) {
+                const teamFileName = teamFilePath.split('/').pop();
+                const roundIdentifier = teamFileName.split('_')[0];
+
+                const indvFilesResponse = await fetch(GITHUB_API_URL_INDV, { cache: 'no-cache' });
+                if (!indvFilesResponse.ok) throw new Error("Could not fetch individual files list.");
+                const indvFiles = await indvFilesResponse.json();
+
+                const matchedIndvFile = indvFiles.find(file => file.name.startsWith(roundIdentifier));
+                if (!matchedIndvFile) {
+                    console.warn(`No matching individual file found for ${roundIdentifier}`);
+                    document.getElementById('stoppage-effectiveness-with-hitout').style.display = 'none';
+                    document.getElementById('stoppage-effectiveness-no-hitout').style.display = 'none';
+                    return;
+                }
+                
+                const indvFileUrl = GITHUB_RAW_URL_BASE + matchedIndvFile.path;
+                const indvResponse = await fetch(indvFileUrl);
+                if (!indvResponse.ok) throw new Error(`Could not fetch ${matchedIndvFile.name}`);
+                
+                // FIX: Use robust decoding for individual file
+                const indvBuffer = await indvResponse.arrayBuffer();
+                const indvXmlText = decodeXmlBuffer(indvBuffer);
+
+                const teamData = parseAnalysisXml(teamXmlText);
+                const individualData = parseAnalysisXml(indvXmlText);
+
+                const mergedData = mergeStats(individualData, teamData);
+                const stoppageStatsWithHitOut = analyzeStoppages(mergedData, true);
+                const stoppageStatsNoHitOut = analyzeStoppages(mergedData, false);
+
+                document.getElementById('stoppage-effectiveness-with-hitout').style.display = 'block';
+                document.getElementById('stoppage-effectiveness-no-hitout').style.display = 'block';
+                renderStoppageAnalysisTable(stoppageStatsWithHitOut, stoppageAnalysisBody, "No stoppages with hit outs found.");
+                renderStoppageAnalysisTable(stoppageStatsNoHitOut, noHitOutAnalysisBody, "No stoppages without hit outs found.");
+            }
+            
+            // FIX: Reusable decoding function
+            function decodeXmlBuffer(buffer) {
+                const uint8 = new Uint8Array(buffer);
+                if (uint8[0] === 0xFF && uint8[1] === 0xFE) {
+                    return new TextDecoder('utf-16le').decode(buffer);
+                } else if (uint8[0] === 0xFE && uint8[1] === 0xFF) {
+                    return new TextDecoder('utf-16be').decode(buffer);
+                }
+                return new TextDecoder('utf-8').decode(buffer);
+            }
+
+            function parseAnalysisXml(xmlString) {
+                const parser = new DOMParser();
+                const xmlDoc = parser.parseFromString(xmlString, "application/xml");
+                if (xmlDoc.getElementsByTagName("parsererror").length > 0) {
+                    // Log the faulty string to help debug if needed
+                    console.error("Parser Error. Input string:", xmlString);
+                    throw new Error("Failed to parse XML for analysis.");
+                }
+                return Array.from(xmlDoc.getElementsByTagName('instance')).map(instance => {
+                    const labels = Array.from(instance.querySelectorAll('label'));
+                    let stat = '', quarter = '';
+                    if (labels.length > 0) {
+                        const statLabel = labels.find(l => l.querySelector('group')?.textContent === 'Stat');
+                        const quarterLabel = labels.find(l => l.querySelector('group')?.textContent === 'Quarter');
+                        if (statLabel) stat = statLabel.querySelector('text')?.textContent || '';
+                        if (quarterLabel) quarter = quarterLabel.querySelector('text')?.textContent || '';
+                        else quarter = labels[0].querySelector('text')?.textContent || '';
+                    }
+                    return {
+                        start: parseFloat(instance.querySelector('start')?.textContent || 0),
+                        end: parseFloat(instance.querySelector('end')?.textContent || 0),
+                        code: instance.querySelector('code')?.textContent || '',
+                        stat: stat,
+                        quarter: quarter
+                    };
+                });
+            }
+
+            function mergeStats(individualData, teamData) {
+                return teamData.map(teamEvent => ({
+                    ...teamEvent,
+                    playerActions: individualData.filter(playerAction =>
+                        playerAction.start >= teamEvent.start && playerAction.start <= teamEvent.end
+                    )
+                }));
+            }
+
+            function analyzeStoppages(mergedData, withHitOut) {
+                const stoppageStats = {};
+                const relevantStoppages = mergedData.filter(event => {
+                    const isStoppage = event.code.includes('Stoppage');
+                    const hasHitOut = event.playerActions.some(a => a.stat === 'Hit Out');
+                    return isStoppage && (withHitOut ? hasHitOut : !hasHitOut);
+                });
+
+                relevantStoppages.forEach(event => {
+                    const type = event.code.replace(/ (Win|Loss|Neutral)$/, '');
+                    if (!stoppageStats[type]) {
+                        stoppageStats[type] = { wins: 0, losses: 0, neutrals: 0, total: 0 };
+                    }
+                    stoppageStats[type].total++;
+                    if (event.code.includes('Win')) stoppageStats[type].wins++;
+                    else if (event.code.includes('Loss')) stoppageStats[type].losses++;
+                    else if (event.code.includes('Neutral')) stoppageStats[type].neutrals++;
+                });
+                return stoppageStats;
+            }
+            
+            function renderStoppageAnalysisTable(stoppageStats, targetBody, emptyMessage) {
+                targetBody.innerHTML = '';
+                const fragment = document.createDocumentFragment();
+                if (Object.keys(stoppageStats).length === 0) {
+                    targetBody.innerHTML = `<tr><td colspan="5" class="text-center py-4">${emptyMessage}</td></tr>`;
+                    return;
+                }
+                for (const type in stoppageStats) {
+                    const stats = stoppageStats[type];
+                    const row = document.createElement('tr');
+                    const winPct = stats.total > 0 ? ((stats.wins / stats.total) * 100).toFixed(1) : 0;
+                    const neutralPct = stats.total > 0 ? ((stats.neutrals / stats.total) * 100).toFixed(1) : 0;
+                    const lossPct = stats.total > 0 ? ((stats.losses / stats.total) * 100).toFixed(1) : 0;
+
+                    row.innerHTML = `
+                        <td class="stat-name-col">${type}</td>
+                        <td>${winPct}% (${stats.wins})</td>
+                        <td>${neutralPct}% (${stats.neutrals})</td>
+                        <td>${lossPct}% (${stats.losses})</td>
+                        <td>${stats.total}</td>
+                    `;
+                    fragment.appendChild(row);
+                }
+                targetBody.appendChild(fragment);
+            }
+            
+            // --- ORIGINAL REPORTING LOGIC (MODIFIED SLIGHTLY FOR COMPATIBILITY) ---
             
             function parseFileName(fileName) {
                 const nameWithoutExt = fileName.replace('.xml', '');
@@ -322,7 +490,6 @@
 
                     labelElements.forEach(label => {
                         const text = label.textContent.trim().toLowerCase();
-                        // UPDATED: Handle both "Quarter X" and "QX" formats
                         if (text.startsWith('quarter ')) {
                             quarter = text.replace('quarter ', 'q');
                         } else if (text.match(/^q[1-4]$/)) {
