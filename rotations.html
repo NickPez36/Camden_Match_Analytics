@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camden Cats - Rotations Analysis</title>
+    
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Custom styles to complement Tailwind */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .tooltip {
+            position: absolute;
+            background-color: #1f2937; /* bg-gray-800 */
+            color: white;
+            padding: 8px;
+            border-radius: 0.5rem; /* rounded-lg */
+            font-size: 0.875rem; /* text-sm */
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.2s;
+            z-index: 50;
+        }
+        .bar-segment:hover {
+            filter: brightness(1.2);
+        }
+        .tab-button {
+            transition: background-color 0.3s, color 0.3s;
+            padding: 0.5rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            color: #d1d5db; /* text-gray-300 */
+            background-color: #374151; /* bg-gray-700 */
+        }
+        .tab-button.active {
+            background-color: #3b82f6; /* bg-blue-600 */
+            color: #ffffff;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .loader {
+            border: 4px solid #374151;
+            border-top: 4px solid #3b82f6;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+
+    <!-- Header -->
+    <header class="bg-gray-800/50 backdrop-blur-sm shadow-md sticky top-0 z-20">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <a href="landing.html" class="flex items-center">
+                        <img src="assets/camden_cats_logo.jpg" alt="Camden Cats Logo" class="h-10 w-10 rounded-full object-cover" 
+                             onerror="this.onerror=null; this.src='https://placehold.co/40x40/1a202c/ffffff?text=Logo';">
+                        <span class="ml-3 font-semibold text-xl">Camden Cats Analytics</span>
+                    </a>
+                </div>
+                <div class="flex items-center space-x-4">
+                     <a href="landing.html" class="text-sm font-medium text-gray-400 hover:text-white transition-colors duration-200">Back to Dashboard</a>
+                    <button id="logout-button" class="text-sm font-medium text-gray-400 hover:text-white transition-colors duration-200">Logout</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="text-center">
+            <h1 class="text-4xl font-bold tracking-tight">AFL Player Rotations Dashboard</h1>
+            <p class="mt-3 max-w-2xl mx-auto text-lg text-gray-400">Visualizing player time on ground and on bench.</p>
+        </div>
+
+        <!-- File Loader -->
+        <div class="mt-8 max-w-2xl mx-auto bg-gray-800 shadow-lg rounded-xl p-6">
+             <h2 class="text-lg font-semibold text-white">Select Match File</h2>
+             <div class="mt-4">
+                <label for="match-select" class="sr-only">Match File</label>
+                <select id="match-select" class="w-full bg-gray-700 border border-gray-600 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-3"></select>
+             </div>
+        </div>
+
+        <!-- Tabs Navigation -->
+        <div id="tabs-container" class="hidden mt-8 mb-8 flex justify-center">
+            <div class="grid grid-cols-2 bg-gray-800 rounded-lg p-1 gap-1 max-w-xs mx-auto">
+                <button id="tab-summary-btn" class="tab-button w-full">Match Summary</button>
+                <button id="tab-qxq-btn" class="tab-button w-full">Quarter by Quarter</button>
+            </div>
+        </div>
+        
+        <div id="qxq-player-selector" class="hidden max-w-md mx-auto mb-8 bg-gray-800 rounded-xl p-6">
+             <label for="player-select" class="block text-sm font-medium text-gray-300 mb-2">Select a Player:</label>
+             <select id="player-select" class="w-full bg-gray-700 border border-gray-600 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-3">
+                 <option value="">-- Select a player --</option>
+             </select>
+        </div>
+
+        <div id="loading-spinner" class="hidden text-center mt-10">
+            <div class="flex flex-col items-center justify-center">
+                <div class="loader"></div>
+                <p class="text-gray-400 mt-4">Loading and Analyzing Match Data...</p>
+            </div>
+        </div>
+        
+        <div id="initial-message" class="text-center py-16 mt-8 bg-gray-800 rounded-xl">
+            <h3 class="mt-2 text-lg font-medium text-white">No file selected</h3>
+            <p class="mt-1 text-sm text-gray-400">Your report will appear here once you select a file.</p>
+        </div>
+
+        <!-- Match Summary Tab Content -->
+        <main id="match-summary-content" class="tab-content"></main>
+
+        <!-- Quarter by Quarter Tab Content -->
+        <main id="qxq-content" class="tab-content">
+            <div id="qxq-dashboard" class="mt-6"></div>
+        </main>
+    </main>
+
+    <div id="tooltip" class="tooltip"></div>
+
+    <script>
+        // --- AUTHENTICATION CHECK ---
+        if (sessionStorage.getItem('isLoggedIn') !== 'true') {
+            window.location.href = 'index.html';
+        }
+        document.getElementById('logout-button').addEventListener('click', function() {
+            sessionStorage.removeItem('isLoggedIn');
+            window.location.href = 'index.html';
+        });
+
+        const GITHUB_USERNAME = 'NickPez36';
+        const GITHUB_REPO = 'Camden_Match_Analytics';
+        const GITHUB_FOLDER_PATH = 'data/Team_Review_Rotations_XML';
+
+        // --- DOM Elements ---
+        const matchSelect = document.getElementById('match-select');
+        const playerSelect = document.getElementById('player-select');
+        const qxqPlayerSelector = document.getElementById('qxq-player-selector');
+        const summaryDashboard = document.getElementById('match-summary-content');
+        const qxqDashboard = document.getElementById('qxq-dashboard');
+        const tooltip = document.getElementById('tooltip');
+        const loadingSpinner = document.getElementById('loading-spinner');
+        const tabsContainer = document.getElementById('tabs-container');
+        const tabSummaryBtn = document.getElementById('tab-summary-btn');
+        const tabQxqBtn = document.getElementById('tab-qxq-btn');
+        const summaryContent = document.getElementById('match-summary-content');
+        const qxqContent = document.getElementById('qxq-content');
+        const initialMessage = document.getElementById('initial-message');
+
+        let currentAnalysisData = null;
+
+        // --- Data Fetching and Parsing ---
+        async function fetchMatchFiles() {
+            const url = `https://api.github.com/repos/${GITHUB_USERNAME}/${GITHUB_REPO}/contents/${GITHUB_FOLDER_PATH}`;
+            try {
+                const response = await fetch(url);
+                if (!response.ok) throw new Error(`GitHub API error: ${response.status}`);
+                const data = await response.json();
+                const xmlFiles = data.filter(file => file.name.endsWith('.xml'));
+                
+                matchSelect.innerHTML = '<option value="">-- Select a match --</option>';
+                xmlFiles.forEach(file => {
+                    const option = document.createElement('option');
+                    option.value = file.download_url;
+                    option.textContent = file.name.replace('.xml', '').replace(/_/g, ' ');
+                    matchSelect.appendChild(option);
+                });
+            } catch (error) {
+                console.error('Failed to fetch match files:', error);
+                matchSelect.innerHTML = '<option>Error loading files</option>';
+            }
+        }
+
+        async function fetchAndParseXML(url) {
+            try {
+                const response = await fetch(url);
+                if (!response.ok) throw new Error(`Failed to fetch XML file: ${response.status}`);
+                const xmlText = await response.text();
+                return new DOMParser().parseFromString(xmlText, "application/xml");
+            } catch (error) {
+                console.error('Error fetching or parsing XML:', error);
+                return null;
+            }
+        }
+
+        // --- Data Processing ---
+        function analyzeRotations(xmlDoc) {
+            if (!xmlDoc) return {};
+
+            const zoneMap = { 'Wing': 'Lock Down', 'Deep Forward': 'Forward', 'High Forward': 'Set Up', 'Mid Forward': 'Engine' };
+            const instances = Array.from(xmlDoc.getElementsByTagName('instance'));
+            const playerData = {};
+            let totalGameTime = 0;
+
+            instances.forEach(instance => {
+                const end = parseFloat(instance.getElementsByTagName('end')[0].textContent);
+                if (end > totalGameTime) totalGameTime = end;
+
+                const code = instance.getElementsByTagName('code')[0].textContent;
+                const playerNameMatch = code.match(/\d+\s(.+?)\s\(Rotations\)/);
+                if (playerNameMatch && !playerData[playerNameMatch[1]]) {
+                    playerData[playerNameMatch[1]] = {
+                        instances: [], zones: {}, onGroundTime: 0, benchTime: 0,
+                        quarters: {
+                            Q1: { onGround: 0, bench: 0 }, Q2: { onGround: 0, bench: 0 },
+                            Q3: { onGround: 0, bench: 0 }, Q4: { onGround: 0, bench: 0 }
+                        }
+                    };
+                }
+            });
+
+            if (totalGameTime === 0) return {};
+            const quarterLength = totalGameTime / 4;
+            const quarterBoundaries = [0, quarterLength, quarterLength * 2, quarterLength * 3, totalGameTime];
+
+            instances.forEach(instance => {
+                const start = parseFloat(instance.getElementsByTagName('start')[0].textContent);
+                const end = parseFloat(instance.getElementsByTagName('end')[0].textContent);
+                const code = instance.getElementsByTagName('code')[0].textContent;
+                const originalZone = instance.getElementsByTagName('text')[0].textContent;
+                const mappedZone = zoneMap[originalZone] || originalZone;
+                const duration = end - start;
+                
+                const playerNameMatch = code.match(/\d+\s(.+?)\s\(Rotations\)/);
+                if (!playerNameMatch) return;
+                const playerName = playerNameMatch[1];
+                const player = playerData[playerName];
+
+                player.instances.push({ start, end, zone: mappedZone, duration });
+
+                if (mappedZone.toLowerCase() === 'bench') player.benchTime += duration;
+                else {
+                    player.onGroundTime += duration;
+                    player.zones[mappedZone] = (player.zones[mappedZone] || 0) + duration;
+                }
+
+                for (let i = 0; i < 4; i++) {
+                    const overlapStart = Math.max(start, quarterBoundaries[i]);
+                    const overlapEnd = Math.min(end, quarterBoundaries[i + 1]);
+                    if (overlapEnd > overlapStart) {
+                        const overlapDuration = overlapEnd - overlapStart;
+                        const quarterKey = `Q${i + 1}`;
+                        if (mappedZone.toLowerCase() === 'bench') player.quarters[quarterKey].bench += overlapDuration;
+                        else player.quarters[quarterKey].onGround += overlapDuration;
+                    }
+                }
+            });
+
+            const groupedPlayers = {};
+            for (const playerName in playerData) {
+                const player = playerData[playerName];
+                player.instances.sort((a, b) => a.start - b.start);
+
+                let rotationCount = 0;
+                let onGroundStints = [], benchStints = [];
+                
+                player.instances.forEach(inst => {
+                    const isBench = inst.zone.toLowerCase() === 'bench';
+                    if (isBench) {
+                        benchStints.push(inst.duration);
+                        if (player.instances.find(p => p.start === inst.end && p.zone.toLowerCase() !== 'bench')) {
+                            rotationCount++;
+                        }
+                    } else {
+                        onGroundStints.push(inst.duration);
+                    }
+                });
+
+                player.rotationCount = rotationCount;
+                player.avgOnGround = onGroundStints.length > 0 ? player.onGroundTime / onGroundStints.length : 0;
+                player.avgBench = benchStints.length > 0 ? player.benchTime / benchStints.length : 0;
+
+                let primaryZone = 'Unknown', maxTimeInZone = 0;
+                for (const zone in player.zones) {
+                    if (player.zones[zone] > maxTimeInZone) {
+                        maxTimeInZone = player.zones[zone];
+                        primaryZone = zone;
+                    }
+                }
+                
+                if (!groupedPlayers[primaryZone]) groupedPlayers[primaryZone] = [];
+                groupedPlayers[primaryZone].push({ name: playerName, ...player });
+            }
+
+            for (const group in groupedPlayers) groupedPlayers[group].sort((a, b) => a.name.localeCompare(b.name));
+            return { groupedPlayers, totalGameTime, players: playerData };
+        }
+        
+        // --- UI Rendering ---
+        function renderSummaryDashboard(analysis) {
+            summaryDashboard.innerHTML = '';
+            const { groupedPlayers, totalGameTime } = analysis;
+            if (!groupedPlayers || Object.keys(groupedPlayers).length === 0) return;
+
+            const zoneColors = { 'Engine': 'bg-blue-500', 'Set Up': 'bg-green-500', 'Forward': 'bg-red-500', 'Lock Down': 'bg-yellow-500' };
+            const groupOrder = ['Engine', 'Set Up', 'Forward', 'Lock Down', 'Unknown'];
+
+            groupOrder.forEach(groupName => {
+                if (!groupedPlayers[groupName]) return;
+
+                const groupContainer = document.createElement('div');
+                groupContainer.className = 'mb-8';
+                groupContainer.innerHTML = `<h2 class="text-2xl font-bold text-white border-b-2 border-gray-700 pb-2 mb-6">${groupName}</h2>`;
+                
+                const playersGrid = document.createElement('div');
+                playersGrid.className = 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6';
+                
+                groupedPlayers[groupName].forEach(player => {
+                    const onGroundPercent = (player.onGroundTime / totalGameTime) * 100;
+                    const benchPercent = (player.benchTime / totalGameTime) * 100;
+
+                    let onGroundBarHTML = '';
+                    for (const zone in player.zones) {
+                        const zonePercentOfTotal = (player.zones[zone] / totalGameTime) * 100;
+                        onGroundBarHTML += `<div class="bar-segment ${zoneColors[zone] || 'bg-purple-500'}" style="width: ${zonePercentOfTotal}%" data-tooltip-text="${zone}: ${formatTime(player.zones[zone])}"></div>`;
+                    }
+
+                    playersGrid.innerHTML += `
+                        <div class="bg-gray-800 p-4 rounded-xl shadow-lg">
+                            <h3 class="font-bold text-lg text-white">${player.name}</h3>
+                            <div class="mt-4">
+                                <div class="text-sm mb-1 flex justify-between text-gray-400">
+                                    <span>On Ground: ${formatTime(player.onGroundTime)} (${onGroundPercent.toFixed(1)}%)</span>
+                                    <span>Bench: ${formatTime(player.benchTime)} (${benchPercent.toFixed(1)}%)</span>
+                                </div>
+                                <div class="w-full bg-gray-700 rounded-full h-6 flex overflow-hidden">
+                                    ${onGroundBarHTML}
+                                    <div class="bar-segment bg-gray-500" style="width: ${benchPercent}%" data-tooltip-text="Bench: ${formatTime(player.benchTime)}"></div>
+                                </div>
+                            </div>
+                        </div>`;
+                });
+                groupContainer.appendChild(playersGrid);
+                summaryDashboard.appendChild(groupContainer);
+            });
+        }
+
+        function createDonutChart(onGround, bench, title) {
+            const total = onGround + bench;
+            if (total === 0) return ''; // Avoid division by zero
+
+            const onGroundPercent = (onGround / total) * 100;
+            const radius = 50;
+            const circumference = 2 * Math.PI * radius;
+            const onGroundOffset = circumference - (onGroundPercent / 100) * circumference;
+
+            return `
+                <div class="text-center bg-gray-800 p-4 rounded-xl">
+                    <h4 class="font-bold text-lg mb-2">${title}</h4>
+                    <div class="relative inline-block">
+                        <svg width="140" height="140" viewBox="0 0 120 120">
+                            <circle class="text-gray-700" stroke-width="12" stroke="currentColor" fill="transparent" r="${radius}" cx="60" cy="60"/>
+                            <circle class="text-green-500" stroke-width="12" stroke-dasharray="${circumference}" stroke-dashoffset="${onGroundOffset}"
+                                stroke-linecap="round" stroke="currentColor" fill="transparent" r="${radius}" cx="60" cy="60" transform="rotate(-90 60 60)"/>
+                            <text x="50%" y="50%" text-anchor="middle" dy=".3em" class="text-xl font-bold fill-current text-white">${onGroundPercent.toFixed(0)}%</text>
+                        </svg>
+                    </div>
+                    <div class="mt-2 text-sm">
+                        <p><span class="font-semibold text-green-400">On Ground:</span> ${formatTime(onGround)}</p>
+                        <p><span class="font-semibold text-gray-400">On Bench:</span> ${formatTime(bench)}</p>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderQxqDashboard(playerData) {
+            if (!playerData) {
+                qxqDashboard.innerHTML = '';
+                return;
+            }
+
+            const statTiles = `
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
+                    <div class="bg-gray-800 p-4 rounded-xl text-center shadow-lg">
+                        <p class="text-sm text-gray-400">Rotations</p>
+                        <p class="text-3xl font-bold text-white">${playerData.rotationCount}</p>
+                    </div>
+                    <div class="bg-gray-800 p-4 rounded-xl text-center shadow-lg">
+                        <p class="text-sm text-gray-400">Avg. Time On Ground</p>
+                        <p class="text-3xl font-bold text-white">${formatTime(playerData.avgOnGround)}</p>
+                    </div>
+                    <div class="bg-gray-800 p-4 rounded-xl text-center shadow-lg">
+                        <p class="text-sm text-gray-400">Avg. Time On Bench</p>
+                        <p class="text-3xl font-bold text-white">${formatTime(playerData.avgBench)}</p>
+                    </div>
+                </div>
+            `;
+
+            const quarterCharts = `
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+                    ${Object.entries(playerData.quarters).map(([q, data]) => createDonutChart(data.onGround, data.bench, q)).join('')}
+                </div>
+            `;
+
+            qxqDashboard.innerHTML = statTiles + quarterCharts;
+        }
+
+        function populatePlayerSelect(players) {
+            playerSelect.innerHTML = '<option value="">-- Select a player --</option>';
+            Object.keys(players).sort().forEach(playerName => {
+                const option = document.createElement('option');
+                option.value = playerName;
+                option.textContent = playerName;
+                playerSelect.appendChild(option);
+            });
+        }
+        
+        function formatTime(seconds) {
+            if (seconds === 0) return '0m 0s';
+            const minutes = Math.floor(seconds / 60);
+            const remainingSeconds = Math.round(seconds % 60);
+            return `${minutes}m ${remainingSeconds}s`;
+        }
+
+        // --- Event Listeners ---
+        matchSelect.addEventListener('change', async (e) => {
+            const url = e.target.value;
+            summaryDashboard.innerHTML = '';
+            qxqDashboard.innerHTML = '';
+            tabsContainer.classList.add('hidden');
+            qxqPlayerSelector.classList.add('hidden');
+            initialMessage.classList.add('hidden');
+
+            if (!url) {
+                currentAnalysisData = null;
+                initialMessage.classList.remove('hidden');
+                return;
+            }
+            loadingSpinner.classList.remove('hidden');
+
+            const xmlDoc = await fetchAndParseXML(url);
+            currentAnalysisData = analyzeRotations(xmlDoc);
+            
+            renderSummaryDashboard(currentAnalysisData);
+            populatePlayerSelect(currentAnalysisData.players);
+            
+            loadingSpinner.classList.add('hidden');
+            tabsContainer.classList.remove('hidden');
+            switchTab('summary'); // Default to summary view
+        });
+
+        playerSelect.addEventListener('change', (e) => {
+            const selectedPlayer = e.target.value;
+            if (selectedPlayer && currentAnalysisData && currentAnalysisData.players[selectedPlayer]) {
+                renderQxqDashboard(currentAnalysisData.players[selectedPlayer]);
+            } else {
+                qxqDashboard.innerHTML = '';
+            }
+        });
+
+        function switchTab(activeTab) {
+            if (activeTab === 'summary') {
+                tabSummaryBtn.classList.add('active');
+                tabQxqBtn.classList.remove('active');
+                summaryContent.classList.add('active');
+                qxqContent.classList.remove('active');
+                qxqPlayerSelector.classList.add('hidden');
+            } else {
+                tabQxqBtn.classList.add('active');
+                tabSummaryBtn.classList.remove('active');
+                qxqContent.classList.add('active');
+                summaryContent.classList.remove('active');
+                if (currentAnalysisData) {
+                    qxqPlayerSelector.classList.remove('hidden');
+                }
+            }
+        }
+
+        tabSummaryBtn.addEventListener('click', () => switchTab('summary'));
+        tabQxqBtn.addEventListener('click', () => switchTab('qxq'));
+
+        document.addEventListener('mousemove', (e) => {
+            if (tooltip.style.opacity === '1') {
+                tooltip.style.left = `${e.pageX + 10}px`;
+                tooltip.style.top = `${e.pageY + 10}px`;
+            }
+        });
+        document.addEventListener('mouseover', e => { if (e.target.classList.contains('bar-segment')) { tooltip.textContent = e.target.dataset.tooltipText; tooltip.style.opacity = '1'; } });
+        document.addEventListener('mouseout', e => { if (e.target.classList.contains('bar-segment')) { tooltip.style.opacity = '0'; } });
+
+        // --- Initial Load ---
+        fetchMatchFiles();
+    </script>
+</body>
+</html>
