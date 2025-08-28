@@ -219,7 +219,7 @@
             const GITHUB_REPO = "Camden_Match_Analytics";
             const GITHUB_BRANCH = "main";
             const TEAM_XML_FOLDER = "data/Team_Review__Team_XML";
-            const INDV_XML_FOLDER = "data/Team_Review_Indv_XML"; // New path for individual files
+            const INDV_XML_FOLDER = "data/Team_Review_Indv_XML";
             
             const GITHUB_API_URL_TEAM = `https://api.github.com/repos/${GITHUB_USER}/${GITHUB_REPO}/contents/${TEAM_XML_FOLDER}?ref=${GITHUB_BRANCH}`;
             const GITHUB_API_URL_INDV = `https://api.github.com/repos/${GITHUB_USER}/${GITHUB_REPO}/contents/${INDV_XML_FOLDER}?ref=${GITHUB_BRANCH}`;
@@ -281,19 +281,22 @@
                 initialMessage.classList.add('hidden');
                 reportWrapper.classList.add('hidden');
                 
+                // [FIX] Proactively hide the analysis tables before loading new data
+                document.getElementById('stoppage-effectiveness-with-hitout').style.display = 'none';
+                document.getElementById('stoppage-effectiveness-no-hitout').style.display = 'none';
+
                 try {
                     const teamFileUrl = GITHUB_RAW_URL_BASE + teamFilePath;
                     const teamResponse = await fetch(teamFileUrl);
                     if (!teamResponse.ok) throw new Error(`Network response was not ok for ${teamFilePath}`);
                     
-                    // FIX: Use robust decoding for team file
                     const teamBuffer = await teamResponse.arrayBuffer();
                     const teamXmlText = decodeXmlBuffer(teamBuffer);
 
                     const matchDetails = parseFileName(teamFilePath.split('/').pop());
                     processXmlData(teamXmlText, matchDetails);
 
-                    // --- NEW: Stoppage Analysis Processing ---
+                    // Stoppage Analysis Processing
                     await runStoppageAnalysis(teamFilePath, teamXmlText);
 
                 } catch (error) {
@@ -307,20 +310,22 @@
                 }
             }
 
-            // --- NEW: Stoppage Analysis Logic ---
+            // --- Stoppage Analysis Logic ---
             async function runStoppageAnalysis(teamFilePath, teamXmlText) {
                 const teamFileName = teamFilePath.split('/').pop();
-                const roundIdentifier = teamFileName.split('_')[0];
+                
+                // [FIX] Create a more specific identifier for matching
+                const teamFileParts = teamFileName.replace('_TeamStatistics.xml', '').split('_');
+                const matchIdentifier = teamFileParts.slice(0, 3).join('_'); // e.g., "RD1_Parramatta Goannas_29032025"
 
                 const indvFilesResponse = await fetch(GITHUB_API_URL_INDV, { cache: 'no-cache' });
                 if (!indvFilesResponse.ok) throw new Error("Could not fetch individual files list.");
                 const indvFiles = await indvFilesResponse.json();
 
-                const matchedIndvFile = indvFiles.find(file => file.name.startsWith(roundIdentifier));
+                const matchedIndvFile = indvFiles.find(file => file.name.startsWith(matchIdentifier));
+
                 if (!matchedIndvFile) {
-                    console.warn(`No matching individual file found for ${roundIdentifier}`);
-                    document.getElementById('stoppage-effectiveness-with-hitout').style.display = 'none';
-                    document.getElementById('stoppage-effectiveness-no-hitout').style.display = 'none';
+                    console.warn(`No matching individual file found for ${matchIdentifier}. Stoppage analysis will be skipped.`);
                     return;
                 }
                 
@@ -328,7 +333,6 @@
                 const indvResponse = await fetch(indvFileUrl);
                 if (!indvResponse.ok) throw new Error(`Could not fetch ${matchedIndvFile.name}`);
                 
-                // FIX: Use robust decoding for individual file
                 const indvBuffer = await indvResponse.arrayBuffer();
                 const indvXmlText = decodeXmlBuffer(indvBuffer);
 
@@ -339,13 +343,13 @@
                 const stoppageStatsWithHitOut = analyzeStoppages(mergedData, true);
                 const stoppageStatsNoHitOut = analyzeStoppages(mergedData, false);
 
+                // Make tables visible before rendering
                 document.getElementById('stoppage-effectiveness-with-hitout').style.display = 'block';
                 document.getElementById('stoppage-effectiveness-no-hitout').style.display = 'block';
                 renderStoppageAnalysisTable(stoppageStatsWithHitOut, stoppageAnalysisBody, "No stoppages with hit outs found.");
                 renderStoppageAnalysisTable(stoppageStatsNoHitOut, noHitOutAnalysisBody, "No stoppages without hit outs found.");
             }
             
-            // FIX: Reusable decoding function
             function decodeXmlBuffer(buffer) {
                 const uint8 = new Uint8Array(buffer);
                 if (uint8[0] === 0xFF && uint8[1] === 0xFE) {
@@ -360,7 +364,6 @@
                 const parser = new DOMParser();
                 const xmlDoc = parser.parseFromString(xmlString, "application/xml");
                 if (xmlDoc.getElementsByTagName("parsererror").length > 0) {
-                    // Log the faulty string to help debug if needed
                     console.error("Parser Error. Input string:", xmlString);
                     throw new Error("Failed to parse XML for analysis.");
                 }
@@ -440,7 +443,7 @@
                 targetBody.appendChild(fragment);
             }
             
-            // --- ORIGINAL REPORTING LOGIC (MODIFIED SLIGHTLY FOR COMPATIBILITY) ---
+            // --- ORIGINAL REPORTING LOGIC ---
             
             function parseFileName(fileName) {
                 const nameWithoutExt = fileName.replace('.xml', '');
