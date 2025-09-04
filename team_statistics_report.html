@@ -333,9 +333,7 @@
                 const matchedIndvFile = indvFiles.find(file => file.name.startsWith(matchIdentifier));
                 
                 renderScoreWormChart(scoreWormData);
-
-                // --- DATA SOURCE FIX ---
-                // Momentum chart ALWAYS uses the 'allEvents' from the main team file.
+                
                 momentumChartDataStore.independent = calculateMomentumData(allEvents, scoreWormData.quarterTimings, false);
                 momentumChartDataStore.cumulative = calculateMomentumData(allEvents, scoreWormData.quarterTimings, true);
                 momentumChartDataStore.boundaries = scoreWormData.quarterBoundaries;
@@ -343,7 +341,6 @@
                 renderMomentumChart(momentumChartDataStore.independent, momentumChartDataStore.boundaries);
                 updateMomentumDescription(false);
 
-                // Stoppage analysis REQUIRES the merged data if available.
                 if (matchedIndvFile) {
                     console.log(`Matching individual file found: ${matchedIndvFile.name}`);
                     const indvFileUrl = GITHUB_RAW_URL_BASE + matchedIndvFile.path;
@@ -352,18 +349,20 @@
                     
                     const indvBuffer = await indvResponse.arrayBuffer();
                     const indvXmlText = decodeXmlBuffer(indvBuffer);
-                    const individualData = parseAnalysisXml(indvXmlText);
-                    const teamDataForStoppage = parseAnalysisXml(teamXmlText); 
-                    const mergedData = mergeStats(individualData, teamDataForStoppage);
                     
-                    const stoppageStatsWithHitOut = analyzeStoppages(mergedData, true);
-                    const stoppageStatsNoHitOut = analyzeStoppages(mergedData, false);
+                    const individualData = parseAnalysisXmlWithStat(indvXmlText);
+                    const teamDataForStoppage = parseAnalysisXmlWithStat(teamXmlText); 
+                    const mergedStoppageData = mergeStatsForStoppages(individualData, teamDataForStoppage);
+                    
+                    const stoppageStatsWithHitOut = analyzeStoppages(mergedStoppageData, true);
+                    const stoppageStatsNoHitOut = analyzeStoppages(mergedStoppageData, false);
+
                     document.getElementById('stoppage-effectiveness-with-hitout').style.display = 'block';
                     document.getElementById('stoppage-effectiveness-no-hitout').style.display = 'block';
                     renderStoppageAnalysisTable(stoppageStatsWithHitOut, stoppageAnalysisBody, "No stoppages with hit outs found.");
                     renderStoppageAnalysisTable(stoppageStatsNoHitOut, noHitOutAnalysisBody, "No stoppages without hit outs found.");
                 } else {
-                    console.warn(`No matching individual file found for ${matchIdentifier}. Stoppage/Momentum analysis will be limited.`);
+                    console.warn(`No matching individual file found for ${matchIdentifier}. Stoppage analysis will be skipped.`);
                 }
             }
             
@@ -374,53 +373,62 @@
                 return new TextDecoder('utf-8').decode(buffer);
             }
 
-            function parseAnalysisXml(xmlString) {
-                // This function is for parsing timeline data for stoppages/momentum
+            function parseAnalysisXmlWithStat(xmlString) {
                 const parser = new DOMParser();
                 const xmlDoc = parser.parseFromString(xmlString, "application/xml");
-                if (xmlDoc.getElementsByTagName("parsererror").length > 0) throw new Error("Failed to parse XML for analysis.");
+                if (xmlDoc.getElementsByTagName("parsererror").length > 0) throw new Error("Failed to parse XML for stoppage analysis.");
                 
                 return Array.from(xmlDoc.getElementsByTagName('instance')).map(instance => {
                     const codeElement = instance.querySelector('code');
                     const startElement = instance.querySelector('start');
-                    if (!codeElement || !startElement) return null;
+                    const endElement = instance.querySelector('end');
+                    if (!codeElement || !startElement || !endElement) return null;
 
+                    const labels = Array.from(instance.querySelectorAll('label'));
+                    let statNameFromLabel = '';
+                     if (labels.length > 0) {
+                        const statLabel = labels.find(l => l.querySelector('group')?.textContent === 'Stat');
+                        if (statLabel) {
+                             statNameFromLabel = statLabel.querySelector('text')?.textContent.trim() || '';
+                        }
+                    }
+                    
                     return {
                         start: parseFloat(startElement.textContent),
+                        end: parseFloat(endElement.textContent),
                         code: codeElement.textContent.trim(),
-                        // Add other necessary fields if needed for merging
+                        stat: statNameFromLabel
                     };
                 }).filter(Boolean);
             }
+            
+            function mergeStatsForStoppages(individualData, teamData) {
+                const teamStoppages = teamData.filter(e => e.code.includes('Stoppage'));
+                const individualHitouts = individualData.filter(e => e.stat === 'Hit Out');
 
-            function mergeStats(individualData, teamData) {
-                // Simplified merge, now only for stoppage analysis
-                return [...individualData, ...teamData];
+                return teamStoppages.map(stoppage => {
+                    const hasHitOut = individualHitouts.some(hitout => 
+                        hitout.start >= stoppage.start && hitout.start <= stoppage.end
+                    );
+                    return { ...stoppage, hasHitOut };
+                });
             }
 
-            function analyzeStoppages(mergedData, withHitOut) {
+            function analyzeStoppages(mergedStoppageData, withHitOut) {
                 const stoppageStats = {};
-                 const relevantStoppages = mergedData.filter(event => {
-                    const isStoppage = event.code.includes('Stoppage');
-                    const hasHitOut = event.code === 'Hit Out'; // Check if the event itself is a hitout
-                    return isStoppage || hasHitOut;
-                });
-
-                // This logic needs to be more robust, associating hitouts with stoppages
-                // For now, let's just count them to restore functionality
-                relevantStoppages.forEach(event => {
-                    if (event.code.includes('Stoppage')) {
-                        const type = event.code.replace(/ (Win|Loss|Neutral)$/, '');
-                        if (!stoppageStats[type]) {
-                            stoppageStats[type] = { wins: 0, losses: 0, neutrals: 0, total: 0, hitouts: 0 };
-                        }
-                        stoppageStats[type].total++;
-                        if (event.code.includes('Win')) stoppageStats[type].wins++;
-                        else if (event.code.includes('Loss')) stoppageStats[type].losses++;
-                        else if (event.code.includes('Neutral')) stoppageStats[type].neutrals++;
-                    }
-                });
                 
+                const relevantStoppages = mergedStoppageData.filter(event => event.hasHitOut === withHitOut);
+
+                relevantStoppages.forEach(event => {
+                    const type = event.code.replace(/ (Win|Loss|Neutral)$/, '');
+                    if (!stoppageStats[type]) {
+                        stoppageStats[type] = { wins: 0, losses: 0, neutrals: 0, total: 0 };
+                    }
+                    stoppageStats[type].total++;
+                    if (event.code.includes('Win')) stoppageStats[type].wins++;
+                    else if (event.code.includes('Loss')) stoppageStats[type].losses++;
+                    else if (event.code.includes('Neutral')) stoppageStats[type].neutrals++;
+                });
                 return stoppageStats;
             }
             
