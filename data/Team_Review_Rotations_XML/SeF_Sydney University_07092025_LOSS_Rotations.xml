@@ -1,0 +1,2304 @@
+﻿<file>
+<ALL_INSTANCES>
+<instance>
+<ID>1</ID>
+<start>14.100716145833331</start>
+<end>261.56071614583334</end>
+<code>13 Brock BEVERIDGE (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+<instance>
+<ID>2</ID>
+<start>14.100716145833331</start>
+<end>261.56071614583334</end>
+<code>14 William GAMBLE (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>High Forward</text>
+</label>
+</instance>
+<instance>
+<ID>3</ID>
+<start>14.100716145833331</start>
+<end>295.15071614583337</end>
+<code>15 Cruz MARTIN (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+<instance>
+<ID>4</ID>
+<start>14.100716145833331</start>
+<end>295.16071614583336</end>
+<code>26 Luke MAJOR (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Wing</text>
+</label>
+</instance>
+<instance>
+<ID>5</ID>
+<start>14.100716145833331</start>
+<end>296.93071614583334</end>
+<code>31 Billy REDMAN (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+<instance>
+<ID>6</ID>
+<start>14.100716145833331</start>
+<end>296.94071614583333</end>
+<code>40 Tom T BEVERIDGE (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Deep Forward</text>
+</label>
+</instance>
+<instance>
+<ID>7</ID>
+<start>14.100716145833331</start>
+<end>341.69071614583333</end>
+<code>3 Zach TAIBA (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+<instance>
+<ID>8</ID>
+<start>14.100716145833331</start>
+<end>341.69071614583333</end>
+<code>12 Jacob ZALAC (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Mid Forward</text>
+</label>
+</instance>
+<instance>
+<ID>9</ID>
+<start>14.100716145833331</start>
+<end>490.1307161458333</end>
+<code>17 Blake CISCATO (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>High Forward</text>
+</label>
+</instance>
+<instance>
+<ID>10</ID>
+<start>14.100716145833331</start>
+<end>519.2007161458333</end>
+<code>25 Jack SHANNON (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Wing</text>
+</label>
+</instance>
+<instance>
+<ID>11</ID>
+<start>14.100716145833331</start>
+<end>587.6007161458333</end>
+<code>5 Lachlan WATT (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Deep Forward</text>
+</label>
+</instance>
+<instance>
+<ID>12</ID>
+<start>14.100716145833331</start>
+<end>749.2407161458333</end>
+<code>11 Riley FREAM (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Mid Forward</text>
+</label>
+</instance>
+<instance>
+<ID>13</ID>
+<start>14.100716145833331</start>
+<end>778.7607161458333</end>
+<code>9 Nathan PRICE (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>High Forward</text>
+</label>
+</instance>
+<instance>
+<ID>14</ID>
+<start>14.100716145833331</start>
+<end>814.0207161458333</end>
+<code>2 Mitchell SAPIATZER (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Mid Forward</text>
+</label>
+</instance>
+<instance>
+<ID>15</ID>
+<start>14.100716145833331</start>
+<end>820.4407161458333</end>
+<code>27 Connor C PASSLOW (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Deep Forward</text>
+</label>
+</instance>
+<instance>
+<ID>16</ID>
+<start>14.100716145833331</start>
+<end>858.1507161458333</end>
+<code>23 Bailey SIMS (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Wing</text>
+</label>
+</instance>
+<instance>
+<ID>17</ID>
+<start>14.100716145833331</start>
+<end>1039.5907161458333</end>
+<code>7 Lachlan MCNAMARA (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>High Forward</text>
+</label>
+</instance>
+<instance>
+<ID>18</ID>
+<start>14.100716145833331</start>
+<end>1177.9207161458332</end>
+<code>16 Corey HARDY (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Deep Forward</text>
+</label>
+</instance>
+<instance>
+<ID>19</ID>
+<start>14.100716145833331</start>
+<end>1267.4807161458334</end>
+<code>10 Adam STOREY (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Wing</text>
+</label>
+</instance>
+<instance>
+<ID>20</ID>
+<start>14.100716145833331</start>
+<end>1334.1007161458333</end>
+<code>1 Zach ZAFOSNIK (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Mid Forward</text>
+</label>
+</instance>
+<instance>
+<ID>21</ID>
+<start>14.100716145833331</start>
+<end>1334.1007161458333</end>
+<code>4 Ryan SHEERS (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Deep Forward</text>
+</label>
+</instance>
+<instance>
+<ID>22</ID>
+<start>14.100716145833331</start>
+<end>1334.1007161458333</end>
+<code>6 Tim GERORGIOU (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Deep Forward</text>
+</label>
+</instance>
+<instance>
+<ID>23</ID>
+<start>261.56071614583334</start>
+<end>490.17071614583335</end>
+<code>14 William GAMBLE (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+<instance>
+<ID>24</ID>
+<start>261.56071614583334</start>
+<end>1334.1007161458333</end>
+<code>13 Brock BEVERIDGE (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>High Forward</text>
+</label>
+</instance>
+<instance>
+<ID>25</ID>
+<start>295.15071614583337</start>
+<end>1075.4207161458332</end>
+<code>15 Cruz MARTIN (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Wing</text>
+</label>
+</instance>
+<instance>
+<ID>26</ID>
+<start>295.16071614583336</start>
+<end>519.1907161458333</end>
+<code>26 Luke MAJOR (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+<instance>
+<ID>27</ID>
+<start>296.93071614583334</start>
+<end>1334.1007161458333</end>
+<code>31 Billy REDMAN (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Deep Forward</text>
+</label>
+</instance>
+<instance>
+<ID>28</ID>
+<start>296.94071614583333</start>
+<end>587.6007161458333</end>
+<code>40 Tom T BEVERIDGE (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+<instance>
+<ID>29</ID>
+<start>341.69071614583333</start>
+<end>749.2907161458334</end>
+<code>12 Jacob ZALAC (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+<instance>
+<ID>30</ID>
+<start>341.69071614583333</start>
+<end>1038.6907161458332</end>
+<code>3 Zach TAIBA (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Mid Forward</text>
+</label>
+</instance>
+<instance>
+<ID>31</ID>
+<start>490.1307161458333</start>
+<end>778.7607161458333</end>
+<code>17 Blake CISCATO (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+<instance>
+<ID>32</ID>
+<start>490.1307161458333</start>
+<end>1334.1007161458333</end>
+<code>14 William GAMBLE (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>High Forward</text>
+</label>
+</instance>
+<instance>
+<ID>33</ID>
+<start>519.1907161458333</start>
+<end>1334.1007161458333</end>
+<code>26 Luke MAJOR (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Wing</text>
+</label>
+</instance>
+<instance>
+<ID>34</ID>
+<start>519.2007161458333</start>
+<end>858.2007161458333</end>
+<code>25 Jack SHANNON (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+<instance>
+<ID>35</ID>
+<start>587.6007161458333</start>
+<end>820.4407161458333</end>
+<code>5 Lachlan WATT (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+<instance>
+<ID>36</ID>
+<start>587.6007161458333</start>
+<end>1334.1007161458333</end>
+<code>40 Tom T BEVERIDGE (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Deep Forward</text>
+</label>
+</instance>
+<instance>
+<ID>37</ID>
+<start>749.2407161458333</start>
+<end>814.0407161458334</end>
+<code>11 Riley FREAM (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+<instance>
+<ID>38</ID>
+<start>749.2407161458333</start>
+<end>1334.1007161458333</end>
+<code>12 Jacob ZALAC (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Mid Forward</text>
+</label>
+</instance>
+<instance>
+<ID>39</ID>
+<start>778.7607161458333</start>
+<end>1039.5907161458333</end>
+<code>9 Nathan PRICE (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+<instance>
+<ID>40</ID>
+<start>778.7607161458333</start>
+<end>1334.1007161458333</end>
+<code>17 Blake CISCATO (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>High Forward</text>
+</label>
+</instance>
+<instance>
+<ID>41</ID>
+<start>814.0207161458333</start>
+<end>1038.6707161458332</end>
+<code>2 Mitchell SAPIATZER (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+<instance>
+<ID>42</ID>
+<start>814.0207161458333</start>
+<end>1334.1007161458333</end>
+<code>11 Riley FREAM (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Mid Forward</text>
+</label>
+</instance>
+<instance>
+<ID>43</ID>
+<start>820.4407161458333</start>
+<end>1177.9107161458332</end>
+<code>27 Connor C PASSLOW (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+<instance>
+<ID>44</ID>
+<start>820.4407161458333</start>
+<end>1334.1007161458333</end>
+<code>5 Lachlan WATT (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Deep Forward</text>
+</label>
+</instance>
+<instance>
+<ID>45</ID>
+<start>858.1507161458333</start>
+<end>1075.4207161458332</end>
+<code>23 Bailey SIMS (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+<instance>
+<ID>46</ID>
+<start>858.1507161458333</start>
+<end>1334.1007161458333</end>
+<code>25 Jack SHANNON (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Wing</text>
+</label>
+</instance>
+<instance>
+<ID>47</ID>
+<start>1038.6707161458332</start>
+<end>1334.1007161458333</end>
+<code>2 Mitchell SAPIATZER (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Mid Forward</text>
+</label>
+</instance>
+<instance>
+<ID>48</ID>
+<start>1038.6807161458332</start>
+<end>1334.1007161458333</end>
+<code>3 Zach TAIBA (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+<instance>
+<ID>49</ID>
+<start>1039.5907161458333</start>
+<end>1334.1007161458333</end>
+<code>7 Lachlan MCNAMARA (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+<instance>
+<ID>50</ID>
+<start>1039.5907161458333</start>
+<end>1334.1007161458333</end>
+<code>9 Nathan PRICE (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>High Forward</text>
+</label>
+</instance>
+<instance>
+<ID>51</ID>
+<start>1075.4207161458332</start>
+<end>1267.4707161458332</end>
+<code>15 Cruz MARTIN (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+<instance>
+<ID>52</ID>
+<start>1075.4207161458332</start>
+<end>1334.1007161458333</end>
+<code>23 Bailey SIMS (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Wing</text>
+</label>
+</instance>
+<instance>
+<ID>53</ID>
+<start>1177.9107161458332</start>
+<end>1334.1007161458333</end>
+<code>27 Connor C PASSLOW (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Deep Forward</text>
+</label>
+</instance>
+<instance>
+<ID>54</ID>
+<start>1177.9207161458332</start>
+<end>1334.1007161458333</end>
+<code>16 Corey HARDY (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+<instance>
+<ID>55</ID>
+<start>1267.4707161458332</start>
+<end>1334.1007161458333</end>
+<code>15 Cruz MARTIN (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Wing</text>
+</label>
+</instance>
+<instance>
+<ID>56</ID>
+<start>1267.4807161458334</start>
+<end>1334.1007161458333</end>
+<code>10 Adam STOREY (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+<instance>
+<ID>57</ID>
+<start>1394.1007161458333</start>
+<end>1924.3707161458333</end>
+<code>1 Zach ZAFOSNIK (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Mid Forward</text>
+</label>
+</instance>
+<instance>
+<ID>58</ID>
+<start>1394.1007161458333</start>
+<end>1924.3707161458333</end>
+<code>6 Tim GERORGIOU (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Deep Forward</text>
+</label>
+</instance>
+<instance>
+<ID>59</ID>
+<start>1394.1007161458333</start>
+<end>1924.3707161458333</end>
+<code>14 William GAMBLE (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>High Forward</text>
+</label>
+</instance>
+<instance>
+<ID>60</ID>
+<start>1394.1007161458333</start>
+<end>1924.3707161458333</end>
+<code>15 Cruz MARTIN (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Wing</text>
+</label>
+</instance>
+<instance>
+<ID>61</ID>
+<start>1394.1007161458333</start>
+<end>1926.3907161458333</end>
+<code>26 Luke MAJOR (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Wing</text>
+</label>
+</instance>
+<instance>
+<ID>62</ID>
+<start>1394.1007161458333</start>
+<end>1978.4807161458334</end>
+<code>3 Zach TAIBA (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Mid Forward</text>
+</label>
+</instance>
+<instance>
+<ID>63</ID>
+<start>1394.1007161458333</start>
+<end>1981.1307161458335</end>
+<code>13 Brock BEVERIDGE (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>High Forward</text>
+</label>
+</instance>
+<instance>
+<ID>64</ID>
+<start>1394.1007161458333</start>
+<end>1988.0607161458333</end>
+<code>31 Billy REDMAN (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Deep Forward</text>
+</label>
+</instance>
+<instance>
+<ID>65</ID>
+<start>1394.1007161458333</start>
+<end>2037.2607161458332</end>
+<code>23 Bailey SIMS (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Wing</text>
+</label>
+</instance>
+<instance>
+<ID>66</ID>
+<start>1394.1007161458333</start>
+<end>2062.780716145833</end>
+<code>17 Blake CISCATO (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>High Forward</text>
+</label>
+</instance>
+<instance>
+<ID>67</ID>
+<start>1394.1007161458333</start>
+<end>2084.6907161458334</end>
+<code>12 Jacob ZALAC (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Mid Forward</text>
+</label>
+</instance>
+<instance>
+<ID>68</ID>
+<start>1394.1007161458333</start>
+<end>2086.4607161458334</end>
+<code>4 Ryan SHEERS (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Deep Forward</text>
+</label>
+</instance>
+<instance>
+<ID>69</ID>
+<start>1394.1007161458333</start>
+<end>2389.950716145833</end>
+<code>11 Riley FREAM (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Mid Forward</text>
+</label>
+</instance>
+<instance>
+<ID>70</ID>
+<start>1394.1007161458333</start>
+<end>2390.820716145833</end>
+<code>9 Nathan PRICE (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>High Forward</text>
+</label>
+</instance>
+<instance>
+<ID>71</ID>
+<start>1394.1007161458333</start>
+<end>2391.6507161458335</end>
+<code>25 Jack SHANNON (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Wing</text>
+</label>
+</instance>
+<instance>
+<ID>72</ID>
+<start>1394.1007161458333</start>
+<end>2576.5007161458334</end>
+<code>2 Mitchell SAPIATZER (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Mid Forward</text>
+</label>
+</instance>
+<instance>
+<ID>73</ID>
+<start>1394.1007161458333</start>
+<end>2577.9407161458334</end>
+<code>40 Tom T BEVERIDGE (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Deep Forward</text>
+</label>
+</instance>
+<instance>
+<ID>74</ID>
+<start>1394.1007161458333</start>
+<end>2663.2707161458334</end>
+<code>7 Lachlan MCNAMARA (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>High Forward</text>
+</label>
+</instance>
+<instance>
+<ID>75</ID>
+<start>1394.1007161458333</start>
+<end>2664.2707161458334</end>
+<code>10 Adam STOREY (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Wing</text>
+</label>
+</instance>
+<instance>
+<ID>76</ID>
+<start>1394.1007161458333</start>
+<end>3008.1007161458333</end>
+<code>5 Lachlan WATT (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Deep Forward</text>
+</label>
+</instance>
+<instance>
+<ID>77</ID>
+<start>1394.1007161458333</start>
+<end>3008.1007161458333</end>
+<code>16 Corey HARDY (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Deep Forward</text>
+</label>
+</instance>
+<instance>
+<ID>78</ID>
+<start>1394.1007161458333</start>
+<end>3008.1007161458333</end>
+<code>27 Connor C PASSLOW (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Deep Forward</text>
+</label>
+</instance>
+<instance>
+<ID>79</ID>
+<start>1924.3707161458333</start>
+<end>1926.3907161458333</end>
+<code>15 Cruz MARTIN (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+<instance>
+<ID>80</ID>
+<start>1924.3707161458333</start>
+<end>1978.4807161458334</end>
+<code>1 Zach ZAFOSNIK (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+<instance>
+<ID>81</ID>
+<start>1924.3707161458333</start>
+<end>1981.1307161458335</end>
+<code>14 William GAMBLE (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+<instance>
+<ID>82</ID>
+<start>1924.3707161458333</start>
+<end>1988.0607161458333</end>
+<code>6 Tim GERORGIOU (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+<instance>
+<ID>83</ID>
+<start>1926.3907161458333</start>
+<end>1983.1907161458334</end>
+<code>15 Cruz MARTIN (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Wing</text>
+</label>
+</instance>
+<instance>
+<ID>84</ID>
+<start>1926.3907161458333</start>
+<end>1983.2007161458332</end>
+<code>26 Luke MAJOR (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+<instance>
+<ID>85</ID>
+<start>1978.4807161458334</start>
+<end>1979.4807161458334</end>
+<code>1 Zach ZAFOSNIK (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Mid Forward</text>
+</label>
+</instance>
+<instance>
+<ID>86</ID>
+<start>1978.4807161458334</start>
+<end>1979.4807161458334</end>
+<code>3 Zach TAIBA (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+<instance>
+<ID>87</ID>
+<start>1979.4107161458332</start>
+<end>2084.6907161458334</end>
+<code>1 Zach ZAFOSNIK (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+<instance>
+<ID>88</ID>
+<start>1979.4107161458332</start>
+<end>3008.1007161458333</end>
+<code>3 Zach TAIBA (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Mid Forward</text>
+</label>
+</instance>
+<instance>
+<ID>89</ID>
+<start>1981.1307161458335</start>
+<end>1981.9307161458332</end>
+<code>13 Brock BEVERIDGE (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+<instance>
+<ID>90</ID>
+<start>1981.1307161458335</start>
+<end>1981.9307161458332</end>
+<code>14 William GAMBLE (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>High Forward</text>
+</label>
+</instance>
+<instance>
+<ID>91</ID>
+<start>1981.840716145833</start>
+<end>2062.780716145833</end>
+<code>14 William GAMBLE (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+<instance>
+<ID>92</ID>
+<start>1981.840716145833</start>
+<end>3008.1007161458333</end>
+<code>13 Brock BEVERIDGE (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>High Forward</text>
+</label>
+</instance>
+<instance>
+<ID>93</ID>
+<start>1983.1907161458334</start>
+<end>1984.3507161458333</end>
+<code>15 Cruz MARTIN (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+<instance>
+<ID>94</ID>
+<start>1983.1907161458334</start>
+<end>1984.3507161458333</end>
+<code>26 Luke MAJOR (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Wing</text>
+</label>
+</instance>
+<instance>
+<ID>95</ID>
+<start>1984.3507161458333</start>
+<end>2037.3507161458333</end>
+<code>26 Luke MAJOR (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+<instance>
+<ID>96</ID>
+<start>1984.3507161458333</start>
+<end>3008.1007161458333</end>
+<code>15 Cruz MARTIN (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Wing</text>
+</label>
+</instance>
+<instance>
+<ID>97</ID>
+<start>1988.0607161458333</start>
+<end>1988.8607161458335</end>
+<code>6 Tim GERORGIOU (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Deep Forward</text>
+</label>
+</instance>
+<instance>
+<ID>98</ID>
+<start>1988.0607161458333</start>
+<end>1988.8607161458335</end>
+<code>31 Billy REDMAN (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+<instance>
+<ID>99</ID>
+<start>1988.8107161458333</start>
+<end>3008.1007161458333</end>
+<code>31 Billy REDMAN (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Deep Forward</text>
+</label>
+</instance>
+<instance>
+<ID>100</ID>
+<start>1988.820716145833</start>
+<end>2086.4607161458334</end>
+<code>6 Tim GERORGIOU (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+<instance>
+<ID>101</ID>
+<start>2037.2607161458332</start>
+<end>2391.6607161458332</end>
+<code>23 Bailey SIMS (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+<instance>
+<ID>102</ID>
+<start>2037.2607161458332</start>
+<end>3008.1007161458333</end>
+<code>26 Luke MAJOR (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Wing</text>
+</label>
+</instance>
+<instance>
+<ID>103</ID>
+<start>2062.780716145833</start>
+<end>2390.9807161458334</end>
+<code>17 Blake CISCATO (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+<instance>
+<ID>104</ID>
+<start>2062.780716145833</start>
+<end>3008.1007161458333</end>
+<code>14 William GAMBLE (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>High Forward</text>
+</label>
+</instance>
+<instance>
+<ID>105</ID>
+<start>2084.6907161458334</start>
+<end>2389.950716145833</end>
+<code>12 Jacob ZALAC (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+<instance>
+<ID>106</ID>
+<start>2084.6907161458334</start>
+<end>3008.1007161458333</end>
+<code>1 Zach ZAFOSNIK (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Mid Forward</text>
+</label>
+</instance>
+<instance>
+<ID>107</ID>
+<start>2086.4607161458334</start>
+<end>2388.950716145833</end>
+<code>4 Ryan SHEERS (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+<instance>
+<ID>108</ID>
+<start>2086.4607161458334</start>
+<end>2388.950716145833</end>
+<code>6 Tim GERORGIOU (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Deep Forward</text>
+</label>
+</instance>
+<instance>
+<ID>109</ID>
+<start>2388.950716145833</start>
+<end>2577.9607161458334</end>
+<code>6 Tim GERORGIOU (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+<instance>
+<ID>110</ID>
+<start>2388.950716145833</start>
+<end>3008.1007161458333</end>
+<code>4 Ryan SHEERS (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Deep Forward</text>
+</label>
+</instance>
+<instance>
+<ID>111</ID>
+<start>2389.950716145833</start>
+<end>2576.550716145833</end>
+<code>11 Riley FREAM (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+<instance>
+<ID>112</ID>
+<start>2389.950716145833</start>
+<end>3008.1007161458333</end>
+<code>12 Jacob ZALAC (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Mid Forward</text>
+</label>
+</instance>
+<instance>
+<ID>113</ID>
+<start>2390.8107161458333</start>
+<end>3008.1007161458333</end>
+<code>17 Blake CISCATO (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>High Forward</text>
+</label>
+</instance>
+<instance>
+<ID>114</ID>
+<start>2390.820716145833</start>
+<end>2663.2707161458334</end>
+<code>9 Nathan PRICE (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+<instance>
+<ID>115</ID>
+<start>2391.6507161458335</start>
+<end>2664.2707161458334</end>
+<code>25 Jack SHANNON (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+<instance>
+<ID>116</ID>
+<start>2391.6507161458335</start>
+<end>3008.1007161458333</end>
+<code>23 Bailey SIMS (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Wing</text>
+</label>
+</instance>
+<instance>
+<ID>117</ID>
+<start>2576.5007161458334</start>
+<end>3008.1007161458333</end>
+<code>2 Mitchell SAPIATZER (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+<instance>
+<ID>118</ID>
+<start>2576.5007161458334</start>
+<end>3008.1007161458333</end>
+<code>11 Riley FREAM (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Mid Forward</text>
+</label>
+</instance>
+<instance>
+<ID>119</ID>
+<start>2577.9407161458334</start>
+<end>3008.1007161458333</end>
+<code>6 Tim GERORGIOU (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Deep Forward</text>
+</label>
+</instance>
+<instance>
+<ID>120</ID>
+<start>2577.9407161458334</start>
+<end>3008.1007161458333</end>
+<code>40 Tom T BEVERIDGE (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+<instance>
+<ID>121</ID>
+<start>2663.2707161458334</start>
+<end>3008.1007161458333</end>
+<code>7 Lachlan MCNAMARA (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+<instance>
+<ID>122</ID>
+<start>2663.2707161458334</start>
+<end>3008.1007161458333</end>
+<code>9 Nathan PRICE (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>High Forward</text>
+</label>
+</instance>
+<instance>
+<ID>123</ID>
+<start>2664.2707161458334</start>
+<end>3008.1007161458333</end>
+<code>10 Adam STOREY (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+<instance>
+<ID>124</ID>
+<start>2664.2707161458334</start>
+<end>3008.1007161458333</end>
+<code>25 Jack SHANNON (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Wing</text>
+</label>
+</instance>
+<instance>
+<ID>125</ID>
+<start>3074.1007161458333</start>
+<end>3538.590716145833</end>
+<code>3 Zach TAIBA (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Mid Forward</text>
+</label>
+</instance>
+<instance>
+<ID>126</ID>
+<start>3074.1007161458333</start>
+<end>3538.590716145833</end>
+<code>5 Lachlan WATT (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Deep Forward</text>
+</label>
+</instance>
+<instance>
+<ID>127</ID>
+<start>3074.1007161458333</start>
+<end>3538.590716145833</end>
+<code>13 Brock BEVERIDGE (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>High Forward</text>
+</label>
+</instance>
+<instance>
+<ID>128</ID>
+<start>3074.1007161458333</start>
+<end>3538.590716145833</end>
+<code>15 Cruz MARTIN (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Wing</text>
+</label>
+</instance>
+<instance>
+<ID>129</ID>
+<start>3074.1007161458333</start>
+<end>3538.590716145833</end>
+<code>27 Connor C PASSLOW (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Deep Forward</text>
+</label>
+</instance>
+<instance>
+<ID>130</ID>
+<start>3074.1007161458333</start>
+<end>3538.590716145833</end>
+<code>31 Billy REDMAN (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Deep Forward</text>
+</label>
+</instance>
+<instance>
+<ID>131</ID>
+<start>3074.1007161458333</start>
+<end>3770.530716145834</end>
+<code>2 Mitchell SAPIATZER (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+<instance>
+<ID>132</ID>
+<start>3074.1007161458333</start>
+<end>3887.8507161458338</end>
+<code>1 Zach ZAFOSNIK (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Mid Forward</text>
+</label>
+</instance>
+<instance>
+<ID>133</ID>
+<start>3074.1007161458333</start>
+<end>3903.6707161458335</end>
+<code>16 Corey HARDY (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Deep Forward</text>
+</label>
+</instance>
+<instance>
+<ID>134</ID>
+<start>3074.1007161458333</start>
+<end>3966.3407161458335</end>
+<code>26 Luke MAJOR (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Wing</text>
+</label>
+</instance>
+<instance>
+<ID>135</ID>
+<start>3074.1007161458333</start>
+<end>3968.0807161458333</end>
+<code>14 William GAMBLE (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>High Forward</text>
+</label>
+</instance>
+<instance>
+<ID>136</ID>
+<start>3074.1007161458333</start>
+<end>4114.4207161458335</end>
+<code>10 Adam STOREY (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Wing</text>
+</label>
+</instance>
+<instance>
+<ID>137</ID>
+<start>3074.1007161458333</start>
+<end>4237.6707161458335</end>
+<code>12 Jacob ZALAC (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Mid Forward</text>
+</label>
+</instance>
+<instance>
+<ID>138</ID>
+<start>3074.1007161458333</start>
+<end>4305.850716145834</end>
+<code>17 Blake CISCATO (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>High Forward</text>
+</label>
+</instance>
+<instance>
+<ID>139</ID>
+<start>3074.1007161458333</start>
+<end>4354.370716145834</end>
+<code>25 Jack SHANNON (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Wing</text>
+</label>
+</instance>
+<instance>
+<ID>140</ID>
+<start>3074.1007161458333</start>
+<end>4494.100716145834</end>
+<code>4 Ryan SHEERS (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Deep Forward</text>
+</label>
+</instance>
+<instance>
+<ID>141</ID>
+<start>3074.1007161458333</start>
+<end>4494.100716145834</end>
+<code>6 Tim GERORGIOU (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Deep Forward</text>
+</label>
+</instance>
+<instance>
+<ID>142</ID>
+<start>3074.1007161458333</start>
+<end>4494.100716145834</end>
+<code>7 Lachlan MCNAMARA (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Deep Forward</text>
+</label>
+</instance>
+<instance>
+<ID>143</ID>
+<start>3074.1007161458333</start>
+<end>4494.100716145834</end>
+<code>9 Nathan PRICE (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>High Forward</text>
+</label>
+</instance>
+<instance>
+<ID>144</ID>
+<start>3074.1007161458333</start>
+<end>4494.100716145834</end>
+<code>11 Riley FREAM (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Mid Forward</text>
+</label>
+</instance>
+<instance>
+<ID>145</ID>
+<start>3074.1007161458333</start>
+<end>4494.100716145834</end>
+<code>23 Bailey SIMS (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Wing</text>
+</label>
+</instance>
+<instance>
+<ID>146</ID>
+<start>3074.1007161458333</start>
+<end>4494.100716145834</end>
+<code>40 Tom T BEVERIDGE (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Deep Forward</text>
+</label>
+</instance>
+<instance>
+<ID>147</ID>
+<start>3538.590716145833</start>
+<end>3716.5907161458335</end>
+<code>3 Zach TAIBA (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+<instance>
+<ID>148</ID>
+<start>3538.590716145833</start>
+<end>3903.6707161458335</end>
+<code>31 Billy REDMAN (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+<instance>
+<ID>149</ID>
+<start>3538.590716145833</start>
+<end>3966.3407161458335</end>
+<code>15 Cruz MARTIN (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+<instance>
+<ID>150</ID>
+<start>3538.590716145833</start>
+<end>3968.0807161458333</end>
+<code>13 Brock BEVERIDGE (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+<instance>
+<ID>151</ID>
+<start>3538.590716145833</start>
+<end>4175.890716145834</end>
+<code>27 Connor C PASSLOW (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Deep Forward</text>
+</label>
+</instance>
+<instance>
+<ID>152</ID>
+<start>3538.590716145833</start>
+<end>4494.100716145834</end>
+<code>5 Lachlan WATT (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Deep Forward</text>
+</label>
+</instance>
+<instance>
+<ID>153</ID>
+<start>3716.5907161458335</start>
+<end>3770.530716145834</end>
+<code>3 Zach TAIBA (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Mid Forward</text>
+</label>
+</instance>
+<instance>
+<ID>154</ID>
+<start>3770.530716145834</start>
+<end>3887.9307161458337</end>
+<code>3 Zach TAIBA (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+<instance>
+<ID>155</ID>
+<start>3770.530716145834</start>
+<end>4494.100716145834</end>
+<code>2 Mitchell SAPIATZER (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Mid Forward</text>
+</label>
+</instance>
+<instance>
+<ID>156</ID>
+<start>3887.8507161458338</start>
+<end>4305.860716145834</end>
+<code>1 Zach ZAFOSNIK (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+<instance>
+<ID>157</ID>
+<start>3887.8507161458338</start>
+<end>4494.100716145834</end>
+<code>3 Zach TAIBA (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Mid Forward</text>
+</label>
+</instance>
+<instance>
+<ID>158</ID>
+<start>3903.6707161458335</start>
+<end>4175.890716145834</end>
+<code>16 Corey HARDY (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+<instance>
+<ID>159</ID>
+<start>3903.6707161458335</start>
+<end>4494.100716145834</end>
+<code>31 Billy REDMAN (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Deep Forward</text>
+</label>
+</instance>
+<instance>
+<ID>160</ID>
+<start>3966.3407161458335</start>
+<end>4114.540716145833</end>
+<code>26 Luke MAJOR (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+<instance>
+<ID>161</ID>
+<start>3966.3407161458335</start>
+<end>4494.100716145834</end>
+<code>15 Cruz MARTIN (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Wing</text>
+</label>
+</instance>
+<instance>
+<ID>162</ID>
+<start>3968.0807161458333</start>
+<end>4237.680716145834</end>
+<code>14 William GAMBLE (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+<instance>
+<ID>163</ID>
+<start>3968.0807161458333</start>
+<end>4494.100716145834</end>
+<code>13 Brock BEVERIDGE (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>High Forward</text>
+</label>
+</instance>
+<instance>
+<ID>164</ID>
+<start>4114.4207161458335</start>
+<end>4354.4207161458335</end>
+<code>10 Adam STOREY (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+<instance>
+<ID>165</ID>
+<start>4114.4207161458335</start>
+<end>4494.100716145834</end>
+<code>26 Luke MAJOR (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Wing</text>
+</label>
+</instance>
+<instance>
+<ID>166</ID>
+<start>4175.890716145834</start>
+<end>4494.100716145834</end>
+<code>16 Corey HARDY (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Deep Forward</text>
+</label>
+</instance>
+<instance>
+<ID>167</ID>
+<start>4175.890716145834</start>
+<end>4494.100716145834</end>
+<code>27 Connor C PASSLOW (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+<instance>
+<ID>168</ID>
+<start>4237.660716145834</start>
+<end>4494.100716145834</end>
+<code>14 William GAMBLE (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Mid Forward</text>
+</label>
+</instance>
+<instance>
+<ID>169</ID>
+<start>4237.6707161458335</start>
+<end>4494.100716145834</end>
+<code>12 Jacob ZALAC (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+<instance>
+<ID>170</ID>
+<start>4305.850716145834</start>
+<end>4494.100716145834</end>
+<code>1 Zach ZAFOSNIK (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>High Forward</text>
+</label>
+</instance>
+<instance>
+<ID>171</ID>
+<start>4305.850716145834</start>
+<end>4494.100716145834</end>
+<code>17 Blake CISCATO (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+<instance>
+<ID>172</ID>
+<start>4354.370716145834</start>
+<end>4494.100716145834</end>
+<code>10 Adam STOREY (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Wing</text>
+</label>
+</instance>
+<instance>
+<ID>173</ID>
+<start>4354.370716145834</start>
+<end>4494.100716145834</end>
+<code>25 Jack SHANNON (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+<instance>
+<ID>174</ID>
+<start>4514.100716145834</start>
+<end>4693.500716145833</end>
+<code>11 Riley FREAM (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+<instance>
+<ID>175</ID>
+<start>4514.100716145834</start>
+<end>4693.540716145833</end>
+<code>2 Mitchell SAPIATZER (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Mid Forward</text>
+</label>
+</instance>
+<instance>
+<ID>176</ID>
+<start>4514.100716145834</start>
+<end>5093.720716145834</end>
+<code>5 Lachlan WATT (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+<instance>
+<ID>177</ID>
+<start>4514.100716145834</start>
+<end>5093.720716145834</end>
+<code>7 Lachlan MCNAMARA (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+<instance>
+<ID>178</ID>
+<start>4514.100716145834</start>
+<end>5093.720716145834</end>
+<code>12 Jacob ZALAC (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>High Forward</text>
+</label>
+</instance>
+<instance>
+<ID>179</ID>
+<start>4514.100716145834</start>
+<end>5093.720716145834</end>
+<code>13 Brock BEVERIDGE (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>High Forward</text>
+</label>
+</instance>
+<instance>
+<ID>180</ID>
+<start>4514.100716145834</start>
+<end>5093.730716145834</end>
+<code>27 Connor C PASSLOW (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Deep Forward</text>
+</label>
+</instance>
+<instance>
+<ID>181</ID>
+<start>4514.100716145834</start>
+<end>5437.440716145834</end>
+<code>1 Zach ZAFOSNIK (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>High Forward</text>
+</label>
+</instance>
+<instance>
+<ID>182</ID>
+<start>4514.100716145834</start>
+<end>5442.860716145834</end>
+<code>3 Zach TAIBA (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Mid Forward</text>
+</label>
+</instance>
+<instance>
+<ID>183</ID>
+<start>4514.100716145834</start>
+<end>5524.800716145834</end>
+<code>15 Cruz MARTIN (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+<instance>
+<ID>184</ID>
+<start>4514.100716145834</start>
+<end>5524.800716145834</end>
+<code>26 Luke MAJOR (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Wing</text>
+</label>
+</instance>
+<instance>
+<ID>185</ID>
+<start>4514.100716145834</start>
+<end>5675.260716145834</end>
+<code>40 Tom T BEVERIDGE (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Deep Forward</text>
+</label>
+</instance>
+<instance>
+<ID>186</ID>
+<start>4514.100716145834</start>
+<end>5743.710716145833</end>
+<code>10 Adam STOREY (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Wing</text>
+</label>
+</instance>
+<instance>
+<ID>187</ID>
+<start>4514.100716145834</start>
+<end>5984.100716145834</end>
+<code>4 Ryan SHEERS (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Deep Forward</text>
+</label>
+</instance>
+<instance>
+<ID>188</ID>
+<start>4514.100716145834</start>
+<end>5984.100716145834</end>
+<code>6 Tim GERORGIOU (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Deep Forward</text>
+</label>
+</instance>
+<instance>
+<ID>189</ID>
+<start>4514.100716145834</start>
+<end>5984.100716145834</end>
+<code>9 Nathan PRICE (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>High Forward</text>
+</label>
+</instance>
+<instance>
+<ID>190</ID>
+<start>4514.100716145834</start>
+<end>5984.100716145834</end>
+<code>16 Corey HARDY (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Deep Forward</text>
+</label>
+</instance>
+<instance>
+<ID>191</ID>
+<start>4514.100716145834</start>
+<end>5984.100716145834</end>
+<code>17 Blake CISCATO (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Mid Forward</text>
+</label>
+</instance>
+<instance>
+<ID>192</ID>
+<start>4514.100716145834</start>
+<end>5984.100716145834</end>
+<code>23 Bailey SIMS (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Wing</text>
+</label>
+</instance>
+<instance>
+<ID>193</ID>
+<start>4514.100716145834</start>
+<end>5984.100716145834</end>
+<code>25 Jack SHANNON (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Wing</text>
+</label>
+</instance>
+<instance>
+<ID>194</ID>
+<start>4514.100716145834</start>
+<end>5984.100716145834</end>
+<code>31 Billy REDMAN (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Deep Forward</text>
+</label>
+</instance>
+<instance>
+<ID>195</ID>
+<start>4514.100716145834</start>
+<end>5984.100716145834</end>
+<code>14 William GAMBLE (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+<label>
+<group>ZONE</group>
+<text>Mid Forward</text>
+</label>
+<label>
+<group>ZONE</group>
+<text>Mid Forward</text>
+</label>
+</instance>
+<instance>
+<ID>196</ID>
+<start>4693.500716145833</start>
+<end>5093.720716145834</end>
+<code>2 Mitchell SAPIATZER (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+<instance>
+<ID>197</ID>
+<start>4693.500716145833</start>
+<end>5984.302647239979</end>
+<code>11 Riley FREAM (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+<label>
+<group>ZONE</group>
+<text>Mid Forward</text>
+</label>
+</instance>
+<instance>
+<ID>198</ID>
+<start>5093.720716145834</start>
+<end>5437.440716145834</end>
+<code>13 Brock BEVERIDGE (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+<instance>
+<ID>199</ID>
+<start>5093.720716145834</start>
+<end>5442.860716145834</end>
+<code>12 Jacob ZALAC (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+<instance>
+<ID>200</ID>
+<start>5093.720716145834</start>
+<end>5528.190716145834</end>
+<code>5 Lachlan WATT (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Deep Forward</text>
+</label>
+</instance>
+<instance>
+<ID>201</ID>
+<start>5093.720716145834</start>
+<end>5984.100716145834</end>
+<code>2 Mitchell SAPIATZER (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Mid Forward</text>
+</label>
+</instance>
+<instance>
+<ID>202</ID>
+<start>5093.720716145834</start>
+<end>5984.100716145834</end>
+<code>7 Lachlan MCNAMARA (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>High Forward</text>
+</label>
+</instance>
+<instance>
+<ID>203</ID>
+<start>5093.730716145834</start>
+<end>5528.190716145834</end>
+<code>27 Connor C PASSLOW (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+<instance>
+<ID>204</ID>
+<start>5437.440716145834</start>
+<end>5984.100716145834</end>
+<code>1 Zach ZAFOSNIK (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+<instance>
+<ID>205</ID>
+<start>5437.440716145834</start>
+<end>5984.100716145834</end>
+<code>13 Brock BEVERIDGE (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>High Forward</text>
+</label>
+</instance>
+<instance>
+<ID>206</ID>
+<start>5442.860716145834</start>
+<end>5680.460716145833</end>
+<code>3 Zach TAIBA (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+<instance>
+<ID>207</ID>
+<start>5442.860716145834</start>
+<end>5984.100716145834</end>
+<code>12 Jacob ZALAC (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Mid Forward</text>
+</label>
+</instance>
+<instance>
+<ID>208</ID>
+<start>5524.800716145834</start>
+<end>5743.710716145833</end>
+<code>26 Luke MAJOR (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+<instance>
+<ID>209</ID>
+<start>5524.800716145834</start>
+<end>5984.100716145834</end>
+<code>15 Cruz MARTIN (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Wing</text>
+</label>
+</instance>
+<instance>
+<ID>210</ID>
+<start>5528.190716145834</start>
+<end>5983.843670616094</end>
+<code>5 Lachlan WATT (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Deep Forward</text>
+</label>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+<instance>
+<ID>211</ID>
+<start>5528.190716145834</start>
+<end>5984.100716145834</end>
+<code>27 Connor C PASSLOW (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Deep Forward</text>
+</label>
+</instance>
+<instance>
+<ID>212</ID>
+<start>5675.6323779520135</start>
+<end>5984.100716145834</end>
+<code>40 Tom T BEVERIDGE (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+<instance>
+<ID>213</ID>
+<start>5681.522919111894</start>
+<end>5983.837361659064</end>
+<code>3 Zach TAIBA (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Mid Forward</text>
+</label>
+</instance>
+<instance>
+<ID>214</ID>
+<start>5743.795926936287</start>
+<end>5984.100716145833</end>
+<code>26 Luke MAJOR (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Wing</text>
+</label>
+</instance>
+<instance>
+<ID>215</ID>
+<start>5743.94891914425</start>
+<end>5984.100716145834</end>
+<code>10 Adam STOREY (Rotations)</code>
+<label>
+<group>ZONE</group>
+<text>Bench</text>
+</label>
+</instance>
+</ALL_INSTANCES>
+<ROWS>
+<row>
+<code>1 Zach ZAFOSNIK (Rotations)</code>
+<R>55000</R>
+<G>55000</G>
+<B>55000</B>
+</row>
+<row>
+<code>2 Mitchell SAPIATZER (Rotations)</code>
+<R>60000</R>
+<G>60000</G>
+<B>60000</B>
+</row>
+<row>
+<code>3 Zach TAIBA (Rotations)</code>
+<R>55000</R>
+<G>55000</G>
+<B>55000</B>
+</row>
+<row>
+<code>4 Ryan SHEERS (Rotations)</code>
+<R>60000</R>
+<G>60000</G>
+<B>60000</B>
+</row>
+<row>
+<code>5 Lachlan WATT (Rotations)</code>
+<R>55000</R>
+<G>55000</G>
+<B>55000</B>
+</row>
+<row>
+<code>6 Tim GERORGIOU (Rotations)</code>
+<R>60000</R>
+<G>60000</G>
+<B>60000</B>
+</row>
+<row>
+<code>7 Lachlan MCNAMARA (Rotations)</code>
+<R>55000</R>
+<G>55000</G>
+<B>55000</B>
+</row>
+<row>
+<code>9 Nathan PRICE (Rotations)</code>
+<R>60000</R>
+<G>60000</G>
+<B>60000</B>
+</row>
+<row>
+<code>10 Adam STOREY (Rotations)</code>
+<R>55000</R>
+<G>55000</G>
+<B>55000</B>
+</row>
+<row>
+<code>11 Riley FREAM (Rotations)</code>
+<R>60000</R>
+<G>60000</G>
+<B>60000</B>
+</row>
+<row>
+<code>12 Jacob ZALAC (Rotations)</code>
+<R>55000</R>
+<G>55000</G>
+<B>55000</B>
+</row>
+<row>
+<code>13 Brock BEVERIDGE (Rotations)</code>
+<R>60000</R>
+<G>60000</G>
+<B>60000</B>
+</row>
+<row>
+<code>14 William GAMBLE (Rotations)</code>
+<R>55000</R>
+<G>55000</G>
+<B>55000</B>
+</row>
+<row>
+<code>15 Cruz MARTIN (Rotations)</code>
+<R>60000</R>
+<G>60000</G>
+<B>60000</B>
+</row>
+<row>
+<code>16 Corey HARDY (Rotations)</code>
+<R>55000</R>
+<G>55000</G>
+<B>55000</B>
+</row>
+<row>
+<code>17 Blake CISCATO (Rotations)</code>
+<R>60000</R>
+<G>60000</G>
+<B>60000</B>
+</row>
+<row>
+<code>23 Bailey SIMS (Rotations)</code>
+<R>55000</R>
+<G>55000</G>
+<B>55000</B>
+</row>
+<row>
+<code>25 Jack SHANNON (Rotations)</code>
+<R>60000</R>
+<G>60000</G>
+<B>60000</B>
+</row>
+<row>
+<code>26 Luke MAJOR (Rotations)</code>
+<R>55000</R>
+<G>55000</G>
+<B>55000</B>
+</row>
+<row>
+<code>27 Connor C PASSLOW (Rotations)</code>
+<R>60000</R>
+<G>60000</G>
+<B>60000</B>
+</row>
+<row>
+<code>31 Billy REDMAN (Rotations)</code>
+<R>55000</R>
+<G>55000</G>
+<B>55000</B>
+</row>
+<row>
+<code>40 Tom T BEVERIDGE (Rotations)</code>
+<R>60000</R>
+<G>60000</G>
+<B>60000</B>
+</row>
+</ROWS>
+</file>
